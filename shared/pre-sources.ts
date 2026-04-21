@@ -5,7 +5,7 @@ import type { OriginSource, Source, SourceID } from "./types"
 
 const Time = {
   Test: 1,
-  Realtime: 2 * 60 * 1000,
+  Realtime: 0.5 * 60 * 1000,
   Fast: 5 * 60 * 1000,
   Default: Interval, // 10min
   Common: 30 * 60 * 1000,
@@ -325,6 +325,7 @@ export const originSources = {
     color: "red",
     type: "realtime",
     title: "财经快讯",
+    interval: Time.Realtime,
     home: "https://kuaixun.eastmoney.com",
   },
   "jin10": {

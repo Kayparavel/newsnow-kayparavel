@@ -9,7 +9,10 @@ export function useRefetch() {
    * force refresh
    */
   const refresh = useCallback((...sources: SourceID[]) => {
+    console.log('useRefetch called with sources:', sources)
+    console.log('Current loggedIn status:', loggedIn)
     if (enableLogin && !loggedIn) {
+      console.log('Showing login toast')
       toaster("登录后可以强制拉取最新数据", {
         type: "warning",
         action: {
@@ -18,8 +21,13 @@ export function useRefetch() {
         },
       })
     } else {
+      console.log('Clearing and adding to refetchSources:', sources)
       refetchSources.clear()
-      sources.forEach(id => refetchSources.add(id))
+      sources.forEach(id => {
+        refetchSources.add(id)
+        console.log('Added', id, 'to refetchSources')
+      })
+      console.log('Calling updateQuery')
       updateQuery(...sources)
     }
   }, [loggedIn, toaster, login, enableLogin, updateQuery])
