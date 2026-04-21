@@ -319,6 +319,14 @@ export const originSources = {
     desc: "不一定靠谱，多看多思考",
     home: "https://kaopu.news/",
   },
+  "eastmoney": {
+    name: "东方财富",
+    column: "finance",
+    color: "red",
+    type: "realtime",
+    title: "财经快讯",
+    home: "https://kuaixun.eastmoney.com",
+  },
   "jin10": {
     name: "金十数据",
     column: "finance",

@@ -405,6 +405,15 @@
     "color": "gray",
     "interval": 1800000
   },
+  "eastmoney": {
+    "title": "财经快讯",
+    "name": "东方财富",
+    "type": "realtime",
+    "column": "finance",
+    "home": "https://kuaixun.eastmoney.com",
+    "color": "red",
+    "interval": 600000
+  },
   "jin10": {
     "name": "金十数据",
     "type": "realtime",

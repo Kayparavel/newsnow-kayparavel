@@ -576,9 +576,120 @@ export default defineSource({
 })
 ```
 
-## 部署与运行
+## 自定义新闻源添加流程
 
-### 1. 环境变量
+### 添加自定义新闻源的完整步骤
+
+#### 1. 创建源解析器
+在 `server/sources/` 目录下创建新的源解析器文件，文件名与源 ID 一致（如 `eastmoney.ts`）：
+
+```typescript
+import type { NewsItem } from "@shared/types"
+import { load } from "cheerio"
+
+export default defineSource({
+  "eastmoney": async () => {
+    const baseURL = "https://kuaixun.eastmoney.com"
+    const url = `${baseURL}/`
+    
+    // 获取页面内容
+    const response = await myFetch(url) as any
+    const $ = load(response)
+    const news: NewsItem[] = []
+    
+    // 查找特定的新闻容器元素
+    const $newsContainer = $("#news_item_collection")
+    
+    if ($newsContainer.length > 0) {
+      // 查找容器下的所有 div 子元素（每个 div 代表一条快讯）
+      $newsContainer.find("> div").each((_, el) => {
+        const $el = $(el)
+        const $a = $el.find("a")
+        
+        if ($a.length > 0) {
+          const title = $a.text().trim()
+          let href = $a.attr("href") || ""
+          
+          if (title && href) {
+            // 处理相对路径
+            if (!href.startsWith("http")) {
+              href = new URL(href, baseURL).toString()
+            }
+            
+            news.push({
+              id: href,
+              title,
+              url: href,
+            })
+          }
+        }
+      })
+    }
+    
+    // 如果没有找到特定容器，回退到查找所有链接
+    if (news.length === 0) {
+      $("a").each((_, el) => {
+        const $el = $(el)
+        const title = $el.text().trim()
+        let href = $el.attr("href") || ""
+        
+        // 过滤掉无效链接和过长/过短的标题
+        if (title.length > 5 && title.length < 100 && href) {
+          // 处理相对路径
+          if (!href.startsWith("http")) {
+            href = new URL(href, baseURL).toString()
+          }
+          
+          // 避免重复添加
+          if (!news.some(item => item.url === href)) {
+            news.push({
+              id: href,
+              title,
+              url: href,
+            })
+          }
+        }
+      })
+    }
+    
+    // 限制返回的新闻数量，避免过多数据
+    return news.slice(0, 30)
+  },
+})
+```
+
+#### 2. 更新源配置
+
+在 `shared/pre-sources.ts` 文件中添加源的元数据配置：
+```typescript
+"eastmoney": {
+    name: "东方财富",
+    column: "finance",
+    color: "red",
+    type: "realtime",
+    title: "财经快讯",
+    home: "https://kuaixun.eastmoney.com",
+  },
+```
+
+#### 3. 生成源配置文件
+运行以下命令重新生成 `sources.json` 和相关文件：
+```sh
+pnpm presource
+```
+
+#### 4. 构建项目
+验证项目是否能正常构建：
+```sh
+pnpm build
+```
+
+#### 5. 部署
+根据需要选择部署方式（Cloudflare Pages、Docker 或本地开发）。
+
+### 部署与运行
+
+#### 环境变量
 
 **example.env.server**：
 ```env
@@ -594,9 +705,9 @@ INIT_TABLE=true
 ENABLE_CACHE=true
 ```
 
-### 2. 部署方式
+#### 部署方式
 
-#### 2.1 Cloudflare Pages（推荐）
+##### 2.1 Cloudflare Pages（推荐）
 ```sh
 # 1. 安装依赖
 pnpm install
@@ -608,12 +719,12 @@ pnpm run build
 pnpm run deploy
 ```
 
-#### 2.2 Docker 部署
+##### 2.2 Docker 部署
 ```sh
 docker compose up
 ```
 
-#### 2.3 本地开发
+##### 2.3 本地开发
 ```sh
 # 1. 安装依赖
 pnpm install

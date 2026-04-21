@@ -10,6 +10,7 @@ declare module 'glob:./sources/{*.ts,**/index.ts}' {
   export const coolapk: typeof import('./sources/coolapk/index')
   export const douban: typeof import('./sources/douban')
   export const douyin: typeof import('./sources/douyin')
+  export const eastmoney: typeof import('./sources/eastmoney')
   export const fastbull: typeof import('./sources/fastbull')
   export const freebuf: typeof import('./sources/freebuf')
   export const gelonghui: typeof import('./sources/gelonghui')
