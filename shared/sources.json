@@ -307,6 +307,88 @@
     "interval": 1800000,
     "title": "头条"
   },
+  "mysteel": {
+    "title": "钢铁快讯",
+    "name": "我的钢铁",
+    "type": "realtime",
+    "column": "finance",
+    "home": "https://www.mysteel.com",
+    "color": "blue",
+    "interval": 300000
+  },
+  "jiemian": {
+    "redirect": "jiemian-quick",
+    "name": "界面新闻",
+    "type": "realtime",
+    "column": "china",
+    "home": "https://www.jiemian.com",
+    "color": "blue",
+    "interval": 30000,
+    "title": "即时资讯"
+  },
+  "jiemian-quick": {
+    "name": "界面新闻",
+    "type": "realtime",
+    "column": "china",
+    "home": "https://www.jiemian.com",
+    "color": "blue",
+    "interval": 30000,
+    "title": "即时资讯"
+  },
+  "jiemian-todayhot": {
+    "name": "界面新闻",
+    "type": "realtime",
+    "column": "china",
+    "home": "https://www.jiemian.com",
+    "color": "blue",
+    "interval": 30000,
+    "title": "今日热点"
+  },
+  "jiemian-company": {
+    "name": "界面新闻",
+    "type": "realtime",
+    "column": "china",
+    "home": "https://www.jiemian.com",
+    "color": "blue",
+    "interval": 30000,
+    "title": "公司头条"
+  },
+  "jiemian-stock": {
+    "name": "界面新闻",
+    "type": "realtime",
+    "column": "china",
+    "home": "https://www.jiemian.com",
+    "color": "blue",
+    "interval": 30000,
+    "title": "股市前沿"
+  },
+  "jiemian-regulatory": {
+    "name": "界面新闻",
+    "type": "realtime",
+    "column": "china",
+    "home": "https://www.jiemian.com",
+    "color": "blue",
+    "interval": 30000,
+    "title": "监管通报"
+  },
+  "jiemian-finance": {
+    "name": "界面新闻",
+    "type": "realtime",
+    "column": "china",
+    "home": "https://www.jiemian.com",
+    "color": "blue",
+    "interval": 30000,
+    "title": "财经速览"
+  },
+  "jiemian-affairs": {
+    "name": "界面新闻",
+    "type": "realtime",
+    "column": "china",
+    "home": "https://www.jiemian.com",
+    "color": "blue",
+    "interval": 30000,
+    "title": "时事追踪"
+  },
   "solidot": {
     "name": "Solidot",
     "column": "tech",

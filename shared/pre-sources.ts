@@ -244,6 +244,61 @@ export const originSources = {
       },
     },
   },
+  "mysteel": {
+    name: "我的钢铁",
+    type: "realtime",
+    column: "finance",
+    home: "https://www.mysteel.com",
+    color: "blue",
+    interval: Time.Fast,
+    title: "钢铁快讯"
+  },
+  "jiemian": {
+    name: "界面新闻",
+    type: "realtime",
+    column: "china",
+    home: "https://www.jiemian.com",
+    color: "blue",
+    interval: Time.Realtime,
+    title: "即时资讯",
+    sub: {
+      quick: {
+        title: "即时资讯",
+        type: "realtime",
+        interval: Time.Realtime,
+      },
+      todayhot: {
+        title: "今日热点",
+        type: "realtime",
+        interval: Time.Realtime,
+      },
+      company: {
+        title: "公司头条",
+        type: "realtime",
+        interval: Time.Realtime,
+      },
+      stock: {
+        title: "股市前沿",
+        type: "realtime",
+        interval: Time.Realtime,
+      },
+      regulatory: {
+        title: "监管通报",
+        type: "realtime",
+        interval: Time.Realtime,
+      },
+      finance: {
+        title: "财经速览",
+        type: "realtime",
+        interval: Time.Realtime,
+      },
+      affairs: {
+        title: "时事追踪",
+        type: "realtime",
+        interval: Time.Realtime,
+      },
+    },
+  },
   "solidot": {
     name: "Solidot",
     color: "teal",

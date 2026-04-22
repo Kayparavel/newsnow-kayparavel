@@ -825,9 +825,436 @@ return results.slice(0, 30)
 - 避免频繁请求 API
 - 实现缓存机制
 
+## 我的钢铁（Mysteel）快讯源开发
+
+### 1. 背景分析
+我的钢铁网（Mysteel）是中国领先的钢铁行业信息服务平台，提供钢铁市场动态、价格走势、行业分析等实时资讯。我们需要实现一个自定义源来获取其快讯板块的内容。
+
+### 2. API接口发现与测试
+通过网络分析发现我的钢铁的快讯API接口：
+```
+https://openapi.mysteel.com/without_sign/newsflash/flashnews/query_by_tags.htm
+```
+该接口返回JSON格式数据，包含完整的新闻列表。
+
+### 3. 实现步骤
+
+#### 3.1 创建源解析器
+在 `server/sources/` 目录下创建新的源解析器文件 `mysteel.ts`：
+
+```typescript
+import type { NewsItem } from "@shared/types"
+
+interface MySteelNewsItem {
+  id: number
+  categoryId: number
+  sectionId: number
+  content: string
+  relationBreedId: string
+  relationBreed: { name: string; id: string }[]
+  relationCityId: string
+  relationCity: any[]
+  relationFactoryId: string
+  relationFactory: { name: string; id: number }[]
+  relationPortId: string
+  relationPort: { name: string; id: number }[]
+  inArticleTitle: string
+  inArticleUrl: string
+  outArticleTitle: string
+  outArticleUrl: string
+  source: string
+  imageUrl: any[]
+  publisherTime: number
+  dataSource: number
+  relationId: number
+  inArticleAid: number
+  outArticleAid: number
+  shareImageUrl: string
+  wapRestrict: boolean
+  wapResidualWords: string | null
+  sectionName: string
+  categoryName: string
+  voiceUrl: string
+  readingCount: any
+  advertisementFlag: number
+  breedTags: string[]
+  breedTagIdNames: { name: string; id: string }[]
+  publisherId: number
+  relationActivityId: number
+  aiFlag: number
+}
+
+interface MySteelResponse {
+  pageNo: number
+  pageSize: number
+  total: number
+  totalPage: number
+  isValid: boolean
+  list: MySteelNewsItem[]
+}
+
+export default defineSource({
+  "mysteel": async () => {
+    // 使用我的钢铁的API接口获取快讯数据
+    const apiUrl = "https://openapi.mysteel.com/without_sign/newsflash/flashnews/query_by_tags.htm"
+    
+    // 直接使用项目提供的 myFetch 函数
+    const res: MySteelResponse = await myFetch(apiUrl)
+    
+    // 检查接口返回是否成功
+    if (res.isValid && res.list) {
+      return res.list.map((item) => {
+        // 转换日期格式 (timestamp 到 Date)
+        const pubDate = item.publisherTime
+        
+        return {
+          id: item.id.toString(),
+          title: item.content, // 内容作为标题
+          url: item.inArticleUrl || item.outArticleUrl, // 优先使用内文链接，否则使用外文链接
+          pubDate,
+          extra: {
+            date: pubDate, // 发布时间
+            info: item.breedTags.join(", "), // 品种标签
+          },
+        }
+      }).slice(0, 30)
+    }
+    
+    // 如果API失败，返回空数组
+    return []
+  },
+})
+```
+
+#### 3.2 更新源配置
+在 `shared/pre-sources.ts` 文件中添加我的钢铁源的配置：
+
+```typescript
+  "mysteel": {
+    name: "我的钢铁",
+    type: "realtime",
+    column: "finance",
+    home: "https://www.mysteel.com",
+    color: "blue",
+    interval: Time.Fast,
+    title: "钢铁快讯"
+  },
+```
+
+#### 3.3 生成配置文件
+运行以下命令重新生成 `sources.json` 和 `pinyin.json`：
+```bash
+pnpm presource
+```
+
+### 4. 功能特点
+- 实时获取钢铁行业快讯
+- 显示新闻内容和发布时间
+- 标签化显示相关品种信息（如螺纹钢、盘螺、线材等）
+- 支持响应式设计，适配不同屏幕尺寸
+- 集成到金融分类页面
+
+### 5. 验证功能
+启动开发服务器并测试源是否正常工作：
+```bash
+pnpm dev
+```
+
+在浏览器中访问 `http://localhost:5173` 验证功能，或直接测试 API 接口：
+```bash
+# 测试 API 接口
+curl -X GET "http://localhost:5173/api/s?id=mysteel&latest=true" \
+  -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+```
+
+成功返回的响应示例：
+```json
+{
+  "status": "success",
+  "id": "mysteel",
+  "updatedTime": 1776740000000,
+  "items": [
+    {
+      "id": "4556557",
+      "title": "4月21日宝武新钢发布南昌市场定价:螺纹3070元/吨，线材3360元/吨，盘螺3360元/吨。",
+      "url": "",
+      "pubDate": 1776783302810,
+      "extra": {
+        "date": 1776783302810,
+        "info": "螺纹钢,盘螺,线材"
+      }
+    }
+  ]
+}
+```
+
+## 界面新闻（Jiemian）快讯源开发
+
+### 1. 背景分析
+界面新闻（Jiemian）是中国领先的财经资讯平台，提供实时财经新闻和市场动态。我们需要实现一个自定义源来获取其快讯板块的内容。
+
+### 2. API接口发现与测试
+通过网络分析发现界面新闻的快讯API接口：
+```
+https://papi.jiemian.com/page/api/kuaixun/getlistmore?cid=1323kb&start_time=1776789031&page=1&tagid=1323
+```
+该接口返回JSON格式数据，包含完整的新闻列表。需要注意的是，`start_time` 参数需要使用当前Unix时间戳（秒）。
+
+### 3. 实现步骤
+
+#### 3.1 创建源解析器
+在 `server/sources/` 目录下创建新的源解析器文件 `jiemian.ts`：
+
+```typescript
+import type { NewsItem } from "@shared/types"
+
+interface JiemianNewsItem {
+  id: string
+  publishtime: string
+  title: string
+  summary: string
+  weights: string
+  h5_href: string
+  is_original: string
+  is_make_img: string
+  img_urls: any[]
+  edit_cms: number
+  blackwhite: string
+}
+
+interface JiemianResponse {
+  code: string
+  message: string
+  user_status: {
+    status: number
+    title: string
+    content: string
+  }
+  result: {
+    hideBtn: boolean
+    list: JiemianNewsItem[]
+  }
+}
+
+export default defineSource({
+  "jiemian": async () => {
+    // 使用界面新闻的API接口获取快讯数据
+    const timestamp = Math.floor(Date.now() / 1000) // 当前Unix时间戳（秒）
+    const apiUrl = `https://papi.jiemian.com/page/api/kuaixun/getlistmore?cid=1323kb&start_time=${timestamp}&page=1&tagid=1323`
+    
+    // 直接使用项目提供的 myFetch 函数
+    const res: JiemianResponse = await myFetch(apiUrl)
+    
+    // 检查接口返回是否成功
+    if (res.code === "0" && res.result?.list) {
+      return res.result.list.map((item) => {
+        // 转换日期格式 (string to timestamp)
+        const pubDate = parseInt(item.publishtime) * 1000 // 转换为毫秒
+        
+        return {
+          id: item.id,
+          title: item.title,
+          url: `https://www.jiemian.com/article/${item.id}.html`, // 使用id构建文章链接
+          pubDate,
+          extra: {
+            hover: item.summary, // 摘要信息
+            date: pubDate, // 发布时间
+          },
+        }
+      }).slice(0, 30)
+    }
+    
+    // 如果API失败，返回空数组
+    return []
+  },
+})
+```
+
+#### 3.2 更新源配置
+在 `shared/pre-sources.ts` 文件中添加界面新闻源的配置：
+
+```typescript
+  "jiemian": {
+    name: "界面新闻",
+    type: "realtime",
+    column: "china",
+    home: "https://www.jiemian.com",
+    color: "blue",
+    interval: Time.Realtime,
+    title: "即时资讯"
+  },
+```
+
+#### 3.3 生成配置文件
+运行以下命令重新生成 `sources.json` 和 `pinyin.json`：
+```bash
+pnpm presource
+```
+
+### 4. 功能特点
+- 实时获取财经类快讯
+- 显示新闻标题和摘要信息
+- 支持响应式设计，适配不同屏幕尺寸
+- 集成到中国分类页面
+- 使用高频刷新间隔（每30秒）
+
+### 5. 新增板块功能
+除了默认的即时资讯板块，我们还为界面新闻添加了以下六个子板块：
+
+#### 5.1 今日热点 (jiemian-todayhot)
+- 接口：`https://papi.jiemian.com/page/api/kuaixun/getlistmore?cid=1324kb&start_time={timestamp}&page=1&tagid=1324`
+- 内容：每日热点新闻
+- 更新频率：实时
+
+#### 5.2 公司头条 (jiemian-company)
+- 接口：`https://papi.jiemian.com/page/api/kuaixun/getlistmore?cid=1322kb&start_time={timestamp}&page=1&tagid=1322`
+- 内容：公司相关新闻
+- 更新频率：实时
+
+#### 5.3 股市前沿 (jiemian-stock)
+- 接口：`https://papi.jiemian.com/page/api/kuaixun/getlistmore?cid=1327kb&start_time={timestamp}&page=1&tagid=1327`
+- 内容：股票市场新闻
+- 更新频率：实时
+
+#### 5.4 监管通报 (jiemian-regulatory)
+- 接口：`https://papi.jiemian.com/page/api/kuaixun/getlistmore?cid=1330kb&start_time={timestamp}&page=1&tagid=1330`
+- 内容：监管部门通报
+- 更新频率：实时
+
+#### 5.5 财经速览 (jiemian-finance)
+- 接口：`https://papi.jiemian.com/page/api/kuaixun/getlistmore?cid=1326kb&start_time={timestamp}&page=1&tagid=1326`
+- 内容：财经新闻速览
+- 更新频率：实时
+
+#### 5.6 时事追踪 (jiemian-affairs)
+- 接口：`https://papi.jiemian.com/page/api/kuaixun/getlistmore?cid=1325kb&start_time={timestamp}&page=1&tagid=1325`
+- 内容：时事新闻追踪
+- 更新频率：实时
+
+### 6. 实现方式
+我们将所有板块的实现放在了同一个 `jiemian.ts` 文件中，采用了与 `wallstreetcn.ts` 类似的架构：
+
+```typescript
+// 通用的界面新闻获取函数
+const fetchJiemianNews = async (cid: string, tagid: string): Promise<NewsItem[]> => {
+  const timestamp = Math.floor(Date.now() / 1000) // 当前Unix时间戳（秒）
+  const apiUrl = `https://papi.jiemian.com/page/api/kuaixun/getlistmore?cid=${cid}&start_time=${timestamp}&page=1&tagid=${tagid}`
+  
+  const res: JiemianResponse = await myFetch(apiUrl)
+  
+  if (res.code === "0" && res.result?.list) {
+    return res.result.list.map((item) => {
+      const pubDate = parseInt(item.publishtime) * 1000
+      
+      return {
+        id: item.id,
+        title: item.title,
+        url: `https://www.jiemian.com/article/${item.id}.html`, // 使用id构建文章链接
+        pubDate,
+        extra: {
+          hover: item.summary,
+          date: pubDate,
+        },
+      }
+    }).slice(0, 30)
+  }
+  
+  return []
+}
+
+// 各个板块的定义
+const todayHot = defineSource(async () => {
+  return await fetchJiemianNews("1324kb", "1324")
+})
+```
+
+### 7. 验证功能
+启动开发服务器并测试源是否正常工作：
+```bash
+pnpm dev
+```
+
+在浏览器中访问 `http://localhost:5173` 验证功能，或直接测试 API 接口：
+```bash
+# 测试 API 接口（以今日热点为例）
+curl -X GET "http://localhost:5173/api/s?id=jiemian-todayhot&latest=true" \
+  -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+```
+
+成功返回的响应示例：
+```json
+{
+  "status": "success",
+  "id": "jiemian-todayhot",
+  "updatedTime": 1776792000000,
+  "items": [
+    {
+      "id": "14287887",
+      "title": "美军称对一艘“伊朗油轮”进行检查",
+      "url": "https://www.jiemian.com/article/14287887.html",
+      "pubDate": 1776787243000,
+      "extra": {
+        "hover": "美国国防部4月21日在社交媒体发布消息称，美海军20日晚登上一艘“伊朗油轮”并检查。卫星跟踪数据显示，该油轮当时位于霍尔木兹海峡和阿拉伯海之间。消息称，这艘名为“苏莱曼尼”号的油轮“无国籍且受制裁”，美海军对该油轮实施了海上拦截并登船检查，全程未出现任何意外。消息还称，美海军将在“全球范围内开展海上执法行动”，拦截向伊朗“提供物资支持”的受制裁船只。据悉，该油轮“因运输伊朗原油”而遭到美国财政部制裁。",
+        "date": 1776787243000
+      }
+    }
+  ]
+}
+```
+
 ### 常见问题与解决方案
 
-#### 1. 编码问题
+#### 1. 东财源刷新间隔限制问题
+**问题**：项目启动后第一次点击刷新按钮时正常刷新，但之后就没反应。
+**原因**：服务器端 API 路由中的刷新间隔限制。在 `server/api/s/index.ts` 文件中，有以下限制逻辑：
+
+```typescript
+// interval 刷新间隔，对于缓存失效也要执行的。本质上表示本来内容更新就很慢，这个间隔内可能内容压根不会更新。
+if (now - cache.updated < sources[id].interval) {
+  return {
+    status: "success",
+    id,
+    updatedTime: now,
+    items: cache.items,
+  }
+}
+```
+
+**解决方案**：调整源的刷新间隔设置。
+
+1. 在 `shared/pre-sources.ts` 中修改 Time 对象：
+```typescript
+const Time = {
+  Test: 1,
+  Realtime: 0.5 * 60 * 1000, // 从 2分钟 改为 0.5分钟（30秒）
+  Fast: 5 * 60 * 1000,
+  Default: Interval, // 10min
+  Common: 30 * 60 * 1000,
+  Slow: 60 * 60 * 1000,
+}
+```
+
+2. 为 EastMoney 源设置正确的刷新间隔：
+```typescript
+"eastmoney": {
+  name: "东方财富",
+  column: "finance",
+  color: "red",
+  type: "realtime",
+  title: "财经快讯",
+  interval: Time.Realtime, // 使用更短的刷新间隔
+  home: "https://kuaixun.eastmoney.com",
+},
+```
+
+3. 重新生成 sources.json 文件：
+```bash
+pnpm run presource
+```
+
+**效果**：现在东财源的刷新间隔从默认的 10分钟 改为 30秒，用户可以更频繁地获取最新数据。
+
+#### 2. 编码问题
 **问题**：API 返回的中文内容显示乱码
 **解决**：使用 Buffer 进行编码转换
 ```typescript
