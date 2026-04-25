@@ -11,6 +11,12 @@ services:
       - JWT_SECRET=
       - INIT_TABLE=true
       - ENABLE_CACHE=true
+      # 启用 Node.js 内置代理支持
+      - NODE_USE_ENV_PROXY=1
+      # 代理配置（取消注释并修改为您的代理地址）
+      - HTTP_PROXY=http://115.159.101.139:7890
+      - HTTPS_PROXY=http://115.159.101.139:7890
+      - PROXY=http://115.159.101.139:7890
 
 volumes:
   newsnow_data:
