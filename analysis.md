@@ -1566,6 +1566,89 @@ volumes:
 - 支持本地开发环境和 Docker 部署环境
 - 不需要添加新的依赖，undici 已经是项目的依赖之一
 
+### 9. 云服务器部署注意事项
+
+#### 9.1 使用预构建的 Docker 镜像
+
+镜像已上传到 Docker Hub，以后部署可以直接拉取：
+```
+kayparavel/newsnow-kayparavel:latest
+```
+
+这样就不需要在云服务器上重新构建项目了，只需要配置 docker-compose.yml 即可。
+
+#### 9.2 端口映射问题
+
+云服务器通常会禁止开放过于靠前的端口（如 80、443），建议使用较高的端口号。推荐的端口映射配置：
+```yaml
+ports:
+  - "14444:4444"  # 使用 14444 端口映射到容器内的 4444 端口
+```
+
+#### 9.3 Docker Hub 访问限制（国内云服务商）
+
+在国内云服务商部署时，可能会遇到 Docker Hub 访问限制问题：
+
+**问题**：拉取 Docker Hub 镜像时速度很慢或失败
+
+**解决方案**：
+1. **给 Docker 配置代理**（推荐）：在 Docker 配置中设置代理，确保 Docker 能正常访问 Docker Hub
+2. **镜像源可能不好用**：国内的 Docker 镜像源（如阿里云、腾讯云）可能不是最新的，或者更新不及时，建议优先使用代理
+
+**Docker 代理配置方法**：
+在 Linux 系统中，创建或编辑 `/etc/systemd/system/docker.service.d/http-proxy.conf` 文件：
+```
+[Service]
+Environment="HTTP_PROXY=http://your-proxy-server:port"
+Environment="HTTPS_PROXY=http://your-proxy-server:port"
+Environment="NO_PROXY=localhost,127.0.0.1"
+```
+
+然后重启 Docker 服务：
+```bash
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+```
+
+#### 9.4 完整的云服务器 docker-compose.yml 示例
+
+```yaml
+services:
+  newsnow:
+    image: kayparavel/newsnow-kayparavel:latest  # 使用预构建的镜像
+    container_name: newsnow
+    ports:
+      - "14444:4444"  # 使用较高的端口号
+    volumes:
+      - newsnow_data:/usr/app/.data
+    environment:
+      - G_CLIENT_ID=your_github_client_id
+      - G_CLIENT_SECRET=your_github_client_secret
+      - JWT_SECRET=your_jwt_secret
+      - INIT_TABLE=true
+      - ENABLE_CACHE=true
+      - HTTP_PROXY=http://your-proxy-server:port
+      - HTTPS_PROXY=http://your-proxy-server:port
+      - PROXY=http://your-proxy-server:port
+    restart: always
+
+volumes:
+  newsnow_data:
+    name: newsnow_data
+```
+
+部署命令：
+```bash
+# 拉取镜像并启动
+docker compose up -d
+
+# 查看日志
+docker compose logs -f
+
+# 停止容器
+docker compose down
+```
+
 ## 核心特性（续）
 
 3. **个性化功能**：支持用户登录、数据同步、聚焦源管理
