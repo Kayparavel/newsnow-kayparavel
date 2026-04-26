@@ -29,16 +29,16 @@ interface JiemianResponse {
 }
 
 // 通用的界面新闻获取函数
-const fetchJiemianNews = async (cid: string, tagid: string): Promise<NewsItem[]> => {
-  const timestamp = Math.floor(Date.now() / 1000) // 当前Unix时间戳（秒）
+async function fetchJiemianNews(cid: string, tagid: string): Promise<NewsItem[]> {
+  const timestamp = Math.floor(Date.now() / 1000) - 5 // 当前Unix时间戳减5秒（秒）
   const apiUrl = `https://papi.jiemian.com/page/api/kuaixun/getlistmore?cid=${cid}&start_time=${timestamp}&page=1&tagid=${tagid}`
-  
+
   const res: JiemianResponse = await myFetch(apiUrl)
-  
+
   if (res.code === "0" && res.result?.list) {
     return res.result.list.map((item) => {
-      const pubDate = parseInt(item.publishtime) * 1000
-      
+      const pubDate = Number.parseInt(item.publishtime) * 1000
+
       return {
         id: item.id,
         title: item.title,
@@ -51,7 +51,7 @@ const fetchJiemianNews = async (cid: string, tagid: string): Promise<NewsItem[]>
       }
     }).slice(0, 30)
   }
-  
+
   return []
 }
 
