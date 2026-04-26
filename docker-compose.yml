@@ -1,9 +1,9 @@
 services:
   newsnow:
-    image: ghcr.io/ourongxing/newsnow:latest
+    image: kayparavel/newsnow-kayparavel:latest
     container_name: newsnow
     ports:
-      - '4444:4444'
+      - '14444:4444'
     volumes:
       - newsnow_data:/usr/app/.data
     environment:
@@ -16,6 +16,12 @@ services:
       - INIT_TABLE=true
       - ENABLE_CACHE=true
       - PRODUCTHUNT_API_TOKEN=
+      # 启用 Node.js 内置代理支持
+      - NODE_USE_ENV_PROXY=1
+      # 代理配置（取消注释并修改为您的代理地址）
+      - HTTP_PROXY=http://115.159.101.139:7890
+      - HTTPS_PROXY=http://115.159.101.139:7890
+      - PROXY=http://115.159.101.139:7890
 
 volumes:
   newsnow_data:
