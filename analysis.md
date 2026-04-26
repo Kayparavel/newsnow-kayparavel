@@ -1408,6 +1408,166 @@ pnpm run dev
 
 1. **实时新闻抓取**：根据源更新频率动态调整抓取间隔（最快 2 分钟）
 2. **智能缓存**：默认 30 分钟缓存，登录用户可强制刷新
+
+## 代理功能实现
+
+### 1. 问题背景
+
+项目在 Docker 容器中部署时，需要访问一些受限制的网站（如 Hacker News、ProductHunt 等），因此需要配置代理。最初在 Dockerfile 中设置了 `NODE_USE_ENV_PROXY=1` 和代理环境变量，但在 Node.js 20.12.2 版本中，`NODE_USE_ENV_PROXY` 环境变量并不支持 fetch 代理（该功能是在 Node.js 22.21.0 或 24.0.0+ 中才引入的），导致 Docker 容器中的代理不生效。
+
+### 2. 解决方案
+
+我们对 `server/utils/fetch.ts` 文件进行了修改，使用 `undici` 库的 `ProxyAgent` 或 `EnvHttpProxyAgent` 来实现代理功能。
+
+#### 2.1 完整实现代码
+
+```typescript
+import process from "node:process"
+import { $fetch } from "ofetch"
+
+// 尝试从环境变量获取代理配置
+const httpProxy = process.env.HTTP_PROXY || process.env.http_proxy || process.env.PROXY || process.env.proxy
+const httpsProxy = process.env.HTTPS_PROXY || process.env.https_proxy || process.env.PROXY || process.env.proxy
+
+// 存储 dispatcher（延迟初始化）
+let dispatcher: any = null
+
+// 初始化 dispatcher（只执行一次）
+let dispatcherInitialized = false
+async function initDispatcher() {
+  if (dispatcherInitialized) return
+  dispatcherInitialized = true
+
+  if (!httpProxy && !httpsProxy) return
+
+  try {
+    // 动态导入 undici
+    const undici = await import("undici")
+
+    // 优先尝试 EnvHttpProxyAgent（自动读取环境变量）
+    if ("EnvHttpProxyAgent" in undici) {
+      dispatcher = new undici.EnvHttpProxyAgent()
+      console.log("[proxy] 使用 EnvHttpProxyAgent 配置代理")
+    } else if ("ProxyAgent" in undici) {
+      // 否则使用 ProxyAgent，优先使用 HTTPS_PROXY
+      const proxyUrl = httpsProxy || httpProxy
+      if (proxyUrl) {
+        dispatcher = new undici.ProxyAgent(proxyUrl)
+        console.log(`[proxy] 使用 ProxyAgent 配置代理: ${proxyUrl}`)
+      }
+    }
+  } catch (e) {
+    console.warn("[proxy] 无法加载 undici，代理配置可能不生效:", e)
+  }
+}
+
+export const myFetch = $fetch.create({
+  headers: {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",
+  },
+  timeout: 10000,
+  retry: 3,
+  async onRequest({ options }) {
+    // 在每次请求前确保 dispatcher 已初始化
+    await initDispatcher()
+    if (dispatcher) {
+      options.dispatcher = dispatcher
+    }
+  },
+})
+```
+
+### 3. 关键实现要点
+
+#### 3.1 环境变量读取
+
+支持多种环境变量格式（大写和小写）：
+- `HTTP_PROXY` 或 `http_proxy`
+- `HTTPS_PROXY` 或 `https_proxy`
+- `PROXY` 或 `proxy`
+
+#### 3.2 延迟初始化
+
+- 代理 dispatcher 只在第一次请求时初始化
+- 使用 `dispatcherInitialized` 标志确保只初始化一次
+- 避免在不需要代理时加载 undici 库
+
+#### 3.3 动态导入
+
+使用 `await import("undici")` 动态导入 undici 库，避免在不需要代理的环境中加载不必要的依赖。
+
+#### 3.4 优先使用 EnvHttpProxyAgent
+
+优先使用 `undici.EnvHttpProxyAgent`，它会自动读取环境变量中的代理配置，简化配置。
+
+如果 `EnvHttpProxyAgent` 不可用，则回退到 `undici.ProxyAgent`，手动配置代理 URL。
+
+#### 3.5 与 ofetch 集成
+
+在 `myFetch.create` 的 `onRequest` 钩子中，在每次请求前确保 dispatcher 已初始化，并将其配置到请求的 `options.dispatcher` 中。
+
+### 4. Dockerfile 修改
+
+为了保持镜像的纯净，删除了 Dockerfile 中硬编码的代理环境变量：
+
+```dockerfile
+# 删除了以下内容：
+# ENV NODE_USE_ENV_PROXY=1
+# ENV HTTP_PROXY=http://115.159.101.139:7890
+# ENV HTTPS_PROXY=http://115.159.101.139:7890
+# ENV PROXY=http://115.159.101.139:7890
+```
+
+现在代理完全通过运行时环境变量配置，镜像本身不包含任何代理信息。
+
+### 5. docker-compose.yml 配置示例
+
+在 docker-compose.yml 中配置代理环境变量：
+
+```yaml
+services:
+  newsnow:
+    image: your-image-name:latest
+    ports:
+      - "14444:4444"
+    volumes:
+      - newsnow_data:/usr/app/.data
+    environment:
+      - G_CLIENT_ID=
+      - G_CLIENT_SECRET=
+      - JWT_SECRET=
+      - INIT_TABLE=true
+      - ENABLE_CACHE=true
+      - HTTP_PROXY=http://your-proxy-server:port
+      - HTTPS_PROXY=http://your-proxy-server:port
+      - PROXY=http://your-proxy-server:port
+
+volumes:
+  newsnow_data:
+    name: newsnow_data
+```
+
+### 6. ESLint 修复
+
+在修改 fetch.ts 时遇到了 ESLint 报错：`Unexpected use of the global variable 'process'. Use 'require("process")' instead`。解决方法是在文件顶部添加 `import process from "node:process"`。
+
+### 7. 验证代理功能
+
+启动 Docker 容器后，查看日志中是否有以下输出：
+```
+[proxy] 使用 EnvHttpProxyAgent 配置代理
+```
+
+然后尝试访问需要代理的新闻源（如 Hacker News、ProductHunt 等），验证功能是否正常。
+
+### 8. 兼容性说明
+
+- 该实现完全向后兼容，在没有配置代理的环境中不会影响现有功能
+- 支持本地开发环境和 Docker 部署环境
+- 不需要添加新的依赖，undici 已经是项目的依赖之一
+
+## 核心特性（续）
+
 3. **个性化功能**：支持用户登录、数据同步、聚焦源管理
 4. **优雅界面**：响应式设计，支持深色模式，无干扰阅读体验
 5. **MCP 支持**：可作为 MCP 服务器集成到其他应用中
@@ -1426,3 +1586,4 @@ pnpm run dev
 3. **类型安全**：全面使用 TypeScript，类型定义详细
 4. **高性能**：使用 React 19、Vite 等现代工具链
 5. **可扩展性**：模块化架构，易于添加新的新闻源
+
