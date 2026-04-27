@@ -54,6 +54,7 @@ export const CardWrapper = forwardRef<HTMLElement, ItemsProps>(({ id, isDragging
 
 function NewsCard({ id, setHandleRef }: NewsCardProps) {
   const { refresh } = useRefetch()
+  const { useProxy, isLoading: isLoadingProxy, isPending, toggleProxy } = useProxyConfig(id)
   const { data, isFetching, isError } = useQuery({
     queryKey: ["source", id],
     queryFn: async ({ queryKey }) => {
@@ -102,10 +103,10 @@ function NewsCard({ id, setHandleRef }: NewsCardProps) {
     refetchOnReconnect: false,
     refetchOnWindowFocus: false,
     retry: false,
+    enabled: !isLoadingProxy && useProxy !== undefined,
   })
 
   const { isFocused, toggleFocus } = useFocusWith(id)
-  const { useProxy, isLoading, toggleProxy } = useProxyConfig(id)
   const toast = useToast()
 
   const handleProxyToggle = useCallback(() => {
@@ -143,13 +144,15 @@ function NewsCard({ id, setHandleRef }: NewsCardProps) {
           </span>
         </div>
         <div className={$("flex gap-2 text-lg", `color-${sources[id].color}`)}>
-          <button
-            type="button"
-            disabled={isLoading}
-            className={$("btn", isLoading ? "i-ph:key-dashed animate-pulse" : useProxy ? "i-ph:key-fill" : "i-ph:key-duotone")}
-            onClick={handleProxyToggle}
-            title={useProxy ? "当前使用代理访问" : "当前直连访问"}
-          />
+          {!isLoadingProxy && useProxy !== undefined && (
+            <button
+              type="button"
+              disabled={isPending}
+              className={$("btn", isPending ? "i-ph:airplane-tilt-duotone animate-pulse" : useProxy ? "i-ph:airplane-tilt-fill" : "i-ph:airplane-tilt-duotone")}
+              onClick={handleProxyToggle}
+              title={useProxy ? "当前使用代理访问" : "当前直连访问"}
+            />
+          )}
           <button
             type="button"
             className={$("btn i-ph:arrow-counter-clockwise-duotone", isFetching && "animate-spin i-ph:circle-dashed-duotone")}

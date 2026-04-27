@@ -60,7 +60,8 @@ export function useProxyConfig(id: SourceID) {
 
   return {
     useProxy: useProxy ?? false,
-    isLoading: isLoadingConfig || isPending,
+    isLoading: isLoadingConfig,
+    isPending,
     isError,
     toggleProxy,
     setProxy,
