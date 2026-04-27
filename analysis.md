@@ -785,6 +785,155 @@ export default defineEventHandler(async (event): Promise<SourceResponse> => {
 })
 ```
 
+#### 7.5 前端 UI 实现
+
+用户可以在每个新闻源卡片右上角直观地切换代理状态。
+
+##### 7.5.1 自定义 Hook (src/hooks/useProxy.ts)
+
+使用 React Query 管理代理配置状态，提供乐观更新和错误回滚功能：
+
+```typescript
+import type { SourceID } from "@shared/types"
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query"
+import { myFetch } from "~/utils"
+
+export function useProxyConfig(id: SourceID) {
+  const queryClient = useQueryClient()
+
+  // 获取代理配置
+  const { data: useProxy, isLoading: isLoadingConfig } = useQuery({
+    queryKey: ["proxy", id],
+    queryFn: async () => {
+      const res = await myFetch("/source-proxy", {
+        query: { id },
+      })
+      return res.useProxy ?? false
+    },
+    staleTime: Infinity,
+  })
+
+  // 更新代理配置
+  const { mutate: _setProxy, isPending, isError } = useMutation({
+    mutationFn: async (newValue: boolean) => {
+      await myFetch("/source-proxy", {
+        method: "POST",
+        body: { id, useProxy: newValue },
+        timeout: 1000,  // 1秒超时，快速反馈
+      })
+      return newValue
+    },
+    onMutate: async (newValue) => {
+      // 乐观更新：先更新 UI
+      await queryClient.cancelQueries({ queryKey: ["proxy", id] })
+      const previousValue = queryClient.getQueryData(["proxy", id])
+      queryClient.setQueryData(["proxy", id], newValue)
+      return { previousValue }
+    },
+    onError: (_err, _newValue, context) => {
+      // 失败回滚
+      if (context?.previousValue !== undefined) {
+        queryClient.setQueryData(["proxy", id], context.previousValue)
+      }
+    },
+    onSettled: () => {
+      queryClient.invalidateQueries({ queryKey: ["proxy", id] })
+    },
+  })
+
+  const setProxy = useCallback(
+    (newValue: boolean, options?: { onError?: () => void }) => {
+      _setProxy(newValue, {
+        onError: options?.onError,
+      })
+    },
+    [_setProxy],
+  )
+
+  const toggleProxy = useCallback(
+    (options?: { onError?: () => void }) => {
+      if (isPending) return
+      setProxy(!useProxy, options)
+    },
+    [isPending, setProxy, useProxy],
+  )
+
+  return {
+    useProxy: useProxy ?? false,
+    isLoading: isLoadingConfig,
+    isPending,
+    isError,
+    toggleProxy,
+    setProxy,
+  }
+}
+```
+
+##### 7.5.2 新闻卡片集成 (src/components/column/card.tsx)
+
+在新闻源卡片右上角添加代理按钮，按钮位置顺序为：`[代理按钮] → [刷新按钮] → [关注按钮]`。
+
+**加载优先级：**
+1. 卡片进入可视区后，优先加载代理配置
+2. 代理按钮在配置加载完前隐藏，避免误导用户
+3. 代理配置加载完后，再开始请求新闻源数据
+
+```typescript
+function NewsCard({ id, setHandleRef }: NewsCardProps) {
+  const { refresh } = useRefetch()
+  // 先获取代理配置（优先加载）
+  const { useProxy, isLoading: isLoadingProxy, isPending, toggleProxy } = useProxyConfig(id)
+  const toast = useToast()
+
+  // 新闻源数据请求，等代理配置加载完才执行
+  const { data, isFetching, isError } = useQuery({
+    queryKey: ["source", id],
+    queryFn: async () => { /* ...原有逻辑... */ },
+    placeholderData: prev => prev,
+    staleTime: Infinity,
+    refetchOnMount: false,
+    refetchOnReconnect: false,
+    refetchOnWindowFocus: false,
+    retry: false,
+    enabled: !isLoadingProxy && useProxy !== undefined,  // 代理配置加载完才启用
+  })
+
+  const handleProxyToggle = useCallback(() => {
+    toggleProxy({
+      onError: () => {
+        toast("代理flag设置失败,请稍后重试", { type: "error" })
+      },
+    })
+  }, [toggleProxy, toast])
+
+  return (
+    <div>
+      <div className="buttons">
+        {/* 代理按钮：等配置加载完才显示 */}
+        {!isLoadingProxy && useProxy !== undefined && (
+          <button
+            type="button"
+            disabled={isPending}
+            className={$("btn", isPending ? "i-ph:paper-plane-tilt-duotone animate-pulse" : useProxy ? "i-ph:paper-plane-tilt-fill" : "i-ph:paper-plane-tilt-duotone")}
+            onClick={handleProxyToggle}
+            title={useProxy ? "当前使用代理访问" : "当前直连访问"}
+          />
+        )}
+        {/* 刷新按钮和关注按钮 */}
+        <button />
+        <button />
+      </div>
+    </div>
+  )
+}
+```
+
+**按钮图标说明：**
+- ✈️ **useProxy=true（代理）**：`i-ph:paper-plane-tilt-fill`（实心纸飞机）
+- 🟢 **useProxy=false（直连）**：`i-ph:paper-plane-tilt-duotone`（空心纸飞机）
+- ⏳ **加载中**：`i-ph:paper-plane-tilt-duotone animate-pulse`（脉冲动画）
+- 配置加载完成前：按钮隐藏，避免误导
+
 ### 8. 数据库支持
 
 #### 8.1 支持的数据库

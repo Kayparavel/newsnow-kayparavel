@@ -148,7 +148,7 @@ function NewsCard({ id, setHandleRef }: NewsCardProps) {
             <button
               type="button"
               disabled={isPending}
-              className={$("btn", isPending ? "i-ph:airplane-tilt-duotone animate-pulse" : useProxy ? "i-ph:airplane-tilt-fill" : "i-ph:airplane-tilt-duotone")}
+              className={$("btn", isPending ? "i-ph:paper-plane-tilt-duotone animate-pulse" : useProxy ? "i-ph:paper-plane-tilt-fill" : "i-ph:paper-plane-tilt-duotone")}
               onClick={handleProxyToggle}
               title={useProxy ? "当前使用代理访问" : "当前直连访问"}
             />
