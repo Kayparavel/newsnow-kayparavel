@@ -5,6 +5,8 @@ import { useWindowSize } from "react-use"
 import { forwardRef, useImperativeHandle } from "react"
 import { OverlayScrollbar } from "../common/overlay-scrollbar"
 import { safeParseString } from "~/utils"
+import { useProxyConfig } from "~/hooks/useProxy"
+import { useToast } from "~/hooks/useToast"
 
 export interface ItemsProps extends React.HTMLAttributes<HTMLDivElement> {
   id: SourceID
@@ -103,6 +105,16 @@ function NewsCard({ id, setHandleRef }: NewsCardProps) {
   })
 
   const { isFocused, toggleFocus } = useFocusWith(id)
+  const { useProxy, isLoading, toggleProxy } = useProxyConfig(id)
+  const toast = useToast()
+
+  const handleProxyToggle = useCallback(() => {
+    toggleProxy({
+      onError: () => {
+        toast("代理flag设置失败,请稍后重试", { type: "error" })
+      },
+    })
+  }, [toggleProxy, toast])
 
   return (
     <>
@@ -131,6 +143,13 @@ function NewsCard({ id, setHandleRef }: NewsCardProps) {
           </span>
         </div>
         <div className={$("flex gap-2 text-lg", `color-${sources[id].color}`)}>
+          <button
+            type="button"
+            disabled={isLoading}
+            className={$("btn", isLoading ? "i-ph:key-dashed animate-pulse" : useProxy ? "i-ph:key-fill" : "i-ph:key-duotone")}
+            onClick={handleProxyToggle}
+            title={useProxy ? "当前使用代理访问" : "当前直连访问"}
+          />
           <button
             type="button"
             className={$("btn i-ph:arrow-counter-clockwise-duotone", isFetching && "animate-spin i-ph:circle-dashed-duotone")}
