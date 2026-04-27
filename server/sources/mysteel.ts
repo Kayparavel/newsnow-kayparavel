@@ -1,5 +1,3 @@
-import type { NewsItem } from "@shared/types"
-
 interface MySteelNewsItem {
   id: number
   categoryId: number

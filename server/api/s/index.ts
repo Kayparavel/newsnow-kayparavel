@@ -1,6 +1,7 @@
 import type { SourceID, SourceResponse } from "@shared/types"
 import { getters } from "#/getters"
 import { getCacheTable } from "#/database/cache"
+import { setCurrentFetch } from "#/utils/fetch"
 import type { CacheInfo } from "#/types"
 
 export default defineEventHandler(async (event): Promise<SourceResponse> => {
@@ -16,7 +17,14 @@ export default defineEventHandler(async (event): Promise<SourceResponse> => {
       if (isValid(id)) throw new Error("Invalid source id")
     }
 
+    // 获取该源的代理配置并设置上下文
     const cacheTable = await getCacheTable()
+    let useProxy = false
+    if (cacheTable) {
+      useProxy = await cacheTable.getUseProxy(id)
+    }
+    setCurrentFetch(useProxy)
+
     // Date.now() in Cloudflare Worker will not update throughout the entire runtime.
     const now = Date.now()
     let cache: CacheInfo | undefined

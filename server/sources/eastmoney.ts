@@ -1,5 +1,3 @@
-import type { NewsItem } from "@shared/types"
-
 interface FastNewsItem {
   code: string
   image: any[]

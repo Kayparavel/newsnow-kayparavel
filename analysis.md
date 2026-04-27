@@ -495,14 +495,304 @@ export const getters = (function () {
 })()
 ```
 
-### 7. 数据库支持
+### 7. 按新闻源配置代理功能
 
-#### 7.1 支持的数据库
+这个功能允许对每个新闻源单独配置是否使用代理访问，使用现有的缓存表存储配置。
+
+#### 7.1 缓存表扩展 (server/database/cache.ts)
+
+在原有的 `cache` 表中新增了 `useProxy` 列来存储每个源的代理配置：
+
+```typescript
+async init() {
+  await this.db.prepare(`
+    CREATE TABLE IF NOT EXISTS cache (
+      id TEXT PRIMARY KEY,
+      updated INTEGER,
+      data TEXT,
+      useProxy INTEGER DEFAULT 0
+    );
+  `).run()
+  logger.success(`init cache table`)
+}
+
+// 新增方法：获取单个源的代理配置
+async getUseProxy(id: string): Promise<boolean> {
+  const row = (await this.db.prepare(`SELECT useProxy FROM cache WHERE id = ?`).get(id)) as { useProxy: number } | undefined
+  // 如果没有记录或者 useProxy 为 NULL，默认返回 false
+  return row && row.useProxy === 1 ? true : false
+}
+
+// 新增方法：设置单个源的代理配置
+async setUseProxy(id: string, useProxy: boolean) {
+  // 先查询是否存在
+  const exists = await this.db.prepare(`SELECT id FROM cache WHERE id = ?`).get(id)
+
+  if (exists) {
+    // 存在，更新
+    await this.db.prepare(
+      `UPDATE cache SET useProxy = ? WHERE id = ?`,
+    ).run(useProxy ? 1 : 0, id)
+  } else {
+    // 不存在，插入新行
+    await this.db.prepare(
+      `INSERT INTO cache (id, useProxy) VALUES (?, ?)`,
+    ).run(id, useProxy ? 1 : 0)
+  }
+  logger.success(`set ${id} useProxy: ${useProxy}`)
+}
+
+// 新增方法：获取所有源的代理配置
+async getAllUseProxy(): Promise<Partial<Record<string, boolean>>> {
+  const res = await this.db.prepare(`SELECT id, useProxy FROM cache WHERE useProxy IS NOT NULL`).all() as any
+  const rows = (res.results ?? res) as { id: string; useProxy: number }[]
+  const result: Partial<Record<string, boolean>> = {}
+  rows.forEach(row => {
+    result[row.id] = row.useProxy === 1
+  })
+  return result
+}
+```
+
+同时，修改了原有的 `set` 方法，从 `INSERT OR REPLACE` 改为先检查后更新/插入，避免覆盖已有的 `useProxy` 配置：
+
+```typescript
+async set(id: string, value: NewsItem[]) {
+  const now = Date.now()
+  // 先查询是否存在
+  const exists = await this.db.prepare(`SELECT id FROM cache WHERE id = ?`).get(id)
+
+  if (exists) {
+    // 存在，更新，保留 useProxy
+    await this.db.prepare(
+      `UPDATE cache SET data = ?, updated = ? WHERE id = ?`,
+    ).run(JSON.stringify(value), now, id)
+  } else {
+    // 不存在，插入新行，useProxy 默认为 0
+    await this.db.prepare(
+      `INSERT INTO cache (id, data, updated, useProxy) VALUES (?, ?, ?, 0)`,
+    ).run(id, JSON.stringify(value), now)
+  }
+  logger.success(`set ${id} cache`)
+}
+```
+
+#### 7.2 代理配置 API (server/api/source-proxy/index.ts)
+
+新增 API 接口用于读取和设置源的代理配置：
+
+```typescript
+import type { SourceID } from "@shared/types"
+import { getCacheTable } from "#/database/cache"
+
+export default defineEventHandler(async (event) => {
+  try {
+    const cacheTable = await getCacheTable()
+    if (!cacheTable) {
+      throw createError({
+        statusCode: 500,
+        message: "Cache database not available",
+      })
+    }
+
+    // GET 请求：读取配置
+    if (event.method === "GET") {
+      const query = getQuery(event)
+      const id = query.id as SourceID
+      if (id) {
+        // 读取单个源的配置
+        const useProxy = await cacheTable.getUseProxy(id)
+        return { id, useProxy }
+      } else {
+        // 读取所有源的配置
+        const all = await cacheTable.getAllUseProxy()
+        return { all }
+      }
+    }
+    // POST 请求：设置配置
+    else if (event.method === "POST") {
+      const body = await readBody(event)
+      const { id, useProxy } = body as { id: SourceID; useProxy: boolean }
+      if (!id || typeof useProxy !== "boolean") {
+        throw createError({
+          statusCode: 400,
+          message: "Invalid request body",
+        })
+      }
+      await cacheTable.setUseProxy(id, useProxy)
+      return { success: true, id, useProxy }
+    }
+  } catch (e) {
+    logger.error(e)
+    throw createError({
+      statusCode: 500,
+      message: e instanceof Error ? e.message : "Internal Server Error",
+    })
+  }
+})
+```
+
+**API 使用示例：**
+
+```bash
+# 1. 设置 hackernews 使用代理
+curl -X POST http://localhost:3000/api/source-proxy \
+  -H "Content-Type: application/json" \
+  -d '{"id":"hackernews","useProxy":true}'
+
+# 2. 查询单个源的配置
+curl "http://localhost:3000/api/source-proxy?id=hackernews"
+# 返回: {"id":"hackernews","useProxy":true}
+
+# 3. 查询所有源的配置
+curl "http://localhost:3000/api/source-proxy"
+# 返回: {"all":{"hackernews":true,"reddit":false,...}}
+```
+
+#### 7.3 Fetch 工具重构 (server/utils/fetch.ts)
+
+重构了统一请求工具，提供直连和代理两种方式，并通过上下文动态选择：
+
+```typescript
+import process from "node:process"
+import { $fetch } from "ofetch"
+import type { $Fetch } from "ofetch"
+
+// 上下文变量：当前是否使用代理
+let currentUseProxy = false
+
+// 导出：设置当前上下文的代理状态
+export function setCurrentFetch(useProxy: boolean) {
+  logger.info(`[proxy] setCurrentFetch: ${useProxy}`)
+  currentUseProxy = useProxy
+}
+
+// 内部：根据上下文返回对应的 fetch 实例
+function getCurrentFetch() {
+  return currentUseProxy ? myFetchProxy : myFetchDirect
+}
+
+// 尝试从环境变量获取代理配置
+const httpProxy = process.env.HTTP_PROXY || process.env.http_proxy || process.env.PROXY || process.env.proxy
+const httpsProxy = process.env.HTTPS_PROXY || process.env.https_proxy || process.env.PROXY || process.env.proxy
+
+// 存储 dispatcher（延迟初始化）
+let dispatcher: any = null
+
+// 初始化 dispatcher（只执行一次）
+let dispatcherInitialized = false
+async function initDispatcher() {
+  if (dispatcherInitialized) return
+  dispatcherInitialized = true
+
+  if (!httpProxy && !httpsProxy) return
+
+  try {
+    // 动态导入 undici
+    const undici = await import("undici" as any)
+
+    // 优先尝试 EnvHttpProxyAgent（自动读取环境变量）
+    if ("EnvHttpProxyAgent" in undici) {
+      dispatcher = new undici.EnvHttpProxyAgent()
+      logger.info("[proxy] 使用 EnvHttpProxyAgent 配置代理")
+    } else if ("ProxyAgent" in undici) {
+      // 否则使用 ProxyAgent，优先使用 HTTPS_PROXY
+      const proxyUrl = httpsProxy || httpProxy
+      if (proxyUrl) {
+        dispatcher = new undici.ProxyAgent(proxyUrl)
+        logger.info(`[proxy] 使用 ProxyAgent 配置代理: ${proxyUrl}`)
+      }
+    }
+  } catch (e) {
+    logger.warn("[proxy] 无法加载 undici，代理配置可能不生效:", e)
+  }
+}
+
+// 直连 fetch（不使用代理）
+export const myFetchDirect = $fetch.create({
+  headers: {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",
+  },
+  timeout: 10000,
+  retry: 3,
+})
+
+// 代理 fetch（使用代理）
+export const myFetchProxy = $fetch.create({
+  headers: {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",
+  },
+  timeout: 10000,
+  retry: 3,
+  async onRequest({ options }) {
+    await initDispatcher()
+    if (dispatcher) {
+      options.dispatcher = dispatcher
+    }
+  },
+})
+
+// 默认 myFetch，使用上下文决定，通过 Proxy 实现
+export const myFetch = new Proxy(myFetchDirect, {
+  apply(_target, thisArg, args) {
+    const fetchFn = getCurrentFetch()
+    logger.debug(`[proxy] using fetch: ${fetchFn === myFetchProxy ? 'proxy' : 'direct'}`)
+    return Reflect.apply(fetchFn as any, thisArg, args)
+  },
+}) as $Fetch
+```
+
+**设计要点：**
+1. 提供两个独立的 fetch 实例：`myFetchDirect`（直连）和 `myFetchProxy`（代理）
+2. 通过 `currentUseProxy` 变量存储当前上下文的代理状态
+3. 使用 `Proxy` 包装默认的 `myFetch`，每次调用时根据上下文动态选择
+4. 代理 dispatcher 采用延迟初始化，避免不必要的模块导入
+
+#### 7.4 核心 API 集成 (server/api/s/index.ts)
+
+在获取单个源数据时，先读取该源的代理配置并设置上下文：
+
+```typescript
+import type { SourceID, SourceResponse } from "@shared/types"
+import { getters } from "#/getters"
+import { getCacheTable } from "#/database/cache"
+import { setCurrentFetch } from "#/utils/fetch"  // 新增导入
+import type { CacheInfo } from "#/types"
+
+export default defineEventHandler(async (event): Promise<SourceResponse> => {
+  try {
+    const query = getQuery(event)
+    const latest = query.latest !== undefined && query.latest !== "false"
+    let id = query.id as SourceID
+    
+    const isValid = (id: SourceID) => !id || !sources[id] || !getters[id]
+    if (isValid(id)) {
+      const redirectID = sources?.[id]?.redirect
+      if (redirectID) id = redirectID
+      if (isValid(id)) throw new Error("Invalid source id")
+    }
+    
+    // 新增：获取该源的代理配置并设置上下文
+    const cacheTable = await getCacheTable()
+    let useProxy = false
+    if (cacheTable) {
+      useProxy = await cacheTable.getUseProxy(id)
+    }
+    setCurrentFetch(useProxy)
+    
+    // 后续原有逻辑...
+  }
+})
+```
+
+### 8. 数据库支持
+
+#### 8.1 支持的数据库
 - **SQLite**：本地开发和 Docker 部署
 - **Cloudflare D1**：推荐的生产部署方案
 - **其他**：通过 DB0 支持多种数据库（PostgreSQL、MySQL、MongoDB 等）
 
-#### 7.2 数据库配置
+#### 8.2 数据库配置
 
 **Cloudflare D1 配置 (wrangler.toml)**：
 ```toml
@@ -515,34 +805,34 @@ database_name = "newsnow-db"
 database_id = "your-database-id"
 ```
 
-### 8. 抓取策略优化
+### 9. 抓取策略优化
 
-#### 8.1 动态刷新间隔
+#### 9.1 动态刷新间隔
 - 每个新闻源可配置不同的刷新间隔（interval 属性）
 - 热门源（如微博）刷新间隔短（2分钟）
 - 冷门源刷新间隔长（10分钟或更久）
 - 服务器会根据源的更新频率自动调整
 
-#### 8.2 缓存机制
+#### 9.2 缓存机制
 - **TTL 缓存**：默认 30 分钟，在时间范围内即使内容更新也返回缓存
 - **强制刷新**：登录用户可通过 `?latest=true` 参数强制获取最新数据
 - **智能缓存**：在刷新间隔内返回缓存，超过间隔才重新抓取
 
-#### 8.3 防封禁策略
+#### 9.3 防封禁策略
 - 统一的 User-Agent 头部
 - 可配置的请求间隔
 - 错误重试机制
 - 代理支持（通过 environment variables 配置）
 
-### 9. 扩展与维护
+### 10. 扩展与维护
 
-#### 9.1 添加新的新闻源
+#### 10.1 添加新的新闻源
 1. 在 `server/sources/` 目录下创建新的解析器文件
 2. 使用 `defineSource` 函数定义源抓取函数
 3. 在 `shared/sources.json` 中添加源配置
 4. 可选：在 `public/icons/` 目录下添加源图标
 
-#### 9.2 源解析器开发模板
+#### 10.2 源解析器开发模板
 
 ```typescript
 import type { NewsItem } from "@shared/types"

@@ -106,7 +106,7 @@ function extractIdFromUrl(url: string): string {
 
 export default defineSource(async () => {
   const baseUrl = "https://www.freebuf.com"
-  const html = await myFetch<any>(baseUrl, {
+  const html = await myFetch(baseUrl, {
     headers: {
       "User-Agent":
                 "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36",

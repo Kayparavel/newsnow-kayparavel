@@ -35,7 +35,7 @@ const renqi = defineSource(async () => {
   const formatted = dayjs().format("YYYY-MM-DD")
   const url = `${baseURL}/hot-list/renqi/${formatted}/1`
 
-  const response = await myFetch<any>(url, {
+  const response = await myFetch(url, {
     headers: {
       "User-Agent":
                 "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36",

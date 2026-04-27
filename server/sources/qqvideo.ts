@@ -2,90 +2,13 @@ import dayjs from "dayjs/esm"
 import { myFetch } from "#/utils/fetch"
 import { defineSource } from "#/utils/source"
 
-interface WapResp {
-  data: {
-    card: {
-      id: string
-      type: string
-      params: any
-      children_list: {
-        list: { cards: CardRes[] }
-      }
-      report_infos: any
-      operations: any
-      flip_infos: any
-      static_conf: any
-      info_map: any
-      mix_data: any
-      data_type: number
-      data_style_type: number
-      data: any
-    }
-    has_next_page: boolean
-    page_context: any
-    has_pre_page: boolean
-    pre_page_context: any
-  }
-  ret: number
-  msg: string
-}
-
-interface CardRes {
-  id: string
-  type: string
-  params: CardParams
-  children_list: any
-  report_infos: any
-  operations: any
-  flip_infos: any
-  static_conf: any
-  info_map: any
-  mix_data: any
-  data_type: number
-  data_style_type: number
-  data: any
-}
-
-interface CardParams {
-  "attent_key": string
-  "card_render@item_idx": string
-  "card_render@item_idx_max": string
-  "card_render@item_source_type": string
-  "card_render@item_type": string
-  "cid": string
-  "comic_main_type_name"?: string
-  "cover_checkup_grade"?: string
-  "episode_updated"?: string
-  "cut_end_time": string
-  "cut_start_time": string
-  "cut_vid": string
-  "image_url": string
-  "item_datakey_info": string
-  "item_report": string
-  "item_score": string
-  "positive_content_id": string
-  "rank_num": string
-  "rec_normal_reason": string
-  "rec_subtitle": string
-  "recall_alg": string
-  "recall_item_type": string
-  "publish_date"?: string
-  "second_title"?: string
-  "sub_title": string
-  "title": string
-  "topic_color": string
-  "topic_label": string
-  "type": string
-  "uni_imgtag": string
-}
-
 /**
  * 腾讯视频-电视剧-热搜榜
  */
 const hotSearch = defineSource(async () => {
   const url
         = "https://pbaccess.video.qq.com/trpc.vector_layout.page_view.PageService/getCard?video_appid=3000010&vversion_platform=2"
-  const resp: WapResp = await myFetch<WapResp>(url, {
+  const resp = await myFetch(url, {
     method: "POST",
     headers: { Referer: "https://v.qq.com/" },
     body: {
@@ -137,7 +60,7 @@ const hotSearch = defineSource(async () => {
     },
   })
 
-  return resp?.data?.card?.children_list?.list?.cards?.map((item) => {
+  return resp?.data?.card?.children_list?.list?.cards?.map((item: any) => {
     return {
       id: item?.id,
       title: item?.params?.title,
