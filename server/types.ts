@@ -25,6 +25,7 @@ export interface CacheRow {
   id: SourceID
   data: string
   updated: number
+  useProxy?: number
 }
 
 export interface RSSHubInfo {
