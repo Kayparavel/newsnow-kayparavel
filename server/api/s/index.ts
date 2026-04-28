@@ -1,7 +1,7 @@
 import type { SourceID, SourceResponse } from "@shared/types"
 import { getters } from "#/getters"
 import { getCacheTable } from "#/database/cache"
-import { setCurrentFetch } from "#/utils/fetch"
+import { useProxyStorage } from "#/utils/fetch"
 import type { CacheInfo } from "#/types"
 
 export default defineEventHandler(async (event): Promise<SourceResponse> => {
@@ -17,13 +17,12 @@ export default defineEventHandler(async (event): Promise<SourceResponse> => {
       if (isValid(id)) throw new Error("Invalid source id")
     }
 
-    // 获取该源的代理配置并设置上下文
+    // 获取该源的代理配置
     const cacheTable = await getCacheTable()
     let useProxy = false
     if (cacheTable) {
       useProxy = await cacheTable.getUseProxy(id)
     }
-    setCurrentFetch(useProxy)
 
     // Date.now() in Cloudflare Worker will not update throughout the entire runtime.
     const now = Date.now()
@@ -64,7 +63,10 @@ export default defineEventHandler(async (event): Promise<SourceResponse> => {
     }
 
     try {
-      const newData = (await getters[id]()).slice(0, 30)
+      // 使用 AsyncLocalStorage 来隔离每个请求的 useProxy 配置
+      const newData = (await useProxyStorage.run(useProxy, async () => {
+        return await getters[id]()
+      })).slice(0, 30)
       if (cacheTable && newData.length) {
         if (event.context.waitUntil) event.context.waitUntil(cacheTable.set(id, newData))
         else await cacheTable.set(id, newData)

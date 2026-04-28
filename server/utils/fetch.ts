@@ -1,17 +1,13 @@
 import process from "node:process"
+import { AsyncLocalStorage } from "node:async_hooks"
 import { $fetch } from "ofetch"
 import type { $Fetch } from "ofetch"
 
-let currentUseProxy = false
+// 使用 AsyncLocalStorage 存储当前请求的 useProxy 配置
+// 这样每个请求的上下文是隔离的，不会被其他请求污染
+const useProxyStorage = new AsyncLocalStorage<boolean>()
 
-export function setCurrentFetch(useProxy: boolean) {
-  logger.info(`[proxy] setCurrentFetch: ${useProxy}`)
-  currentUseProxy = useProxy
-}
-
-function getCurrentFetch() {
-  return currentUseProxy ? myFetchProxy : myFetchDirect
-}
+export { useProxyStorage }
 
 // 尝试从环境变量获取代理配置
 const httpProxy = process.env.HTTP_PROXY || process.env.http_proxy || process.env.PROXY || process.env.proxy
@@ -73,11 +69,17 @@ export const myFetchProxy = $fetch.create({
   },
 })
 
-// 默认 myFetch，使用上下文决定
+// 根据 AsyncLocalStorage 上下文返回对应的 fetch 实例
+function getCurrentFetch() {
+  const useProxy = useProxyStorage.getStore() ?? false
+  return useProxy ? myFetchProxy : myFetchDirect
+}
+
+// 默认 myFetch，使用 AsyncLocalStorage 中的上下文决定
 export const myFetch = new Proxy(myFetchDirect, {
   apply(_target, thisArg, args) {
     const fetchFn = getCurrentFetch()
-    logger.info(`[proxy] using fetch: ${fetchFn === myFetchProxy ? 'proxy' : 'direct'}`)
+    logger.info(`[proxy] using fetch: ${fetchFn === myFetchProxy ? "proxy" : "direct"}`)
     return Reflect.apply(fetchFn as any, thisArg, args)
   },
 }) as $Fetch

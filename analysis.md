@@ -565,8 +565,7 @@ export const getters = (function () {
 这个功能允许对每个新闻源单独配置是否使用代理访问，使用现有的缓存表存储配置。
 
 > **重要说明：**
-> 1. 此功能与原项目中的 `proxySource` 函数无关。`proxySource` 是原项目用于 Cloudflare Pages 部署的代理方案，而本章节描述的是我们 fork 后新增的按源配置代理功能。
-> 2. **线程安全问题（严重）**：当前实现使用全局变量 `currentUseProxy` 存储代理状态，在并发请求环境下会导致配置混乱，需要将来修复。建议使用 Nitro/H3 的 `event.context` 存储代理状态，或重构 `myFetch` 函数使其接收代理配置作为参数。
+> 此功能与原项目中的 `proxySource` 函数无关。`proxySource` 是原项目用于 Cloudflare Pages 部署的代理方案，而本章节描述的是我们 fork 后新增的按源配置代理功能。
 
 #### 7.1 缓存表扩展 (server/database/cache.ts)
 
@@ -720,25 +719,24 @@ curl "http://localhost:3000/api/source-proxy"
 
 #### 7.3 Fetch 工具重构 (server/utils/fetch.ts)
 
-重构了统一请求工具，提供直连和代理两种方式，并通过上下文动态选择：
+重构了统一请求工具，提供直连和代理两种方式，并通过 `AsyncLocalStorage` 实现请求级别的上下文隔离：
 
 ```typescript
 import process from "node:process"
+import { AsyncLocalStorage } from "node:async_hooks"
 import { $fetch } from "ofetch"
 import type { $Fetch } from "ofetch"
 
-// 上下文变量：当前是否使用代理
-let currentUseProxy = false
+// 使用 AsyncLocalStorage 存储当前请求的 useProxy 配置
+// 这样每个请求的上下文是隔离的，不会被其他请求污染
+const useProxyStorage = new AsyncLocalStorage<boolean>()
 
-// 导出：设置当前上下文的代理状态
-export function setCurrentFetch(useProxy: boolean) {
-  logger.info(`[proxy] setCurrentFetch: ${useProxy}`)
-  currentUseProxy = useProxy
-}
+export { useProxyStorage }
 
-// 内部：根据上下文返回对应的 fetch 实例
+// 内部：根据 AsyncLocalStorage 上下文返回对应的 fetch 实例
 function getCurrentFetch() {
-  return currentUseProxy ? myFetchProxy : myFetchDirect
+  const useProxy = useProxyStorage.getStore() ?? false
+  return useProxy ? myFetchProxy : myFetchDirect
 }
 
 // 尝试从环境变量获取代理配置
@@ -801,11 +799,11 @@ export const myFetchProxy = $fetch.create({
   },
 })
 
-// 默认 myFetch，使用上下文决定，通过 Proxy 实现
+// 默认 myFetch，使用 AsyncLocalStorage 中的上下文决定
 export const myFetch = new Proxy(myFetchDirect, {
   apply(_target, thisArg, args) {
     const fetchFn = getCurrentFetch()
-    logger.debug(`[proxy] using fetch: ${fetchFn === myFetchProxy ? 'proxy' : 'direct'}`)
+    logger.info(`[proxy] using fetch: ${fetchFn === myFetchProxy ? 'proxy' : 'direct'}`)
     return Reflect.apply(fetchFn as any, thisArg, args)
   },
 }) as $Fetch
@@ -813,19 +811,21 @@ export const myFetch = new Proxy(myFetchDirect, {
 
 **设计要点：**
 1. 提供两个独立的 fetch 实例：`myFetchDirect`（直连）和 `myFetchProxy`（代理）
-2. 通过 `currentUseProxy` 变量存储当前上下文的代理状态
-3. 使用 `Proxy` 包装默认的 `myFetch`，每次调用时根据上下文动态选择
-4. 代理 dispatcher 采用延迟初始化，避免不必要的模块导入
+2. 使用 Node.js 原生的 `AsyncLocalStorage` 来存储请求级别的 `useProxy` 状态
+3. `AsyncLocalStorage` 基于 `async_hooks` 追踪异步调用链，确保每个请求的上下文完全隔离，避免并发请求竞态问题
+4. 使用 `Proxy` 包装默认的 `myFetch`，每次调用时根据 `AsyncLocalStorage` 中的上下文动态选择 fetch 实例
+5. 代理 dispatcher 采用延迟初始化，避免不必要的模块导入
+6. **0 个 source 文件需要修改**，完美兼容现有代码
 
 #### 7.4 核心 API 集成 (server/api/s/index.ts)
 
-在获取单个源数据时，先读取该源的代理配置并设置上下文：
+在获取单个源数据时，先读取该源的代理配置，然后使用 `AsyncLocalStorage` 在整个请求处理期间传递这个配置：
 
 ```typescript
 import type { SourceID, SourceResponse } from "@shared/types"
 import { getters } from "#/getters"
 import { getCacheTable } from "#/database/cache"
-import { setCurrentFetch } from "#/utils/fetch"  // 新增导入
+import { useProxyStorage } from "#/utils/fetch"  // 导入 AsyncLocalStorage
 import type { CacheInfo } from "#/types"
 
 export default defineEventHandler(async (event): Promise<SourceResponse> => {
@@ -841,15 +841,83 @@ export default defineEventHandler(async (event): Promise<SourceResponse> => {
       if (isValid(id)) throw new Error("Invalid source id")
     }
     
-    // 新增：获取该源的代理配置并设置上下文
+    // 获取该源的代理配置
     const cacheTable = await getCacheTable()
     let useProxy = false
     if (cacheTable) {
       useProxy = await cacheTable.getUseProxy(id)
     }
-    setCurrentFetch(useProxy)
     
-    // 后续原有逻辑...
+    // 使用 AsyncLocalStorage.run() 包裹后续逻辑，在整个异步调用链中传递 useProxy
+    return await useProxyStorage.run(useProxy, async () => {
+      // Date.now() in Cloudflare Worker will not update throughout the entire runtime.
+      const now = Date.now()
+      let cache: CacheInfo | undefined
+      if (cacheTable) {
+        cache = await cacheTable.get(id)
+        if (cache) {
+          // interval 刷新间隔，对于缓存失效也要执行的。本质上表示本来内容更新就很慢，这个间隔内可能内容压根不会更新。
+          // 默认 10 分钟，是低于 TTL 的，但部分 Source 的更新间隔会超过 TTL，甚至有的一天更新一次。
+          if (now - cache.updated < sources[id].interval) {
+            return {
+              status: "success",
+              id,
+              updatedTime: now,
+              items: cache.items,
+            }
+          }
+
+          // 而 TTL 缓存失效时间，在时间范围内，就算内容更新了也要用这个缓存。
+          // 复用缓存是不会更新时间的。
+          if (now - cache.updated < TTL) {
+            // 有 latest
+            // 没有 latest，但服务器禁止登录
+            // 没有 latest
+            // 有 latest，服务器可以登录但没有登录
+            if (!latest || (!event.context.disabledLogin && !event.context.user)) {
+              return {
+                status: "cache",
+                id,
+                updatedTime: cache.updatedTime,
+                items: cache.items,
+              }
+            }
+          }
+        }
+      }
+
+      try {
+        const newData = (await getters[id]()).slice(0, 30)
+        if (cacheTable && newData.length) {
+          if (event.context.waitUntil) event.context.waitUntil(cacheTable.set(id, newData))
+          else await cacheTable.set(id, newData)
+        }
+        logger.success(`fetch ${id} latest`)
+        return {
+          status: "success",
+          id,
+          updatedTime: now,
+          items: newData,
+        }
+      } catch (e) {
+        if (cache) {
+          return {
+            status: "cache",
+            id,
+            updatedTime: cache.updatedTime,
+            items: cache.items,
+          }
+        } else {
+          throw e
+        }
+      }
+    })
+  } catch (e: any) {
+    logger.error(e)
+    throw createError({
+      statusCode: 500,
+      message: e instanceof Error ? e.message : "Internal Server Error",
+    })
   }
 })
 ```
