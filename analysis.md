@@ -66,6 +66,7 @@ export interface Source {
   home?: string             // 主页链接
   disable?: boolean | "cf"  // 是否禁用
   redirect?: SourceID       // 重定向到其他源
+  staggerRefresh?: boolean  // 刷新时是否需要错开（避免并发请求被限制）
 }
 
 export interface NewsItem {
@@ -84,7 +85,35 @@ export interface NewsItem {
 }
 ```
 
-#### 1.2 源配置文件 (shared/sources.json)
+**staggerRefresh 使用说明：**
+- 某些新闻源会限制同一 IP 并发请求数，当多个板块同时刷新时会导致部分请求失败
+- 为这些源设置 `staggerRefresh: true`，在全体刷新时会按顺序处理，每个源间隔 1 秒
+- 配置定义在 `shared/pre-sources.ts` 中
+- 实际使用在 `src/hooks/useRefetch.ts` 中
+- 配置示例见 `shared/pre-sources.ts` 中的界面新闻源
+
+#### 1.2 源配置文件
+
+源配置分为两个文件：
+
+1. **`shared/pre-sources.ts`**：源配置的源文件，手动编辑此文件
+2. **`shared/sources.json`**：自动生成的文件，通过 `pnpm presource` 命令从 `pre-sources.ts` 生成
+
+**生成命令：**
+```bash
+pnpm run presource
+```
+
+该命令在 `package.json` 中定义：
+```json
+"presource": "tsx ./scripts/favicon.ts && tsx ./scripts/source.ts"
+```
+
+**注意：**
+- 不要手动修改 `sources.json`
+- 修改 `pre-sources.ts` 后需要重新运行 `pnpm presource` 来更新 `sources.json`
+
+**示例配置：**
 ```json
 {
   "zhihu": {
@@ -384,6 +413,8 @@ export async function getCacheTable() {
 
 ### 5. 核心 API 接口 (server/api/s/index.ts)
 
+#### 5.1 单个源获取接口
+
 ```typescript
 import type { SourceID, SourceResponse } from "@shared/types"
 import { getters } from "#/getters"
@@ -475,6 +506,40 @@ export default defineEventHandler(async (event): Promise<SourceResponse> => {
 })
 ```
 
+#### 5.2 批量获取缓存接口 (server/api/s/entire.post.ts)
+
+```typescript
+import type { SourceID, SourceResponse } from "@shared/types"
+import { getCacheTable } from "#/database/cache"
+
+export default defineEventHandler(async (event) => {
+  try {
+    const { sources: _ }: { sources: SourceID[] } = await readBody(event)
+    const cacheTable = await getCacheTable()
+    const ids = _?.filter(k => sources[k])
+    if (ids?.length && cacheTable) {
+      const caches = await cacheTable.getEntire(ids)
+      const now = Date.now()
+      return caches.map(cache => ({
+        status: "cache",
+        id: cache.id,
+        items: cache.items,
+        updatedTime: now - cache.updated < sources[cache.id].interval ? now : cache.updated,
+      })) as SourceResponse[]
+    }
+  } catch {
+    //
+  }
+})
+```
+
+> **重要说明：**
+> 该端点目前仅从缓存读取数据，不涉及实际抓取，因此：
+> 1. 没有使用代理配置逻辑
+> 2. 与 `staggerRefresh` 逻辑完全脱节
+> 3. 当缓存失效需要刷新时，无法正确应用代理配置和并发限制策略
+> 4. 目前依赖该端点的业务存在问题，需要将来重构或调整
+
 ### 6. 获取器管理 (server/getters.ts)
 
 ```typescript
@@ -498,6 +563,10 @@ export const getters = (function () {
 ### 7. 按新闻源配置代理功能
 
 这个功能允许对每个新闻源单独配置是否使用代理访问，使用现有的缓存表存储配置。
+
+> **重要说明：**
+> 1. 此功能与原项目中的 `proxySource` 函数无关。`proxySource` 是原项目用于 Cloudflare Pages 部署的代理方案，而本章节描述的是我们 fork 后新增的按源配置代理功能。
+> 2. **线程安全问题（严重）**：当前实现使用全局变量 `currentUseProxy` 存储代理状态，在并发请求环境下会导致配置混乱，需要将来修复。建议使用 Nitro/H3 的 `event.context` 存储代理状态，或重构 `myFetch` 函数使其接收代理配置作为参数。
 
 #### 7.1 缓存表扩展 (server/database/cache.ts)
 
@@ -1519,10 +1588,56 @@ export default defineSource({
     column: "china",
     home: "https://www.jiemian.com",
     color: "blue",
-    interval: Time.Realtime,
-    title: "即时资讯"
+    sub: {
+      quick: {
+        title: "即时资讯",
+        type: "realtime",
+        interval: Time.Realtime,
+        staggerRefresh: true // 启用错开刷新，避免并发请求被限制
+      },
+      todayhot: {
+        title: "今日热点",
+        type: "realtime",
+        interval: Time.Realtime,
+        staggerRefresh: true
+      },
+      company: {
+        title: "公司头条",
+        type: "realtime",
+        interval: Time.Realtime,
+        staggerRefresh: true
+      },
+      stock: {
+        title: "股市前沿",
+        type: "realtime",
+        interval: Time.Realtime,
+        staggerRefresh: true
+      },
+      regulatory: {
+        title: "监管通报",
+        type: "realtime",
+        interval: Time.Realtime,
+        staggerRefresh: true
+      },
+      finance: {
+        title: "财经速览",
+        type: "realtime",
+        interval: Time.Realtime,
+        staggerRefresh: true
+      },
+      affairs: {
+        title: "时事追踪",
+        type: "realtime",
+        interval: Time.Realtime,
+        staggerRefresh: true
+      },
+    },
   },
 ```
+
+**注意**：
+- 主源不应该有 `title` 和 `interval`，这些配置放在子源里
+- 所有子源都设置 `staggerRefresh: true`，在全体刷新时会按顺序处理，每个源间隔 1 秒，避免并发请求被限制
 
 #### 3.3 生成配置文件
 运行以下命令重新生成 `sources.json` 和 `pinyin.json`：
@@ -2094,6 +2209,104 @@ docker compose down
 4. **优雅界面**：响应式设计，支持深色模式，无干扰阅读体验
 5. **MCP 支持**：可作为 MCP 服务器集成到其他应用中
 6. **PWA 支持**：可安装为桌面应用，支持离线缓存
+
+### staggerRefresh 源刷新限制处理
+
+#### 问题背景
+某些新闻源（如界面新闻）会限制同一 IP 并发请求数，当多个板块同时刷新时会导致部分请求失败。
+
+#### 解决方案
+
+1. **在 `shared/types.ts 中添加 staggerRefresh 配置项
+```typescript
+export interface Source {
+  name: string;
+  interval: number;
+  color: Color;
+  // ...其他字段
+  /**
+   * 刷新时是否需要错开（避免并发请求被限制）
+   */
+  staggerRefresh?: boolean;
+}
+```
+
+2. **在 `shared/pre-sources.ts` 中配置源
+```typescript
+"jiemian": {
+  name: "界面新闻",
+  type: "realtime",
+  column: "china",
+  home: "https://www.jiemian.com",
+  color: "blue",
+  sub: {
+    quick: {
+      title: "即时资讯",
+      type: "realtime",
+      interval: Time.Realtime,
+      staggerRefresh: true, // 启用 staggerRefresh
+    },
+    todayhot: {
+      title: "今日热点",
+      type: "realtime",
+      interval: Time.Realtime,
+      staggerRefresh: true,
+    },
+    // ...其他子源同样配置 staggerRefresh: true
+  },
+}
+```
+
+3. **在 `src/hooks/useRefetch.ts` 中的处理逻辑
+- 普通源并发刷新，`staggerRefresh` 源顺序刷新，每个间隔 1 秒
+```typescript
+const refresh = useCallback(async (...sourceIds: SourceID[]) => {
+  if (enableLogin && !loggedIn) {
+    // ...登录提示
+  } else {
+    // 分开需要错开的源和普通源
+    const staggerSources: SourceID[] = [];
+    const normalSources: SourceID[] = [];
+    for (const id of sourceIds) {
+      if (sources[id]?.staggerRefresh) {
+        staggerSources.push(id);
+      } else {
+        normalSources.push(id);
+      }
+    }
+    
+    // 普通源并发刷新
+    if (normalSources.length > 0) {
+      refetchSources.clear();
+      normalSources.forEach(id => refetchSources.add(id));
+      await queryClient.refetchQueries({
+        predicate: (query) => {
+          const [type, id] = query.queryKey as ["source" | "entire", SourceID];
+          return type === "source" && normalSources.includes(id);
+        },
+      });
+    }
+    
+    // 需要错开的源顺序刷新，每个间隔 1 秒
+    for (const id of staggerSources) {
+      refetchSources.clear();
+      refetchSources.add(id);
+      await queryClient.refetchQueries({
+        predicate: (query) => {
+          const [type, queryId] = query.queryKey as ["source" | "entire", SourceID];
+          return type === "source" && queryId === id;
+        },
+      });
+      await new Promise(r => setTimeout(r, 1000));
+    }
+  }
+}, [loggedIn, toaster, login, enableLogin, queryClient]);
+```
+
+4. **重新生成 sources.json
+```bash
+pnpm run presource
+```
 
 ## 部署方式
 

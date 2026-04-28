@@ -1,6 +1,12 @@
 services:
   newsnow:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
+      tags:
+        - kayparavel/newsnow-kayparavel:latest
+    container_name: newsnow-kayparavel
+    image: kayparavel/newsnow-kayparavel:0.0.39.2
     ports:
       - '4444:4444'
     volumes:

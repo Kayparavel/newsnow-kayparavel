@@ -77,6 +77,10 @@ export interface Source {
    */
   disable?: boolean | "cf"
   redirect?: SourceID
+  /**
+   * 刷新时是否需要错开（避免并发请求被限制）
+   */
+  staggerRefresh?: boolean
 }
 
 export interface Column {

@@ -1,15 +1,16 @@
 import type { SourceID } from "@shared/types"
-import { useUpdateQuery } from "./query"
+import { sources } from "@shared/sources"
+import { useQueryClient } from "@tanstack/react-query"
 
 export function useRefetch() {
   const { enableLogin, loggedIn, login } = useLogin()
   const toaster = useToast()
-  const updateQuery = useUpdateQuery()
+  const queryClient = useQueryClient()
   /**
    * force refresh
    */
-  const refresh = useCallback((...sources: SourceID[]) => {
-    console.log('useRefetch called with sources:', sources)
+  const refresh = useCallback(async (...sourceIds: SourceID[]) => {
+    console.log('useRefetch called with sources:', sourceIds)
     console.log('Current loggedIn status:', loggedIn)
     if (enableLogin && !loggedIn) {
       console.log('Showing login toast')
@@ -21,16 +22,45 @@ export function useRefetch() {
         },
       })
     } else {
-      console.log('Clearing and adding to refetchSources:', sources)
-      refetchSources.clear()
-      sources.forEach(id => {
+      // 分开需要错开的源和普通源
+      const staggerSources: SourceID[] = []
+      const normalSources: SourceID[] = []
+      for (const id of sourceIds) {
+        if (sources[id]?.staggerRefresh) {
+          staggerSources.push(id)
+        } else {
+          normalSources.push(id)
+        }
+      }
+      
+      // 普通源并发刷新
+      if (normalSources.length > 0) {
+        console.log('Refreshing normal sources:', normalSources)
+        refetchSources.clear()
+        normalSources.forEach(id => refetchSources.add(id))
+        await queryClient.refetchQueries({
+          predicate: (query) => {
+            const [type, id] = query.queryKey as ["source" | "entire", SourceID]
+            return type === "source" && normalSources.includes(id)
+          },
+        })
+      }
+      
+      // 需要错开的源顺序刷新，每个间隔 1秒
+      for (const id of staggerSources) {
+        console.log('Refreshing stagger source:', id)
+        refetchSources.clear()
         refetchSources.add(id)
-        console.log('Added', id, 'to refetchSources')
-      })
-      console.log('Calling updateQuery')
-      updateQuery(...sources)
+        await queryClient.refetchQueries({
+          predicate: (query) => {
+            const [type, queryId] = query.queryKey as ["source" | "entire", SourceID]
+            return type === "source" && queryId === id
+          },
+        })
+        await new Promise(r => setTimeout(r, 1000))
+      }
     }
-  }, [loggedIn, toaster, login, enableLogin, updateQuery])
+  }, [loggedIn, toaster, login, enableLogin, queryClient])
 
   return {
     refresh,
