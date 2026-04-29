@@ -1401,6 +1401,136 @@ return results.slice(0, 30)
 - 避免频繁请求 API
 - 实现缓存机制
 
+### 法布财经（FastBull）今日日历板块重构
+
+#### 1. 背景
+法布财经原快讯板块使用 HTML 解析方式，由于页面改版导致失效。我们通过 API 重构方式实现了新的"今日日历"板块，展示今日财经日历数据。
+
+#### 2. API 接口发现与分析
+- **接口地址**：`https://api.fastbull.cn/fastbull-news-service/api/getMergeCalendarV1Page`
+- **接口地址示例**：`https://api.fastbull.cn/fastbull-news-service/api/getMergeCalendarV1Page?pageSize=50&startTimestamp=1777305600000&endTimestamp=1777391999000&importance=2,3`
+- **请求参数**：
+  - `pageSize`：分页大小（建议 50）
+  - `startTimestamp`：开始时间戳（今日 00:00:00）
+  - `endTimestamp`：结束时间戳（今日 23:59:59）
+  - `importance`：重要程度（3 表示只显示重要）
+- **数据特点**：返回嵌套 JSON 结构，`bodyMessage` 字段是需要二次解析的 JSON 字符串
+- **数据类型**：
+  - `type: 1`：经济数据（actual/consensus/previous）
+  - `type: 2`：财经事件
+  - `type: 3`：假期
+
+#### 3. 核心技术实现
+
+##### 3.1 嵌套 JSON 解析
+```typescript
+// 第一层解析 API 响应
+const res: FastBullResponse = await myFetch(url)
+
+// 第二层解析 bodyMessage 中的 JSON
+const bodyData: BodyMessage = JSON.parse(res.bodyMessage)
+```
+
+##### 3.2 数值格式化
+实现数值格式化函数，将大数值转换为万/亿单位：
+```typescript
+function formatNumber(value: string | null | undefined): string {
+  // 亿级（>= 100,000,000）
+  if (Math.abs(num) >= 100000000) {
+    return `${(num / 100000000).toFixed(2)}亿`
+  }
+  // 万级（>= 10,000）
+  if (Math.abs(num) >= 10000) {
+    return `${(num / 10000).toFixed(2)}万`
+  }
+  return value.toString()
+}
+```
+
+##### 3.3 Title 换行显示
+在 title 字段中使用 `\n` 换行符实现多行显示：
+```typescript
+title = `${originalTitle}\n${dataParts.join('  ')}`
+```
+
+同时需要在前端添加 CSS 才能生效：
+```tsx
+<span className="whitespace-pre-line">{item.title}</span>
+```
+
+##### 3.4 未来时间戳支持
+扩展 `relativeTime` 函数，支持未来时间戳的正确显示：
+- `diffInSeconds < 0 && diffInSeconds >= -60` → "即将"
+- `diffInMinutes > -60` → "X分钟后"
+- `diffInHours > -24` → "X小时后"
+
+##### 3.5 国旗图标显示
+使用 `extra.icon` 字段显示国家国旗：
+```typescript
+extra: {
+  icon: countryImg ? { url: countryImg, scale: 0.75 } : undefined,
+}
+```
+
+##### 3.6 Info 和 Icon 同时显示
+修改 `ExtraInfo` 组件，支持同时显示国旗和 info 文本：
+```typescript
+function ExtraInfo({ item }: { item: NewsItem }) {
+  return (
+    <>
+      {item?.extra?.icon && (
+        <img ... className="h-4 inline mt--1 mr-1" ... />
+      )}
+      {item?.extra?.info}
+    </>
+  )
+}
+```
+
+#### 4. 数据字段映射
+
+| NewsItem 字段 | 数据来源 | 说明 |
+|--------------|---------|------|
+| `id` | calendarId 或随机值 | 唯一标识 |
+| `title` | 原标题 + `\n` + 公/预/前数据 | 支持换行显示 |
+| `pubDate` | releasedDate | 发布时间戳 |
+| `extra.info` | "数据"/"事件"/"假期"（假期带详细信息） | Info 文本 |
+| `extra.hover` | 国家 + 标题 + 数据值 | 鼠标悬停提示 |
+| `extra.icon` | countryImg（scale: 0.75） | 国旗图标 |
+| `url` | 法布财经主页 | 链接 |
+
+#### 5. 前端相关修改
+
+##### 5.1 Title 换行支持
+在 `NewsListHot` 和 `NewsListTimeLine` 组件中，给显示 title 的标签添加 `whitespace-pre-line` 类。
+
+##### 5.2 ExtraInfo 组件扩展
+同时支持显示 icon 和 info，国旗在前，info 在后，添加适当的间距。
+
+##### 5.3 relativeTime 函数扩展
+支持未来时间戳的显示逻辑。
+
+#### 6. 配置修改
+在 `shared/pre-sources.ts` 中将子源名称从"快讯"修改为"今日日历"，并运行 `pnpm presource` 重新生成配置。
+
+#### 7. 经验总结
+
+##### 7.1 API 嵌套结构处理
+当 API 返回的 JSON 中某个字段本身也是 JSON 字符串时，需要进行二次解析，注意异常处理。
+
+##### 7.2 换行显示的实现
+- 在数据层：使用 `\n` 作为换行符
+- 在渲染层：需要添加 `white-space: pre-line` CSS 才能生效
+
+##### 7.3 数据格式化
+对于大数值，应进行单位转换（万/亿），提高可读性。
+
+##### 7.4 未来时间戳支持
+财经日历类数据经常包含未来时间，需要扩展时间格式化函数。
+
+##### 7.5 Icon 和 Info 同时显示
+修改前端组件逻辑，支持两者同时展示，提升视觉效果。
+
 ## 我的钢铁（Mysteel）快讯源开发
 
 ### 1. 背景分析

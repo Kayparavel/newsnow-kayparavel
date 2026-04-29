@@ -225,22 +225,27 @@ function DiffNumber({ diff }: { diff: number }) {
   )
 }
 function ExtraInfo({ item }: { item: NewsItem }) {
-  if (item?.extra?.info) {
-    return <>{item.extra.info}</>
-  }
-  if (item?.extra?.icon) {
-    const { url, scale } = typeof item.extra.icon === "string" ? { url: item.extra.icon, scale: undefined } : item.extra.icon
-    return (
-      <img
-        src={url}
-        style={{
-          transform: `scale(${scale ?? 1})`,
-        }}
-        className="h-4 inline mt--1"
-        onError={e => e.currentTarget.style.display = "none"}
-      />
-    )
-  }
+  const hasIcon = item?.extra?.icon
+  const hasInfo = item?.extra?.info
+
+  return (
+    <>
+      {hasIcon && (() => {
+        const { url, scale } = typeof item.extra.icon === "string" ? { url: item.extra.icon, scale: undefined } : item.extra.icon
+        return (
+          <img
+            src={url}
+            style={{
+              transform: `scale(${scale ?? 1})`,
+            }}
+            className="h-4 inline mt--1 mr-1"
+            onError={e => e.currentTarget.style.display = "none"}
+          />
+        )
+      })()}
+      {hasInfo && <span>{item.extra.info}</span>}
+    </>
+  )
 }
 
 function NewsUpdatedTime({ date }: { date: string | number }) {
@@ -267,7 +272,7 @@ function NewsListHot({ items }: { items: NewsItem[] }) {
           </span>
           {!!item.extra?.diff && <DiffNumber diff={item.extra.diff} />}
           <span className="self-start line-height-none">
-            <span className="mr-2 text-base">
+            <span className="mr-2 text-base whitespace-pre-line">
               {item.title}
             </span>
             <span className="text-xs text-neutral-400/80 truncate align-middle">
@@ -305,7 +310,7 @@ function NewsListTimeLine({ items }: { items: NewsItem[] }) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            {item.title}
+            <span className="whitespace-pre-line">{item.title}</span>
           </a>
         </li>
       ))}

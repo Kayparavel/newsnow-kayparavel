@@ -234,7 +234,7 @@ export const originSources = {
     column: "finance",
     sub: {
       express: {
-        title: "快讯",
+        title: "今日日历",
         type: "realtime",
         interval: Time.Realtime,
       },
@@ -251,7 +251,7 @@ export const originSources = {
     home: "https://www.mysteel.com",
     color: "blue",
     interval: Time.Fast,
-    title: "钢铁快讯"
+    title: "钢铁快讯",
   },
   "jiemian": {
     name: "界面新闻",

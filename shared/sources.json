@@ -288,7 +288,7 @@
     "home": "https://www.fastbull.cn",
     "color": "emerald",
     "interval": 30000,
-    "title": "快讯"
+    "title": "今日日历"
   },
   "fastbull-express": {
     "name": "法布财经",
@@ -297,7 +297,7 @@
     "home": "https://www.fastbull.cn",
     "color": "emerald",
     "interval": 30000,
-    "title": "快讯"
+    "title": "今日日历"
   },
   "fastbull-news": {
     "name": "法布财经",
