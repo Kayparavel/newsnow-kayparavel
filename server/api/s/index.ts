@@ -66,7 +66,7 @@ export default defineEventHandler(async (event): Promise<SourceResponse> => {
       // 使用 AsyncLocalStorage 来隔离每个请求的 useProxy 配置
       const newData = (await useProxyStorage.run(useProxy, async () => {
         return await getters[id]()
-      })).slice(0, 30)
+      })).slice(0, 100)
       if (cacheTable && newData.length) {
         if (event.context.waitUntil) event.context.waitUntil(cacheTable.set(id, newData))
         else await cacheTable.set(id, newData)
