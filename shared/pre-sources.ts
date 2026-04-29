@@ -233,12 +233,27 @@ export const originSources = {
     home: "https://www.fastbull.cn",
     column: "finance",
     sub: {
-      express: {
+      "today": {
         title: "今日日历",
         type: "realtime",
         interval: Time.Realtime,
       },
-      news: {
+      "tomorrow": {
+        title: "明日日历",
+        type: "realtime",
+        interval: Time.Realtime,
+      },
+      "this-week": {
+        title: "本周日历",
+        type: "realtime",
+        interval: Time.Realtime,
+      },
+      "next-week": {
+        title: "下周日历",
+        type: "realtime",
+        interval: Time.Realtime,
+      },
+      "news": {
         title: "头条",
         interval: Time.Common,
       },

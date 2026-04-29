@@ -281,7 +281,7 @@
     "interval": 30000
   },
   "fastbull": {
-    "redirect": "fastbull-express",
+    "redirect": "fastbull-today",
     "name": "法布财经",
     "type": "realtime",
     "column": "finance",
@@ -290,7 +290,7 @@
     "interval": 30000,
     "title": "今日日历"
   },
-  "fastbull-express": {
+  "fastbull-today": {
     "name": "法布财经",
     "type": "realtime",
     "column": "finance",
@@ -298,6 +298,33 @@
     "color": "emerald",
     "interval": 30000,
     "title": "今日日历"
+  },
+  "fastbull-tomorrow": {
+    "name": "法布财经",
+    "type": "realtime",
+    "column": "finance",
+    "home": "https://www.fastbull.cn",
+    "color": "emerald",
+    "interval": 30000,
+    "title": "明日日历"
+  },
+  "fastbull-this-week": {
+    "name": "法布财经",
+    "type": "realtime",
+    "column": "finance",
+    "home": "https://www.fastbull.cn",
+    "color": "emerald",
+    "interval": 30000,
+    "title": "本周日历"
+  },
+  "fastbull-next-week": {
+    "name": "法布财经",
+    "type": "realtime",
+    "column": "finance",
+    "home": "https://www.fastbull.cn",
+    "color": "emerald",
+    "interval": 30000,
+    "title": "下周日历"
   },
   "fastbull-news": {
     "name": "法布财经",

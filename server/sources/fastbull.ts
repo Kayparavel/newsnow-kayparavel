@@ -93,14 +93,8 @@ interface FastBullResponse {
   bodyMessage: string
 }
 
-const express = defineSource(async () => {
-  // 获取今日 00:00:00 的时间戳
-  const now = new Date()
-  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate())
-  const startTimestamp = today.getTime()
-  // 获取今日 23:59:59 的时间戳
-  const endTimestamp = startTimestamp + 24 * 60 * 60 * 1000 - 1
-
+// 通用的财经日历获取函数
+async function getCalendarData(startTimestamp: number, endTimestamp: number): Promise<NewsItem[]> {
   const url = `https://api.fastbull.cn/fastbull-news-service/api/getMergeCalendarV1Page?pageSize=50&startTimestamp=${startTimestamp}&endTimestamp=${endTimestamp}&importance=3`
 
   const res: FastBullResponse = await myFetch(url)
@@ -196,6 +190,46 @@ const express = defineSource(async () => {
     console.warn("Failed to parse bodyMessage:", parseError)
     return []
   }
+}
+
+// 今日日历
+const todayCalendar = defineSource(async () => {
+  const now = new Date()
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate())
+  const startTimestamp = today.getTime()
+  const endTimestamp = startTimestamp + 24 * 60 * 60 * 1000 - 1
+  return getCalendarData(startTimestamp, endTimestamp)
+})
+
+// 明日日历
+const tomorrowCalendar = defineSource(async () => {
+  const now = new Date()
+  const tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1)
+  const startTimestamp = tomorrow.getTime()
+  const endTimestamp = startTimestamp + 24 * 60 * 60 * 1000 - 1
+  return getCalendarData(startTimestamp, endTimestamp)
+})
+
+// 本周日历（周一到周日）
+const thisWeekCalendar = defineSource(async () => {
+  const now = new Date()
+  const day = now.getDay() // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
+  const mondayOffset = day === 0 ? -6 : 1 - day // 计算本周一的偏移
+  const monday = new Date(now.getFullYear(), now.getMonth(), now.getDate() + mondayOffset)
+  const startTimestamp = monday.getTime()
+  const endTimestamp = startTimestamp + 7 * 24 * 60 * 60 * 1000 - 1
+  return getCalendarData(startTimestamp, endTimestamp)
+})
+
+// 下周日历（下周一到下周日）
+const nextWeekCalendar = defineSource(async () => {
+  const now = new Date()
+  const day = now.getDay() // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
+  const mondayOffset = day === 0 ? -6 : 1 - day // 计算本周一的偏移
+  const nextMonday = new Date(now.getFullYear(), now.getMonth(), now.getDate() + mondayOffset + 7)
+  const startTimestamp = nextMonday.getTime()
+  const endTimestamp = startTimestamp + 7 * 24 * 60 * 60 * 1000 - 1
+  return getCalendarData(startTimestamp, endTimestamp)
 })
 
 const news = defineSource(async () => {
@@ -223,8 +257,12 @@ const news = defineSource(async () => {
 
 export default defineSource(
   {
-    "fastbull": express,
-    "fastbull-express": express,
+    "fastbull": todayCalendar,
+    "fastbull-express": todayCalendar,
+    "fastbull-today": todayCalendar,
+    "fastbull-tomorrow": tomorrowCalendar,
+    "fastbull-this-week": thisWeekCalendar,
+    "fastbull-next-week": nextWeekCalendar,
     "fastbull-news": news,
   },
 )

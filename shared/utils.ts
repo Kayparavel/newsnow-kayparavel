@@ -8,26 +8,36 @@ export function relativeTime(timestamp: string | number) {
   const diffInMinutes = diffInSeconds / 60
   const diffInHours = diffInMinutes / 60
 
-  if (diffInSeconds < 0 && diffInSeconds >= -60) {
-    return "即将"
-  } else if (diffInMinutes > -60 && diffInSeconds < 0) {
-    const minutes = Math.floor(-diffInMinutes)
-    return `${minutes}分钟后`
-  } else if (diffInHours > -24 && diffInSeconds < 0) {
-    const hours = Math.floor(-diffInHours)
-    return `${hours}小时后`
-  } else if (diffInSeconds < 60) {
-    return "刚刚"
-  } else if (diffInMinutes < 60) {
-    const minutes = Math.floor(diffInMinutes)
-    return `${minutes}分钟前`
-  } else if (diffInHours < 24) {
-    const hours = Math.floor(diffInHours)
-    return `${hours}小时前`
+  if (diffInSeconds < 0) {
+    // 未来时间
+    if (diffInSeconds >= -60) {
+      return "即将"
+    } else if (diffInMinutes > -60) {
+      const minutes = Math.floor(-diffInMinutes)
+      return `${minutes}分钟后`
+    } else if (diffInHours > -24) {
+      const hours = Math.floor(-diffInHours)
+      return `${hours}小时后`
+    } else {
+      const month = date.getMonth() + 1
+      const day = date.getDate()
+      return `${month}月${day}日`
+    }
   } else {
-    const month = date.getMonth() + 1
-    const day = date.getDate()
-    return `${month}月${day}日`
+    // 过去时间
+    if (diffInSeconds < 60) {
+      return "刚刚"
+    } else if (diffInMinutes < 60) {
+      const minutes = Math.floor(diffInMinutes)
+      return `${minutes}分钟前`
+    } else if (diffInHours < 24) {
+      const hours = Math.floor(diffInHours)
+      return `${hours}小时前`
+    } else {
+      const month = date.getMonth() + 1
+      const day = date.getDate()
+      return `${month}月${day}日`
+    }
   }
 }
 
