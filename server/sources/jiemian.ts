@@ -49,7 +49,7 @@ async function fetchJiemianNews(cid: string, tagid: string): Promise<NewsItem[]>
           date: pubDate,
         },
       }
-    }).slice(0, 30)
+    })
   }
 
   return []

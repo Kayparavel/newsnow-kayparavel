@@ -1,0 +1,2879 @@
+{
+  "statusCode": 200,
+  "message": "Success",
+  "result": {
+    "id": "/",
+    "website": "reuters",
+    "name": "Home",
+    "language": "en",
+    "template_type": "section",
+    "type": "section",
+    "node_type": "section",
+    "children": [
+      {
+        "id": "/world/",
+        "website": "reuters",
+        "name": "World",
+        "page_title": "World",
+        "can_follow": true,
+        "language": "en",
+        "template_type": "section",
+        "type": "section",
+        "advertising": {
+          "sponsored": "false"
+        },
+        "node_type": "section",
+        "children": [
+          {
+            "id": "/world/africa/",
+            "website": "reuters",
+            "name": "Africa",
+            "page_title": "Africa",
+            "can_follow": true,
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/world/americas/",
+            "website": "reuters",
+            "name": "Americas",
+            "page_title": "Americas",
+            "can_follow": true,
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/world/asia-pacific/",
+            "website": "reuters",
+            "name": "Asia Pacific",
+            "page_title": "Asia Pacific",
+            "can_follow": true,
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/world/china/",
+            "website": "reuters",
+            "name": "China",
+            "page_title": "China",
+            "can_follow": true,
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/world/europe/",
+            "website": "reuters",
+            "name": "Europe",
+            "page_title": "Europe",
+            "can_follow": true,
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/world/france/",
+            "website": "reuters",
+            "name": "France",
+            "page_title": "France",
+            "can_follow": true,
+            "language": "en",
+            "template_type": "topic",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/world/germany/",
+            "website": "reuters",
+            "name": "Germany",
+            "page_title": "Germany",
+            "language": "en",
+            "template_type": "topic",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/world/ghana/",
+            "website": "reuters",
+            "name": "Ghana",
+            "page_title": "Ghana",
+            "language": "en",
+            "template_type": "topic",
+            "type": "section",
+            "node_type": "section"
+          },
+          {
+            "id": "/world/india/",
+            "website": "reuters",
+            "name": "India",
+            "page_title": "India",
+            "can_follow": true,
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false"
+            },
+            "node_type": "section",
+            "children": [
+              {
+                "id": "/world/india/elections/",
+                "website": "reuters",
+                "name": "India Election",
+                "description": "Read the latest news on the India elections. Get comprehensive coverage on Prime Minister Narendra Modi's policies, the Bharatiya Janata Party, and more.",
+                "page_title": "India Election",
+                "language": "en",
+                "template_type": "topic",
+                "type": "section",
+                "advertising": {
+                  "sponsor_logo_type": "indiaelectionslogo"
+                },
+                "node_type": "section"
+              }
+            ]
+          },
+          {
+            "id": "/world/iran/",
+            "website": "reuters",
+            "name": "Iran War",
+            "description": "The U.S. and Israel’s attack on Iran is the most consequential military operation in the Middle East in more than two decades.",
+            "page_title": "Iran War",
+            "language": "en",
+            "template_type": "topic",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "iranlogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/world/israel-hamas/",
+            "website": "reuters",
+            "name": "Israel and Hamas at War",
+            "description": "The Hamas Oct. 7 attacks on Israel unleashed a fresh cycle of violence that has rocked the Middle East",
+            "page_title": "Israel and Hamas at War",
+            "can_follow": true,
+            "language": "en",
+            "template_type": "topic",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/world/japan/",
+            "website": "reuters",
+            "name": "Japan",
+            "page_title": "Japan",
+            "can_follow": true,
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/world/middle-east/",
+            "website": "reuters",
+            "name": "Middle East",
+            "page_title": "Middle East",
+            "can_follow": true,
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/world/pakistan/",
+            "website": "reuters",
+            "name": "Pakistan",
+            "page_title": "Pakistan",
+            "language": "en",
+            "template_type": "topic",
+            "type": "section",
+            "node_type": "section"
+          },
+          {
+            "id": "/world/russia/",
+            "website": "reuters",
+            "name": "Russia",
+            "page_title": "Russia",
+            "language": "en",
+            "template_type": "topic",
+            "type": "section",
+            "node_type": "section",
+            "children": [
+              {
+                "id": "/world/russia/vladimir-putin/",
+                "website": "reuters",
+                "name": "Vladimir Putin",
+                "page_title": "Vladimir Putin",
+                "can_follow": true,
+                "language": "en",
+                "template_type": "topic",
+                "type": "section",
+                "advertising": {
+                  "sponsor_logo_type": "topicpersonlogo"
+                },
+                "node_type": "section"
+              }
+            ]
+          },
+          {
+            "id": "/world/south-africa/",
+            "website": "reuters",
+            "name": "South Africa",
+            "page_title": "South Africa",
+            "language": "en",
+            "template_type": "topic",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "south africalogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/world/taiwan/",
+            "website": "reuters",
+            "name": "Taiwan",
+            "page_title": "Taiwan",
+            "language": "en",
+            "template_type": "topic",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "taiwanlogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/world/ukraine-russia-war/",
+            "website": "reuters",
+            "name": "Ukraine and Russia at War",
+            "description": "Russia’s invasion of Ukraine started the deadliest war on European soil in more than 70 years.",
+            "page_title": "Ukraine and Russia at War",
+            "can_follow": true,
+            "language": "en",
+            "template_type": "topic",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "topiceventlogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/world/uk/",
+            "website": "reuters",
+            "name": "United Kingdom",
+            "page_title": "United Kingdom",
+            "can_follow": true,
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "uklogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/world/us/",
+            "website": "reuters",
+            "name": "United States",
+            "page_title": "United States",
+            "can_follow": true,
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "uslogo"
+            },
+            "node_type": "section",
+            "children": [
+              {
+                "id": "/world/us/joe-biden/",
+                "website": "reuters",
+                "name": "Joe Biden",
+                "description": "Follow the latest coverage on Joe Biden, including updates on his public appearances, policy commentary and role in U.S. political developments.",
+                "page_title": "Joe Biden",
+                "can_follow": true,
+                "language": "en",
+                "template_type": "topic",
+                "type": "section",
+                "advertising": {
+                  "sponsored": "false",
+                  "sponsor_logo_type": "topicpersonlogo"
+                },
+                "node_type": "section"
+              },
+              {
+                "id": "/world/us/kamala-harris/",
+                "website": "reuters",
+                "name": "Kamala Harris",
+                "description": "Vice President Kamala Harris has entered the presidential race after President Joe Biden's stunning withdrawal, throwing the election into a whirlwind of uncertainty.",
+                "page_title": "Kamala Harris",
+                "can_follow": true,
+                "language": "en",
+                "template_type": "topic",
+                "type": "section",
+                "advertising": {
+                  "sponsor_logo_type": "topicpersonlogo"
+                },
+                "node_type": "section"
+              },
+              {
+                "id": "/world/us/donald-trump/",
+                "ad_unit_code": "/donald-trump",
+                "website": "reuters",
+                "name": "Donald Trump",
+                "description": "Donald Trump is the undisputed frontrunner for the Republican presidential nomination in the 2024 election. He is also the defendant in four criminal cases. Bookmark this page to get the latest news on one of the most divisive figures in American history.",
+                "page_title": "Donald Trump",
+                "can_follow": true,
+                "language": "en",
+                "template_type": "topic",
+                "type": "section",
+                "advertising": {
+                  "sponsored": "false",
+                  "sponsor_logo_type": "topicpersonlogo"
+                },
+                "node_type": "section"
+              }
+            ]
+          },
+          {
+            "id": "/world/reuters-next/",
+            "website": "reuters",
+            "name": "Reuters NEXT New York",
+            "description": "Tech, luxury, media and metals executives discuss key economic drivers ",
+            "page_title": "Reuters NEXT New York",
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "reutersnextlogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/world/year-in-review/",
+            "website": "reuters",
+            "name": "2024 Year in Review",
+            "page_title": "2024 Year in Review",
+            "language": "en",
+            "template_type": "topic",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "reutersyearinreviewlogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/world/g7/",
+            "website": "reuters",
+            "name": "G7",
+            "page_title": "G7",
+            "language": "en",
+            "template_type": "topic",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "topiclogo"
+            },
+            "node_type": "section"
+          }
+        ]
+      },
+      {
+        "id": "/business/",
+        "website": "reuters",
+        "name": "Business",
+        "page_title": "Business",
+        "language": "en",
+        "template_type": "section",
+        "type": "section",
+        "advertising": {
+          "sponsored": "false",
+          "sponsor_logo_type": "businesslogo"
+        },
+        "node_type": "section",
+        "children": [
+          {
+            "id": "/business/aerospace-defense/",
+            "website": "reuters",
+            "name": "Aerospace & Defense",
+            "page_title": "Aerospace & Defense",
+            "can_follow": true,
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "aerospacelogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/business/autos-transportation/",
+            "website": "reuters",
+            "name": "Autos & Transportation",
+            "description": "Find latest autos news from every corner of the globe at Reuters.com, your online source for breaking international news coverage.",
+            "page_title": "Autos & Transportation",
+            "can_follow": true,
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "autoslogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/business/davos/",
+            "website": "reuters",
+            "name": "Davos",
+            "description": "World Economic Forum in Davos",
+            "page_title": "Davos",
+            "language": "en",
+            "template_type": "topic",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "davoslogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/business/energy/",
+            "website": "reuters",
+            "name": "Energy",
+            "description": "Find latest energy news from every corner of the globe at Reuters.com, your online source for breaking international news coverage.",
+            "page_title": "Energy",
+            "can_follow": true,
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "energylogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/business/environment/",
+            "website": "reuters",
+            "name": "Environment",
+            "page_title": "Environment",
+            "can_follow": true,
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "environmentlogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/business/finance/",
+            "website": "reuters",
+            "name": "Finance",
+            "page_title": "Finance",
+            "can_follow": true,
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "true",
+              "sponsor_logo_type": "financelogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/business/healthcare-pharmaceuticals/",
+            "website": "reuters",
+            "name": "Healthcare & Pharmaceuticals",
+            "description": "Find latest healthcare news from every corner of the globe at Reuters.com, your online source for breaking international news coverage.",
+            "page_title": "Healthcare & Pharmaceuticals",
+            "can_follow": true,
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "true",
+              "sponsor_logo_type": "healthcarelogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/business/media-telecom/",
+            "website": "reuters",
+            "name": "Media & Telecom",
+            "page_title": "Media & Telecom",
+            "can_follow": true,
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "medialogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/business/retail-consumer/",
+            "website": "reuters",
+            "name": "Retail & Consumer",
+            "page_title": "Retail & Consumer",
+            "can_follow": true,
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "true",
+              "sponsor_logo_type": "consumerlogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/business/future-of-health/",
+            "website": "reuters",
+            "name": "Future of Health",
+            "description": "The science and business powering tomorrow's medicine.",
+            "page_title": "Future of Health",
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "futureofhealthlogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/business/future-of-money/",
+            "website": "reuters",
+            "name": "Future of Money",
+            "description": "Making sense of cryptocurrency, fintech and digital payments.",
+            "page_title": "Future of Money",
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "true",
+              "sponsor_logo_type": "futureofmoneylogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/business/take-five/",
+            "website": "reuters",
+            "name": "Take Five",
+            "description": "The economic, political and business news to watch in the week ahead.",
+            "page_title": "Take Five",
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "true",
+              "sponsor_logo_type": "takefivelogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/business/world-at-work/",
+            "website": "reuters",
+            "name": "World at Work",
+            "description": "How companies and countries are reimagining the way we work, live and play.",
+            "page_title": "World at Work",
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "worldatworklogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/business/tariffs/",
+            "website": "reuters",
+            "name": "Tariffs",
+            "description": "President Trump has ordered a slate of import tariffs, throwing the global economy into a state of uncertainty.",
+            "page_title": "Tariffs",
+            "language": "en",
+            "template_type": "topic",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "topiclogo"
+            },
+            "node_type": "section"
+          }
+        ]
+      },
+      {
+        "id": "/markets/",
+        "website": "reuters",
+        "name": "Markets",
+        "page_title": "Markets",
+        "language": "en",
+        "template_type": "section",
+        "type": "section",
+        "advertising": {
+          "sponsored": "false",
+          "sponsor_logo_type": "marketslogo"
+        },
+        "node_type": "section",
+        "children": [
+          {
+            "id": "/markets/news/",
+            "website": "reuters",
+            "name": "Markets News",
+            "page_title": "Markets News",
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "marketsnewslogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/markets/on-the-money/",
+            "website": "reuters",
+            "name": "On the Money",
+            "description": "Your guide to savings, investing, retirement, taxes, credit, family finances and more with the latest news, commentary and analysis.",
+            "page_title": "On the Money",
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/markets/watchlist/",
+            "website": "reuters",
+            "name": "Watchlist",
+            "page_title": "Watchlist",
+            "can_follow": true,
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "marketswatchlist"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/markets/asia/",
+            "website": "reuters",
+            "name": "Asian Markets",
+            "page_title": "Asian Markets",
+            "can_follow": true,
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "marketsasialogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/markets/carbon/",
+            "website": "reuters",
+            "name": "Carbon Markets",
+            "page_title": "Carbon Markets",
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "marketscarbonlogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/markets/commodities/",
+            "website": "reuters",
+            "name": "Commodities",
+            "page_title": "Commodities",
+            "can_follow": true,
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "true",
+              "sponsor_logo_type": "marketscommoditieslogo"
+            },
+            "node_type": "section",
+            "children": [
+              {
+                "id": "/markets/commodities/agriculture/",
+                "website": "reuters",
+                "name": "Agriculture",
+                "page_title": "Agriculture",
+                "language": "en",
+                "template_type": "section",
+                "type": "section",
+                "advertising": {
+                  "sponsored": "false",
+                  "sponsor_logo_type": "marketscommoditieslogo"
+                },
+                "node_type": "section"
+              },
+              {
+                "id": "/markets/commodities/energy/",
+                "website": "reuters",
+                "name": "Energy",
+                "page_title": "Energy",
+                "language": "en",
+                "template_type": "section",
+                "type": "section",
+                "advertising": {
+                  "sponsored": "true",
+                  "sponsor_logo_type": "marketscommoditieslogo"
+                },
+                "node_type": "section"
+              },
+              {
+                "id": "/markets/commodities/livestock/",
+                "website": "reuters",
+                "name": "Livestock",
+                "page_title": "Livestock",
+                "language": "en",
+                "template_type": "section",
+                "type": "section",
+                "advertising": {
+                  "sponsored": "false",
+                  "sponsor_logo_type": "marketscommoditieslogo"
+                },
+                "node_type": "section"
+              },
+              {
+                "id": "/markets/commodities/metals/",
+                "website": "reuters",
+                "name": "Metals",
+                "page_title": "Metals",
+                "language": "en",
+                "template_type": "section",
+                "type": "section",
+                "advertising": {
+                  "sponsored": "false",
+                  "sponsor_logo_type": "marketscommoditieslogo"
+                },
+                "node_type": "section"
+              }
+            ]
+          },
+          {
+            "id": "/markets/currencies/",
+            "website": "reuters",
+            "name": "Currencies",
+            "page_title": "Currencies",
+            "can_follow": true,
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "marketscurrencieslogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/markets/deals/",
+            "website": "reuters",
+            "name": "Deals",
+            "page_title": "Deals",
+            "can_follow": true,
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "marketsdealslogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/markets/emerging/",
+            "website": "reuters",
+            "name": "Emerging Markets",
+            "page_title": "Emerging Markets",
+            "can_follow": true,
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "marketsemerginglogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/markets/etf/",
+            "website": "reuters",
+            "name": "ETFs",
+            "page_title": "ETFs",
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "true",
+              "sponsor_logo_type": "marketsemerginglogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/markets/europe/",
+            "website": "reuters",
+            "name": "European Markets",
+            "page_title": "European Markets",
+            "can_follow": true,
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "marketseuropelogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/markets/funds/",
+            "website": "reuters",
+            "name": "Funds",
+            "page_title": "Funds",
+            "can_follow": true,
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "true",
+              "sponsor_logo_type": "marketsfundslogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/markets/econ-world/",
+            "website": "reuters",
+            "name": "Econ World",
+            "description": "The latest news and expert analysis about the state of the global economy.",
+            "page_title": "Econ World",
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "true",
+              "sponsor_logo_type": "econworldlogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/markets/global-market-data/",
+            "website": "reuters",
+            "name": "Global Market Data",
+            "page_title": "Global Market Data",
+            "can_follow": true,
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "marketsgloballogo"
+            },
+            "node_type": "section",
+            "children": [
+              {
+                "id": "/markets/global-market-data/basic-materials/",
+                "website": "reuters",
+                "name": "Basic Materials",
+                "page_title": "Basic Materials",
+                "language": "en",
+                "template_type": "section",
+                "type": "section",
+                "advertising": {
+                  "sponsor_logo_type": "marketsgloballogo"
+                },
+                "node_type": "section"
+              },
+              {
+                "id": "/markets/global-market-data/cyclicals/",
+                "website": "reuters",
+                "name": "Cyclical Goods & Services",
+                "page_title": "Cyclical Goods & Services",
+                "language": "en",
+                "template_type": "section",
+                "type": "section",
+                "advertising": {
+                  "sponsor_logo_type": "marketsgloballogo"
+                },
+                "node_type": "section"
+              },
+              {
+                "id": "/markets/global-market-data/non-cyclicals/",
+                "website": "reuters",
+                "name": "Non-Cyclical Goods & Services",
+                "page_title": "Non-Cyclical Goods & Services",
+                "language": "en",
+                "template_type": "section",
+                "type": "section",
+                "advertising": {
+                  "sponsor_logo_type": "marketsgloballogo"
+                },
+                "node_type": "section"
+              },
+              {
+                "id": "/markets/global-market-data/industrials/",
+                "website": "reuters",
+                "name": "Industrials",
+                "page_title": "Industrials",
+                "language": "en",
+                "template_type": "section",
+                "type": "section",
+                "advertising": {
+                  "sponsor_logo_type": "marketsgloballogo"
+                },
+                "node_type": "section"
+              },
+              {
+                "id": "/markets/global-market-data/utilities/",
+                "website": "reuters",
+                "name": "Utilities",
+                "page_title": "Utilities",
+                "language": "en",
+                "template_type": "section",
+                "type": "section",
+                "advertising": {
+                  "sponsor_logo_type": "marketsgloballogo"
+                },
+                "node_type": "section"
+              }
+            ]
+          },
+          {
+            "id": "/markets/rates-bonds/",
+            "website": "reuters",
+            "name": "Rates & Bonds",
+            "page_title": "Rates & Bonds",
+            "can_follow": true,
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "marketsratesbondslogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/markets/stocks/",
+            "website": "reuters",
+            "name": "Stocks",
+            "page_title": "Stocks",
+            "can_follow": true,
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "true",
+              "sponsor_logo_type": "marketsstockslogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/markets/us/",
+            "website": "reuters",
+            "name": "U.S. Markets",
+            "page_title": "U.S. Markets",
+            "can_follow": true,
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "true",
+              "sponsor_logo_type": "marketsuslogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/markets/wealth/",
+            "website": "reuters",
+            "name": "Wealth",
+            "page_title": "Wealth",
+            "can_follow": true,
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "wealthlogo"
+            },
+            "node_type": "section"
+          }
+        ]
+      },
+      {
+        "id": "/sustainability/",
+        "website": "reuters",
+        "name": "Sustainability",
+        "page_title": "Sustainable Business",
+        "language": "en",
+        "template_type": "section",
+        "type": "section",
+        "advertising": {
+          "sponsored": "false"
+        },
+        "node_type": "section",
+        "children": [
+          {
+            "id": "/sustainability/boards-policy-regulation/",
+            "website": "reuters",
+            "name": "Boards, Policy & Regulation",
+            "page_title": "Boards, Policy & Regulation",
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/sustainability/climate-energy/",
+            "website": "reuters",
+            "name": "Climate & Energy",
+            "page_title": "Climate & Energy",
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/sustainability/land-use-biodiversity/",
+            "website": "reuters",
+            "name": "Land Use & Biodiversity",
+            "page_title": "Land Use & Biodiversity",
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "landusebiodiversitylogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/sustainability/society-equity/",
+            "website": "reuters",
+            "name": "Society & Equity",
+            "page_title": "Society & Equity",
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "societyequitylogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/sustainability/sustainable-finance-reporting/",
+            "website": "reuters",
+            "name": "Sustainable Finance & Reporting",
+            "page_title": "Sustainable Finance & Reporting",
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "true",
+              "sponsor_logo_type": "boardspolicyregulationlogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/sustainability/the-switch/",
+            "website": "reuters",
+            "name": "The Switch",
+            "description": "The people, technology and companies working toward a sustainable future",
+            "page_title": "The Switch",
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "theswitchlogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/sustainability/reuters-impact/",
+            "website": "reuters",
+            "name": "Reuters Impact",
+            "description": "Tackling climate change with businesses, scientists and thinkers",
+            "page_title": "Reuters Impact",
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "reutersimpactlogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/sustainability/cop/",
+            "website": "reuters",
+            "name": "COP30",
+            "description": "The latest news from the U.N. COP30 climate summit",
+            "page_title": "COP30",
+            "language": "en",
+            "template_type": "topic",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "coplogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/sustainability/reuters-events/",
+            "website": "reuters",
+            "name": "Reuters Events",
+            "description": "View Reuters Events' inaugural Climate Future Leaders list, featuring 10 young individuals who have made significant contributions to the global sustainability movement.",
+            "page_title": "Reuters Events",
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "reuterseventslogo"
+            },
+            "node_type": "section",
+            "children": [
+              {
+                "id": "/sustainability/reuters-events/trailblazers/",
+                "website": "reuters",
+                "name": "Trailblazing Women in Climate",
+                "description": "View Reuters Events' inaugural Climate Future Leaders list, featuring 10 young individuals who have made significant contributions to the global sustainability movement.",
+                "page_title": "Trailblazing Women in Climate",
+                "language": "en",
+                "template_type": "topic",
+                "type": "section",
+                "advertising": {
+                  "sponsor_logo_type": "reuterseventstrailblazerslogo"
+                },
+                "node_type": "section"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "/legal/",
+        "website": "reuters",
+        "name": "Legal",
+        "page_title": "Legal",
+        "language": "en",
+        "template_type": "section",
+        "type": "section",
+        "advertising": {
+          "sponsored": "false",
+          "sponsor_logo_type": "legallogo"
+        },
+        "node_type": "section",
+        "children": [
+          {
+            "id": "/legal/government/",
+            "website": "reuters",
+            "name": "Government",
+            "page_title": "Government",
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "legalgovernmentlogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/legal/legalindustry/",
+            "website": "reuters",
+            "name": "Legal Industry",
+            "page_title": "Legal Industry",
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "legallegalindustrylogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/legal/litigation/",
+            "website": "reuters",
+            "name": "Litigation",
+            "page_title": "Litigation",
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "legallitigationlogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/legal/transactional/",
+            "website": "reuters",
+            "name": "Transactional",
+            "page_title": "Transactional",
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "legaltransactionallogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/legal/us-supreme-court/",
+            "website": "reuters",
+            "name": "US Supreme Court",
+            "page_title": "US Supreme Court",
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "legalussupremecourtlogo"
+            },
+            "node_type": "section"
+          }
+        ]
+      },
+      {
+        "id": "/commentary/",
+        "website": "reuters",
+        "name": "Commentary",
+        "description": "Columns from Reuters Open Interest and Reuters Breakingviews.",
+        "page_title": "Commentary",
+        "language": "en",
+        "template_type": "section",
+        "type": "section",
+        "advertising": {
+          "sponsored": "false",
+          "sponsor_logo_type": "commentarylogo"
+        },
+        "node_type": "section",
+        "children": [
+          {
+            "id": "/commentary/breakingviews-predictions/",
+            "website": "reuters",
+            "name": "Breakingviews Predictions",
+            "page_title": "Breakingviews Predictions",
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "breakingviewspredictionslogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/commentary/breakingviews/",
+            "website": "reuters",
+            "name": "Breakingviews",
+            "description": "Breakingviews provides financial professionals with unique agenda-setting insight on the major financial news stories as they break globally every day",
+            "page_title": "Breakingviews",
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "breakingviewslogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/commentary/reuters-open-interest/",
+            "website": "reuters",
+            "name": "ROI: Reuters Open Interest",
+            "description": "ROI offers data-driven expert commentary on the trends driving global markets.",
+            "page_title": "ROI: Reuters Open Interest",
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false"
+            },
+            "node_type": "section"
+          }
+        ]
+      },
+      {
+        "id": "/technology/",
+        "website": "reuters",
+        "name": "Technology",
+        "page_title": "Technology",
+        "can_follow": true,
+        "language": "en",
+        "template_type": "section",
+        "type": "section",
+        "advertising": {
+          "sponsored": "true",
+          "sponsor_logo_type": "technologylogo"
+        },
+        "node_type": "section",
+        "children": [
+          {
+            "id": "/technology/ai-and-us/",
+            "website": "reuters",
+            "name": "A.I. and Us",
+            "description": "How AI is shaping modern life in unexpected ways",
+            "page_title": "AI&Us",
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "true",
+              "sponsor_logo_type": "ai-and-uslogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/technology/artificial-intelligence/",
+            "website": "reuters",
+            "name": "Artificial Intelligence",
+            "description": "How Artificial Intelligence is creating the next normal",
+            "page_title": "Artificial Intelligence",
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "true",
+              "sponsor_logo_type": "ailogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/technology/cybersecurity/",
+            "website": "reuters",
+            "name": "Cybersecurity",
+            "page_title": "Cybersecurity",
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "true",
+              "sponsor_logo_type": "cybersecuritylogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/technology/space/",
+            "website": "reuters",
+            "name": "Space",
+            "page_title": "Space",
+            "can_follow": true,
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "spacelogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/technology/disrupted/",
+            "website": "reuters",
+            "name": "Disrupted",
+            "description": "How innovation in technology is transforming business, communications and entertainment",
+            "page_title": "Disrupted",
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "true",
+              "sponsor_logo_type": "disruptedlogo"
+            },
+            "node_type": "section"
+          }
+        ]
+      },
+      {
+        "id": "/investigations/",
+        "website": "reuters",
+        "name": "Investigations",
+        "description": "Investigations, explanatory journalism and long-form narratives by Reuters journalists around the world.",
+        "page_title": "Reuters Investigates",
+        "language": "en",
+        "template_type": "section",
+        "type": "section",
+        "advertising": {
+          "sponsored": "false",
+          "sponsor_logo_type": "investigationslogo"
+        },
+        "node_type": "section"
+      },
+      {
+        "id": "/investigates/",
+        "website": "reuters",
+        "name": "Investigates",
+        "description": "Investigations, explanatory journalism and long-form narratives by Reuters journalists around the world.",
+        "page_title": "Investigates",
+        "language": "en",
+        "template_type": "section",
+        "type": "section",
+        "advertising": {
+          "sponsored": "false",
+          "sponsor_logo_type": "investigationslogo"
+        },
+        "node_type": "section"
+      },
+      {
+        "id": "/sports/",
+        "website": "reuters",
+        "name": "Sports",
+        "page_title": "Sports",
+        "language": "en",
+        "template_type": "section",
+        "type": "section",
+        "advertising": {
+          "sponsored": "false",
+          "sponsor_logo_type": "sportslogo"
+        },
+        "node_type": "section",
+        "children": [
+          {
+            "id": "/sports/olympics/",
+            "website": "reuters",
+            "name": "Winter Olympics",
+            "description": "The 2026 Winter Olympics hosted in Milano and Cortina d'Ampezzo, Italy.",
+            "page_title": "Milano Cortina 2026 Winter Olympics",
+            "language": "en",
+            "template_type": "topic",
+            "short_description": "News about the Milano Cortina 2026 Olympic Games including latest stories and live updates",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "olympicslogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/sports/world-cup/",
+            "website": "reuters",
+            "name": "World Cup",
+            "description": "Latest news and opinion on FIFA World Cup",
+            "page_title": "FIFA World Cup 2026",
+            "can_follow": true,
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "worldcuplogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/sports/athletics/",
+            "website": "reuters",
+            "name": "Athletics",
+            "page_title": "Athletics",
+            "can_follow": true,
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "athleticslogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/sports/baseball/",
+            "website": "reuters",
+            "name": "Baseball",
+            "page_title": "Baseball",
+            "can_follow": true,
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "baseballlogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/sports/basketball/",
+            "website": "reuters",
+            "name": "Basketball",
+            "page_title": "Basketball",
+            "can_follow": true,
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "basketballlogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/sports/cricket/",
+            "website": "reuters",
+            "name": "Cricket",
+            "page_title": "Cricket",
+            "can_follow": true,
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "cricketlogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/sports/cycling/",
+            "website": "reuters",
+            "name": "Cycling",
+            "page_title": "Cycling",
+            "can_follow": true,
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "cyclinglogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/sports/formula1/",
+            "website": "reuters",
+            "name": "Formula 1",
+            "page_title": "Formula 1",
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "formula1logo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/sports/golf/",
+            "website": "reuters",
+            "name": "Golf",
+            "page_title": "Golf",
+            "can_follow": true,
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "golflogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/sports/nfl/",
+            "website": "reuters",
+            "name": "NFL",
+            "page_title": "NFL",
+            "can_follow": true,
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "nfllogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/sports/nhl/",
+            "website": "reuters",
+            "name": "NHL",
+            "page_title": "NHL",
+            "can_follow": true,
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "nhllogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/sports/soccer/",
+            "website": "reuters",
+            "name": "Soccer",
+            "page_title": "Soccer",
+            "can_follow": true,
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "soccerlogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/sports/tennis/",
+            "website": "reuters",
+            "name": "Tennis",
+            "page_title": "Tennis",
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "tennislogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/sports/inside-track/",
+            "website": "reuters",
+            "name": "Inside Track",
+            "description": "Your essential weekly preview to the weekend ahead in sports from global sports editor Ossian Shine",
+            "page_title": "Inside Track",
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "inside-tracklogo"
+            },
+            "node_type": "section"
+          }
+        ]
+      },
+      {
+        "id": "/science/",
+        "website": "reuters",
+        "name": "Science",
+        "page_title": "Science",
+        "can_follow": true,
+        "language": "en",
+        "template_type": "section",
+        "type": "section",
+        "advertising": {
+          "sponsored": "false",
+          "sponsor_logo_type": "sciencelogo"
+        },
+        "node_type": "section"
+      },
+      {
+        "id": "/lifestyle/",
+        "website": "reuters",
+        "name": "Lifestyle",
+        "page_title": "Lifestyle",
+        "language": "en",
+        "template_type": "section",
+        "type": "section",
+        "advertising": {
+          "sponsored": "false",
+          "sponsor_logo_type": "lifestylelogo"
+        },
+        "node_type": "section",
+        "children": [
+          {
+            "id": "/lifestyle/48-hours/",
+            "website": "reuters",
+            "name": "48 Hours",
+            "description": "Lifestyle - 48 Hours",
+            "page_title": "48 Hours",
+            "language": "en",
+            "template_type": "topic",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "lifestyle48logo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/lifestyle/culture-current/",
+            "website": "reuters",
+            "name": "Culture Current",
+            "description": "A weekly Q&A with cultural tastemakers exploring the intersection of their craft and the news",
+            "page_title": "Culture Current",
+            "language": "en",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "culturecurrentlogo"
+            },
+            "node_type": "section"
+          }
+        ]
+      },
+      {
+        "id": "/city-memo/",
+        "website": "reuters",
+        "name": "City Memo",
+        "description": "The inside view on what to do in the most interesting places around the world",
+        "page_title": "City Memo",
+        "language": "en",
+        "template_type": "section",
+        "type": "section",
+        "advertising": {
+          "sponsor_logo_type": "city-memologo"
+        },
+        "node_type": "section"
+      },
+      {
+        "id": "/graphics/",
+        "website": "reuters",
+        "name": "Graphics",
+        "description": "The latest Graphics on politics, sports, culture, science and environment from our journalists around the world",
+        "page_title": "Graphics",
+        "language": "en",
+        "template_type": "section",
+        "type": "section",
+        "advertising": {
+          "sponsored": "false",
+          "sponsor_logo_type": "graphicslogo"
+        },
+        "node_type": "section",
+        "children": [
+          {
+            "id": "/chart-of-the-week/",
+            "website": "reuters",
+            "name": "Chart of the Week",
+            "description": "A visual take on one of the biggest stories of the week",
+            "page_title": "Chart of the Week",
+            "language": "en",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "chart-of-the-weeklogo"
+            },
+            "node_type": "section"
+          }
+        ]
+      },
+      {
+        "id": "/graphic/",
+        "website": "reuters",
+        "name": "Graphic",
+        "description": "The latest Graphics on politics, sports, culture, science and environment from our journalists around the world",
+        "page_title": "Graphic",
+        "can_follow": true,
+        "language": "en",
+        "template_type": "section",
+        "type": "section",
+        "advertising": {
+          "sponsor_logo_type": "graphicslogo"
+        },
+        "node_type": "section"
+      },
+      {
+        "id": "/pictures/",
+        "website": "reuters",
+        "name": "Pictures",
+        "description": "A selection of the best images from our photojournalists around the globe",
+        "page_title": "Pictures",
+        "language": "en",
+        "template_type": "section",
+        "type": "section",
+        "advertising": {
+          "sponsored": "false",
+          "sponsor_logo_type": "pictureslogo"
+        },
+        "node_type": "section",
+        "children": [
+          {
+            "id": "/pictures/photos-of-the-day/",
+            "website": "reuters",
+            "name": "Pictures of the Day",
+            "page_title": "Pictures of the Day",
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "photosofthedaylogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/pictures/photos-of-the-week/",
+            "website": "reuters",
+            "name": "Pictures of the Week",
+            "page_title": "Pictures of the Week",
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "photosoftheweeklogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/pictures/photos-of-the-month/",
+            "website": "reuters",
+            "name": "Pictures of the Month",
+            "page_title": "Pictures of the Month",
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "photosofthemonthlogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/pictures/year-in-pictures/",
+            "website": "reuters",
+            "name": "Year in Pictures",
+            "page_title": "Year in Pictures",
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "yearinpictureslogo"
+            },
+            "node_type": "section"
+          }
+        ]
+      },
+      {
+        "id": "/wider-image/",
+        "website": "reuters",
+        "name": "Wider Image",
+        "description": "The home for Reuters in-depth visual storytelling from our photojournalists and reporters around the globe",
+        "page_title": "The Wider Image",
+        "language": "en",
+        "template_type": "section",
+        "type": "section",
+        "advertising": {
+          "sponsored": "false",
+          "sponsor_logo_type": "widerimagelogo"
+        },
+        "node_type": "section"
+      },
+      {
+        "id": "/podcasts/",
+        "website": "reuters",
+        "name": "Podcasts",
+        "description": "The latest news podcasts from around the world by our frontline journalists.",
+        "page_title": "Podcasts",
+        "language": "en",
+        "template_type": "section",
+        "network_id": "7d3db05a-8c41-11ed-a109-9b062d29da32",
+        "podcast_id": "e3c7d1b2-8c45-11ed-80a2-172771c99810",
+        "type": "section",
+        "advertising": {
+          "sponsored": "false",
+          "sponsor_logo_type": "podcastslogo"
+        },
+        "node_type": "section",
+        "children": [
+          {
+            "id": "/podcasts/reuters-world-news/",
+            "website": "reuters",
+            "name": "Reuters World News",
+            "description": "Everything you need to know about your world in 10 minutes. Go straight to the source with a ten-minute news briefing by Reuters frontline journalists. Join host Kim Vinnell as she takes you around the world every weekday.",
+            "page_title": "Reuters World News",
+            "language": "en",
+            "template_type": "section",
+            "network_id": "7d3db05a-8c41-11ed-a109-9b062d29da32",
+            "podcast_id": "e3c7d1b2-8c45-11ed-80a2-172771c99810",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "podcastslogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/podcasts/reuters-morning-bid/",
+            "website": "reuters",
+            "name": "Reuters Morning Bid",
+            "description": "The conversational weekday markets and finance podcast hosted by Mike Dolan and Anna Szymanski. Providing listeners with a breakdown of the day’s key market news in a chatty, yet informative manner.",
+            "page_title": "Reuters Morning Bid",
+            "language": "en",
+            "template_type": "section",
+            "network_id": "7d3db05a-8c41-11ed-a109-9b062d29da32",
+            "podcast_id": "8d7badb4-26b3-11f0-a040-1fe12f445fb2",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "podcastslogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/podcasts/reuters-econ-world/",
+            "website": "reuters",
+            "name": "Reuters Econ World",
+            "description": "Join Reuters journalist Carmel Crimmins every week as she and her guests pick apart a key economic principle behind the world’s news. Get beyond buzzwords and technical terms to understand the ideas and debates shaping the global economic agenda.",
+            "page_title": "Reuters Econ World",
+            "language": "en",
+            "template_type": "section",
+            "network_id": "7d3db05a-8c41-11ed-a109-9b062d29da32",
+            "podcast_id": "3c37d102-0c70-11ef-9f2a-d3c80df1fc79",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "podcastslogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/podcasts/on-assignment/",
+            "website": "reuters",
+            "name": "On Assignment",
+            "description": "Dive into the stories behind the news with a new podcast from Reuters. We take you past the headlines right to the heart of the action. From the frontlines of war to corporate boardrooms and the centers of political power, listen to our award-winning investigative journalists around the world make sense of the most important stories today.",
+            "page_title": "On Assignment",
+            "language": "en",
+            "template_type": "section",
+            "network_id": "7d3db05a-8c41-11ed-a109-9b062d29da32",
+            "podcast_id": "e3c7d1b2-8c45-11ed-80a2-172771c99810",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "podcastslogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/podcasts/viewsroom/",
+            "website": "reuters",
+            "name": "Viewsroom",
+            "description": "Pull up a chair and join the debate about the biggest stories in global business and finance. Breakingviews columnists talk about the big numbers, crunchy deals and nasty spats in global business and economics, offering a weekly dose of financial insight that goes beyond the concise and provocative views readers get from our columns every day.",
+            "page_title": "Viewsroom",
+            "language": "en",
+            "template_type": "section",
+            "network_id": "aa71465a-a087-11ec-8680-73c03cf16654",
+            "podcast_id": "3f585882-b431-11ec-b607-27400e0231df",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "podcastslogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/podcasts/the-big-view/",
+            "website": "reuters",
+            "name": "The Big View",
+            "description": "Reuters Breakingviews columnists tap their best contacts to explore the biggest issues driving business and markets today. Every Tuesday, Global Editor Peter Thal Larsen and his team tackle a pressing question with a senior executive, financier, policymaker, or other expert. The Big View helps you understand what is going on, explore all sides of the argument, and think about what happens next.",
+            "page_title": "The Big View",
+            "language": "en",
+            "template_type": "section",
+            "network_id": "aa71465a-a087-11ec-8680-73c03cf16654",
+            "podcast_id": "b1c9fd44-b431-11ec-90ef-133914fde813",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "podcastslogo"
+            },
+            "node_type": "section"
+          }
+        ]
+      },
+      {
+        "id": "/live/",
+        "website": "reuters",
+        "name": "Live",
+        "page_title": "Live",
+        "language": "en",
+        "template_type": "section",
+        "type": "section",
+        "advertising": {
+          "sponsor_logo_type": "livelogo"
+        },
+        "node_type": "section"
+      },
+      {
+        "id": "/fact-check/",
+        "website": "reuters",
+        "name": "Fact Check",
+        "description": "Examining social media narratives and misinformation",
+        "page_title": "Reuters Fact Check",
+        "language": "en",
+        "template_type": "section",
+        "type": "section",
+        "advertising": {
+          "sponsored": "false",
+          "sponsor_logo_type": "fact-checklogo"
+        },
+        "node_type": "section",
+        "children": [
+          {
+            "id": "/fact-check/arabic/",
+            "website": "reuters",
+            "name": "خدمة تقصي الحقيقة من رويترز",
+            "description": "تدقيق منشورات وسائل التواصل الاجتماعي والمعلومات المضللة",
+            "page_title": "خدمة تقصي الحقيقة من رويترز",
+            "language": "ar",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "fact-checklogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/fact-check/espanol/",
+            "website": "reuters",
+            "name": "Reuters Verificación ",
+            "description": "Evaluar narrativas e información errónea en redes sociales",
+            "page_title": "Reuters Verificación ",
+            "language": "es",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "fact-checklogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/fact-check/hebrew/",
+            "website": "reuters",
+            "name": "בדיקת עובדות רויטרס",
+            "description": "בחינת נרטיבים ומידע מוטעה ברשתות החברתיות",
+            "page_title": "בדיקת עובדות רויטרס",
+            "language": "he",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "fact-checklogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/fact-check/portugues/",
+            "website": "reuters",
+            "name": "Checagem de fatos ",
+            "description": "De olho em narrativas e desinformação nas mídias sociais",
+            "page_title": "Checagem de fatos ",
+            "language": "pt",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsored": "false",
+              "sponsor_logo_type": "fact-checklogo"
+            },
+            "node_type": "section"
+          }
+        ]
+      },
+      {
+        "id": "/video/",
+        "website": "reuters",
+        "name": "Video",
+        "page_title": "Video",
+        "language": "en",
+        "template_type": "section",
+        "type": "section",
+        "advertising": {
+          "sponsored": "false",
+          "sponsor_logo_type": "videologo"
+        },
+        "node_type": "section"
+      },
+      {
+        "id": "/media-center/",
+        "website": "reuters",
+        "name": "Media Center",
+        "description": "Latest news and announcements from the Reuters press team.",
+        "editorial_description": "In 1850, Baron Julius Reuter turned speed into an advantage—using carrier pigeons to move market prices faster than anyone else. Today, 175 years later, Reuters continues to deliver fast, accurate and fact-based news through its more than 2,600 journalists in 200 locations worldwide and cutting-edge use of AI and technology.",
+        "page_title": "Media Center",
+        "language": "en",
+        "template_type": "section",
+        "type": "section",
+        "advertising": {
+          "sponsor_logo_type": "mdeiacenterlogo"
+        },
+        "node_type": "section",
+        "children": [
+          {
+            "id": "/media-center/announcements/",
+            "website": "reuters",
+            "name": "Announcements",
+            "description": "Latest news and announcements from the Reuters press team.",
+            "editorial_description": "In 1850, Baron Julius Reuter turned speed into an advantage—using carrier pigeons to move market prices faster than anyone else. Today, 175 years later, Reuters continues to deliver fast, accurate and fact-based news through its more than 2,600 journalists in 200 locations worldwide and cutting-edge use of AI and technology.",
+            "page_title": "Announcements",
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "node_type": "section"
+          },
+          {
+            "id": "/media-center/awards/",
+            "website": "reuters",
+            "name": "Awards",
+            "description": "Latest news and announcements from the Reuters press team.",
+            "editorial_description": "In 1850, Baron Julius Reuter turned speed into an advantage—using carrier pigeons to move market prices faster than anyone else. Today, 175 years later, Reuters continues to deliver fast, accurate and fact-based news through its more than 2,600 journalists in 200 locations worldwide and cutting-edge use of AI and technology.",
+            "page_title": "Awards",
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "node_type": "section"
+          },
+          {
+            "id": "/media-center/inside-the-newsroom/",
+            "website": "reuters",
+            "name": "Inside the Newsroom",
+            "description": "Latest news and announcements from the Reuters press team.",
+            "editorial_description": "In 1850, Baron Julius Reuter turned speed into an advantage—using carrier pigeons to move market prices faster than anyone else. Today, 175 years later, Reuters continues to deliver fast, accurate and fact-based news through its more than 2,600 journalists in 200 locations worldwide and cutting-edge use of AI and technology.",
+            "page_title": "Inside the Newsroom",
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "node_type": "section"
+          },
+          {
+            "id": "/media-center/people-news/",
+            "website": "reuters",
+            "name": "People News",
+            "description": "Latest news and announcements from the Reuters press team.",
+            "editorial_description": "In 1850, Baron Julius Reuter turned speed into an advantage—using carrier pigeons to move market prices faster than anyone else. Today, 175 years later, Reuters continues to deliver fast, accurate and fact-based news through its more than 2,600 journalists in 200 locations worldwide and cutting-edge use of AI and technology.",
+            "page_title": "People News",
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "node_type": "section"
+          }
+        ]
+      },
+      {
+        "id": "/sponsored/",
+        "website": "reuters",
+        "name": "Sponsored Content",
+        "page_title": "Sponsored Content",
+        "language": "en",
+        "template_type": "section",
+        "type": "section",
+        "advertising": {
+          "sponsor_logo_type": "sponsoredlogo"
+        },
+        "node_type": "section",
+        "children": [
+          {
+            "id": "/sponsored/reuters-plus/",
+            "website": "reuters",
+            "name": "Reuters Plus",
+            "page_title": "Reuters Plus",
+            "language": "en",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "sponsoredreuterspluslogo"
+            },
+            "node_type": "section"
+          }
+        ]
+      },
+      {
+        "id": "/en/",
+        "website": "reuters",
+        "name": "English",
+        "page_title": "English",
+        "can_follow": true,
+        "language": "en",
+        "template_type": "section",
+        "type": "section",
+        "advertising": {
+          "sponsor_logo_type": "mobiletestlogo"
+        },
+        "node_type": "section"
+      },
+      {
+        "id": "/static/",
+        "website": "reuters",
+        "name": "Static Page",
+        "page_title": "Static Page",
+        "can_follow": true,
+        "language": "en",
+        "template_type": "section",
+        "type": "section",
+        "advertising": {
+          "sponsor_logo_type": "staticlogo"
+        },
+        "node_type": "section"
+      },
+      {
+        "id": "/fr/",
+        "website": "reuters",
+        "name": "Francais",
+        "page_title": "Francais",
+        "language": "fr",
+        "template_type": "section",
+        "type": "section",
+        "advertising": {
+          "sponsor_logo_type": "frlogo"
+        },
+        "node_type": "section",
+        "children": [
+          {
+            "id": "/fr/actualites/",
+            "website": "reuters",
+            "name": "Actualités",
+            "page_title": "Actualités",
+            "language": "fr",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "fractualiteslogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/fr/affaires/",
+            "website": "reuters",
+            "name": "Affaires",
+            "page_title": "Affaires",
+            "language": "fr",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "fraffaireslogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/fr/international/",
+            "website": "reuters",
+            "name": "International",
+            "page_title": "International",
+            "language": "fr",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "frinternationallogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/fr/sports/",
+            "website": "reuters",
+            "name": "Sports",
+            "page_title": "Sports",
+            "language": "fr",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "frsportslogo"
+            },
+            "node_type": "section"
+          }
+        ]
+      },
+      {
+        "id": "/ar/",
+        "website": "reuters",
+        "name": "العربية",
+        "page_title": "العربية",
+        "can_follow": true,
+        "language": "ar",
+        "template_type": "section",
+        "type": "section",
+        "advertising": {
+          "sponsor_logo_type": "arlogo"
+        },
+        "node_type": "section",
+        "children": [
+          {
+            "id": "/ar/business/",
+            "website": "reuters",
+            "name": "مهنة",
+            "page_title": "مهنة",
+            "can_follow": true,
+            "language": "ar",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "arlogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/ar/entertainment/",
+            "website": "reuters",
+            "name": "ترفيه",
+            "page_title": "ترفيه",
+            "can_follow": true,
+            "language": "ar",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "arlogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/ar/sports/",
+            "website": "reuters",
+            "name": "رياضي",
+            "page_title": "رياضي",
+            "can_follow": true,
+            "language": "ar",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "arlogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/ar/technology/",
+            "website": "reuters",
+            "name": "التقنية",
+            "page_title": "التقنية",
+            "can_follow": true,
+            "language": "ar",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "arlogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/ar/world/",
+            "website": "reuters",
+            "name": "عالم",
+            "page_title": "عالم",
+            "can_follow": true,
+            "language": "ar",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "arlogo"
+            },
+            "node_type": "section"
+          }
+        ]
+      },
+      {
+        "id": "/pt/",
+        "website": "reuters",
+        "name": "Português",
+        "page_title": "Português",
+        "can_follow": true,
+        "language": "pt",
+        "template_type": "section",
+        "type": "section",
+        "advertising": {
+          "sponsor_logo_type": "ptlogo"
+        },
+        "node_type": "section",
+        "children": [
+          {
+            "id": "/pt/agricultura/",
+            "website": "reuters",
+            "name": "Agricultura",
+            "page_title": "Agricultura",
+            "can_follow": true,
+            "language": "pt",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "ptlogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/pt/negocio/",
+            "website": "reuters",
+            "name": "Negócio",
+            "page_title": "Negócio",
+            "can_follow": true,
+            "language": "pt",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "ptlogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/pt/domestico/",
+            "website": "reuters",
+            "name": "Doméstico",
+            "page_title": "Doméstico",
+            "can_follow": true,
+            "language": "pt",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "ptlogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/pt/entretenimento/",
+            "website": "reuters",
+            "name": "Entretenimento",
+            "page_title": "Entretenimento",
+            "can_follow": true,
+            "language": "pt",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "ptlogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/pt/desportivo/",
+            "website": "reuters",
+            "name": "Desportivo",
+            "page_title": "Desportivo",
+            "can_follow": true,
+            "language": "pt",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "ptlogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/pt/tecnologia/",
+            "website": "reuters",
+            "name": "Tecnologia",
+            "page_title": "Tecnologia",
+            "can_follow": true,
+            "language": "pt",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "ptlogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/pt/mundo/",
+            "website": "reuters",
+            "name": "Mundo",
+            "page_title": "Mundo",
+            "can_follow": true,
+            "language": "pt",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "ptlogo"
+            },
+            "node_type": "section"
+          }
+        ]
+      },
+      {
+        "id": "/de/",
+        "website": "reuters",
+        "name": "Deutsch",
+        "page_title": "Deutsch",
+        "can_follow": true,
+        "language": "de",
+        "template_type": "section",
+        "type": "section",
+        "advertising": {
+          "sponsor_logo_type": "delogo"
+        },
+        "node_type": "section",
+        "children": [
+          {
+            "id": "/de/firma/",
+            "website": "reuters",
+            "name": "Firma",
+            "page_title": "Firma",
+            "can_follow": true,
+            "language": "de",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "delogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/de/hauslich/",
+            "website": "reuters",
+            "name": "Häuslich",
+            "page_title": "Häuslich",
+            "can_follow": true,
+            "language": "de",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "delogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/de/wirtschaft/",
+            "website": "reuters",
+            "name": "Wirtschaft",
+            "page_title": "Wirtschaft",
+            "can_follow": true,
+            "language": "de",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "delogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/de/markte/",
+            "website": "reuters",
+            "name": "Märkte",
+            "page_title": "Märkte",
+            "can_follow": true,
+            "language": "de",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "delogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/de/welt/",
+            "website": "reuters",
+            "name": "Welt",
+            "page_title": "Welt",
+            "can_follow": true,
+            "language": "de",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "delogo"
+            },
+            "node_type": "section"
+          }
+        ]
+      },
+      {
+        "id": "/it/",
+        "website": "reuters",
+        "name": "Italiano",
+        "page_title": "Italiano",
+        "can_follow": true,
+        "language": "it",
+        "template_type": "section",
+        "type": "section",
+        "advertising": {
+          "sponsor_logo_type": "itlogo"
+        },
+        "node_type": "section",
+        "children": [
+          {
+            "id": "/it/azienda/",
+            "website": "reuters",
+            "name": "Azienda",
+            "page_title": "Azienda",
+            "can_follow": true,
+            "language": "it",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "itlogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/it/mondo/",
+            "website": "reuters",
+            "name": "Mondo",
+            "page_title": "Mondo",
+            "can_follow": true,
+            "language": "it",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "itlogo"
+            },
+            "node_type": "section"
+          }
+        ]
+      },
+      {
+        "id": "/latam/",
+        "website": "reuters",
+        "name": "Latam",
+        "page_title": "Latam",
+        "can_follow": true,
+        "language": "es",
+        "template_type": "section",
+        "type": "section",
+        "advertising": {
+          "sponsor_logo_type": "eslogo"
+        },
+        "node_type": "section",
+        "children": [
+          {
+            "id": "/latam/negocio/",
+            "website": "reuters",
+            "name": "Negocio",
+            "page_title": "Negocio",
+            "can_follow": true,
+            "language": "es",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "eslogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/latam/domestico/",
+            "website": "reuters",
+            "name": "Doméstico",
+            "page_title": "Doméstico",
+            "can_follow": true,
+            "language": "es",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "eslogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/latam/diversion/",
+            "website": "reuters",
+            "name": "Diversión",
+            "page_title": "Diversión",
+            "can_follow": true,
+            "language": "es",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "eslogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/latam/deportivo/",
+            "website": "reuters",
+            "name": "Deportivo",
+            "page_title": "Deportivo",
+            "can_follow": true,
+            "language": "es",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "eslogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/latam/technologia/",
+            "website": "reuters",
+            "name": "Tecnología",
+            "page_title": "Tecnología",
+            "can_follow": true,
+            "language": "es",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "eslogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/latam/mundo/",
+            "website": "reuters",
+            "name": "Mundo",
+            "page_title": "Mundo",
+            "can_follow": true,
+            "language": "es",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "eslogo"
+            },
+            "node_type": "section"
+          }
+        ]
+      },
+      {
+        "id": "/es/",
+        "website": "reuters",
+        "name": "Español",
+        "page_title": "Español",
+        "can_follow": true,
+        "language": "es",
+        "template_type": "section",
+        "type": "section",
+        "advertising": {
+          "sponsor_logo_type": "eslogo"
+        },
+        "node_type": "section",
+        "children": [
+          {
+            "id": "/es/negocio/",
+            "website": "reuters",
+            "name": "Negocio",
+            "page_title": "Negocio",
+            "can_follow": true,
+            "language": "es",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "eslogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/es/diversión/",
+            "website": "reuters",
+            "name": "Diversión",
+            "page_title": "Diversión",
+            "can_follow": true,
+            "language": "es",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "eslogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/es/deportivo/",
+            "website": "reuters",
+            "name": "Deportivo",
+            "page_title": "Deportivo",
+            "can_follow": true,
+            "language": "es",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "eslogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/es/tecnología/",
+            "website": "reuters",
+            "name": "Tecnología",
+            "page_title": "Tecnología",
+            "can_follow": true,
+            "language": "es",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "eslogo"
+            },
+            "node_type": "section"
+          },
+          {
+            "id": "/es/mundo/",
+            "website": "reuters",
+            "name": "Mundo",
+            "page_title": "Mundo",
+            "can_follow": true,
+            "language": "es",
+            "template_type": "section",
+            "type": "section",
+            "advertising": {
+              "sponsor_logo_type": "eslogo"
+            },
+            "node_type": "section"
+          }
+        ]
+      },
+      {
+        "id": "/topic/",
+        "website": "reuters",
+        "name": "Topic",
+        "page_title": "Topic",
+        "can_follow": true,
+        "language": "en",
+        "template_type": "section",
+        "type": "section",
+        "advertising": {
+          "sponsored": "false",
+          "sponsor_logo_type": "topiclogo"
+        },
+        "node_type": "section"
+      },
+      {
+        "id": "/data/",
+        "website": "reuters",
+        "name": "Data",
+        "description": "Analyze and explore the numbers making news",
+        "page_title": "Data",
+        "language": "en",
+        "template_type": "section",
+        "type": "section",
+        "advertising": {
+          "sponsor_logo_type": "datalogo"
+        },
+        "node_type": "section"
+      },
+      {
+        "id": "/obituary/",
+        "website": "reuters",
+        "name": "Obituaries",
+        "page_title": "Obituaries",
+        "can_follow": true,
+        "language": "en",
+        "template_type": "section",
+        "type": "section",
+        "advertising": {
+          "sponsor_logo_type": "obituarylogo"
+        },
+        "node_type": "section"
+      }
+    ],
+    "response_time": 1777479082112
+  },
+  "_id": "e58c434dc82801af9e0ae441cc812ff53968df1307c8de3c8f561acc689e5b33"
+}

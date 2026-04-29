@@ -1220,7 +1220,7 @@ export default defineSource({
             date: pubDate, // 发布时间
           },
         }
-      }).slice(0, 30)
+      })
     }
     
     // 如果API失败，返回空数组
@@ -1623,7 +1623,7 @@ export default defineSource({
             info: item.breedTags.join(", "), // 品种标签
           },
         }
-      }).slice(0, 30)
+      })
     }
     
     // 如果API失败，返回空数组
@@ -1767,7 +1767,7 @@ export default defineSource({
             date: pubDate, // 发布时间
           },
         }
-      }).slice(0, 30)
+      })
     }
     
     // 如果API失败，返回空数组
@@ -1908,7 +1908,7 @@ const fetchJiemianNews = async (cid: string, tagid: string): Promise<NewsItem[]>
           date: pubDate,
         },
       }
-    }).slice(0, 30)
+    })
   }
   
   return []

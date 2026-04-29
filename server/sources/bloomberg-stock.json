@@ -1,0 +1,1675 @@
+[
+  {
+    "archived": false,
+    "brand": "industries",
+    "byline": "Anthony Hughes",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Anthony Hughes",
+        "attributionPreferences": {
+          "fullNamePreference": "Anthony Hughes",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "industries",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "",
+      "text": "Industries",
+      "bybrowEligible": false
+    },
+    "headline": "E*Trade in Talks to Lead SpaceX IPO for Retail, Report Says",
+    "id": "TCQ0OMKK3NYA00",
+    "image": {
+      "alt": "The E*Trade Financial Corp. App Ahead Of Earnings Figures ",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i_98LYQoPFBs/v0/-1x-1.webp",
+      "caption": "",
+      "credit": "Andrew Harrer/Bloomberg",
+      "origWidth": 1999,
+      "origHeight": 1333,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "The E*Trade Financial Corp. App Ahead Of Earnings Figures ",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i_98LYQoPFBs/v0/-1x-1.webp",
+        "caption": "",
+        "credit": "Andrew Harrer/Bloomberg",
+        "origWidth": 1999,
+        "origHeight": 1333,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-03-30T17:12:01.290Z",
+    "slug": "2026-03-30/e-trade-in-talks-to-lead-spacex-ipo-for-retail-reuters-says",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-03-30T17:44:54.580Z",
+    "url": "/news/articles/2026-03-30/e-trade-in-talks-to-lead-spacex-ipo-for-retail-reuters-says",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "markets",
+    "byline": "Brian Smith, Caleb Mutua and Davide Barbuscia",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Brian W Smith",
+        "attributionPreferences": {
+          "fullNamePreference": "Brian Smith",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "markets",
+        "photoDisplayed": false,
+        "thumbnail": null
+      },
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Caleb Mutua",
+        "attributionPreferences": {
+          "fullNamePreference": "Caleb Mutua",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "markets",
+        "photoDisplayed": false,
+        "thumbnail": null
+      },
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Davide Barbuscia",
+        "attributionPreferences": {
+          "fullNamePreference": "Davide Barbuscia",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "markets",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "/markets",
+      "text": "Markets",
+      "bybrowEligible": false
+    },
+    "headline": "Intel $6.5 Billion Bond Sale Signals Investor Hope in Turnaround",
+    "id": "TE07VET9NJLV00",
+    "image": {
+      "alt": "Intel Shares Fall Most Since July After Predicting Surprise Loss",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iRWSWPwAYNt8/v1/-1x-1.webp",
+      "caption": "",
+      "credit": "David Paul Morris/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1331,
+      "themes": [],
+      "type": "image"
+    },
+    "lede": {
+      "alt": "Signage outside Intel headquarters in Santa Clara, California.",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iRWSWPwAYNt8/v1/-1x-1.webp",
+      "caption": "\u003Cp\u003ESignage outside Intel headquarters in Santa Clara, California.\u003C/p\u003E",
+      "credit": "Photographer: David Paul Morris/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1331,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "Intel Shares Fall Most Since July After Predicting Surprise Loss",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iRWSWPwAYNt8/v1/-1x-1.webp",
+        "caption": "",
+        "credit": "David Paul Morris/Bloomberg",
+        "origWidth": 2000,
+        "origHeight": 1331,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-27T12:39:32.245Z",
+    "slug": "2026-04-27/intel-kicks-off-bond-sale-to-help-buy-back-ireland-plant-stake",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-27T21:28:58.375Z",
+    "url": "/news/articles/2026-04-27/intel-kicks-off-bond-sale-to-help-buy-back-ireland-plant-stake",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "technology",
+    "byline": "Yazhou Sun and Amy Thomson",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Yazhou Sun",
+        "attributionPreferences": {
+          "fullNamePreference": "Yazhou Sun",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "technology",
+        "photoDisplayed": false,
+        "thumbnail": null
+      },
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Amy Thomson",
+        "attributionPreferences": {
+          "fullNamePreference": "Amy Thomson",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "technology",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "",
+      "text": "Big Tech",
+      "bybrowEligible": false
+    },
+    "headline": "US Government Stake in Intel Has Jumped 300% to $36 Billion",
+    "id": "TE01BLT9NJLV00",
+    "image": {
+      "alt": "Intel’s Money Woes Throw Biden Team’s Chip Strategy Into Turmoil ",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iOauZdnioCMk/v1/-1x-1.webp",
+      "caption": "",
+      "credit": "David Paul Morris/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1331,
+      "themes": [],
+      "type": "image"
+    },
+    "label": "Big Tech",
+    "lede": {
+      "alt": "Intel Corp. headquarters in Santa Clara, California.",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iOauZdnioCMk/v1/-1x-1.webp",
+      "caption": "\u003Cp\u003EIntel Corp. headquarters in Santa Clara, California.\u003C/p\u003E",
+      "credit": "Photographer: David Paul Morris/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1331,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "Intel’s Money Woes Throw Biden Team’s Chip Strategy Into Turmoil ",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iOauZdnioCMk/v1/-1x-1.webp",
+        "caption": "",
+        "credit": "David Paul Morris/Bloomberg",
+        "origWidth": 2000,
+        "origHeight": 1331,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-24T15:14:55.117Z",
+    "slug": "2026-04-24/us-government-stake-in-intel-has-jumped-300-to-36-billion",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-24T20:33:43.797Z",
+    "url": "/news/articles/2026-04-24/us-government-stake-in-intel-has-jumped-300-to-36-billion",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "markets",
+    "byline": "Brian Smith, Kevin Kingsbury and Caleb Mutua",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Brian W Smith",
+        "attributionPreferences": {
+          "fullNamePreference": "Brian Smith",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "markets",
+        "photoDisplayed": false,
+        "thumbnail": null
+      },
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Kevin Kingsbury",
+        "attributionPreferences": {
+          "fullNamePreference": "Kevin Kingsbury",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "markets",
+        "photoDisplayed": false,
+        "thumbnail": null
+      },
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Caleb Mutua",
+        "attributionPreferences": {
+          "fullNamePreference": "Caleb Mutua",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "markets",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "/markets",
+      "text": "Markets",
+      "bybrowEligible": false
+    },
+    "headline": "Intel Plans Multi-Billion Dollar Bond Sale Tied to Apollo Deal",
+    "id": "TDZZ3CKJH6V400",
+    "image": {
+      "alt": "Intel Shares Fall Most Since July After Predicting Surprise Loss",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ild70eP.Und8/v1/-1x-1.webp",
+      "caption": "",
+      "credit": "David Paul Morris/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1331,
+      "themes": [],
+      "type": "image"
+    },
+    "lede": {
+      "alt": "Intel headquarters in Santa Clara, California.",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ild70eP.Und8/v1/-1x-1.webp",
+      "caption": "\u003Cp\u003EIntel headquarters in Santa Clara, California.\u003C/p\u003E",
+      "credit": "Photographer: David Paul Morris/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1331,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "Intel Shares Fall Most Since July After Predicting Surprise Loss",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ild70eP.Und8/v1/-1x-1.webp",
+        "caption": "",
+        "credit": "David Paul Morris/Bloomberg",
+        "origWidth": 2000,
+        "origHeight": 1331,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-24T13:05:57.928Z",
+    "slug": "2026-04-24/intel-to-hold-fixed-income-calls-following-blowout-sales-outlook",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-24T21:23:50.035Z",
+    "url": "/news/articles/2026-04-24/intel-to-hold-fixed-income-calls-following-blowout-sales-outlook",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "markets",
+    "byline": "Joel Leon",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Joel Leon",
+        "attributionPreferences": {
+          "fullNamePreference": "Joel Leon",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "markets",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "/markets",
+      "text": "Markets",
+      "bybrowEligible": false
+    },
+    "headline": "Nasdaq 100, S&P 500 Finish at Record on Intel’s Blowout Results",
+    "id": "TDZWSYKJH6VH00",
+    "image": {
+      "alt": "Intel’s Money Woes Throw Biden Team’s Chip Strategy Into Turmoil ",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iYOGbEO62W0U/v1/-1x-1.webp",
+      "caption": "",
+      "credit": "David Paul Morris/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1331,
+      "themes": [],
+      "type": "image"
+    },
+    "lede": {
+      "alt": "Intel Corp. headquarters in Santa Clara, California.",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iYOGbEO62W0U/v1/-1x-1.webp",
+      "caption": "\u003Cp\u003EIntel Corp. headquarters in Santa Clara, California.\u003C/p\u003E",
+      "credit": "Photographer: David Paul Morris/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1331,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "Intel’s Money Woes Throw Biden Team’s Chip Strategy Into Turmoil ",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iYOGbEO62W0U/v1/-1x-1.webp",
+        "caption": "",
+        "credit": "David Paul Morris/Bloomberg",
+        "origWidth": 2000,
+        "origHeight": 1331,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-24T12:56:40.043Z",
+    "slug": "2026-04-24/nasdaq-futures-jump-as-intel-s-blockbuster-sales-view-impresses",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-24T20:21:21.927Z",
+    "url": "/news/articles/2026-04-24/nasdaq-futures-jump-as-intel-s-blockbuster-sales-view-impresses",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "markets",
+    "byline": "Will Daley",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Will Daley",
+        "attributionPreferences": {
+          "fullNamePreference": "Will Daley",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "markets",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "/markets",
+      "text": "Markets",
+      "bybrowEligible": false
+    },
+    "headline": "US Premarket Movers for April 24, 2026",
+    "id": "TDZXXOKGCTHG00",
+    "locale": "en",
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-24T11:53:18.569Z",
+    "slug": "2026-04-24/us-stock-futures-today-intel-maxlinear-organon-procter-gamble",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-24T11:53:18.571Z",
+    "url": "/news/articles/2026-04-24/us-stock-futures-today-intel-maxlinear-organon-procter-gamble",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "markets",
+    "byline": "Rita Nazareth",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Rita Nazareth",
+        "attributionPreferences": {
+          "fullNamePreference": "Rita Nazareth",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "markets",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "/markets",
+      "text": "Markets",
+      "bybrowEligible": false
+    },
+    "headline": "Treasuries Fall as Oil Rally Fuels Inflation Worry: Markets Wrap",
+    "id": "TE8286KIUPSH00",
+    "image": {
+      "alt": "General Views of Shanghai",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iSS0Z_IAON74/v0/-1x-1.webp",
+      "caption": "",
+      "credit": "Qilai Shen/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1334,
+      "themes": [],
+      "type": "image"
+    },
+    "lede": {
+      "autoplay": true,
+      "bmmrId": "c406e133-b9a2-4464-8b09-3922eda56d47",
+      "prerollAdUnit": "",
+      "url": "",
+      "thumbnail": {
+        "alt": "",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iF8D4GezR3LY/v3/-1x-1.webp",
+        "caption": "",
+        "credit": "",
+        "origWidth": 1920,
+        "origHeight": 1080,
+        "themes": [],
+        "type": "image"
+      },
+      "title": "Kpler Sees Brent as High as $125 If Blockade Continues",
+      "duration": 184980,
+      "type": "Video",
+      "keywords": [],
+      "showName": "",
+      "aspectRatio": "16:9"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "General Views of Shanghai",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iSS0Z_IAON74/v0/-1x-1.webp",
+        "caption": "",
+        "credit": "Qilai Shen/Bloomberg",
+        "origWidth": 2000,
+        "origHeight": 1334,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "nicodes": [
+      "GLOBEWRP"
+    ],
+    "premium": false,
+    "publishedAt": "2026-04-28T22:07:16.494Z",
+    "slug": "2026-04-28/asian-stocks-set-for-muted-open-after-us-selloff-markets-wrap",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-29T14:44:04.863Z",
+    "url": "/news/articles/2026-04-28/asian-stocks-set-for-muted-open-after-us-selloff-markets-wrap",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "industries",
+    "byline": "Peter Eichenbaum",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Peter Eichenbaum",
+        "attributionPreferences": {
+          "fullNamePreference": "Peter Eichenbaum",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "industries",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "/opinion-finance",
+      "text": "Finance",
+      "bybrowEligible": false
+    },
+    "headline": "Robinhood Falls After Warning of Expenses Tied to Trump Accounts",
+    "id": "TE82R7T9NJLS00",
+    "image": {
+      "alt": "Robinhood Takes Flight Keynote At JFK Airport",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ixAJnG4ZXr2M/v1/-1x-1.webp",
+      "caption": "",
+      "credit": "Adam Gray/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1333,
+      "themes": [],
+      "type": "image"
+    },
+    "label": "Finance",
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "Robinhood Takes Flight Keynote At JFK Airport",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ixAJnG4ZXr2M/v1/-1x-1.webp",
+        "caption": "",
+        "credit": "Adam Gray/Bloomberg",
+        "origWidth": 2000,
+        "origHeight": 1333,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-28T21:32:14.943Z",
+    "slug": "2026-04-28/robinhood-falls-after-warning-of-expenses-tied-to-trump-accounts",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-28T21:32:14.943Z",
+    "url": "/news/articles/2026-04-28/robinhood-falls-after-warning-of-expenses-tied-to-trump-accounts",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "industries",
+    "byline": "Paige Smith and Gabrielle Ng",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Paige Smith",
+        "attributionPreferences": {
+          "fullNamePreference": "Paige Smith",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "industries",
+        "photoDisplayed": false,
+        "thumbnail": null
+      },
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Gabrielle Ng",
+        "attributionPreferences": {
+          "fullNamePreference": "Gabrielle Ng",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "industries",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "/opinion-finance",
+      "text": "Finance",
+      "bybrowEligible": false
+    },
+    "headline": "Robinhood Gets Singapore Regulatory OK for Brokerage Service",
+    "id": "TDURJ2T9NJM800",
+    "image": {
+      "alt": "Robinhood Gets Singapore Regulators’ Nod for Brokerage Offerings",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iLwd6IybgfHk/v1/-1x-1.webp",
+      "caption": "",
+      "credit": "Adam Gray/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1333,
+      "themes": [],
+      "type": "image"
+    },
+    "label": "Finance",
+    "lede": {
+      "alt": "Robinhood is expanding internationally as it seeks to become a financial “super app”.",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iLwd6IybgfHk/v1/-1x-1.webp",
+      "caption": "\u003Cp\u003ERobinhood is expanding internationally as it seeks to become a financial “super app”.\u003C/p\u003E",
+      "credit": "Photographer: Adam Gray/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1333,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "Robinhood Gets Singapore Regulators’ Nod for Brokerage Offerings",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iLwd6IybgfHk/v1/-1x-1.webp",
+        "caption": "",
+        "credit": "Adam Gray/Bloomberg",
+        "origWidth": 2000,
+        "origHeight": 1333,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-23T09:00:00.001Z",
+    "slug": "2026-04-23/robinhood-gets-singapore-regulators-nod-for-brokerage-offerings",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-23T15:04:04.629Z",
+    "url": "/news/articles/2026-04-23/robinhood-gets-singapore-regulators-nod-for-brokerage-offerings",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "industries",
+    "byline": "Katherine Doherty",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Katherine Doherty",
+        "attributionPreferences": {
+          "fullNamePreference": "Katherine Doherty",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "industries",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "/opinion-finance",
+      "text": "Finance",
+      "bybrowEligible": false
+    },
+    "headline": "Citadel Securities Looks at Prediction Markets as Trading Scales",
+    "id": "TDLOSWT96OSV00",
+    "image": {
+      "alt": "Key Speakers At Boom Belt Event",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iY3MmJ6VXz54/v1/-1x-1.webp",
+      "caption": "",
+      "credit": "Eva Marie Uzcategui/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1334,
+      "themes": [],
+      "type": "image"
+    },
+    "label": "Finance",
+    "lede": {
+      "alt": "Jim Esposito",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iY3MmJ6VXz54/v1/-1x-1.webp",
+      "caption": "Jim Esposito",
+      "credit": "Photographer: Eva Marie Uzcategui/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1334,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "Key Speakers At Boom Belt Event",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iY3MmJ6VXz54/v1/-1x-1.webp",
+        "caption": "",
+        "credit": "Eva Marie Uzcategui/Bloomberg",
+        "origWidth": 2000,
+        "origHeight": 1334,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-16T20:46:24.283Z",
+    "slug": "2026-04-16/citadel-securities-looks-at-prediction-markets-as-trading-scales",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-16T20:46:24.283Z",
+    "url": "/news/articles/2026-04-16/citadel-securities-looks-at-prediction-markets-as-trading-scales",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "industries",
+    "byline": "Paige Smith",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Paige Smith",
+        "attributionPreferences": {
+          "fullNamePreference": "Paige Smith",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "industries",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "/opinion-finance",
+      "text": "Finance",
+      "bybrowEligible": false
+    },
+    "headline": "Schwab Considering Prediction Markets Tied to Finance Events",
+    "id": "TDL9F7KJH6V500",
+    "image": {
+      "alt": "Charles Schwab Ahead Of Earnings Figures",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iUetWAlVDPlM/v1/-1x-1.webp",
+      "caption": "",
+      "credit": "Angus Mordant/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1334,
+      "themes": [],
+      "type": "image"
+    },
+    "label": "Finance",
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "Charles Schwab Ahead Of Earnings Figures",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iUetWAlVDPlM/v1/-1x-1.webp",
+        "caption": "",
+        "credit": "Angus Mordant/Bloomberg",
+        "origWidth": 2000,
+        "origHeight": 1334,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-16T13:57:45.610Z",
+    "slug": "2026-04-16/schwab-considering-prediction-markets-linked-to-finance-events",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-16T19:05:17.760Z",
+    "url": "/news/articles/2026-04-16/schwab-considering-prediction-markets-linked-to-finance-events",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "markets",
+    "byline": "Gowri Gurumurthy and Gerson Freitas Jr.",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Gowri Gurumurthy",
+        "attributionPreferences": {
+          "fullNamePreference": "Gowri Gurumurthy",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "markets",
+        "photoDisplayed": false,
+        "thumbnail": null
+      },
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Gerson Freitas Jr.",
+        "attributionPreferences": {
+          "fullNamePreference": "Gerson Freitas Jr.",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "markets",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "/markets",
+      "text": "Markets",
+      "bybrowEligible": false
+    },
+    "headline": "Nvidia-Tied Data Center Raises $4.59 Billion From Junk-Bond Sale",
+    "id": "TE7OATKGZARN00",
+    "image": {
+      "alt": "Intel Soars After Nvidia Makes $5 Billion Investment",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/imsfsCEKlEWE/v1/-1x-1.webp",
+      "caption": "",
+      "credit": "David Paul Morris/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1333,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "Intel Soars After Nvidia Makes $5 Billion Investment",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/imsfsCEKlEWE/v1/-1x-1.webp",
+        "caption": "",
+        "credit": "David Paul Morris/Bloomberg",
+        "origWidth": 2000,
+        "origHeight": 1333,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-28T20:57:53.657Z",
+    "slug": "2026-04-28/nvidia-tied-data-center-raises-4-59-billion-from-junk-bond-sale",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-28T20:57:53.657Z",
+    "url": "/news/articles/2026-04-28/nvidia-tied-data-center-raises-4-59-billion-from-junk-bond-sale",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "technology",
+    "byline": "Mark Bergen",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Mark Bergen",
+        "attributionPreferences": {
+          "fullNamePreference": "Mark Bergen",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "technology",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "/technology",
+      "text": "Technology",
+      "bybrowEligible": false
+    },
+    "headline": "Sequoia and Nvidia Back Ex-DeepMind Researcher’s New AI Startup at $5.1 Billion Value",
+    "id": "TE5NXFKK3NYH00",
+    "image": {
+      "alt": "Satya Nadella at Microsoft Build AI Day Summit",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i6QIc3okkHlQ/v1/-1x-1.webp",
+      "caption": "",
+      "credit": "Dimas Ardian/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1333,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "Satya Nadella at Microsoft Build AI Day Summit",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i6QIc3okkHlQ/v1/-1x-1.webp",
+        "caption": "",
+        "credit": "Dimas Ardian/Bloomberg",
+        "origWidth": 2000,
+        "origHeight": 1333,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-27T14:26:16.742Z",
+    "slug": "2026-04-27/sequoia-and-nvidia-back-ex-deepmind-researcher-at-5-1-billion-value",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-27T15:19:25.402Z",
+    "url": "/news/articles/2026-04-27/sequoia-and-nvidia-back-ex-deepmind-researcher-at-5-1-billion-value",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "technology",
+    "byline": "Gowri Gurumurthy and Gerson Freitas Jr.",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Gowri Gurumurthy",
+        "attributionPreferences": {
+          "fullNamePreference": "Gowri Gurumurthy",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "technology",
+        "photoDisplayed": false,
+        "thumbnail": null
+      },
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Gerson Freitas Jr.",
+        "attributionPreferences": {
+          "fullNamePreference": "Gerson Freitas Jr.",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "technology",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "/technology",
+      "text": "Technology",
+      "bybrowEligible": false
+    },
+    "headline": "Nvidia-Tied Data Center Taps Junk-Debt Market for $4.5 Billion",
+    "id": "TE5HF4KGZANX00",
+    "image": {
+      "alt": "The Exhibition Floor At The Nvidia GTC Conference",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iOb7Q4HIZjI0/v1/-1x-1.webp",
+      "caption": "",
+      "credit": "David Paul Morris/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1333,
+      "themes": [],
+      "type": "image"
+    },
+    "lede": {
+      "alt": "Attendees on the exhibition floor during the Nvidia GTC conference in San Jose, California on&nbsp;March 18.",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iOb7Q4HIZjI0/v1/-1x-1.webp",
+      "caption": "\u003Cp\u003EAttendees on the exhibition floor during the Nvidia GTC conference in San Jose, California on&nbsp;March 18.\u003C/p\u003E",
+      "credit": "Photographer: David Paul Morris/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1333,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "The Exhibition Floor At The Nvidia GTC Conference",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iOb7Q4HIZjI0/v1/-1x-1.webp",
+        "caption": "",
+        "credit": "David Paul Morris/Bloomberg",
+        "origWidth": 2000,
+        "origHeight": 1333,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-27T13:12:56.521Z",
+    "slug": "2026-04-27/nvidia-tied-data-center-taps-junk-debt-market-for-4-5-billion",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-27T13:12:56.521Z",
+    "url": "/news/articles/2026-04-27/nvidia-tied-data-center-taps-junk-debt-market-for-4-5-billion",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "markets",
+    "byline": "Youkyung Lee",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Youkyung Lee",
+        "attributionPreferences": {
+          "fullNamePreference": "Youkyung Lee",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "technology",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "/markets",
+      "text": "Markets",
+      "bybrowEligible": false
+    },
+    "headline": "US Stocks, Nvidia Close at Record Highs Ahead of Tech Earnings",
+    "id": "TE5D35KIP3LH00",
+    "image": {
+      "alt": "An S&P 500 chart on the floor of the New York Stock Exchange.",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ifgLvW4yT0j4/v1/-1x-1.webp",
+      "caption": "",
+      "credit": "Michael Nagle/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1334,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "An S&P 500 chart on the floor of the New York Stock Exchange.",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ifgLvW4yT0j4/v1/-1x-1.webp",
+        "caption": "",
+        "credit": "Michael Nagle/Bloomberg",
+        "origWidth": 2000,
+        "origHeight": 1334,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-27T11:29:05.641Z",
+    "slug": "2026-04-27/us-stock-futures-flat-as-traders-brace-for-busy-earnings-week",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-27T20:23:06.493Z",
+    "url": "/news/articles/2026-04-27/us-stock-futures-flat-as-traders-brace-for-busy-earnings-week",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "markets",
+    "byline": "Ryan Vlastelica",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Ryan Vlastelica",
+        "attributionPreferences": {
+          "fullNamePreference": "Ryan Vlastelica",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "markets",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "/markets",
+      "text": "Markets",
+      "bybrowEligible": false
+    },
+    "headline": "Nvidia Breakout Sends Chip Giant to First Record Since October",
+    "id": "TDNAHJKK3NY900",
+    "image": {
+      "alt": "The Exhibition Floor At The Nvidia GTC Conference",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iHCLpfyQmrdY/v1/-1x-1.webp",
+      "caption": "",
+      "credit": "David Paul Morris/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1333,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "The Exhibition Floor At The Nvidia GTC Conference",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iHCLpfyQmrdY/v1/-1x-1.webp",
+        "caption": "",
+        "credit": "David Paul Morris/Bloomberg",
+        "origWidth": 2000,
+        "origHeight": 1333,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-24T20:08:19.924Z",
+    "slug": "2026-04-24/nvidia-breakout-sends-chip-giant-to-first-record-since-october",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-24T20:08:19.925Z",
+    "url": "/news/articles/2026-04-24/nvidia-breakout-sends-chip-giant-to-first-record-since-october",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "technology",
+    "byline": "Matt Day and Ed Ludlow",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Matt Day",
+        "attributionPreferences": {
+          "fullNamePreference": "Matt Day",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "technology",
+        "photoDisplayed": false,
+        "thumbnail": null
+      },
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Edward Ludlow",
+        "attributionPreferences": {
+          "fullNamePreference": "Ed Ludlow",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "technology",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "/technology-ai",
+      "text": "AI",
+      "bybrowEligible": false
+    },
+    "headline": "Amazon to Sell OpenAI Tech After Microsoft Cedes Exclusivity",
+    "id": "TE7L6ZT96OSJ00",
+    "image": {
+      "alt": "Davos Prepares To Host World Economic Forum (WEF) 2025",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/icrT09nxob3A/v1/-1x-1.webp",
+      "caption": "",
+      "credit": "Hollie Adams/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1334,
+      "themes": [],
+      "type": "image"
+    },
+    "label": "AI",
+    "lede": {
+      "autoplay": true,
+      "bmmrId": "9c583d74-5afc-41cc-b8ba-a90f67ef4d6d",
+      "prerollAdUnit": "",
+      "url": "",
+      "thumbnail": {
+        "alt": "",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ixYOMQWGTZDo/v3/-1x-1.webp",
+        "caption": "",
+        "credit": "",
+        "origWidth": 1920,
+        "origHeight": 1080,
+        "themes": [],
+        "type": "image"
+      },
+      "title": "Amazon Inks Deal with OpenAI, Plans New AWS Applications",
+      "duration": 807770,
+      "type": "Video",
+      "keywords": [],
+      "showName": "",
+      "aspectRatio": "16:9"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "Davos Prepares To Host World Economic Forum (WEF) 2025",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/icrT09nxob3A/v1/-1x-1.webp",
+        "caption": "",
+        "credit": "Hollie Adams/Bloomberg",
+        "origWidth": 2000,
+        "origHeight": 1334,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-28T17:00:00.001Z",
+    "slug": "2026-04-28/amazon-set-to-sell-openai-tech-after-microsoft-cedes-exclusivity",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-28T17:27:12.861Z",
+    "url": "/news/articles/2026-04-28/amazon-set-to-sell-openai-tech-after-microsoft-cedes-exclusivity",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "technology",
+    "byline": "Matt Day",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Matt Day",
+        "attributionPreferences": {
+          "fullNamePreference": "Matt Day",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "technology",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "/technology-ai",
+      "text": "AI",
+      "bybrowEligible": false
+    },
+    "headline": "Amazon Launches AI Productivity Software for Office Workers",
+    "id": "TE6704KJH6V700",
+    "image": {
+      "alt": "AWS re:Invent 2023",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ir1rn3oBCEGI/v1/-1x-1.webp",
+      "caption": "",
+      "credit": "Noah Berger/Getty Images",
+      "origWidth": 1120,
+      "origHeight": 745,
+      "themes": [],
+      "type": "image"
+    },
+    "label": "AI",
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "AWS re:Invent 2023",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ir1rn3oBCEGI/v1/-1x-1.webp",
+        "caption": "",
+        "credit": "Noah Berger/Getty Images",
+        "origWidth": 1120,
+        "origHeight": 745,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-28T16:00:00.003Z",
+    "slug": "2026-04-28/amazon-launches-ai-productivity-software-for-office-workers",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-28T16:00:00.002Z",
+    "url": "/news/articles/2026-04-28/amazon-launches-ai-productivity-software-for-office-workers",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "technology",
+    "byline": "Matt Day",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Matt Day",
+        "attributionPreferences": {
+          "fullNamePreference": "Matt Day",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "technology",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "/technology-ai",
+      "text": "AI",
+      "bybrowEligible": false
+    },
+    "headline": "OpenAI Breaks Free From Exclusive AI Pact With Microsoft",
+    "id": "TE5LOIKK3NYI00",
+    "image": {
+      "alt": "US-TECHNOLOGY-AI-MICROSOFT-COMPUTERS",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iS24Aa.6dIE8/v1/-1x-1.webp",
+      "caption": "",
+      "credit": "Jason Redmond/AFP/Getty Images",
+      "origWidth": 2000,
+      "origHeight": 1334,
+      "themes": [],
+      "type": "image"
+    },
+    "label": "AI",
+    "lede": {
+      "alt": "OpenAI CEO Sam Altman, left, speaks with Microsoft Chief Technology Officer Kevin Scott during the Microsoft Build conference&nbsp;in Seattle in 2024.&nbsp;",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iS24Aa.6dIE8/v1/-1x-1.webp",
+      "caption": "\u003Cp\u003EOpenAI CEO Sam Altman, left, speaks with Microsoft Chief Technology Officer Kevin Scott during the Microsoft Build conference&nbsp;in Seattle in 2024.&nbsp;\u003C/p\u003E",
+      "credit": "Photographer: Jason Redmond/AFP/Getty Images",
+      "origWidth": 2000,
+      "origHeight": 1334,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "US-TECHNOLOGY-AI-MICROSOFT-COMPUTERS",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iS24Aa.6dIE8/v1/-1x-1.webp",
+        "caption": "",
+        "credit": "Jason Redmond/AFP/Getty Images",
+        "origWidth": 2000,
+        "origHeight": 1334,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-27T13:14:37.195Z",
+    "slug": "2026-04-27/microsoft-to-stop-sharing-revenue-with-main-ai-partner-openai",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-27T14:36:36.900Z",
+    "url": "/news/articles/2026-04-27/microsoft-to-stop-sharing-revenue-with-main-ai-partner-openai",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "technology",
+    "byline": "Matt Day",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Matt Day",
+        "attributionPreferences": {
+          "fullNamePreference": "Matt Day",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "technology",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "/technology",
+      "text": "Technology",
+      "bybrowEligible": false
+    },
+    "headline": "Meta Inks Deal to Use Amazon’s Graviton Processors for AI",
+    "id": "TDYO9PKK3NYA00",
+    "image": {
+      "alt": "Meta Ahead Of Earnings Figures",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ikmNlLulGWgk/v0/-1x-1.webp",
+      "caption": "",
+      "credit": "David Paul Morris/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1329,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "Meta Ahead Of Earnings Figures",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ikmNlLulGWgk/v0/-1x-1.webp",
+        "caption": "",
+        "credit": "David Paul Morris/Bloomberg",
+        "origWidth": 2000,
+        "origHeight": 1329,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-24T12:00:00.000Z",
+    "slug": "2026-04-24/meta-inks-multibillion-dollar-deal-to-use-amazon-chips-for-ai",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-24T13:03:27.948Z",
+    "url": "/news/articles/2026-04-24/meta-inks-multibillion-dollar-deal-to-use-amazon-chips-for-ai",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "industries",
+    "byline": "Monique Mulima",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Monique Mulima",
+        "attributionPreferences": {
+          "fullNamePreference": "Monique Mulima",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "industries",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "",
+      "text": "Industries",
+      "bybrowEligible": false
+    },
+    "headline": "Amazon-Backed Nuclear Firm X-Energy Raises $1.02 Billion in IPO",
+    "id": "TDSPQYKJH6V900",
+    "image": {
+      "alt": "X-Energy",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ieZjMMhWGOC4/v0/-1x-1.webp",
+      "caption": "",
+      "credit": "\u003Cp\u003EGeorge Walker IV/AP Photo\u003C/p\u003E",
+      "origWidth": 2000,
+      "origHeight": 1333,
+      "themes": [],
+      "type": "image"
+    },
+    "lede": {
+      "alt": "An R&D scientist at X-Energy looks at a sample of Triso fuel in Oak Ridge, Tennessee.",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ieZjMMhWGOC4/v0/-1x-1.webp",
+      "caption": "An R&D scientist at X-Energy looks at a sample of Triso fuel in Oak Ridge, Tennessee.",
+      "credit": "\u003Cp\u003EPhotographer: George Walker IV/AP Photo\u003C/p\u003E",
+      "origWidth": 2000,
+      "origHeight": 1333,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "X-Energy",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ieZjMMhWGOC4/v0/-1x-1.webp",
+        "caption": "",
+        "credit": "\u003Cp\u003EGeorge Walker IV/AP Photo\u003C/p\u003E",
+        "origWidth": 2000,
+        "origHeight": 1333,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-24T00:11:55.418Z",
+    "slug": "2026-04-24/amazon-backed-nuclear-firm-x-energy-raises-1-02-billion-in-ipo",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-24T00:11:55.419Z",
+    "url": "/news/articles/2026-04-24/amazon-backed-nuclear-firm-x-energy-raises-1-02-billion-in-ipo",
+    "__modelType": "Story"
+  }
+]

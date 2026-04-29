@@ -1,0 +1,3787 @@
+[
+  {
+    "archived": false,
+    "brand": "industries",
+    "byline": "Kate Duffy and Jack Wittels",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Kate Duffy",
+        "attributionPreferences": {
+          "fullNamePreference": "Kate Duffy",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "industries",
+        "photoDisplayed": false,
+        "thumbnail": null
+      },
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Jack Wittels",
+        "attributionPreferences": {
+          "fullNamePreference": "Jack Wittels",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "industries",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "",
+      "text": "Explainer",
+      "bybrowEligible": false
+    },
+    "franchise": "explainer",
+    "headline": "How a Jet Fuel Supply Crunch Threatens Summer Flights",
+    "id": "TDXSQBT9NJLS00",
+    "image": {
+      "alt": "US Airlines Cut Flights, More To Come As Shutdown Drags On",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iqB_4p6OdvFU/v10/-1x-1.webp",
+      "caption": "",
+      "credit": "Elijah Nouvelage/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1334,
+      "themes": [],
+      "type": "image"
+    },
+    "lede": {
+      "alt": "A Delta plane takes off near an air traffic control tower at Hartsfield-Jackson Atlanta International Airport",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iqB_4p6OdvFU/v10/-1x-1.webp",
+      "caption": "A Delta plane takes off near an air traffic control tower at Hartsfield-Jackson Atlanta International Airport",
+      "credit": "Photographer: Elijah Nouvelage/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1334,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "US Airlines Cut Flights, More To Come As Shutdown Drags On",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iqB_4p6OdvFU/v10/-1x-1.webp",
+        "caption": "",
+        "credit": "Elijah Nouvelage/Bloomberg",
+        "origWidth": 2000,
+        "origHeight": 1334,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-29T13:21:21.814Z",
+    "slug": "2026-04-29/a-jet-fuel-shortage-why-airlines-are-canceling-flights-and-raising-airfares",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-29T13:21:21.814Z",
+    "url": "/news/articles/2026-04-29/a-jet-fuel-shortage-why-airlines-are-canceling-flights-and-raising-airfares",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "markets",
+    "byline": "Preeti Singh",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Preeti Singh",
+        "attributionPreferences": {
+          "fullNamePreference": "Preeti Singh",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "markets",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "/markets",
+      "text": "Markets",
+      "bybrowEligible": false
+    },
+    "headline": "Blackstone Forms New Unit to Oversee AI, High-Growth Tech Bets",
+    "id": "TE7S6ST96OSG00",
+    "image": {
+      "alt": "Mobile World Congress 2026",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/isSc3S8OffI4/v0/-1x-1.webp",
+      "caption": "",
+      "credit": "Angel Garcia/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1334,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "Mobile World Congress 2026",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/isSc3S8OffI4/v0/-1x-1.webp",
+        "caption": "",
+        "credit": "Angel Garcia/Bloomberg",
+        "origWidth": 2000,
+        "origHeight": 1334,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-29T13:15:36.124Z",
+    "slug": "2026-04-29/blackstone-forms-new-unit-to-oversee-ai-high-growth-tech-bets",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-29T13:15:36.125Z",
+    "url": "/news/articles/2026-04-29/blackstone-forms-new-unit-to-oversee-ai-high-growth-tech-bets",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "politics",
+    "byline": "Joe Mayes",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Joe Mayes",
+        "attributionPreferences": {
+          "fullNamePreference": "Joe Mayes",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "bpol",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "/politics",
+      "text": "Politics",
+      "bybrowEligible": false
+    },
+    "headline": "Farage Accused of Breaking Rules Over £5 Million Donation",
+    "id": "TE98EKKIJHE600",
+    "image": {
+      "alt": "Nigel Farage's Reform UK Vows to Keep Expensive Pensions 'Triple Lock'\n",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iK_SUW6KwnXg/v1/-1x-1.webp",
+      "caption": "",
+      "credit": "Jose Sarmento Matos/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1333,
+      "themes": [],
+      "type": "image"
+    },
+    "lede": {
+      "alt": "Nigel Farage",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iK_SUW6KwnXg/v1/-1x-1.webp",
+      "caption": "\u003Cp\u003ENigel Farage\u003C/p\u003E",
+      "credit": "Photographer: Jose Sarmento Matos/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1333,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "Nigel Farage's Reform UK Vows to Keep Expensive Pensions 'Triple Lock'\n",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iK_SUW6KwnXg/v1/-1x-1.webp",
+        "caption": "",
+        "credit": "Jose Sarmento Matos/Bloomberg",
+        "origWidth": 2000,
+        "origHeight": 1333,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-29T13:14:23.077Z",
+    "slug": "2026-04-29/farage-accused-of-rule-break-over-5-million-donation",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-29T13:14:23.077Z",
+    "url": "/news/articles/2026-04-29/farage-accused-of-rule-break-over-5-million-donation",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "technology",
+    "byline": "Rachel Metz",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Rachel Metz",
+        "attributionPreferences": {
+          "fullNamePreference": "Rachel Metz",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "technology",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "/technology",
+      "text": "Technology",
+      "bybrowEligible": false
+    },
+    "headline": "OpenAI Sued in US by Families of Canada School Shooting Victims",
+    "id": "TE8L8KKJH6V400",
+    "image": {
+      "alt": "Tumbler Ridge",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iB0m25ae_HFU/v1/-1x-1.webp",
+      "caption": "",
+      "credit": "Paige Taylor White/AFP/Getty Images",
+      "origWidth": 2000,
+      "origHeight": 1334,
+      "themes": [],
+      "type": "image"
+    },
+    "lede": {
+      "alt": "People pay their respects at a community vigil in Tumbler Ridge",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iB0m25ae_HFU/v1/-1x-1.webp",
+      "caption": "People pay their respects at a community vigil in Tumbler Ridge",
+      "credit": "Photographer: Paige Taylor White/AFP/Getty Images",
+      "origWidth": 2000,
+      "origHeight": 1334,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "Tumbler Ridge",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iB0m25ae_HFU/v1/-1x-1.webp",
+        "caption": "",
+        "credit": "Paige Taylor White/AFP/Getty Images",
+        "origWidth": 2000,
+        "origHeight": 1334,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-29T13:06:37.576Z",
+    "slug": "2026-04-29/openai-sued-in-us-by-families-of-canada-school-shooting-victims",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-29T13:06:37.576Z",
+    "url": "/news/articles/2026-04-29/openai-sued-in-us-by-families-of-canada-school-shooting-victims",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "technology",
+    "byline": "Edward Ludlow",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "author"
+        ],
+        "name": "Edward Ludlow",
+        "attributionPreferences": {
+          "fullNamePreference": "Ed Ludlow",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "technology",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "",
+      "text": "Bloomberg Primer",
+      "bybrowEligible": false
+    },
+    "headline": "Why Humanoid Robots Are the Ultimate AI Frontier",
+    "id": "TE9B2TKIJHEQ00",
+    "image": {
+      "alt": "",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/isvSqIYf6L30/v0/-1x-1.webp",
+      "caption": "",
+      "credit": "\u003Cp\u003E\u003Cem\u003EChristian Capestany\u003C/em\u003E\u003C/p\u003E",
+      "origWidth": 1920,
+      "origHeight": 1080,
+      "themes": [],
+      "type": "image"
+    },
+    "label": "Bloomberg Primer",
+    "lede": {
+      "alt": "",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/isvSqIYf6L30/v0/-1x-1.webp",
+      "caption": "",
+      "credit": "\u003Cp\u003E\u003Cem\u003EPhoto Illustration: Christian Capestany\u003C/em\u003E\u003C/p\u003E",
+      "origWidth": 1920,
+      "origHeight": 1080,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/isvSqIYf6L30/v0/-1x-1.webp",
+        "caption": "",
+        "credit": "\u003Cp\u003E\u003Cem\u003EChristian Capestany\u003C/em\u003E\u003C/p\u003E",
+        "origWidth": 1920,
+        "origHeight": 1080,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-29T13:06:30.009Z",
+    "slug": "2026-04-29/why-humanoid-robots-will-soon-become-the-ultimate-ai-frontier",
+    "summary": "On this episode of Bloomberg Primer, we explore the gap between futuristic hype and reality—and how quickly it will shrink.",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-29T13:06:30.010Z",
+    "url": "/news/articles/2026-04-29/why-humanoid-robots-will-soon-become-the-ultimate-ai-frontier",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "industries",
+    "byline": "Ike Swetlitz and Amber Tong",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Ike Swetlitz",
+        "attributionPreferences": {
+          "fullNamePreference": "Ike Swetlitz",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "industries",
+        "photoDisplayed": false,
+        "thumbnail": null
+      },
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Amber Tong",
+        "attributionPreferences": {
+          "fullNamePreference": "Amber Tong",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "industries",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "",
+      "text": "Health",
+      "bybrowEligible": false
+    },
+    "headline": "US Brain Implant Company Tests in China in Apparent First",
+    "id": "TE04MWKGCTHK00",
+    "image": {
+      "alt": "",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iVDaXwe8qMac/v0/-1x-1.webp",
+      "caption": "",
+      "credit": "",
+      "origWidth": 2200,
+      "origHeight": 1466,
+      "themes": [],
+      "type": "image"
+    },
+    "label": "Health",
+    "lede": {
+      "alt": "An Axoft implant, which contains 1,024 gold wires, on a person’s finger for display purposes.",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i0cLkvoNg74g/v2/-1x-1.webp",
+      "caption": "An Axoft implant, which contains 1,024 gold wires, on a person’s finger for display purposes.",
+      "credit": "",
+      "origWidth": 2200,
+      "origHeight": 1466,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iVDaXwe8qMac/v0/-1x-1.webp",
+        "caption": "",
+        "origWidth": 2200,
+        "origHeight": 1466,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-29T13:00:00.002Z",
+    "slug": "2026-04-29/us-brain-implant-company-axoft-tests-on-patient-in-china-raises-more-money",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-29T13:00:00.002Z",
+    "url": "/news/articles/2026-04-29/us-brain-implant-company-axoft-tests-on-patient-in-china-raises-more-money",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "markets",
+    "byline": "Dinesh Nair, Swetha Gopinath and Vinicy Chan",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Dinesh Nair",
+        "attributionPreferences": {
+          "fullNamePreference": "Dinesh Nair",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "markets",
+        "photoDisplayed": false,
+        "thumbnail": null
+      },
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Swetha Gopinath",
+        "attributionPreferences": {
+          "fullNamePreference": "Swetha Gopinath",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "markets",
+        "photoDisplayed": false,
+        "thumbnail": null
+      },
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Vinicy Chan",
+        "attributionPreferences": {
+          "fullNamePreference": "Vinicy Chan",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "markets",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "",
+      "text": "Deals",
+      "bybrowEligible": false
+    },
+    "franchise": "deals",
+    "headline": "EQT Is Said to Prepare Improved Takeover Offer for UK’s Intertek",
+    "id": "TE93NBT9NJLS00",
+    "image": {
+      "alt": "In this photo illustration an EQT (EQT Partners AB) logo of",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iDpqAF9ZMp5I/v1/-1x-1.webp",
+      "caption": "",
+      "credit": "Pavlo Gonchar/SOPA Images/LightRocket/Getty Images",
+      "origWidth": 3888,
+      "origHeight": 2592,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "In this photo illustration an EQT (EQT Partners AB) logo of",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iDpqAF9ZMp5I/v1/-1x-1.webp",
+        "caption": "",
+        "credit": "Pavlo Gonchar/SOPA Images/LightRocket/Getty Images",
+        "origWidth": 3888,
+        "origHeight": 2592,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-29T12:56:17.542Z",
+    "slug": "2026-04-29/eqt-is-said-to-prepare-improved-takeover-offer-for-uk-s-intertek",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-29T12:56:17.542Z",
+    "url": "/news/articles/2026-04-29/eqt-is-said-to-prepare-improved-takeover-offer-for-uk-s-intertek",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "industries",
+    "byline": "Jennifer Creery and Ruth David",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Jennifer Creery",
+        "attributionPreferences": {
+          "fullNamePreference": "Jennifer Creery",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "industries",
+        "photoDisplayed": false,
+        "thumbnail": null
+      },
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Ruth David",
+        "attributionPreferences": {
+          "fullNamePreference": "Ruth David",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "industries",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "",
+      "text": "Industries",
+      "bybrowEligible": false
+    },
+    "headline": "Diageo CEO Dave Lewis Reveals Plan to Pare Back Management",
+    "id": "TE91C1T96OSI00",
+    "image": {
+      "alt": "British Chambers Of Commerce Annual Conference 2019",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i40r_xTl3A5g/v1/-1x-1.webp",
+      "caption": "",
+      "credit": "Chris Ratcliffe/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1333,
+      "themes": [],
+      "type": "image"
+    },
+    "lede": {
+      "alt": "Dave Lewis, chief executive officer of Diageo Plc",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i40r_xTl3A5g/v1/-1x-1.webp",
+      "caption": "Dave Lewis, chief executive officer of Diageo Plc",
+      "credit": "Photographer: Chris Ratcliffe/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1333,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "British Chambers Of Commerce Annual Conference 2019",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i40r_xTl3A5g/v1/-1x-1.webp",
+        "caption": "",
+        "credit": "Chris Ratcliffe/Bloomberg",
+        "origWidth": 2000,
+        "origHeight": 1333,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-29T12:46:44.985Z",
+    "slug": "2026-04-29/diageo-ceo-dave-lewis-reveals-plan-to-pare-back-management",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-29T12:46:44.985Z",
+    "url": "/news/articles/2026-04-29/diageo-ceo-dave-lewis-reveals-plan-to-pare-back-management",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "industries",
+    "byline": "Dinesh Nair and Laura Gardner Cuesta",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Dinesh Nair",
+        "attributionPreferences": {
+          "fullNamePreference": "Dinesh Nair",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "industries",
+        "photoDisplayed": false,
+        "thumbnail": null
+      },
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Laura Gardner Cuesta",
+        "attributionPreferences": {
+          "fullNamePreference": "Laura Gardner Cuesta",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "industries",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "/opinion-finance",
+      "text": "Finance",
+      "bybrowEligible": false
+    },
+    "headline": "Citi Picks Veteran Mideast Banker Tannir for Top Regional Role",
+    "id": "TE92MHKGIFYA00",
+    "image": {
+      "alt": "World’s Rich Ignore Mideast Strife to Bet on Dubai and Abu Dhabi",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iLg0SvtYuooY/v1/-1x-1.webp",
+      "caption": "",
+      "credit": "Walaa Alshaer/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1334,
+      "themes": [],
+      "type": "image"
+    },
+    "label": "Finance",
+    "lede": {
+      "alt": "The Dubai International Financial Centre.",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iLg0SvtYuooY/v1/-1x-1.webp",
+      "caption": "\u003Cp\u003EThe Dubai International Financial Centre.\u003C/p\u003E",
+      "credit": "Photographer: Walaa Alshaer/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1334,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "World’s Rich Ignore Mideast Strife to Bet on Dubai and Abu Dhabi",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iLg0SvtYuooY/v1/-1x-1.webp",
+        "caption": "",
+        "credit": "Walaa Alshaer/Bloomberg",
+        "origWidth": 2000,
+        "origHeight": 1334,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-29T12:40:39.687Z",
+    "slug": "2026-04-29/citi-picks-veteran-mideast-banker-tannir-for-top-regional-role",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-29T12:40:39.688Z",
+    "url": "/news/articles/2026-04-29/citi-picks-veteran-mideast-banker-tannir-for-top-regional-role",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "markets",
+    "byline": "Bailey Lipschultz",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Bailey Lipschultz",
+        "attributionPreferences": {
+          "fullNamePreference": "Bailey Lipschultz",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "markets",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "/markets",
+      "text": "Markets",
+      "bybrowEligible": false
+    },
+    "headline": "Ackman’s $5 Billion Pershing IPO Squeaks Across the Finish Line",
+    "id": "TE5JZOT96OSG00",
+    "image": {
+      "alt": "Ackman's Pershing Square Fund IPO Raises $5 Billion For Permanent Capital Plan",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i.tywu.u.3Pk/v1/-1x-1.webp",
+      "caption": "",
+      "credit": "Michael Nagle/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1334,
+      "themes": [],
+      "type": "image"
+    },
+    "lede": {
+      "alt": "Pershing Square signage during the company’s IPO at the New York Stock Exchange on April 29.",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i.tywu.u.3Pk/v1/-1x-1.webp",
+      "caption": "\u003Cp\u003EPershing Square signage during the company’s IPO at the New York Stock Exchange on April 29.\u003C/p\u003E",
+      "credit": "Photographer: Michael Nagle/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1334,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "Ackman's Pershing Square Fund IPO Raises $5 Billion For Permanent Capital Plan",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i.tywu.u.3Pk/v1/-1x-1.webp",
+        "caption": "",
+        "credit": "Michael Nagle/Bloomberg",
+        "origWidth": 2000,
+        "origHeight": 1334,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-29T12:36:14.246Z",
+    "slug": "2026-04-29/ackman-s-5-billion-pershing-ipo-squeaks-across-the-finish-line",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-29T12:36:14.245Z",
+    "url": "/news/articles/2026-04-29/ackman-s-5-billion-pershing-ipo-squeaks-across-the-finish-line",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "industries",
+    "byline": "Bloomberg News",
+    "credits": [],
+    "eyebrow": {
+      "url": "",
+      "text": "Real Estate",
+      "bybrowEligible": false
+    },
+    "headline": "Builder China Vanke Posts $871 Million Loss in First Quarter",
+    "id": "TE701GKK3NY800",
+    "image": {
+      "alt": "Construction in Qinghai as China Tells Bankers to Shore Up Property Market ",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iqtI47WtUQoE/v1/-1x-1.webp",
+      "caption": "",
+      "credit": "Qilai Shen/Bloomberg",
+      "origWidth": 4000,
+      "origHeight": 2667,
+      "themes": [],
+      "type": "image"
+    },
+    "label": "Real Estate",
+    "lede": {
+      "alt": "A crane with the China Vanke Co. logo at a residential construction site in the Nanchuan area of Xining, Qinghai province, China.",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iqtI47WtUQoE/v1/-1x-1.webp",
+      "caption": "\u003Cp\u003EA crane with the China Vanke Co. logo at a residential construction site in the Nanchuan area of Xining, Qinghai province, China.\u003C/p\u003E",
+      "credit": "Photographer: Qilai Shen/Bloomberg",
+      "origWidth": 4000,
+      "origHeight": 2667,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "Construction in Qinghai as China Tells Bankers to Shore Up Property Market ",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iqtI47WtUQoE/v1/-1x-1.webp",
+        "caption": "",
+        "credit": "Qilai Shen/Bloomberg",
+        "origWidth": 4000,
+        "origHeight": 2667,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-29T12:34:50.444Z",
+    "slug": "2026-04-29/developer-china-vanke-posts-871-million-loss-in-first-quarter",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-29T13:09:18.582Z",
+    "url": "/news/articles/2026-04-29/developer-china-vanke-posts-871-million-loss-in-first-quarter",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "citylab",
+    "byline": "Kriston Capps",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "author"
+        ],
+        "name": "Kriston Capps",
+        "attributionPreferences": {
+          "fullNamePreference": "Kriston Capps",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "citylab",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "/citylab/design",
+      "text": "Design",
+      "bybrowEligible": false
+    },
+    "headline": "A Lesson From Urban Icons on Designing Public Space: Get Rid of Traffic",
+    "id": "TE99LQKGZAJ600",
+    "image": {
+      "alt": "CityLab 2026 Madrid MIS",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ibbLk4NQkvhY/v1/-1x-1.webp",
+      "caption": "",
+      "credit": "\u003Cp\u003EBen Roberts\u003C/p\u003E",
+      "origWidth": 1200,
+      "origHeight": 800,
+      "themes": [],
+      "type": "image"
+    },
+    "label": "Design",
+    "lede": {
+      "alt": "Former Paris Mayor Anne Hidalgo speaks to a global gathering&nbsp;of mayors in Madrid on April 27.",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ibbLk4NQkvhY/v1/-1x-1.webp",
+      "caption": "\u003Cp\u003EFormer Paris Mayor Anne Hidalgo speaks to a global gathering&nbsp;of mayors in Madrid on April 27.\u003C/p\u003E",
+      "credit": "\u003Cp\u003EPhotographer: Ben Roberts\u003C/p\u003E",
+      "origWidth": 1200,
+      "origHeight": 800,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "CityLab 2026 Madrid MIS",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ibbLk4NQkvhY/v1/-1x-1.webp",
+        "caption": "",
+        "credit": "\u003Cp\u003EBen Roberts\u003C/p\u003E",
+        "origWidth": 1200,
+        "origHeight": 800,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-29T12:34:38.140Z",
+    "slug": "2026-04-29/anne-hidalgo-and-norman-foster-have-lessons-on-designing-public-space",
+    "summary": "In a mayoral forum, Anne Hidalgo and Norman Foster pointed to a shared strategy behind their successful visions for transforming cities.",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-29T12:34:38.139Z",
+    "url": "/news/articles/2026-04-29/anne-hidalgo-and-norman-foster-have-lessons-on-designing-public-space",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "markets",
+    "byline": "Mark Niquette",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Mark Niquette",
+        "attributionPreferences": {
+          "fullNamePreference": "Mark Niquette",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "markets",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "/markets",
+      "text": "Markets",
+      "bybrowEligible": false
+    },
+    "headline": "US Core Capital Goods Orders Jump by Most Since 2020",
+    "id": "TDYTZ1T96OSK00",
+    "image": {
+      "alt": "Inside Enercon Engineering Ahead of Factory Orders Data",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ifhRYyZnCshY/v1/-1x-1.webp",
+      "caption": "",
+      "credit": "Daniel Acker/Bloomberg",
+      "origWidth": 2700,
+      "origHeight": 1796,
+      "themes": [],
+      "type": "image"
+    },
+    "lede": {
+      "alt": "A worker welds a stainless steel gas pipe&nbsp;in East Peoria, Illinois.",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ifhRYyZnCshY/v1/-1x-1.webp",
+      "caption": "\u003Cp\u003EA worker welds a stainless steel gas pipe&nbsp;in East Peoria, Illinois.\u003C/p\u003E",
+      "credit": "Photographer: Daniel Acker/Bloomberg",
+      "origWidth": 2700,
+      "origHeight": 1796,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "Inside Enercon Engineering Ahead of Factory Orders Data",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ifhRYyZnCshY/v1/-1x-1.webp",
+        "caption": "",
+        "credit": "Daniel Acker/Bloomberg",
+        "origWidth": 2700,
+        "origHeight": 1796,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-29T12:33:21.539Z",
+    "slug": "2026-04-29/us-core-capital-goods-orders-surged-in-march-by-most-since-2020",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-29T13:05:42.486Z",
+    "url": "/news/articles/2026-04-29/us-core-capital-goods-orders-surged-in-march-by-most-since-2020",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "economics",
+    "byline": "Julia Fanzeres",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Julia Fanzeres",
+        "attributionPreferences": {
+          "fullNamePreference": "Julia Fanzeres",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "economics",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "",
+      "text": "Economics",
+      "bybrowEligible": false
+    },
+    "headline": "US Housing Starts Surge to Highest Level Since December 2024",
+    "id": "TE7PPAT96OSH00",
+    "image": {
+      "alt": "US Pending-Home Sales Plunge By Most Since Start Of Pandemic",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ic_kllkrtPyI/v1/-1x-1.webp",
+      "caption": "",
+      "credit": "David Paul Morris/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1333,
+      "themes": [],
+      "type": "image"
+    },
+    "lede": {
+      "alt": "Homes in Crockett, California.",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ic_kllkrtPyI/v1/-1x-1.webp",
+      "caption": "\u003Cp\u003EHomes in Crockett, California.\u003C/p\u003E",
+      "credit": "Photographer: David Paul Morris/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1333,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "US Pending-Home Sales Plunge By Most Since Start Of Pandemic",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ic_kllkrtPyI/v1/-1x-1.webp",
+        "caption": "",
+        "credit": "David Paul Morris/Bloomberg",
+        "origWidth": 2000,
+        "origHeight": 1333,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-29T12:32:56.152Z",
+    "slug": "2026-04-29/us-housing-starts-surge-to-highest-level-since-december-2024",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-29T13:03:21.432Z",
+    "url": "/news/articles/2026-04-29/us-housing-starts-surge-to-highest-level-since-december-2024",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "markets",
+    "byline": "Muyao Shen",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Muyao Shen",
+        "attributionPreferences": {
+          "fullNamePreference": "Muyao Shen",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "markets",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "/cryptocurrencies",
+      "text": "Crypto",
+      "bybrowEligible": false
+    },
+    "franchise": "cryptocurrencies",
+    "headline": "Kalshi, Polymarket Face New Rival in Crypto’s Hottest Exchange",
+    "id": "TCVG4FKK3NYA00",
+    "image": {
+      "alt": "In this photo illustration, the Hyperliquid (Hyper Liquid)",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/isTH12GWMn40/v0/-1x-1.webp",
+      "caption": "",
+      "credit": "",
+      "origWidth": 2000,
+      "origHeight": 1333,
+      "themes": [],
+      "type": "image"
+    },
+    "lede": {
+      "alt": "The Hyperliquid website",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ichwOJpOvbQ0/v1/-1x-1.webp",
+      "caption": "The Hyperliquid website",
+      "credit": "Source: hyperfoundation.org",
+      "origWidth": 847,
+      "origHeight": 585,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "In this photo illustration, the Hyperliquid (Hyper Liquid)",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/isTH12GWMn40/v0/-1x-1.webp",
+        "caption": "",
+        "origWidth": 2000,
+        "origHeight": 1333,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-29T12:18:50.695Z",
+    "slug": "2026-04-29/kalshi-polymarket-face-new-rival-in-crypto-s-hottest-exchange",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-29T12:18:50.697Z",
+    "url": "/news/articles/2026-04-29/kalshi-polymarket-face-new-rival-in-crypto-s-hottest-exchange",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "technology",
+    "byline": "Bloomberg News",
+    "credits": [],
+    "eyebrow": {
+      "url": "",
+      "text": "Asia",
+      "bybrowEligible": false
+    },
+    "headline": "Cambricon’s Revenue Jumps on Strong AI Chip Demand in China",
+    "id": "TE4P23T96OSI00",
+    "label": "Asia",
+    "locale": "en",
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-29T12:18:09.318Z",
+    "slug": "2026-04-29/cambricon-s-revenue-jumps-on-strong-ai-chip-demand-in-china",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-29T12:18:09.318Z",
+    "url": "/news/articles/2026-04-29/cambricon-s-revenue-jumps-on-strong-ai-chip-demand-in-china",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "technology",
+    "byline": "Arvelisse Bonilla Ramos",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Arvelisse Bonilla Ramos",
+        "attributionPreferences": {
+          "fullNamePreference": "Arvelisse Bonilla Ramos",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "technology",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "/technology",
+      "text": "Technology",
+      "bybrowEligible": false
+    },
+    "headline": "Defense Upstarts Capitalize on Global Conflict as Budgets Shift",
+    "id": "TE0F5XKIUPTB00",
+    "image": {
+      "alt": "",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ieaZE40_OYjw/v0/-1x-1.webp",
+      "caption": "",
+      "credit": "Swarmer Inc.",
+      "origWidth": 1933,
+      "origHeight": 1201,
+      "themes": [],
+      "type": "image"
+    },
+    "lede": {
+      "alt": "Traders work during the Aevex Corp. IPO on the floor of the New York Stock Exchange on April 17.",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iGKcngWLMd8A/v1/-1x-1.webp",
+      "caption": "\u003Cp\u003ETraders work during the Aevex Corp. IPO on the floor of the New York Stock Exchange on April 17.\u003C/p\u003E",
+      "credit": "Photographer: Michael Nagle/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1334,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ieaZE40_OYjw/v0/-1x-1.webp",
+        "caption": "",
+        "credit": "Swarmer Inc.",
+        "origWidth": 1933,
+        "origHeight": 1201,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-29T12:12:04.096Z",
+    "slug": "2026-04-29/defense-upstarts-capitalize-on-global-conflict-as-budgets-shift",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-29T12:12:04.096Z",
+    "url": "/news/articles/2026-04-29/defense-upstarts-capitalize-on-global-conflict-as-budgets-shift",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "economics",
+    "byline": "Barbara Sladkowska",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Barbara Sladkowska",
+        "attributionPreferences": {
+          "fullNamePreference": "Barbara Sladkowska",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "economics",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "",
+      "text": "Indicators",
+      "bybrowEligible": false
+    },
+    "headline": "Euro Area Sentiment Falls as Confidence Weakens Across Sectors",
+    "id": "TE9252KK3NY800",
+    "image": {
+      "alt": "Irish Economy As Latest Retail Figures Released",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iDrvOV1Svui4/v1/-1x-1.webp",
+      "caption": "",
+      "credit": "Patrick Bolger/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1333,
+      "themes": [],
+      "type": "image"
+    },
+    "label": "Indicators",
+    "lede": {
+      "alt": "Shoppers on Wicklow Street in Dublin.",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iDrvOV1Svui4/v1/-1x-1.webp",
+      "caption": "\u003Cp\u003EShoppers on Wicklow Street in Dublin.\u003C/p\u003E",
+      "credit": "Photographer: Patrick Bolger/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1333,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "Irish Economy As Latest Retail Figures Released",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iDrvOV1Svui4/v1/-1x-1.webp",
+        "caption": "",
+        "credit": "Patrick Bolger/Bloomberg",
+        "origWidth": 2000,
+        "origHeight": 1333,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-29T12:08:26.017Z",
+    "slug": "2026-04-29/euro-area-sentiment-falls-as-confidence-weakens-across-sectors",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-29T12:08:26.018Z",
+    "url": "/news/articles/2026-04-29/euro-area-sentiment-falls-as-confidence-weakens-across-sectors",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "industries",
+    "byline": "Jessica Nix",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Jessica Nix",
+        "attributionPreferences": {
+          "fullNamePreference": "Jessica Nix",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "industries",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "",
+      "text": "Health",
+      "bybrowEligible": false
+    },
+    "headline": "Teva Rises After Sales Top Estimates on Shift to Branded Drugs",
+    "id": "TE95UCKK3NY800",
+    "image": {
+      "alt": "Moderna Inc. Vaccine Storage at Teva Pharmaceutical Industries Ltd. ",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iqGTZHJnrJqI/v1/-1x-1.webp",
+      "caption": "",
+      "credit": "Kobi Wolf/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1333,
+      "themes": [],
+      "type": "image"
+    },
+    "label": "Health",
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "Moderna Inc. Vaccine Storage at Teva Pharmaceutical Industries Ltd. ",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iqGTZHJnrJqI/v1/-1x-1.webp",
+        "caption": "",
+        "credit": "Kobi Wolf/Bloomberg",
+        "origWidth": 2000,
+        "origHeight": 1333,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-29T12:07:23.920Z",
+    "slug": "2026-04-29/teva-rises-after-sales-top-estimates-on-shift-to-branded-drugs",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-29T12:07:23.920Z",
+    "url": "/news/articles/2026-04-29/teva-rises-after-sales-top-estimates-on-shift-to-branded-drugs",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "politics",
+    "byline": "Sam Dagher, Fiona MacDonald, Salma El Wardany and Mirette Magdy",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Sam Dagher",
+        "attributionPreferences": {
+          "fullNamePreference": "Sam Dagher",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "bpol",
+        "photoDisplayed": false,
+        "thumbnail": null
+      },
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Fiona MacDonald",
+        "attributionPreferences": {
+          "fullNamePreference": "Fiona MacDonald",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "bpol",
+        "photoDisplayed": false,
+        "thumbnail": null
+      },
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Salma El Wardany",
+        "attributionPreferences": {
+          "fullNamePreference": "Salma El Wardany",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "bpol",
+        "photoDisplayed": false,
+        "thumbnail": null
+      },
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Mirette Magdy",
+        "attributionPreferences": {
+          "fullNamePreference": "Mirette Magdy",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "bpol",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "",
+      "text": "Middle East",
+      "bybrowEligible": false
+    },
+    "headline": "UAE Bristled at Saudis for Years Before Iran War Tipped Scales",
+    "id": "TE7LVGT96OSJ00",
+    "image": {
+      "alt": "Oil Rally Builds as 'Staggering' Middle East War Jolts Energy",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iolYhwb7zvlc/v0/-1x-1.webp",
+      "caption": "",
+      "credit": "Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1334,
+      "themes": [],
+      "type": "image"
+    },
+    "label": "Middle East",
+    "lede": {
+      "alt": "Smoke rises after an explosion in the industrial zone in Fujairah, United Arab Emirates, on March 3.",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iolYhwb7zvlc/v0/-1x-1.webp",
+      "caption": "Smoke rises after an explosion in the industrial zone in Fujairah, United Arab Emirates, on March 3.",
+      "credit": "Source: Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1334,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "Oil Rally Builds as 'Staggering' Middle East War Jolts Energy",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iolYhwb7zvlc/v0/-1x-1.webp",
+        "caption": "",
+        "credit": "Bloomberg",
+        "origWidth": 2000,
+        "origHeight": 1334,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-29T12:06:27.000Z",
+    "slug": "2026-04-29/uae-bristled-at-saudis-for-years-before-iran-war-tipped-scales",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-29T12:06:27.001Z",
+    "url": "/news/articles/2026-04-29/uae-bristled-at-saudis-for-years-before-iran-war-tipped-scales",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "markets",
+    "byline": "Bloomberg News",
+    "credits": [],
+    "eyebrow": {
+      "url": "/markets",
+      "text": "Markets",
+      "bybrowEligible": false
+    },
+    "headline": "Ukraine Says It Hit Russia’s Oil Station and Sanctioned Tanker",
+    "id": "TE8XAKT96OSG00",
+    "image": {
+      "alt": "",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iqWGycTduaMQ/v2/-1x-1.webp",
+      "caption": "",
+      "credit": "Bloomberg",
+      "origWidth": 1280,
+      "origHeight": 582,
+      "themes": [],
+      "type": "image"
+    },
+    "lede": {
+      "alt": "NASA FIRMS satellite images from April 29 show a heat anomaly over the station, located about 24 kilometers (15 miles) from the city of Perm.",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iqWGycTduaMQ/v2/-1x-1.webp",
+      "caption": "NASA FIRMS satellite images from April 29 show a heat anomaly over the station, located about 24 kilometers (15 miles) from the city of Perm.",
+      "credit": "Source: Bloomberg",
+      "origWidth": 1280,
+      "origHeight": 582,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iqWGycTduaMQ/v2/-1x-1.webp",
+        "caption": "",
+        "credit": "Bloomberg",
+        "origWidth": 1280,
+        "origHeight": 582,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-29T12:04:28.628Z",
+    "slug": "2026-04-29/ukraine-says-it-hit-russia-s-oil-station-and-sanctioned-tanker",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-29T12:04:28.629Z",
+    "url": "/news/articles/2026-04-29/ukraine-says-it-hit-russia-s-oil-station-and-sanctioned-tanker",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "industries",
+    "byline": "Rachel Phua",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Rachel Phua",
+        "attributionPreferences": {
+          "fullNamePreference": "Rachel Phua",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "industries",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "",
+      "text": "Consumer",
+      "bybrowEligible": false
+    },
+    "headline": "Wingstop Sinks as Fewer Diners Feasted on Fast-Food Chicken",
+    "id": "TE97CLT9NJLS00",
+    "image": {
+      "alt": "Wingstop Locations As Earnings Figures Are Released",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ijH52vxV1hHw/v1/-1x-1.webp",
+      "caption": "",
+      "credit": "Bing Guan/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1333,
+      "themes": [],
+      "type": "image"
+    },
+    "label": "Consumer",
+    "lede": {
+      "alt": "A bag at Wingstop restaurant in the Brooklyn borough of New York.",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ijH52vxV1hHw/v1/-1x-1.webp",
+      "caption": "\u003Cp\u003EA bag at Wingstop restaurant in the Brooklyn borough of New York.\u003C/p\u003E",
+      "credit": "Photographer: Bing Guan/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1333,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "Wingstop Locations As Earnings Figures Are Released",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ijH52vxV1hHw/v1/-1x-1.webp",
+        "caption": "",
+        "credit": "Bing Guan/Bloomberg",
+        "origWidth": 2000,
+        "origHeight": 1333,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-29T12:04:28.084Z",
+    "slug": "2026-04-29/wingstop-sinks-as-fewer-diners-feasted-on-fast-food-chicken",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-29T12:04:28.086Z",
+    "url": "/news/articles/2026-04-29/wingstop-sinks-as-fewer-diners-feasted-on-fast-food-chicken",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "economics",
+    "byline": "Jana Randow",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Jana Randow",
+        "attributionPreferences": {
+          "fullNamePreference": "Jana Randow",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "economics",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "",
+      "text": "Inflation & Prices",
+      "bybrowEligible": false
+    },
+    "headline": "German Inflation Up Less Than Expected as ECB Mulls War Response",
+    "id": "TE8V7DKIP3J200",
+    "image": {
+      "alt": "German Economy Ahead of GDP Figures",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ixPtEuNs7jYo/v1/-1x-1.webp",
+      "caption": "",
+      "credit": "Krisztian Bocsi/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1334,
+      "themes": [],
+      "type": "image"
+    },
+    "label": "Inflation & Prices",
+    "lede": {
+      "alt": "Shoppers walk along Friedrichstarsse in Berlin.",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ixPtEuNs7jYo/v1/-1x-1.webp",
+      "caption": "\u003Cp\u003EShoppers walk along Friedrichstarsse in Berlin.\u003C/p\u003E",
+      "credit": "Photographer: Krisztian Bocsi/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1334,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "German Economy Ahead of GDP Figures",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ixPtEuNs7jYo/v1/-1x-1.webp",
+        "caption": "",
+        "credit": "Krisztian Bocsi/Bloomberg",
+        "origWidth": 2000,
+        "origHeight": 1334,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-29T12:01:39.285Z",
+    "slug": "2026-04-29/german-inflation-up-less-than-expected-as-ecb-mulls-war-response",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-29T12:01:39.285Z",
+    "url": "/news/articles/2026-04-29/german-inflation-up-less-than-expected-as-ecb-mulls-war-response",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "industries",
+    "byline": "Dawn Lim",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Dawn Lim",
+        "attributionPreferences": {
+          "fullNamePreference": "Dawn Lim",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "industries",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "/opinion-finance",
+      "text": "Finance",
+      "bybrowEligible": false
+    },
+    "headline": "Brookfield’s Compass Pulls Out of Massive Virginia Data Center",
+    "id": "TE8QZ2KK3NYD00",
+    "image": {
+      "alt": "Portugal's New Start Campus Data Centre",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i1nrZBNMz8cQ/v1/-1x-1.webp",
+      "caption": "",
+      "credit": "Zed Jameson/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1333,
+      "themes": [],
+      "type": "image"
+    },
+    "label": "Finance",
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "Portugal's New Start Campus Data Centre",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i1nrZBNMz8cQ/v1/-1x-1.webp",
+        "caption": "",
+        "credit": "Zed Jameson/Bloomberg",
+        "origWidth": 2000,
+        "origHeight": 1333,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-29T11:57:33.059Z",
+    "slug": "2026-04-29/brookfield-s-compass-pulls-out-of-massive-virginia-data-center",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-29T11:57:33.058Z",
+    "url": "/news/articles/2026-04-29/brookfield-s-compass-pulls-out-of-massive-virginia-data-center",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "markets",
+    "byline": "Ye Xie and Greg Ritchie",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Ye Xie",
+        "attributionPreferences": {
+          "fullNamePreference": "Ye Xie",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "markets",
+        "photoDisplayed": false,
+        "thumbnail": null
+      },
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Greg Ritchie",
+        "attributionPreferences": {
+          "fullNamePreference": "Greg Ritchie",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "markets",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "/markets",
+      "text": "Markets",
+      "bybrowEligible": false
+    },
+    "headline": "America’s Bond-Market Privilege Is Disappearing as US Debt Soars",
+    "id": "TE0UNZKJH6V500",
+    "locale": "en",
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-29T11:56:50.767Z",
+    "slug": "2026-04-29/america-s-bond-market-privilege-is-disappearing-as-us-debt-soars",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-29T11:56:50.769Z",
+    "url": "/news/articles/2026-04-29/america-s-bond-market-privilege-is-disappearing-as-us-debt-soars",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "technology",
+    "byline": "Rachel Phua",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Rachel Phua",
+        "attributionPreferences": {
+          "fullNamePreference": "Rachel Phua",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "technology",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "/technology",
+      "text": "Technology",
+      "bybrowEligible": false
+    },
+    "headline": "GE HealthCare Drops After Cutting Outlook on War-Related Woes",
+    "id": "TE95O5T9NJLS00",
+    "image": {
+      "alt": "CHINA-ECONOMY",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i4bRoixAM5OM/v1/-1x-1.webp",
+      "caption": "",
+      "credit": "Jade Gao/AFP/Getty Images ",
+      "origWidth": 2000,
+      "origHeight": 1333,
+      "themes": [],
+      "type": "image"
+    },
+    "lede": {
+      "alt": "People walk past a GE HealthCare booth during the 2025&nbsp;China International Supply Chain Expo in Beijing on July 16.",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i4bRoixAM5OM/v1/-1x-1.webp",
+      "caption": "\u003Cp\u003EPeople walk past a GE HealthCare booth during the 2025&nbsp;China International Supply Chain Expo in Beijing on July 16.\u003C/p\u003E",
+      "credit": "Photographer: Jade Gao/AFP/Getty Images ",
+      "origWidth": 2000,
+      "origHeight": 1333,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "CHINA-ECONOMY",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i4bRoixAM5OM/v1/-1x-1.webp",
+        "caption": "",
+        "credit": "Jade Gao/AFP/Getty Images ",
+        "origWidth": 2000,
+        "origHeight": 1333,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-29T11:56:27.763Z",
+    "slug": "2026-04-29/ge-healthcare-drops-after-cutting-outlook-on-war-related-woes",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-29T11:56:27.763Z",
+    "url": "/news/articles/2026-04-29/ge-healthcare-drops-after-cutting-outlook-on-war-related-woes",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "politics",
+    "byline": "Upmanyu Trivedi",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Upmanyu Trivedi",
+        "attributionPreferences": {
+          "fullNamePreference": "Upmanyu Trivedi",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "bpol",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "/politics",
+      "text": "Politics",
+      "bybrowEligible": false
+    },
+    "headline": "Russian Speaking ‘El Money’ Recruited Arsonists to Target Starmer, Prosecutors Say",
+    "id": "TE5BT8KK3NYE00",
+    "image": {
+      "alt": "UK Prime Minister Keir Starmer Attends Weekly Question Time",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ixCxOaNhOKNM/v0/-1x-1.webp",
+      "caption": "",
+      "credit": "Jose Sarmento Matos/Bloomberg",
+      "origWidth": 2678,
+      "origHeight": 1785,
+      "themes": [],
+      "type": "image"
+    },
+    "lede": {
+      "alt": "Keir Starmer on April 29.",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ixCxOaNhOKNM/v0/-1x-1.webp",
+      "caption": "Keir Starmer on April 29.",
+      "credit": "Photographer: Jose Sarmento Matos/Bloomberg",
+      "origWidth": 2678,
+      "origHeight": 1785,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "UK Prime Minister Keir Starmer Attends Weekly Question Time",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ixCxOaNhOKNM/v0/-1x-1.webp",
+        "caption": "",
+        "credit": "Jose Sarmento Matos/Bloomberg",
+        "origWidth": 2678,
+        "origHeight": 1785,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-29T11:53:06.999Z",
+    "slug": "2026-04-29/-el-money-hired-arsonists-to-target-starmer-s-properties-uk-prosecutors-say",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-29T11:53:06.999Z",
+    "url": "/news/articles/2026-04-29/-el-money-hired-arsonists-to-target-starmer-s-properties-uk-prosecutors-say",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "markets",
+    "byline": "Will Daley",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Will Daley",
+        "attributionPreferences": {
+          "fullNamePreference": "Will Daley",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "markets",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "/markets",
+      "text": "Markets",
+      "bybrowEligible": false
+    },
+    "headline": "US Premarket Movers for April 29, 2026",
+    "id": "TE96X7KIP3MK00",
+    "image": {
+      "alt": "Traders On The Floor Of The New York Stock Exchange As Stocks Hit By Software Selloff",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ilrt27_6w1T8/v1/-1x-1.webp",
+      "caption": "",
+      "credit": "Michael Nagle/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1334,
+      "themes": [],
+      "type": "image"
+    },
+    "lede": {
+      "alt": "Traders work on the floor of the New York Stock Exchange.",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ilrt27_6w1T8/v1/-1x-1.webp",
+      "caption": "\u003Cp\u003ETraders work on the floor of the New York Stock Exchange.\u003C/p\u003E",
+      "credit": "Photographer: Michael Nagle/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1334,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "Traders On The Floor Of The New York Stock Exchange As Stocks Hit By Software Selloff",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ilrt27_6w1T8/v1/-1x-1.webp",
+        "caption": "",
+        "credit": "Michael Nagle/Bloomberg",
+        "origWidth": 2000,
+        "origHeight": 1334,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-29T11:49:32.737Z",
+    "slug": "2026-04-29/us-stock-futures-today-booking-robinhood-seagate-starbucks",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-29T11:49:32.739Z",
+    "url": "/news/articles/2026-04-29/us-stock-futures-today-booking-robinhood-seagate-starbucks",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "industries",
+    "byline": "Tim Loh",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Tim Loh",
+        "attributionPreferences": {
+          "fullNamePreference": "Tim Loh",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "industries",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "",
+      "text": "Consumer",
+      "bybrowEligible": false
+    },
+    "headline": "Adidas Banks on Marathon Feat Energizing Its Running-Shoe Sales",
+    "id": "TE8ZHCKJH6V500",
+    "image": {
+      "alt": "2026 TCS London Marathon",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i1RWdJ42Rgh8/v2/-1x-1.webp",
+      "caption": "",
+      "credit": "Alex Davidson/Getty Images Europe",
+      "origWidth": 1024,
+      "origHeight": 689,
+      "themes": [],
+      "type": "image"
+    },
+    "label": "Consumer",
+    "lede": {
+      "alt": "Kenya’s Sabastian Sawe after winning the London Marathon on April 26.",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i1RWdJ42Rgh8/v2/-1x-1.webp",
+      "caption": "Kenya’s Sabastian Sawe after winning the London Marathon on April 26.",
+      "credit": "Photographer: Alex Davidson/Getty Images Europe",
+      "origWidth": 1024,
+      "origHeight": 689,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "2026 TCS London Marathon",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i1RWdJ42Rgh8/v2/-1x-1.webp",
+        "caption": "",
+        "credit": "Alex Davidson/Getty Images Europe",
+        "origWidth": 1024,
+        "origHeight": 689,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-29T11:48:00.247Z",
+    "slug": "2026-04-29/adidas-banks-on-marathon-feat-energizing-its-running-shoe-sales",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-29T11:48:00.247Z",
+    "url": "/news/articles/2026-04-29/adidas-banks-on-marathon-feat-energizing-its-running-shoe-sales",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "industries",
+    "byline": "Annika Inampudi",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Annika Inampudi",
+        "attributionPreferences": {
+          "fullNamePreference": "Annika Inampudi",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "industries",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "",
+      "text": "Health",
+      "bybrowEligible": false
+    },
+    "headline": "AbbVie Lifts Forecast as Botox Sales Help Offset Humira Drop",
+    "id": "TE033ZT96OSH00",
+    "image": {
+      "alt": "AbbVie Inc.'s Irish Manufacturing Plant",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i80MVDivUEKA/v0/-1x-1.webp",
+      "caption": "",
+      "credit": "Rob Stothard/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1333,
+      "themes": [],
+      "type": "image"
+    },
+    "label": "Health",
+    "lede": {
+      "alt": "An AbbVie Inc. pharmaceutical manufacturing facility in Sligo, Ireland.",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i80MVDivUEKA/v0/-1x-1.webp",
+      "caption": "An AbbVie Inc. pharmaceutical manufacturing facility in Sligo, Ireland.",
+      "credit": "Photographer: Rob Stothard/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1333,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "AbbVie Inc.'s Irish Manufacturing Plant",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i80MVDivUEKA/v0/-1x-1.webp",
+        "caption": "",
+        "credit": "Rob Stothard/Bloomberg",
+        "origWidth": 2000,
+        "origHeight": 1333,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-29T11:47:19.979Z",
+    "slug": "2026-04-29/abbvie-lifts-forecast-as-botox-sales-help-offset-humira-decline",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-29T12:53:57.108Z",
+    "url": "/news/articles/2026-04-29/abbvie-lifts-forecast-as-botox-sales-help-offset-humira-decline",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "industries",
+    "byline": "Ashleigh Furlong",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Ashleigh Furlong",
+        "attributionPreferences": {
+          "fullNamePreference": "Ashleigh Furlong",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "industries",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "",
+      "text": "Industries",
+      "bybrowEligible": false
+    },
+    "headline": "AstraZeneca Invests £300 Million in UK in Boost for Starmer",
+    "id": "TE966RKK3NY900",
+    "image": {
+      "alt": "AstraZeneca Plc Vaccine U.K. Production Sites",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ivlvSaL.fWcA/v1/-1x-1.webp",
+      "caption": "",
+      "credit": "Anthony Devlin/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1333,
+      "themes": [],
+      "type": "image"
+    },
+    "lede": {
+      "alt": "The AstraZeneca Plc plant in Macclesfield, UK.",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ivlvSaL.fWcA/v1/-1x-1.webp",
+      "caption": "\u003Cp\u003EThe AstraZeneca Plc plant in Macclesfield, UK.\u003C/p\u003E",
+      "credit": "Photographer: Anthony Devlin/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1333,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "AstraZeneca Plc Vaccine U.K. Production Sites",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ivlvSaL.fWcA/v1/-1x-1.webp",
+        "caption": "",
+        "credit": "Anthony Devlin/Bloomberg",
+        "origWidth": 2000,
+        "origHeight": 1333,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-29T11:46:26.551Z",
+    "slug": "2026-04-29/astrazeneca-to-invest-300-million-in-uk-in-boost-for-starmer",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-29T13:19:23.824Z",
+    "url": "/news/articles/2026-04-29/astrazeneca-to-invest-300-million-in-uk-in-boost-for-starmer",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "markets",
+    "byline": "Mumbi Gitau and Lyubov Pronina",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Mumbi Gitau",
+        "attributionPreferences": {
+          "fullNamePreference": "Mumbi Gitau",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "markets",
+        "photoDisplayed": false,
+        "thumbnail": null
+      },
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Lyubov Pronina",
+        "attributionPreferences": {
+          "fullNamePreference": "Lyubov Pronina",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "markets",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "/markets",
+      "text": "Markets",
+      "bybrowEligible": false
+    },
+    "headline": "European Sugar Rift Deepens Over Plan to Curb Duty-Free Imports",
+    "id": "TE0774KJH6VB00",
+    "locale": "en",
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-29T11:45:34.235Z",
+    "slug": "2026-04-29/european-sugar-rift-deepens-over-plan-to-curb-duty-free-imports",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-29T11:45:34.235Z",
+    "url": "/news/articles/2026-04-29/european-sugar-rift-deepens-over-plan-to-curb-duty-free-imports",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "markets",
+    "byline": "Youkyung Lee",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Youkyung Lee",
+        "attributionPreferences": {
+          "fullNamePreference": "Youkyung Lee",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "markets",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "/markets",
+      "text": "Markets",
+      "bybrowEligible": false
+    },
+    "headline": "US Stock Futures Edge Up on Tech Gains Before Megacap Earnings",
+    "id": "TE936QKGCTK700",
+    "image": {
+      "alt": "S&P 500 Extends Record-Breaking $17.5 Trillion Run",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iMQyt3GVhFOw/v0/-1x-1.webp",
+      "caption": "",
+      "credit": "Michael Nagle/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1334,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "S&P 500 Extends Record-Breaking $17.5 Trillion Run",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iMQyt3GVhFOw/v0/-1x-1.webp",
+        "caption": "",
+        "credit": "Michael Nagle/Bloomberg",
+        "origWidth": 2000,
+        "origHeight": 1334,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-29T11:38:46.315Z",
+    "slug": "2026-04-29/us-stock-futures-edge-up-on-tech-gains-before-megacap-earnings",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-29T11:38:46.315Z",
+    "url": "/news/articles/2026-04-29/us-stock-futures-edge-up-on-tech-gains-before-megacap-earnings",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "politics",
+    "byline": "Bonolo Mokonoto",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Bonolo Mokonoto",
+        "attributionPreferences": {
+          "fullNamePreference": "Bonolo Mokonoto",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "bpol",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "/politics",
+      "text": "Politics",
+      "bybrowEligible": false
+    },
+    "headline": "Fugitive Linked to Benin Coup Bid Seeks Bail in South Africa",
+    "id": "TE8W86KIJH9600",
+    "image": {
+      "alt": "Kemi Seba",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i4BpoM0KEFfY/v2/-1x-1.webp",
+      "caption": "",
+      "credit": "Stephane De Sakutin/AFP/Getty Images",
+      "origWidth": 2200,
+      "origHeight": 1466,
+      "themes": [],
+      "type": "image"
+    },
+    "lede": {
+      "alt": "Kémi Séba.",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i4BpoM0KEFfY/v2/-1x-1.webp",
+      "caption": "Kémi Séba.",
+      "credit": "Photographer: Stephane De Sakutin/AFP/Getty Images",
+      "origWidth": 2200,
+      "origHeight": 1466,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "Kemi Seba",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i4BpoM0KEFfY/v2/-1x-1.webp",
+        "caption": "",
+        "credit": "Stephane De Sakutin/AFP/Getty Images",
+        "origWidth": 2200,
+        "origHeight": 1466,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-29T11:34:31.088Z",
+    "slug": "2026-04-29/fugitive-linked-to-benin-coup-bid-seeks-bail-in-south-africa",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-29T11:34:31.089Z",
+    "url": "/news/articles/2026-04-29/fugitive-linked-to-benin-coup-bid-seeks-bail-in-south-africa",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "markets",
+    "byline": "Rachel Yeo",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Rachel Yeo",
+        "attributionPreferences": {
+          "fullNamePreference": "Rachel Yeo",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "markets",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "/markets",
+      "text": "Markets",
+      "bybrowEligible": false
+    },
+    "headline": "Cosco’s Profit Drops by Half as Lower Freight Rates Bite",
+    "id": "TE8SI2T9NJLS00",
+    "image": {
+      "alt": "Operations At The Port Of Prince Rupert",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iYDl8tQNXUFY/v0/-1x-1.webp",
+      "caption": "",
+      "credit": "James MacDonald/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1334,
+      "themes": [],
+      "type": "image"
+    },
+    "lede": {
+      "alt": "A Cosco Shipping Holdings container ship at the Port of Prince Rupert in British Columbia, Canada.",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iYDl8tQNXUFY/v0/-1x-1.webp",
+      "caption": "A Cosco Shipping Holdings container ship at the Port of Prince Rupert in British Columbia, Canada.",
+      "credit": "Photographer: James MacDonald/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1334,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "Operations At The Port Of Prince Rupert",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iYDl8tQNXUFY/v0/-1x-1.webp",
+        "caption": "",
+        "credit": "James MacDonald/Bloomberg",
+        "origWidth": 2000,
+        "origHeight": 1334,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-29T11:30:41.897Z",
+    "slug": "2026-04-29/cosco-s-profit-drops-by-half-as-lower-freight-rates-bite",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-29T11:30:41.897Z",
+    "url": "/news/articles/2026-04-29/cosco-s-profit-drops-by-half-as-lower-freight-rates-bite",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "view",
+    "byline": "Mark Gongloff",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "author",
+          "featured"
+        ],
+        "name": "Mark Gongloff",
+        "attributionPreferences": {
+          "fullNamePreference": "Mark Gongloff",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "bview",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "/opinion-technology-and-ideas",
+      "text": "Technology & Ideas",
+      "bybrowEligible": true
+    },
+    "headline": "Relax. Solar Panels Won’t Give You Cancer",
+    "id": "TE96MIKIUPZE00",
+    "image": {
+      "alt": "US Renewable Investments Fell 36% On Trump's Policies",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iyqif4P.wOSY/v1/-1x-1.webp",
+      "caption": "",
+      "credit": "\u003Cp\u003EDavid Paul Morris/Bloomberg\u003C/p\u003E",
+      "origWidth": 2000,
+      "origHeight": 1332,
+      "themes": [],
+      "type": "image"
+    },
+    "label": "Technology & Ideas",
+    "lede": {
+      "alt": "Noise, ugliness and toxic waste are just a few of the myths of solar power.",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iyqif4P.wOSY/v1/-1x-1.webp",
+      "caption": "\u003Cp\u003ENoise, ugliness and toxic waste are just a few of the myths of solar power.\u003C/p\u003E",
+      "credit": "\u003Cp\u003EPhotographer: David Paul Morris/Bloomberg\u003C/p\u003E",
+      "origWidth": 2000,
+      "origHeight": 1332,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "US Renewable Investments Fell 36% On Trump's Policies",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iyqif4P.wOSY/v1/-1x-1.webp",
+        "caption": "",
+        "credit": "\u003Cp\u003EDavid Paul Morris/Bloomberg\u003C/p\u003E",
+        "origWidth": 2000,
+        "origHeight": 1332,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "nicodes": [
+      "OPINION"
+    ],
+    "premium": false,
+    "publishedAt": "2026-04-29T11:30:18.635Z",
+    "slug": "2026-04-29/no-solar-panels-won-t-give-you-cancer",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-29T11:30:18.636Z",
+    "url": "/opinion/articles/2026-04-29/no-solar-panels-won-t-give-you-cancer",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "industries",
+    "byline": "David Welch",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "David Welch",
+        "attributionPreferences": {
+          "fullNamePreference": "David Welch",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "industries",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "/citylab/transportation",
+      "text": "Transportation",
+      "bybrowEligible": false
+    },
+    "headline": "Avis Budget’s Worse-Than-Expected Loss Extends Stock Selloff",
+    "id": "TE7YCCKK3NY800",
+    "image": {
+      "alt": "Avis Budget Ahead Of Earnings Figures",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ikbzUGN_4NbE/v1/-1x-1.webp",
+      "caption": "",
+      "credit": "Bing Guan/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1334,
+      "themes": [],
+      "type": "image"
+    },
+    "label": "Transportation",
+    "lede": {
+      "alt": "An Avis rental location near LaGuardia Airport in New York.",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ikbzUGN_4NbE/v1/-1x-1.webp",
+      "caption": "\u003Cp\u003EAn Avis rental location near LaGuardia Airport in New York.\u003C/p\u003E",
+      "credit": "Photographer: Bing Guan/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1334,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "Avis Budget Ahead Of Earnings Figures",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ikbzUGN_4NbE/v1/-1x-1.webp",
+        "caption": "",
+        "credit": "Bing Guan/Bloomberg",
+        "origWidth": 2000,
+        "origHeight": 1334,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-29T11:30:11.742Z",
+    "slug": "2026-04-29/avis-worse-than-expected-loss-sparks-another-stock-selloff",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-29T11:30:11.742Z",
+    "url": "/news/articles/2026-04-29/avis-worse-than-expected-loss-sparks-another-stock-selloff",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "industries",
+    "byline": "Bloomberg News",
+    "credits": [],
+    "eyebrow": {
+      "url": "",
+      "text": "Energy",
+      "bybrowEligible": false
+    },
+    "headline": "Russia Says It Has No Plans to Leave OPEC+ After UAE Exit",
+    "id": "TE91Q2T96OSH00",
+    "image": {
+      "alt": "UAE to Leave OPEC in May as Iran War Reshapes Oil Market ",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/igr336YxiCnU/v0/-1x-1.webp",
+      "caption": "",
+      "credit": "Andrey Rudakov/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1364,
+      "themes": [],
+      "type": "image"
+    },
+    "label": "Energy",
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "UAE to Leave OPEC in May as Iran War Reshapes Oil Market ",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/igr336YxiCnU/v0/-1x-1.webp",
+        "caption": "",
+        "credit": "Andrey Rudakov/Bloomberg",
+        "origWidth": 2000,
+        "origHeight": 1364,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-29T11:16:58.218Z",
+    "slug": "2026-04-29/russia-says-it-has-no-plans-to-leave-opec-after-shock-uae-exit",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-29T12:10:33.986Z",
+    "url": "/news/articles/2026-04-29/russia-says-it-has-no-plans-to-leave-opec-after-shock-uae-exit",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "markets",
+    "byline": "Bloomberg News",
+    "credits": [],
+    "eyebrow": {
+      "url": "/markets",
+      "text": "Markets",
+      "bybrowEligible": false
+    },
+    "headline": "China’s Shenzhen Relaxes Home Buying Rules to Boost Demand",
+    "id": "TB3FV8KJH6V400",
+    "image": {
+      "alt": "China Vanke Co. Residential Project as Developer Readies $18 Billion of Assets as Collateral for New Loans",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iakL51k5QG_Q/v0/-1x-1.webp",
+      "caption": "",
+      "credit": "Qilai Shen/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1334,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "China Vanke Co. Residential Project as Developer Readies $18 Billion of Assets as Collateral for New Loans",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iakL51k5QG_Q/v0/-1x-1.webp",
+        "caption": "",
+        "credit": "Qilai Shen/Bloomberg",
+        "origWidth": 2000,
+        "origHeight": 1334,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-29T11:13:47.270Z",
+    "slug": "2026-04-29/china-s-shenzhen-relaxes-home-buying-rules-to-boost-demand",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-29T11:13:47.272Z",
+    "url": "/news/articles/2026-04-29/china-s-shenzhen-relaxes-home-buying-rules-to-boost-demand",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "markets",
+    "byline": "Luca Casiraghi",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Luca Casiraghi",
+        "attributionPreferences": {
+          "fullNamePreference": "Luca Casiraghi",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "markets",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "/markets",
+      "text": "Markets",
+      "bybrowEligible": false
+    },
+    "headline": "Chiesi Agrees to Buy KalVista Pharmaceuticals for $1.9 Billion",
+    "id": "TE946EKGCTHJ00",
+    "image": {
+      "alt": "Pipetting droplets of liquid into eppendorf tubes, side view",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/imNYhbtthlY4/v0/-1x-1.webp",
+      "caption": "",
+      "credit": "Andrew Brookes/Cultura RF",
+      "origWidth": 2000,
+      "origHeight": 1453,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "Pipetting droplets of liquid into eppendorf tubes, side view",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/imNYhbtthlY4/v0/-1x-1.webp",
+        "caption": "",
+        "credit": "Andrew Brookes/Cultura RF",
+        "origWidth": 2000,
+        "origHeight": 1453,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-29T11:05:36.652Z",
+    "slug": "2026-04-29/chiesi-agrees-to-buy-kalvista-pharmaceuticals-for-1-9-billion",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-29T11:05:36.652Z",
+    "url": "/news/articles/2026-04-29/chiesi-agrees-to-buy-kalvista-pharmaceuticals-for-1-9-billion",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "view",
+    "byline": "Lisa Jarvis",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "author",
+          "featured"
+        ],
+        "name": "Lisa Jarvis",
+        "attributionPreferences": {
+          "fullNamePreference": "Lisa Jarvis",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "bview",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "/opinion-politics-and-policy",
+      "text": "Politics & Policy",
+      "bybrowEligible": true
+    },
+    "headline": "Ibogaine Hype Is Outpacing the Science",
+    "id": "TE958KKGZAIQ00",
+    "image": {
+      "alt": "US-POLITICS-TRUMP",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/izecYTdk1OdU/v1/-1x-1.webp",
+      "caption": "",
+      "credit": "\u003Cp\u003EJim Watson/AFP/Getty Images\u003C/p\u003E",
+      "origWidth": 2000,
+      "origHeight": 1333,
+      "themes": [],
+      "type": "image"
+    },
+    "label": "Politics & Policy",
+    "lede": {
+      "alt": "Podcaster Joe Rogan was on hand for the president’s ibogaine announcement.",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/izecYTdk1OdU/v1/-1x-1.webp",
+      "caption": "\u003Cp\u003EPodcaster Joe Rogan was on hand for the president’s ibogaine announcement.\u003C/p\u003E",
+      "credit": "\u003Cp\u003EPhotographer: Jim Watson/AFP/Getty Images\u003C/p\u003E",
+      "origWidth": 2000,
+      "origHeight": 1333,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "US-POLITICS-TRUMP",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/izecYTdk1OdU/v1/-1x-1.webp",
+        "caption": "",
+        "credit": "\u003Cp\u003EJim Watson/AFP/Getty Images\u003C/p\u003E",
+        "origWidth": 2000,
+        "origHeight": 1333,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "nicodes": [
+      "OPINION"
+    ],
+    "premium": false,
+    "publishedAt": "2026-04-29T11:00:20.026Z",
+    "slug": "2026-04-29/ibogaine-hype-is-outpacing-the-science",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-29T11:00:20.026Z",
+    "url": "/opinion/articles/2026-04-29/ibogaine-hype-is-outpacing-the-science",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "equality",
+    "byline": "Taylor Nicole Rogers",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "author"
+        ],
+        "name": "Taylor Nicole Rogers",
+        "attributionPreferences": {
+          "fullNamePreference": "Taylor Nicole Rogers",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "equality",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "/equality",
+      "text": "Equality",
+      "bybrowEligible": false
+    },
+    "headline": "Healthy Workers Are Ditching Company Insurance to Save $1,000 a Month",
+    "id": "TE958IKIJHBT00",
+    "image": {
+      "alt": "",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/icSB7m0P2tNA/v1/-1x-1.webp",
+      "caption": "",
+      "credit": "Sylvia Jarrus/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1333,
+      "themes": [],
+      "type": "image"
+    },
+    "lede": {
+      "alt": "Daniel Wilson and his wife Paige Wilson joined a health share cooperative and waived their employer-sponsored health insurance due to a high price tag and high deductibles for they family of five.",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/icSB7m0P2tNA/v1/-1x-1.webp",
+      "caption": "\u003Cp\u003EDaniel Wilson and his wife Paige Wilson joined a health share cooperative and waived their employer-sponsored health insurance due to a high price tag and high deductibles for they family of five.\u003C/p\u003E",
+      "credit": "Photographer: Sylvia Jarrus/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1333,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/icSB7m0P2tNA/v1/-1x-1.webp",
+        "caption": "",
+        "credit": "Sylvia Jarrus/Bloomberg",
+        "origWidth": 2000,
+        "origHeight": 1333,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-29T11:00:18.418Z",
+    "slug": "2026-04-29/as-health-insurance-costs-rise-workers-leave-employer-plans",
+    "summary": "The very people that employers rely on to pay into plans and keep them afloat are starting to opt out due to soaring costs.",
+    "trackingType": "Feature",
+    "type": "feature",
+    "updatedAt": "2026-04-29T11:00:18.420Z",
+    "url": "/news/features/2026-04-29/as-health-insurance-costs-rise-workers-leave-employer-plans",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "markets",
+    "byline": "Georgie McKay and Olivia Fishlow",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Georgie McKay",
+        "attributionPreferences": {
+          "fullNamePreference": "Georgie McKay",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "markets",
+        "photoDisplayed": false,
+        "thumbnail": null
+      },
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Olivia Fishlow",
+        "attributionPreferences": {
+          "fullNamePreference": "Olivia Fishlow",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "markets",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "/markets",
+      "text": "Markets",
+      "bybrowEligible": false
+    },
+    "headline": "Blue Owl Scrutiny to Ramp Up With Shares Near ‘Doomsday’ Levels",
+    "id": "TDYFTFKIUPUU00",
+    "image": {
+      "alt": "Blue Owl Fund Outlook Cut To Negative By Moody’s On Outflows",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ieKubJvKCOFo/v0/-1x-1.webp",
+      "caption": "",
+      "credit": "Michael Nagle/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1334,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "Blue Owl Fund Outlook Cut To Negative By Moody’s On Outflows",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ieKubJvKCOFo/v0/-1x-1.webp",
+        "caption": "",
+        "credit": "Michael Nagle/Bloomberg",
+        "origWidth": 2000,
+        "origHeight": 1334,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-29T11:00:01.000Z",
+    "slug": "2026-04-29/blue-owl-shares-near-doomsday-levels-see-earnings-as-next-risk",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-29T11:00:01.000Z",
+    "url": "/news/articles/2026-04-29/blue-owl-shares-near-doomsday-levels-see-earnings-as-next-risk",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "crypto",
+    "byline": "Emily Nicolle",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Emily Nicolle",
+        "attributionPreferences": {
+          "fullNamePreference": "Emily Nicolle",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "crypto",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "/cryptocurrencies",
+      "text": "Crypto",
+      "bybrowEligible": false
+    },
+    "franchise": "cryptocurrencies",
+    "headline": "Crypto Firm MoonPay Bets $100 Million for Institutional Push",
+    "id": "TE780GKIJHAF00",
+    "image": {
+      "alt": "Caroline Pham",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ihaRJeExzYiA/v1/-1x-1.webp",
+      "caption": "",
+      "credit": "Al Drago/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1333,
+      "themes": [],
+      "type": "image"
+    },
+    "lede": {
+      "alt": "Caroline Pham",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ihaRJeExzYiA/v1/-1x-1.webp",
+      "caption": "\u003Cp\u003ECaroline Pham\u003C/p\u003E",
+      "credit": "Photographer: Al Drago/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1333,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "Caroline Pham",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ihaRJeExzYiA/v1/-1x-1.webp",
+        "caption": "",
+        "credit": "Al Drago/Bloomberg",
+        "origWidth": 2000,
+        "origHeight": 1333,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-29T11:00:00.015Z",
+    "slug": "2026-04-29/crypto-firm-moonpay-bets-100-million-for-institutional-push",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-29T11:00:00.015Z",
+    "url": "/news/articles/2026-04-29/crypto-firm-moonpay-bets-100-million-for-institutional-push",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "crypto",
+    "byline": "Maria Clara Cobo",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Maria Clara Cobo",
+        "attributionPreferences": {
+          "fullNamePreference": "Maria Clara Cobo",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "crypto",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "",
+      "text": "Crypto",
+      "bybrowEligible": false
+    },
+    "headline": "Stablecoin Giant Tether Leads Investment in Argentine Crypto App",
+    "id": "TDYVTPKJH6VC00",
+    "image": {
+      "alt": "Belo",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iQwyGymKEOJM/v1/-1x-1.webp",
+      "caption": "",
+      "credit": "Belo",
+      "origWidth": 2200,
+      "origHeight": 1468,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "Belo",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iQwyGymKEOJM/v1/-1x-1.webp",
+        "caption": "",
+        "credit": "Belo",
+        "origWidth": 2200,
+        "origHeight": 1468,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-29T11:00:00.010Z",
+    "slug": "2026-04-29/stablecoin-giant-tether-leads-investment-in-argentine-crypto-app",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-29T11:00:00.006Z",
+    "url": "/news/articles/2026-04-29/stablecoin-giant-tether-leads-investment-in-argentine-crypto-app",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "industries",
+    "byline": "Redd Brown",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Redd Brown",
+        "attributionPreferences": {
+          "fullNamePreference": "Redd Brown",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "industries",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "",
+      "text": "Consumer",
+      "bybrowEligible": false
+    },
+    "headline": "Yum Tops Estimates as Taco Bell Offsets Tepid KFC, Pizza Hut",
+    "id": "TE7O3BT96OSJ00",
+    "image": {
+      "alt": "Yum! Brands Restaurants Ahead Of Earnings Figures",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iT0nJeVuQeL0/v0/-1x-1.webp",
+      "caption": "",
+      "credit": "Michael Nagle/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1333,
+      "themes": [],
+      "type": "image"
+    },
+    "label": "Consumer",
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "Yum! Brands Restaurants Ahead Of Earnings Figures",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iT0nJeVuQeL0/v0/-1x-1.webp",
+        "caption": "",
+        "credit": "Michael Nagle/Bloomberg",
+        "origWidth": 2000,
+        "origHeight": 1333,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-29T11:00:00.007Z",
+    "slug": "2026-04-29/yum-beats-estimates-as-taco-bell-offsets-tepid-kfc-pizza-hut",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-29T12:20:12.862Z",
+    "url": "/news/articles/2026-04-29/yum-beats-estimates-as-taco-bell-offsets-tepid-kfc-pizza-hut",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "industries",
+    "byline": "Michael Hytha and Ryan Gould",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Michael Hytha",
+        "attributionPreferences": {
+          "fullNamePreference": "Michael Hytha",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "industries",
+        "photoDisplayed": false,
+        "thumbnail": null
+      },
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Ryan Gould",
+        "attributionPreferences": {
+          "fullNamePreference": "Ryan Gould",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "industries",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "",
+      "text": "Energy",
+      "bybrowEligible": false
+    },
+    "franchise": "deals",
+    "headline": "Arlington Capital Acquires Nuclear Engineering Firm Enercon",
+    "id": "TE0XG2KJH6V400",
+    "image": {
+      "alt": "",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i7ydY.ZD7mz4/v0/-1x-1.webp",
+      "caption": "",
+      "credit": "Arlington Capital Partners",
+      "origWidth": 2200,
+      "origHeight": 1467,
+      "themes": [],
+      "type": "image"
+    },
+    "label": "Energy",
+    "lede": {
+      "alt": "Michael Lustbader and Gordon Auduong",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i7ydY.ZD7mz4/v0/-1x-1.webp",
+      "caption": "Michael Lustbader and Gordon Auduong",
+      "credit": "Source: Arlington Capital Partners",
+      "origWidth": 2200,
+      "origHeight": 1467,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i7ydY.ZD7mz4/v0/-1x-1.webp",
+        "caption": "",
+        "credit": "Arlington Capital Partners",
+        "origWidth": 2200,
+        "origHeight": 1467,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-29T11:00:00.006Z",
+    "slug": "2026-04-29/arlington-capital-acquires-nuclear-engineering-firm-enercon",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-29T11:00:00.008Z",
+    "url": "/news/articles/2026-04-29/arlington-capital-acquires-nuclear-engineering-firm-enercon",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "economics",
+    "byline": "Augusta Saraiva",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Augusta Saraiva",
+        "attributionPreferences": {
+          "fullNamePreference": "Augusta Saraiva",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "economics",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "",
+      "text": "Economics",
+      "bybrowEligible": false
+    },
+    "headline": "What to Watch in the US Economy’s First Report Card of 2026",
+    "id": "TE5RLVT96OSH00",
+    "image": {
+      "alt": "Investment in AI has been a key driver of business spending over the past year",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iYD51vRGOds0/v1/-1x-1.webp",
+      "caption": "",
+      "credit": "Kyle Grillot/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1334,
+      "themes": [],
+      "type": "image"
+    },
+    "lede": {
+      "alt": "Investment in AI has been a key driver of business spending over the past year.",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iYD51vRGOds0/v1/-1x-1.webp",
+      "caption": "\u003Cp\u003EInvestment in AI has been a key driver of business spending over the past year.\u003C/p\u003E",
+      "credit": "Photographer: Kyle Grillot/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1334,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "Investment in AI has been a key driver of business spending over the past year",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iYD51vRGOds0/v1/-1x-1.webp",
+        "caption": "",
+        "credit": "Kyle Grillot/Bloomberg",
+        "origWidth": 2000,
+        "origHeight": 1334,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-29T11:00:00.006Z",
+    "slug": "2026-04-29/us-gdp-report-to-show-consumer-slowdown-early-war-impact",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-29T11:00:00.001Z",
+    "url": "/news/articles/2026-04-29/us-gdp-report-to-show-consumer-slowdown-early-war-impact",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "economics",
+    "byline": "Ignacio Olivera Doll",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Ignacio Olivera Doll",
+        "attributionPreferences": {
+          "fullNamePreference": "Ignacio Olivera Doll",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "economics",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "",
+      "text": "Economics",
+      "bybrowEligible": false
+    },
+    "headline": "Argentina Bond Investors Increasingly Fear the Day After Milei",
+    "id": "TE66VUT9NJM600",
+    "image": {
+      "alt": "President Milei Speaks On Malvinas Veterans Day",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iZ4PWOllx2fI/v0/-1x-1.webp",
+      "caption": "",
+      "credit": "Tomas Cuesta/Getty Images",
+      "origWidth": 2000,
+      "origHeight": 1333,
+      "themes": [],
+      "type": "image"
+    },
+    "lede": {
+      "alt": "Argentinian President Javier Milei",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iZ4PWOllx2fI/v0/-1x-1.webp",
+      "caption": "Argentinian President Javier Milei",
+      "credit": "Photographer: Tomas Cuesta/Getty Images",
+      "origWidth": 2000,
+      "origHeight": 1333,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "President Milei Speaks On Malvinas Veterans Day",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iZ4PWOllx2fI/v0/-1x-1.webp",
+        "caption": "",
+        "credit": "Tomas Cuesta/Getty Images",
+        "origWidth": 2000,
+        "origHeight": 1333,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-29T11:00:00.003Z",
+    "slug": "2026-04-29/argentina-bond-investors-increasingly-fear-the-day-after-milei",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-29T11:00:00.003Z",
+    "url": "/news/articles/2026-04-29/argentina-bond-investors-increasingly-fear-the-day-after-milei",
+    "__modelType": "Story"
+  },
+  {
+    "archived": false,
+    "brand": "markets",
+    "byline": "Natalia Kniazhevich",
+    "credits": [
+      {
+        "editorialBoard": false,
+        "roles": [
+          "by",
+          "reporter"
+        ],
+        "name": "Natalia Kniazhevich",
+        "attributionPreferences": {
+          "fullNamePreference": "Natalia Kniazhevich",
+          "__typename": "AttributionDetails"
+        },
+        "__typename": "Person",
+        "site": "markets",
+        "photoDisplayed": false,
+        "thumbnail": null
+      }
+    ],
+    "eyebrow": {
+      "url": "/markets",
+      "text": "Markets",
+      "bybrowEligible": false
+    },
+    "headline": "Morgan Stanley’s Slimmon Says Be Ready to Buy Short-Term Pullback in Stocks",
+    "id": "TE7JY0T96OSJ00",
+    "image": {
+      "alt": "The New York Stock Exchange.",
+      "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iIAFO8l.8sUg/v1/-1x-1.webp",
+      "caption": "",
+      "credit": "Michael Nagle/Bloomberg",
+      "origWidth": 2000,
+      "origHeight": 1334,
+      "themes": [],
+      "type": "image"
+    },
+    "locale": "en",
+    "media": {
+      "defaultImage": {
+        "alt": "The New York Stock Exchange.",
+        "baseUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iIAFO8l.8sUg/v1/-1x-1.webp",
+        "caption": "",
+        "credit": "Michael Nagle/Bloomberg",
+        "origWidth": 2000,
+        "origHeight": 1334,
+        "placement": "",
+        "themes": [],
+        "type": "image"
+      }
+    },
+    "meta": {
+      "terminalBlogId": null,
+      "__typename": "Meta"
+    },
+    "premium": false,
+    "publishedAt": "2026-04-29T11:00:00.002Z",
+    "slug": "2026-04-29/morgan-stanley-s-slimmon-says-buy-short-term-pullback-in-stocks-spy",
+    "summary": "",
+    "trackingType": "Story",
+    "type": "article",
+    "updatedAt": "2026-04-29T11:00:00.011Z",
+    "url": "/news/articles/2026-04-29/morgan-stanley-s-slimmon-says-buy-short-term-pullback-in-stocks-spy",
+    "__modelType": "Story"
+  }
+]

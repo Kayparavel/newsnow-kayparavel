@@ -398,10 +398,19 @@ export const originSources = {
     name: "东方财富",
     column: "finance",
     color: "red",
-    type: "realtime",
-    title: "财经快讯",
-    interval: Time.Realtime,
     home: "https://kuaixun.eastmoney.com",
+    sub: {
+      flash: {
+        title: "7x24",
+        type: "realtime",
+        interval: Time.Realtime,
+      },
+      focus: {
+        title: "焦点",
+        type: "realtime",
+        interval: Time.Realtime,
+      },
+    },
   },
   "jin10": {
     name: "金十数据",
@@ -514,6 +523,34 @@ export const originSources = {
     color: "blue",
     type: "hottest",
     home: "https://store.steampowered.com",
+  },
+  "bloomberg": {
+    name: "彭博",
+    column: "world",
+    color: "gray",
+    home: "https://www.bloomberg.com",
+    sub: {
+      hot: {
+        title: "热点",
+        type: "hottest",
+        interval: Time.Slow,
+      },
+      market: {
+        title: "市场动态",
+        type: "realtime",
+        interval: Time.Slow,
+      },
+      us: {
+        title: "欧美快讯",
+        type: "realtime",
+        interval: Interval,
+      },
+      ja: {
+        title: "日本快讯",
+        type: "realtime",
+        interval: Interval,
+      },
+    },
   },
   "tencent": {
     name: "腾讯新闻",

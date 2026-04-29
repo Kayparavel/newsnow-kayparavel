@@ -4,13 +4,13 @@ interface MySteelNewsItem {
   sectionId: number
   content: string
   relationBreedId: string
-  relationBreed: { name: string; id: string }[]
+  relationBreed: { name: string, id: string }[]
   relationCityId: string
   relationCity: any[]
   relationFactoryId: string
-  relationFactory: { name: string; id: number }[]
+  relationFactory: { name: string, id: number }[]
   relationPortId: string
-  relationPort: { name: string; id: number }[]
+  relationPort: { name: string, id: number }[]
   inArticleTitle: string
   inArticleUrl: string
   outArticleTitle: string
@@ -31,7 +31,7 @@ interface MySteelNewsItem {
   readingCount: any
   advertisementFlag: number
   breedTags: string[]
-  breedTagIdNames: { name: string; id: string }[]
+  breedTagIdNames: { name: string, id: string }[]
   publisherId: number
   relationActivityId: number
   aiFlag: number
@@ -47,19 +47,19 @@ interface MySteelResponse {
 }
 
 export default defineSource({
-  "mysteel": async () => {
+  mysteel: async () => {
     // 使用我的钢铁的API接口获取快讯数据
     const apiUrl = "https://openapi.mysteel.com/without_sign/newsflash/flashnews/query_by_tags.htm"
-    
+
     // 直接使用项目提供的 myFetch 函数
     const res: MySteelResponse = await myFetch(apiUrl)
-    
+
     // 检查接口返回是否成功
     if (res.isValid && res.list) {
       return res.list.map((item) => {
         // 转换日期格式 (timestamp 到 Date)
         const pubDate = item.publisherTime
-        
+
         return {
           id: item.id.toString(),
           title: item.content, // 内容作为标题
@@ -70,9 +70,9 @@ export default defineSource({
             info: item.breedTags.join(", "), // 品种标签
           },
         }
-      }).slice(0, 30)
+      })
     }
-    
+
     // 如果API失败，返回空数组
     return []
   },

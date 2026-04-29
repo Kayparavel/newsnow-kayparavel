@@ -523,13 +523,32 @@
     "interval": 1800000
   },
   "eastmoney": {
-    "title": "财经快讯",
+    "redirect": "eastmoney-flash",
     "name": "东方财富",
     "type": "realtime",
     "column": "finance",
     "home": "https://kuaixun.eastmoney.com",
     "color": "red",
-    "interval": 30000
+    "interval": 30000,
+    "title": "7x24"
+  },
+  "eastmoney-flash": {
+    "name": "东方财富",
+    "type": "realtime",
+    "column": "finance",
+    "home": "https://kuaixun.eastmoney.com",
+    "color": "red",
+    "interval": 30000,
+    "title": "7x24"
+  },
+  "eastmoney-focus": {
+    "name": "东方财富",
+    "type": "realtime",
+    "column": "finance",
+    "home": "https://kuaixun.eastmoney.com",
+    "color": "red",
+    "interval": 30000,
+    "title": "焦点"
   },
   "jin10": {
     "name": "金十数据",
@@ -623,6 +642,52 @@
     "home": "https://store.steampowered.com",
     "color": "blue",
     "interval": 600000
+  },
+  "bloomberg": {
+    "redirect": "bloomberg-hot",
+    "name": "彭博",
+    "type": "hottest",
+    "column": "world",
+    "home": "https://www.bloomberg.com",
+    "color": "gray",
+    "interval": 3600000,
+    "title": "热点"
+  },
+  "bloomberg-hot": {
+    "name": "彭博",
+    "type": "hottest",
+    "column": "world",
+    "home": "https://www.bloomberg.com",
+    "color": "gray",
+    "interval": 3600000,
+    "title": "热点"
+  },
+  "bloomberg-market": {
+    "name": "彭博",
+    "type": "realtime",
+    "column": "world",
+    "home": "https://www.bloomberg.com",
+    "color": "gray",
+    "interval": 3600000,
+    "title": "市场动态"
+  },
+  "bloomberg-us": {
+    "name": "彭博",
+    "type": "realtime",
+    "column": "world",
+    "home": "https://www.bloomberg.com",
+    "color": "gray",
+    "interval": 3600000,
+    "title": "欧美快讯"
+  },
+  "bloomberg-ja": {
+    "name": "彭博",
+    "type": "realtime",
+    "column": "world",
+    "home": "https://www.bloomberg.com",
+    "color": "gray",
+    "interval": 3600000,
+    "title": "日本快讯"
   },
   "tencent": {
     "redirect": "tencent-hot",

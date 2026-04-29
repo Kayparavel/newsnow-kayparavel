@@ -1,0 +1,2113 @@
+{
+  "statusCode": 200,
+  "message": "Success",
+  "result": {
+    "parent_section_name": "World",
+    "pagination": {
+      "size": 20,
+      "expected_size": 20,
+      "total_size": 20,
+      "orderby": "display_date:desc"
+    },
+    "date_modified": "2026-04-29T16:16:44.298Z",
+    "fetch_type": "collection",
+    "articles": [
+      {
+        "id": "ZJN7Z7TFKJPS7ILHMVKVBYAKCI",
+        "revision_id": "WVNECR3RZJGPZG37BUYG5LW74Y",
+        "canonical_url": "/world/asia-pacific/trump-urges-iran-sign-deal-after-report-suggests-us-may-extend-blockade-2026-04-29/",
+        "website": "reuters",
+        "web": "Trump urges Iran to sign a deal and discusses prolonged blockade",
+        "native": "Trump urges Iran to sign a deal and discusses prolonged blockade",
+        "headline_feature": "WRAPUP 4",
+        "published": true,
+        "published_time": "2026-04-29T10:23:11.709Z",
+        "article_type": "Standard",
+        "display_my_news": true,
+        "display_newsletter_signup": true,
+        "display_notifications": true,
+        "display_related_media": true,
+        "display_related_organizations": true,
+        "content_code": "metered",
+        "source": {
+          "name": "Reuters",
+          "original_name": "Reuters"
+        },
+        "title": "Trump urges Iran to sign a deal and discusses prolonged blockade",
+        "basic_headline": "Trump urges Iran to sign a deal and discusses prolonged blockade",
+        "distributor": "Reuters",
+        "description": "Trump discussed how to mitigate the impact of a possible months-long U.S. blockade of Iran's ports.",
+        "primary_media_type": "image",
+        "primary_tag": {
+          "short_bio": "RULES:IRAN",
+          "description": "RULES:IRAN",
+          "slug": "rules-iran",
+          "text": "RULES:IRAN",
+          "topic_url": "/tags/rules-iran/"
+        },
+        "word_count": 1001,
+        "read_minutes": 6,
+        "kicker": {
+          "name": "Asia Pacific",
+          "path": "/world/asia-pacific/",
+          "names": [
+            "World",
+            "Asia Pacific"
+          ]
+        },
+        "ad_topics": [
+          "com",
+          "DeathInjrConft",
+          "engy",
+          "pol",
+          "trade",
+          "DeathInjrConft"
+        ],
+        "thumbnail": {
+          "url": "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/UHULYDJBUZPZDJXF2SFZO7IDSQ.jpg",
+          "caption": "Ships and boats in the Strait of Hormuz, Musandam, Oman, April 29, 2026. REUTERS/Stringer",
+          "type": "image",
+          "resizer_url": "https://www.reuters.com/resizer/v2/UHULYDJBUZPZDJXF2SFZO7IDSQ.jpg?auth=3706c4e8d07ffa3ce7b40a5168d7cacbd01febc4a244ee401d11085795b935e2",
+          "location": "Musandam, OMAN",
+          "id": "UHULYDJBUZPZDJXF2SFZO7IDSQ",
+          "authors": "Stringer",
+          "alt_text": "Ships and boats in the Strait of Hormuz",
+          "width": 4584,
+          "height": 2578,
+          "subtitle": "Ships and boats in the Strait of Hormuz",
+          "slug": "IRAN-CRISIS-OMAN-HORMUZ",
+          "updated_at": "2026-04-29T10:36:21Z",
+          "company": "Reuters",
+          "purchase_licensing_path": "https://www.reutersconnect.com/item/ships-and-boats-in-the-strait-of-hormuz/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX1JDMldZS0E2NE5XMQ%3D%3D/?utm_medium=rcom-article-media&utm_campaign=rcom-rcp-lead"
+        },
+        "display_time": "2026-04-29T10:23:11.709Z",
+        "updated_time": "2026-04-29T15:33:38.026Z",
+        "authors": [
+          {
+            "id": "timothy.gardner@thomsonreuters.com",
+            "name": "Timothy Gardner",
+            "first_name": "Timothy",
+            "last_name": "Gardner",
+            "company": "Reuters",
+            "thumbnail": {
+              "url": "https://s3.amazonaws.com/arc-authors/reuters/1bb7724b-8fde-4826-bdd0-f0f535c72cd1.png",
+              "type": "image",
+              "resizer_url": "https://www.reuters.com/resizer/v2/https%3A%2F%2Fs3.amazonaws.com%2Farc-authors%2Freuters%2F1bb7724b-8fde-4826-bdd0-f0f535c72cd1.png?auth=7bbb8c4ffa85576094b8fc43b04397dae6367ec3080896a1c0ed9c2869edb43a"
+            },
+            "social_links": [
+              {
+                "site": "email",
+                "url": "mailto:timothy.gardner@thomsonreuters.com"
+              },
+              {
+                "site": "twitter",
+                "url": "https://x.com/timogard"
+              },
+              {
+                "site": "linkedin",
+                "url": "https://www.linkedin.com/in/timothy-gardner-1448953/"
+              }
+            ],
+            "byline": "Timothy Gardner",
+            "description": "Timothy reports on energy and environment policy and is based in Washington, D.C. His coverage ranges from the latest in nuclear power, to environment regulations, to U.S. sanctions and geopolitics. He has been a member of three teams in the past two years that have won Reuters best journalism of the year awards.  As a cyclist he is happiest outside.",
+            "topic_url": "/authors/timothy-gardner/",
+            "role": "Energy and Environment Correspondent"
+          }
+        ]
+      },
+      {
+        "id": "LB3GIBRKQNI63NLMSX42VCRUYM",
+        "revision_id": "GBTC3Y6MJBCGVOGOZXV3IJNPMY",
+        "canonical_url": "/world/uk/uk-police-arrest-man-after-two-people-stabbed-north-london-times-reports-2026-04-29/",
+        "website": "reuters",
+        "web": "Two Jewish men stabbed in London, police treat attack as terrorism",
+        "native": "Two Jewish men stabbed in London, police treat attack as terrorism",
+        "published": true,
+        "published_time": "2026-04-29T11:13:07.819Z",
+        "article_type": "Standard",
+        "display_my_news": true,
+        "display_newsletter_signup": true,
+        "display_notifications": true,
+        "display_related_media": true,
+        "display_related_organizations": true,
+        "content_code": "metered",
+        "source": {
+          "name": "Reuters",
+          "original_name": "Reuters"
+        },
+        "title": "Two Jewish men stabbed in London, police treat attack as terrorism",
+        "basic_headline": "Two Jewish men stabbed in London, police treat attack as terrorism",
+        "distributor": "Reuters",
+        "description": "Two Jewish men were stabbed in north London on Wednesday by an attacker who ​ran down a street targeting Jews in what police said was being treated as a terrorist incident.",
+        "primary_media_type": "video",
+        "primary_tag": {
+          "short_bio": "N2:CLJ",
+          "description": "N2:CLJ",
+          "slug": "n2-clj",
+          "text": "CLJ",
+          "topic_url": "/tags/n2-clj/"
+        },
+        "word_count": 878,
+        "read_minutes": 5,
+        "kicker": {
+          "name": "United Kingdom",
+          "path": "/world/uk/",
+          "names": [
+            "World",
+            "United Kingdom"
+          ]
+        },
+        "ad_topics": [
+          "crime",
+          "media",
+          "pol",
+          "crime"
+        ],
+        "thumbnail": {
+          "url": "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/5U5H4CHNANPMXAOCWAVLGJ4LLE.jpg",
+          "caption": "A Shomrim London Emergency Support Unit member walks towards a police vehicle in Golders Green, after a man was arrested following a stabbing incident in the area, which is home to a large Jewish population, in London, Britain, April 29, 2026. REUTERS/Hannah McKay",
+          "type": "image",
+          "resizer_url": "https://www.reuters.com/resizer/v2/5U5H4CHNANPMXAOCWAVLGJ4LLE.jpg?auth=3662526e5f32063c50ab3a9d97fb83527a0752bbe966bb29e822375b557dc0aa",
+          "location": "LONDON, UNITED KINGDOM",
+          "id": "5U5H4CHNANPMXAOCWAVLGJ4LLE",
+          "authors": "Hannah McKay",
+          "alt_text": "Stabbing incident in Golders Green area of London",
+          "width": 6000,
+          "height": 4000,
+          "subtitle": "Stabbing incident in Golders Green area of London",
+          "slug": "BRITAIN-CRIME",
+          "updated_at": "2026-04-29T14:22:40Z",
+          "company": "Reuters",
+          "purchase_licensing_path": "https://www.reutersconnect.com/item/stabbing-incident-in-golders-green-area-of-london/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX1JDMjBaS0FFVlE1Mg%3D%3D/?utm_medium=rcom-article-media&utm_campaign=rcom-rcp-lead"
+        },
+        "display_time": "2026-04-29T11:13:07.819Z",
+        "updated_time": "2026-04-29T16:13:00.708Z",
+        "authors": [
+          {
+            "id": "sam.tobin@thomsonreuters.com",
+            "name": "Sam Tobin",
+            "first_name": "Sam",
+            "last_name": "Tobin",
+            "company": "Reuters",
+            "thumbnail": {
+              "url": "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/H24NV3AFCZCWPC463OG3JRYY7U.jpg",
+              "type": "image",
+              "resizer_url": "https://www.reuters.com/resizer/v2/https%3A%2F%2Fcloudfront-us-east-2.images.arcpublishing.com%2Freuters%2FH24NV3AFCZCWPC463OG3JRYY7U.jpg?auth=4dd3566d980534ddab2fb815cfdf9f08e04ca3d4f4dd0c88f6e42931b1e77167"
+            },
+            "social_links": [
+              {
+                "site": "email",
+                "url": "mailto:Sam.Tobin@thomsonreuters.com"
+              }
+            ],
+            "byline": "Sam Tobin",
+            "topic_url": "/authors/sam-tobin/"
+          },
+          {
+            "id": "sarah.young@thomsonreuters.com",
+            "name": "Sarah Young",
+            "first_name": "Sarah",
+            "last_name": "Young",
+            "company": "Reuters",
+            "thumbnail": {
+              "url": "https://s3.amazonaws.com/arc-authors/reuters/63d811b4-b072-4808-8e32-26628db6f2b1.png",
+              "type": "image",
+              "resizer_url": "https://www.reuters.com/resizer/v2/https%3A%2F%2Fs3.amazonaws.com%2Farc-authors%2Freuters%2F63d811b4-b072-4808-8e32-26628db6f2b1.png?auth=d3a355a46d32b11b1e26962495d74cfe268b772279c2ca3cf507f57c4d13f7d4"
+            },
+            "social_links": [
+              {
+                "site": "email",
+                "url": "mailto:sarah.young@thomsonreuters.com"
+              },
+              {
+                "site": "twitter",
+                "url": "https://x.com/syoungreuters "
+              }
+            ],
+            "byline": "Sarah Young",
+            "description": "Sarah reports on UK breaking news, with a focus on British companies. She has been a part of the UK bureau for 12 years covering everything from airlines to energy to the royals, politics and sport. She is a keen open water swimmer. ",
+            "topic_url": "/authors/sarah-young/",
+            "role": "Senior Breaking News Correspondent "
+          }
+        ]
+      },
+      {
+        "id": "U2HXBJP6CJNS5EXT47HKQKIU4I",
+        "revision_id": "KV6RWANZEJDOVBMVWTAIWE7COA",
+        "canonical_url": "/world/us-supreme-court-blocks-louisiana-voting-map-with-second-black-majority-district-2026-04-29/",
+        "website": "reuters",
+        "web": "US Supreme Court guts key provision of Voting Rights Act",
+        "native": "US Supreme Court guts key provision of Voting Rights Act",
+        "published": true,
+        "published_time": "2026-04-29T14:14:43.181Z",
+        "article_type": "Standard",
+        "display_my_news": true,
+        "display_newsletter_signup": true,
+        "display_notifications": true,
+        "display_related_media": true,
+        "display_related_organizations": true,
+        "content_code": "metered",
+        "source": {
+          "name": "Reuters",
+          "original_name": "Reuters"
+        },
+        "title": "US Supreme Court guts key provision of Voting Rights Act",
+        "basic_headline": "US Supreme Court guts key provision of Voting Rights Act",
+        "distributor": "Reuters",
+        "description": "This raises the bar for racial minorities to challenge electoral maps.",
+        "primary_media_type": "gallery",
+        "primary_tag": {
+          "short_bio": "Constitutional Law",
+          "description": "Constitutional Law",
+          "slug": "nrlpa-oconl",
+          "text": "NRLPA:OCONL",
+          "is_topic": true,
+          "can_follow": true,
+          "is_legal": true,
+          "topic_url": "/legal/constitutional-law/"
+        },
+        "word_count": 1517,
+        "read_minutes": 8,
+        "kicker": {
+          "name": "World",
+          "path": "/world/",
+          "names": [
+            "World"
+          ]
+        },
+        "ad_topics": [
+          "advoc",
+          "elc",
+          "legal",
+          "legal",
+          "pol"
+        ],
+        "thumbnail": {
+          "url": "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/E5FDRNTMWRM2FKQTSRG4ZKA7BM.jpg",
+          "caption": " REUTERS/Elizabeth Frantz",
+          "type": "image",
+          "resizer_url": "https://www.reuters.com/resizer/v2/E5FDRNTMWRM2FKQTSRG4ZKA7BM.jpg?auth=bd78ab4cf5f99931304b53b8757705cadf291873f4a29d3ac0d37ecf3c3930a2",
+          "location": "WASHINGTON, DC, UNITED STATES",
+          "id": "E5FDRNTMWRM2FKQTSRG4ZKA7BM",
+          "authors": "Elizabeth Frantz",
+          "alt_text": "People protest on the day the U.S. Supreme Court hears arguments regarding the composition of Louisiana electoral districts, in Washington",
+          "width": 3936,
+          "height": 2624,
+          "subtitle": "People protest on the day the U.S. Supreme Court hears arguments regarding the composition of Louisiana electoral districts, in Washington",
+          "slug": "USA-COURT-REDISTRICTING-LOUISIANA",
+          "updated_at": "2026-04-29T15:28:06Z",
+          "company": "Reuters",
+          "purchase_licensing_path": "https://www.reutersconnect.com/item/people-protest-on-the-day-the-us-supreme-court-hears-arguments-regarding-the-composition-of-louisiana-electoral-districts-in-washington/dGFnOnJldXRlcnMuY29tLDIwMjU6bmV3c21sX1JDMkVDSEFLMVpERw%3D%3D/?utm_medium=rcom-article-media&utm_campaign=rcom-rcp-lead"
+        },
+        "authors": [
+          {
+            "id": "john.kruzel@thomsonreuters.com",
+            "name": "John Kruzel",
+            "first_name": "John",
+            "last_name": "Kruzel",
+            "company": "Reuters",
+            "thumbnail": {
+              "url": "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/H24NV3AFCZCWPC463OG3JRYY7U.jpg",
+              "type": "image",
+              "resizer_url": "https://www.reuters.com/resizer/v2/https%3A%2F%2Fcloudfront-us-east-2.images.arcpublishing.com%2Freuters%2FH24NV3AFCZCWPC463OG3JRYY7U.jpg?auth=4dd3566d980534ddab2fb815cfdf9f08e04ca3d4f4dd0c88f6e42931b1e77167"
+            },
+            "social_links": [
+              {
+                "site": "email",
+                "url": "mailto:John.Kruzel@thomsonreuters.com"
+              }
+            ],
+            "byline": "John Kruzel",
+            "topic_url": "/authors/john-kruzel/"
+          },
+          {
+            "id": "andrew.chung1@thomsonreuters.com",
+            "name": "Andrew Chung",
+            "first_name": "Andrew",
+            "last_name": "Chung",
+            "company": "Reuters",
+            "thumbnail": {
+              "url": "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/H24NV3AFCZCWPC463OG3JRYY7U.jpg",
+              "type": "image",
+              "resizer_url": "https://www.reuters.com/resizer/v2/https%3A%2F%2Fcloudfront-us-east-2.images.arcpublishing.com%2Freuters%2FH24NV3AFCZCWPC463OG3JRYY7U.jpg?auth=4dd3566d980534ddab2fb815cfdf9f08e04ca3d4f4dd0c88f6e42931b1e77167"
+            },
+            "social_links": [
+              {
+                "site": "email",
+                "url": "mailto:andrew.chung1@thomsonreuters.com"
+              }
+            ],
+            "byline": "Andrew Chung",
+            "topic_url": "/authors/andrew-chung/"
+          }
+        ],
+        "display_time": "2026-04-29T14:14:43.181Z",
+        "updated_time": "2026-04-29T16:08:25.787Z"
+      },
+      {
+        "id": "WDORU3HEWJLITJLT4SCP36PPYA",
+        "revision_id": "WKAZNY342NEWTK6QZOKEIYUMS4",
+        "canonical_url": "/sustainability/boards-policy-regulation/elon-musk-return-witness-stand-trial-over-openais-future-2026-04-29/",
+        "website": "reuters",
+        "web": "Elon Musk testifies at trial that OpenAI's nonprofit status gave it 'halo'",
+        "native": "Elon Musk testifies at trial that OpenAI's nonprofit status gave it 'halo'",
+        "published": true,
+        "published_time": "2026-04-29T10:08:04.624Z",
+        "article_type": "Standard",
+        "display_my_news": true,
+        "display_newsletter_signup": true,
+        "display_notifications": true,
+        "display_related_media": true,
+        "display_related_organizations": true,
+        "content_code": "metered",
+        "source": {
+          "name": "Reuters",
+          "original_name": "Reuters"
+        },
+        "company_rics": "GOOGL.O,MSFT.O,TSLA.O",
+        "title": "Elon Musk testifies at trial that OpenAI's nonprofit status gave it 'halo'",
+        "basic_headline": "Elon Musk testifies at trial that OpenAI's nonprofit status gave it 'halo'",
+        "distributor": "Reuters",
+        "description": "Elon Musk ​testified on Wednesday that OpenAI's nonprofit status had a \"halo effect\" that gave the impression it was developing artificial intelligence for ‌the public good, a mission that Musk alleges the company abandoned in pursuit of profits.",
+        "primary_media_type": "gallery",
+        "primary_tag": {
+          "short_bio": "Corporate Activism",
+          "description": "Corporate Activism",
+          "slug": "rsbi-corporate-activism",
+          "text": "RSBI:CORPORATE-ACTIVISM",
+          "is_topic": true,
+          "can_follow": true,
+          "topic_url": "/sustainability/corporate-activism/"
+        },
+        "word_count": 698,
+        "read_minutes": 4,
+        "kicker": {
+          "name": "Sustainability",
+          "path": "/sustainability/",
+          "names": [
+            "Sustainability",
+            "Boards, Policy & Regulation"
+          ]
+        },
+        "ad_topics": [
+          "auto",
+          "ivbk",
+          "sci",
+          "ssb",
+          "ai",
+          "tech"
+        ],
+        "thumbnail": {
+          "url": "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/YJ3VGBH455JWDJLK4H3AKKZYKE.jpg",
+          "caption": "Elon Musk reacts at a federal courthouse during a recess of the trial in his lawsuit over OpenAI for-profit conversion, in Oakland, California, U.S., April 28, 2026.  REUTERS/Manuel Orbegozo",
+          "type": "image",
+          "resizer_url": "https://www.reuters.com/resizer/v2/YJ3VGBH455JWDJLK4H3AKKZYKE.jpg?auth=41bdb3672d8b3a6b08a4e4b23877f6aa3f764b407c7c4ae5bdc8d4193fcb7811",
+          "location": "Oakland, CA, UNITED STATES",
+          "id": "YJ3VGBH455JWDJLK4H3AKKZYKE",
+          "authors": "Manuel Orbegozo",
+          "alt_text": "Trial in Elon Musk's lawsuit over OpenAI for-profit conversion at a federal courthouse in Oakland",
+          "width": 3038,
+          "height": 2029,
+          "subtitle": "Trial in Elon Musk's lawsuit over OpenAI for-profit conversion at a federal courthouse in Oakland",
+          "slug": "MUSK-OPENAI-COURT",
+          "updated_at": "2026-04-29T15:36:54Z",
+          "company": "Reuters",
+          "purchase_licensing_path": "https://www.reutersconnect.com/item/trial-in-elon-musks-lawsuit-over-openai-for-profit-conversion-at-a-federal-courthouse-in-oakland/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX1JDMkpZS0FFTDFUVQ%3D%3D/?utm_medium=rcom-article-media&utm_campaign=rcom-rcp-lead"
+        },
+        "authors": [
+          {
+            "id": "deepa.seetharaman@thomsonreuters.com",
+            "name": "Deepa Seetharaman",
+            "first_name": "Deepa",
+            "last_name": "Seetharaman",
+            "company": "Reuters",
+            "thumbnail": {
+              "url": "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/H24NV3AFCZCWPC463OG3JRYY7U.jpg",
+              "type": "image",
+              "resizer_url": "https://www.reuters.com/resizer/v2/https%3A%2F%2Fcloudfront-us-east-2.images.arcpublishing.com%2Freuters%2FH24NV3AFCZCWPC463OG3JRYY7U.jpg?auth=4dd3566d980534ddab2fb815cfdf9f08e04ca3d4f4dd0c88f6e42931b1e77167"
+            },
+            "social_links": [
+              {
+                "site": "email",
+                "url": "mailto:Deepa.Seetharaman@thomsonreuters.com"
+              }
+            ],
+            "byline": "Deepa Seetharaman",
+            "topic_url": "/authors/deepa-seetharaman/"
+          },
+          {
+            "id": "max.cherney@thomsonreuters.com",
+            "name": "Max Cherney",
+            "first_name": "Max",
+            "last_name": "Cherney",
+            "company": "Reuters",
+            "thumbnail": {
+              "url": "https://author-service-images-prod-us-east-1.publishing.aws.arc.pub/reuters/09c9004b-2a13-4994-a7f2-0e8a2caaa444.jpg",
+              "type": "image",
+              "resizer_url": "https://www.reuters.com/resizer/v2/https%3A%2F%2Fauthor-service-images-prod-us-east-1.publishing.aws.arc.pub%2Freuters%2F09c9004b-2a13-4994-a7f2-0e8a2caaa444.jpg?auth=aba933bc32e6be31d309529413a11136846fa30e7ce6d37223f74634e140fc81"
+            },
+            "social_links": [
+              {
+                "site": "email",
+                "url": "mailto:Max.Cherney@thomsonreuters.com"
+              },
+              {
+                "site": "twitter",
+                "url": "https://x.com/chernandburn"
+              },
+              {
+                "site": "instagram",
+                "url": "@chernandburn"
+              },
+              {
+                "site": "linkedin",
+                "url": "https://www.linkedin.com/in/maxcherney/"
+              }
+            ],
+            "byline": "Max A. Cherney",
+            "description": "Max A. Cherney is a correspondent for Reuters based in San Francisco, where he reports on the semiconductor industry and artificial intelligence. He joined Reuters in 2023 and has previously worked for Barron’s magazine and its sister publication, MarketWatch. Cherney graduated from Trent University with a degree in history.",
+            "topic_url": "/authors/max-a-cherney/",
+            "role": "Tech Correspondent"
+          }
+        ],
+        "display_time": "2026-04-29T10:08:04.624Z",
+        "updated_time": "2026-04-29T16:14:45.041Z"
+      },
+      {
+        "id": "OBLHYXWOZ5OMVISAAJE5CFQLSQ",
+        "revision_id": "3HG6HVX7PVEBNELFNBEF5FPK7Y",
+        "canonical_url": "/world/middle-east/us-war-iran-has-cost-25-billion-so-far-says-pentagon-official-2026-04-29/",
+        "website": "reuters",
+        "web": "U.S. war in Iran has cost $25 billion so far, says Pentagon official",
+        "native": "U.S. war in Iran has cost $25 billion so far, says Pentagon official",
+        "published": true,
+        "published_time": "2026-04-29T14:59:15.912Z",
+        "article_type": "Standard",
+        "display_my_news": true,
+        "display_newsletter_signup": true,
+        "display_notifications": true,
+        "display_related_media": true,
+        "display_related_organizations": true,
+        "content_code": "metered",
+        "source": {
+          "name": "Reuters",
+          "original_name": "Reuters"
+        },
+        "title": "U.S. war in Iran has cost $25 billion so far, says Pentagon official",
+        "basic_headline": "U.S. war in Iran has cost $25 billion so far, says Pentagon official",
+        "distributor": "Reuters",
+        "description": "The United States' war in Iran has cost $25 billion so far, a senior Pentagon official said on Wednesday, providing ​the first official estimate of the military's price tag for the conflict.",
+        "primary_media_type": "gallery",
+        "primary_tag": {
+          "short_bio": "N2:CWP",
+          "description": "N2:CWP",
+          "slug": "n2-cwp",
+          "text": "CWP",
+          "topic_url": "/tags/n2-cwp/"
+        },
+        "word_count": 378,
+        "read_minutes": 2,
+        "kicker": {
+          "name": "Middle East",
+          "path": "/world/middle-east/",
+          "names": [
+            "World",
+            "Middle East"
+          ]
+        },
+        "ad_topics": [
+          "com",
+          "DeathInjrConft",
+          "elc",
+          "engy",
+          "pol",
+          "DeathInjrConft"
+        ],
+        "thumbnail": {
+          "url": "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/XQRPAXOF4ZNC5NCU3AMX5TAMCI.jpg",
+          "caption": "A cleric walks near a residential building damaged by a strike on March 4, in Tehran, Iran, April 14, 2026. REUTERS/Thaier Al Sudani     ",
+          "type": "image",
+          "resizer_url": "https://www.reuters.com/resizer/v2/XQRPAXOF4ZNC5NCU3AMX5TAMCI.jpg?auth=a92ed7abb64fd6ac142f93b947a3a9e40d6a7de7cb786082ef84c6226f5723ad",
+          "location": "TEHRAN, Iran",
+          "id": "XQRPAXOF4ZNC5NCU3AMX5TAMCI",
+          "authors": "Thaier Al-Sudani",
+          "alt_text": "A cleric walks near a residential building damaged by a strike on March 4, in Tehran",
+          "width": 3803,
+          "height": 2538,
+          "subtitle": "A cleric walks near a residential building damaged by a strike on March 4, in Tehran",
+          "slug": "IRAN-CRISIS/AFTERMATH",
+          "updated_at": "2026-04-29T15:45:08Z",
+          "company": "REUTERS",
+          "purchase_licensing_path": "https://www.reutersconnect.com/item/a-cleric-walks-near-a-residential-building-damaged-by-a-strike-on-march-4-in-tehran/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX1JDMlhPS0E3UFZRRA%3D%3D/?utm_medium=rcom-article-media&utm_campaign=rcom-rcp-lead"
+        },
+        "authors": [
+          {
+            "name": "Reuters",
+            "company": "Reuters",
+            "thumbnail": {
+              "url": "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/H24NV3AFCZCWPC463OG3JRYY7U.jpg",
+              "type": "image",
+              "resizer_url": "https://www.reuters.com/resizer/v2/https%3A%2F%2Fcloudfront-us-east-2.images.arcpublishing.com%2Freuters%2FH24NV3AFCZCWPC463OG3JRYY7U.jpg?auth=4dd3566d980534ddab2fb815cfdf9f08e04ca3d4f4dd0c88f6e42931b1e77167"
+            },
+            "byline": "Reuters"
+          }
+        ],
+        "display_time": "2026-04-29T14:59:15.912Z",
+        "updated_time": "2026-04-29T15:45:15.526Z"
+      },
+      {
+        "id": "7CIMCZUGYZKDDOZQPEWW7WCQPI",
+        "revision_id": "FGF7SGPOZFE4PCE2YDSII5K3GM",
+        "canonical_url": "/world/israeli-maps-outline-expanded-zone-military-control-gaza-2026-04-29/",
+        "website": "reuters",
+        "web": "Israeli maps outline expanded zone of military control in Gaza",
+        "native": "Israeli maps outline expanded zone of military control in Gaza",
+        "published": true,
+        "published_time": "2026-04-29T15:23:10.625Z",
+        "article_type": "Standard",
+        "display_my_news": true,
+        "display_newsletter_signup": true,
+        "display_notifications": true,
+        "display_related_media": true,
+        "display_related_organizations": true,
+        "content_code": "metered",
+        "source": {
+          "name": "Reuters",
+          "original_name": "Reuters"
+        },
+        "title": "Israeli maps outline expanded zone of military control in Gaza",
+        "basic_headline": "Israeli maps outline expanded zone of military control in Gaza",
+        "distributor": "Reuters",
+        "description": "New maps of Gaza quietly issued by Israel a little more than a month ago have put thousands of displaced Palestinians inside an expanded restricted area, within boundaries the military says it can continue to change.",
+        "primary_media_type": "gallery",
+        "primary_tag": {
+          "short_bio": "Israel and Hamas at War",
+          "description": "Israel and Hamas at War",
+          "slug": "rules-israel-palestinians",
+          "text": "RULES:ISRAEL-PALESTINIANS",
+          "can_follow": true,
+          "topic_url": "/world/israel-hama-at-war/"
+        },
+        "word_count": 1335,
+        "read_minutes": 7,
+        "kicker": {
+          "name": "World",
+          "path": "/world/",
+          "names": [
+            "World"
+          ]
+        },
+        "ad_topics": [
+          "DeathInjrConft",
+          "pol",
+          "DeathInjrConft",
+          "DeathInjrConft"
+        ],
+        "thumbnail": {
+          "url": "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/EHYVXHYDVBHYDPMGKSGCMFV7KA.jpg",
+          "caption": "A reproduction by Palestinian researchers of a map provided to aid organizations showing the \"orange line\" in Gaza, which encompasses an estimated 64% of the Strip",
+          "type": "image",
+          "resizer_url": "https://www.reuters.com/resizer/v2/EHYVXHYDVBHYDPMGKSGCMFV7KA.jpg?auth=39e5bcb3dd0e342b75e0e5b923ba52da703771cb7acde795a9c6b6abf3012ebc",
+          "id": "EHYVXHYDVBHYDPMGKSGCMFV7KA",
+          "alt_text": "Israeli maps outline expanded zone of military control in Gaza",
+          "width": 3507,
+          "height": 4960,
+          "subtitle": "Israeli maps outline expanded zone of military control in Gaza",
+          "updated_at": "2026-04-29T15:46:03Z"
+        },
+        "display_time": "2026-04-29T15:23:10.625Z",
+        "updated_time": "2026-04-29T16:15:59.555Z",
+        "authors": [
+          {
+            "id": "pesha.magid@thomsonreuters.com",
+            "name": "Pesha Magid",
+            "first_name": "Pesha",
+            "last_name": "Magid",
+            "company": "Reuters",
+            "thumbnail": {
+              "url": "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/H24NV3AFCZCWPC463OG3JRYY7U.jpg",
+              "type": "image",
+              "resizer_url": "https://www.reuters.com/resizer/v2/https%3A%2F%2Fcloudfront-us-east-2.images.arcpublishing.com%2Freuters%2FH24NV3AFCZCWPC463OG3JRYY7U.jpg?auth=4dd3566d980534ddab2fb815cfdf9f08e04ca3d4f4dd0c88f6e42931b1e77167"
+            },
+            "social_links": [
+              {
+                "site": "email",
+                "url": "mailto:Pesha.Magid@thomsonreuters.com"
+              }
+            ],
+            "byline": "Pesha Magid",
+            "topic_url": "/authors/pesha-magid/"
+          },
+          {
+            "id": "nidal.almughrab@thomsonreuters.com",
+            "name": "Nidal Al-Mughrabi",
+            "first_name": "Nidal",
+            "last_name": "Al-Mughrabi",
+            "company": "Reuters",
+            "thumbnail": {
+              "url": "https://s3.amazonaws.com/arc-authors/reuters/f246d78a-76ae-4a2c-bed3-096ff70126b6.jpg",
+              "type": "image",
+              "resizer_url": "https://www.reuters.com/resizer/v2/https%3A%2F%2Fs3.amazonaws.com%2Farc-authors%2Freuters%2Ff246d78a-76ae-4a2c-bed3-096ff70126b6.jpg?auth=434b1d6e9ccb05a3fa684ea45f6a01d534c9408c692961db00249f23c52bbda3"
+            },
+            "social_links": [
+              {
+                "site": "email",
+                "url": "mailto:nidal.almughrab@thomsonreuters.com"
+              },
+              {
+                "site": "twitter",
+                "url": "https://x.com/nidalal"
+              }
+            ],
+            "byline": "Nidal Al-Mughrabi",
+            "description": "A senior correspondent with nearly 25 years’ experience covering the Palestinian-Israeli conflict including several wars and the signing of the first historic peace accord between the two sides.",
+            "topic_url": "/authors/nidal-al-mughrabi/",
+            "role": "Senior Correspondent"
+          },
+          {
+            "id": "alexander.cornwell@thomsonreuters.com",
+            "name": "Alexander Cornwell",
+            "first_name": "Alexander",
+            "last_name": "Cornwell",
+            "company": "Reuters",
+            "thumbnail": {
+              "url": "https://author-service-images-prod-us-east-1.publishing.aws.arc.pub/reuters/e4c8a815-5810-4dfa-892c-833d94f74f7e.png",
+              "type": "image",
+              "resizer_url": "https://www.reuters.com/resizer/v2/https%3A%2F%2Fauthor-service-images-prod-us-east-1.publishing.aws.arc.pub%2Freuters%2Fe4c8a815-5810-4dfa-892c-833d94f74f7e.png?auth=10d36e4cf889723c5a4239a53eba78789951599c056efa68014eaf7452076cd7"
+            },
+            "social_links": [
+              {
+                "site": "email",
+                "url": "mailto:Alexander.Cornwell@thomsonreuters.com"
+              },
+              {
+                "site": "twitter",
+                "url": "https://x.com/alexjcornwell"
+              },
+              {
+                "site": "instagram",
+                "url": "@alexjcornwell"
+              },
+              {
+                "site": "linkedin",
+                "url": "https://www.linkedin.com/in/alexjcornwell/"
+              }
+            ],
+            "byline": "Alexander Cornwell",
+            "description": "Alexander has over a decade of international reporting experience. He is currently a senior correspondent in Jerusalem covering Israel & the Palestinian Territories and was formerly in Dubai where he covered the Arabian Peninsula, including the United Arab Emirates, Saudi Arabia and Yemen, often writing about foreign policy, security and economic-related issues.",
+            "topic_url": "/authors/alexander-cornwell/",
+            "role": "Senior Correspondent"
+          }
+        ]
+      },
+      {
+        "id": "YBORWS2OC5N6PJIVXODDY56CNQ",
+        "revision_id": "COAULROSI5CD7KDY22Q6P4EI5I",
+        "canonical_url": "/world/un-candidate-grynspan-says-world-body-must-do-less-with-less-2026-04-29/",
+        "website": "reuters",
+        "web": "UN candidate Grynspan says world body must do 'less with less'",
+        "native": "UN candidate Grynspan says world body must do 'less with less'",
+        "published": true,
+        "published_time": "2026-04-29T16:13:46.912Z",
+        "article_type": "Standard",
+        "display_my_news": true,
+        "display_newsletter_signup": true,
+        "display_notifications": true,
+        "display_related_media": true,
+        "display_related_organizations": true,
+        "content_code": "metered",
+        "source": {
+          "name": "Reuters",
+          "original_name": "Reuters"
+        },
+        "title": "UN candidate Grynspan says world body must do 'less with less'",
+        "basic_headline": "UN candidate Grynspan says world body must do 'less with less'",
+        "distributor": "Reuters",
+        "description": "The United Nations is facing a critical moment with its financial sustainability under threat and it should do \"less with less\", Costa Rica's Rebeca Grynspan said on Wednesday, as she campaigns to become the next U.N. secretary‑general.",
+        "primary_media_type": "image",
+        "primary_tag": {
+          "short_bio": "TOPIC:WORLD-UNITED-NATIONS",
+          "description": "TOPIC:WORLD-UNITED-NATIONS",
+          "slug": "topic-world-united-nations",
+          "text": "TOPIC:WORLD-UNITED-NATIONS",
+          "topic_url": "/tags/topic-world-united-nations/"
+        },
+        "word_count": 490,
+        "read_minutes": 3,
+        "kicker": {
+          "name": "World",
+          "path": "/world/",
+          "names": [
+            "World"
+          ]
+        },
+        "ad_topics": [
+          "aero",
+          "aero",
+          "DeathInjrConft",
+          "elc",
+          "fixinc",
+          "pol"
+        ],
+        "thumbnail": {
+          "url": "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/MRZIX7XZUVK73A6OOTIDTUMPF4.jpg",
+          "caption": "Rebeca Grynspan, former Vice President of Costa Rica, speaks during a news conference where the government  announced her nomination  for United Nations secretary-general, in San Jose, Costa Rica, October 8, 2025. REUTERS/Mayela Lopez/File Photo",
+          "type": "image",
+          "resizer_url": "https://www.reuters.com/resizer/v2/MRZIX7XZUVK73A6OOTIDTUMPF4.jpg?auth=43694f27d67f2cd8886491bdfc83472da269ab4a00cb0bfc0a43fdc534f5be4b",
+          "location": "SAN JOSE, COSTA RICA",
+          "id": "MRZIX7XZUVK73A6OOTIDTUMPF4",
+          "authors": "Mayela Lopez",
+          "alt_text": "Costa Rica nominates former Vice President Rebeca Grynspan to head UN",
+          "width": 6500,
+          "height": 4333,
+          "subtitle": "Costa Rica nominates former Vice President Rebeca Grynspan to head UN",
+          "slug": "UN-ELECTION-SECRETARYGENERAL",
+          "updated_at": "2026-04-29T16:17:43Z",
+          "company": "Reuters",
+          "purchase_licensing_path": "https://www.reutersconnect.com/item/costa-rica-nominates-former-vice-president-rebeca-grynspan-to-head-un/dGFnOnJldXRlcnMuY29tLDIwMjU6bmV3c21sX1JDMk83SEFSTjhSTw%3D%3D/?utm_medium=rcom-article-media&utm_campaign=rcom-rcp-lead"
+        },
+        "display_time": "2026-04-29T16:13:46.912Z",
+        "updated_time": "2026-04-29T16:17:43.401Z",
+        "authors": [
+          {
+            "id": "michel.rose@thomsonreuters.com",
+            "name": "Michel Rose",
+            "first_name": "Michel",
+            "last_name": "Rose",
+            "company": "Reuters",
+            "thumbnail": {
+              "url": "https://s3.amazonaws.com/arc-authors/reuters/9391eb15-2f1f-4a84-ada3-73c1b27edbab.png",
+              "type": "image",
+              "resizer_url": "https://www.reuters.com/resizer/v2/https%3A%2F%2Fs3.amazonaws.com%2Farc-authors%2Freuters%2F9391eb15-2f1f-4a84-ada3-73c1b27edbab.png?auth=b12b4ca1067bf62a337f66c2a1f4e999fcffb71e11e946d89e24a45d1da69ef9"
+            },
+            "social_links": [
+              {
+                "site": "email",
+                "url": "mailto:michel.rose@thomsonreuters.com"
+              },
+              {
+                "site": "twitter",
+                "url": "https://x.com/MichelReuters"
+              },
+              {
+                "site": "linkedin",
+                "url": "http://linkedin.com/in/michelrose"
+              }
+            ],
+            "byline": "Michel Rose",
+            "description": "Michel reports on French politics and diplomacy, having covered President Emmanuel Macron at the Elysee since 2017 and the rise of the far right under Marine Le Pen. He also writes about power dynamics in the EU. He previously covered macro-economics and energy. Worked at the Milan, Italy bureau of Reuters during the euro zone debt crisis and at the London headquarters. Michel is a graduate of the London School of Economics and the Sorbonne, and is interested in mental health and social diversity issues.",
+            "topic_url": "/authors/michel-rose/",
+            "role": "Senior Political Correspondent"
+          }
+        ]
+      },
+      {
+        "id": "LRC4UIOGHJMTLIDB23EZ6LBGSM",
+        "revision_id": "UQDW3HC3SJGNXFYKVD3HIRIDWQ",
+        "canonical_url": "/world/middle-east/why-saudi-uae-trade-ties-remain-resilient-despite-yemen-tensions-2026-04-29/",
+        "website": "reuters",
+        "web": "How the UAE's OPEC exit could affect its trade ties with Saudi Arabia",
+        "native": "How the UAE's OPEC exit could affect its trade ties with Saudi Arabia",
+        "headline_feature": "EXPLAINER",
+        "published": true,
+        "published_time": "2026-01-07T16:31:25.316Z",
+        "article_type": "Standard",
+        "display_my_news": true,
+        "display_newsletter_signup": true,
+        "display_notifications": true,
+        "display_related_media": true,
+        "display_related_organizations": true,
+        "content_code": "metered",
+        "source": {
+          "name": "Reuters",
+          "original_name": "Reuters"
+        },
+        "title": "How the UAE's OPEC exit could affect its trade ties with Saudi Arabia",
+        "basic_headline": "How the UAE's OPEC exit could affect its trade ties with Saudi Arabia",
+        "distributor": "Reuters",
+        "description": "The United Arab Emirates' withdrawal from OPEC weakens the group's control over global oil markets and potentially risks widening a rift with Gulf neighbour Saudi Arabia, the de facto leader of the crude producers' organisation.",
+        "primary_media_type": "image",
+        "primary_tag": {
+          "short_bio": "OPEC",
+          "description": "OPEC",
+          "slug": "repi-opec",
+          "text": "REPI:OPEC",
+          "is_topic": true,
+          "can_follow": true,
+          "topic_url": "/business/energy/opec/"
+        },
+        "word_count": 898,
+        "read_minutes": 5,
+        "kicker": {
+          "name": "Middle East",
+          "path": "/world/middle-east/",
+          "names": [
+            "World",
+            "Middle East"
+          ]
+        },
+        "ad_topics": [
+          "com",
+          "econ",
+          "engy",
+          "engy",
+          "pol",
+          "trade"
+        ],
+        "thumbnail": {
+          "url": "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/DA7F2UTSHFIPDGMYMTI4RYZ6PY.jpg",
+          "caption": "Containers are seen at Abu Dhabi's Khalifa Port after it was expanded in Abu Dhabi, UAE, December 11, 2019. REUTERS/Satish Kumar",
+          "type": "image",
+          "resizer_url": "https://www.reuters.com/resizer/v2/DA7F2UTSHFIPDGMYMTI4RYZ6PY.jpg?auth=7bcbba34637c048a81008183fbfd0c49c23e0d47df50abe44462d7e7eac79f31",
+          "location": "ABU DHABI, United Arab Emirates",
+          "id": "DA7F2UTSHFIPDGMYMTI4RYZ6PY",
+          "authors": "SATISH KUMAR",
+          "alt_text": "Containers are seen at Abu Dhabi's Khalifa Port after it was expanded in Abu Dhabi",
+          "width": 4896,
+          "height": 3264,
+          "subtitle": "Containers are seen at Abu Dhabi's Khalifa Port after it was expanded in Abu Dhabi",
+          "slug": "EMIRATES-ABU-DHABI-PORTS",
+          "updated_at": "2026-04-29T14:44:01Z",
+          "company": "Reuters",
+          "purchase_licensing_path": "https://www.reutersconnect.com/item/containers-are-seen-at-abu-dhabis-khalifa-port-after-it-was-expanded-in-abu-dhabi/dGFnOnJldXRlcnMuY29tLDIwMTk6bmV3c21sX1JDMjFURDk1NVNOWQ%3D%3D/?utm_medium=rcom-article-media&utm_campaign=rcom-rcp-lead"
+        },
+        "authors": [
+          {
+            "id": "andrew.mills@thomsonreuters.com",
+            "name": "Andrew Mills",
+            "first_name": "Andrew",
+            "last_name": "Mills",
+            "company": "Reuters",
+            "thumbnail": {
+              "url": "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/H24NV3AFCZCWPC463OG3JRYY7U.jpg",
+              "type": "image",
+              "resizer_url": "https://www.reuters.com/resizer/v2/https%3A%2F%2Fcloudfront-us-east-2.images.arcpublishing.com%2Freuters%2FH24NV3AFCZCWPC463OG3JRYY7U.jpg?auth=4dd3566d980534ddab2fb815cfdf9f08e04ca3d4f4dd0c88f6e42931b1e77167"
+            },
+            "social_links": [
+              {
+                "site": "email",
+                "url": "mailto:Andrew.Mills@thomsonreuters.com"
+              }
+            ],
+            "byline": "Andrew Mills",
+            "topic_url": "/authors/andrew-mills/"
+          },
+          {
+            "id": "rachna.uppal@thomsonreuters.com",
+            "name": "Rachna Uppal",
+            "first_name": "Rachna",
+            "last_name": "Uppal",
+            "company": "Reuters",
+            "thumbnail": {
+              "url": "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/H24NV3AFCZCWPC463OG3JRYY7U.jpg",
+              "type": "image",
+              "resizer_url": "https://www.reuters.com/resizer/v2/https%3A%2F%2Fcloudfront-us-east-2.images.arcpublishing.com%2Freuters%2FH24NV3AFCZCWPC463OG3JRYY7U.jpg?auth=4dd3566d980534ddab2fb815cfdf9f08e04ca3d4f4dd0c88f6e42931b1e77167"
+            },
+            "social_links": [
+              {
+                "site": "email",
+                "url": "mailto:rachna.uppal@thomsonreuters.com"
+              }
+            ],
+            "byline": "Rachna Uppal",
+            "topic_url": "/authors/rachna-uppal/"
+          },
+          {
+            "id": "federico.maccioni@thomsonreuters.com",
+            "name": "Federico Maccioni",
+            "first_name": "Federico",
+            "last_name": "Maccioni",
+            "company": "Reuters",
+            "thumbnail": {
+              "url": "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/H24NV3AFCZCWPC463OG3JRYY7U.jpg",
+              "type": "image",
+              "resizer_url": "https://www.reuters.com/resizer/v2/https%3A%2F%2Fcloudfront-us-east-2.images.arcpublishing.com%2Freuters%2FH24NV3AFCZCWPC463OG3JRYY7U.jpg?auth=4dd3566d980534ddab2fb815cfdf9f08e04ca3d4f4dd0c88f6e42931b1e77167"
+            },
+            "social_links": [
+              {
+                "site": "email",
+                "url": "mailto:Federico.Maccioni@thomsonreuters.com"
+              }
+            ],
+            "byline": "Federico Maccioni",
+            "topic_url": "/authors/federico-maccioni/"
+          }
+        ],
+        "display_time": "2026-01-07T16:35:44Z",
+        "updated_time": "2026-04-29T15:22:33.190Z"
+      },
+      {
+        "id": "X46VGGPSABLZHJ53T2PYQAMT74",
+        "revision_id": "IQPRKFLXZVGRVBFEFTRS37I24A",
+        "canonical_url": "/legal/government/ex-fbi-chief-comey-expected-surrender-us-authorities-following-indictment-source-2026-04-29/",
+        "website": "reuters",
+        "web": "Ex-FBI chief Comey expected to surrender to US authorities following indictment, source says",
+        "native": "Ex-FBI chief Comey expected to surrender to US authorities following indictment, source says",
+        "published": true,
+        "published_time": "2026-04-29T16:16:44.298Z",
+        "article_type": "Standard",
+        "display_my_news": true,
+        "display_newsletter_signup": true,
+        "display_notifications": true,
+        "display_related_media": true,
+        "display_related_organizations": true,
+        "content_code": "metered",
+        "source": {
+          "name": "Reuters",
+          "original_name": "Reuters"
+        },
+        "title": "Ex-FBI chief Comey expected to surrender to US authorities following indictment, source says",
+        "basic_headline": "Ex-FBI chief Comey expected to surrender to US authorities following indictment, source says",
+        "distributor": "Reuters",
+        "description": "Former FBI Director James Comey was expected to surrender to U.S. authorities on Wednesday, according to a source familiar ​with the situation, a day after being indicted over a ‌social media post that prosecutors allege threatened President Donald Trump.",
+        "primary_media_type": "image",
+        "primary_tag": {
+          "short_bio": "Public Policy",
+          "description": "Public Policy",
+          "slug": "nrlpa-opub",
+          "text": "NRLPA:OPUB",
+          "is_topic": true,
+          "can_follow": true,
+          "is_legal": true,
+          "topic_url": "/legal/public-policy/"
+        },
+        "word_count": 352,
+        "read_minutes": 2,
+        "kicker": {
+          "name": "Legal",
+          "path": "/legal/",
+          "names": [
+            "Legal",
+            "Government"
+          ]
+        },
+        "ad_topics": [
+          "pol"
+        ],
+        "thumbnail": {
+          "url": "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/I3WSCZOWQFM6LF5TVHH3NKR5VE.jpg",
+          "caption": "FBI Director James Comey waits before testifying at a House Intelligence Committee hearing into alleged Russian meddling in the 2016 U.S. election, on Capitol Hill in Washington, U.S., March 20, 2017. REUTERS/Joshua Roberts/File Photo",
+          "type": "image",
+          "resizer_url": "https://www.reuters.com/resizer/v2/I3WSCZOWQFM6LF5TVHH3NKR5VE.jpg?auth=1de3b613d2e0684b24540140b350811fb15a22499a2209d745e28a15fb90c2ea",
+          "location": "District of Columbia, DISTRICT OF COLUMBIA, UNITED STATES",
+          "id": "I3WSCZOWQFM6LF5TVHH3NKR5VE",
+          "authors": "Joshua Roberts",
+          "alt_text": "FBI Director James Comey at House Intelligence Committee hearing in Washington",
+          "width": 3500,
+          "height": 2696,
+          "subtitle": "FBI Director James Comey at House Intelligence Committee hearing in Washington",
+          "slug": "USA-TRUMP-COMEY",
+          "updated_at": "2026-04-29T16:23:01Z",
+          "company": "Reuters",
+          "purchase_licensing_path": "https://www.reutersconnect.com/item/fbi-director-james-comey-at-house-intelligence-committee-hearing-in-washington/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX1JDMklZS0FOOElCUg%3D%3D/?utm_medium=rcom-article-media&utm_campaign=rcom-rcp-lead"
+        },
+        "authors": [
+          {
+            "name": "Reuters",
+            "company": "Reuters",
+            "thumbnail": {
+              "url": "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/H24NV3AFCZCWPC463OG3JRYY7U.jpg",
+              "type": "image",
+              "resizer_url": "https://www.reuters.com/resizer/v2/https%3A%2F%2Fcloudfront-us-east-2.images.arcpublishing.com%2Freuters%2FH24NV3AFCZCWPC463OG3JRYY7U.jpg?auth=4dd3566d980534ddab2fb815cfdf9f08e04ca3d4f4dd0c88f6e42931b1e77167"
+            },
+            "byline": "Reuters"
+          }
+        ],
+        "display_time": "2026-04-29T16:16:44.298Z",
+        "updated_time": "2026-04-29T16:23:02.792Z"
+      },
+      {
+        "id": "BIJL6PK4XFL7JDG5CUKDMZ4PXM",
+        "revision_id": "R6ETNW322JHIFONGOKYJ5DVR3Y",
+        "canonical_url": "/world/us/supreme-court-examines-trumps-move-against-haitian-syrian-immigrants-2026-04-29/",
+        "website": "reuters",
+        "web": "Supreme Court leans toward Trump's move targeting Haitian and Syrian immigrants",
+        "native": "Supreme Court leans toward Trump's move targeting Haitian and Syrian immigrants",
+        "published": true,
+        "published_time": "2026-04-29T10:11:51.085Z",
+        "article_type": "Standard",
+        "display_my_news": true,
+        "display_newsletter_signup": true,
+        "display_notifications": true,
+        "display_related_media": true,
+        "display_related_organizations": true,
+        "content_code": "metered",
+        "source": {
+          "name": "Reuters",
+          "original_name": "Reuters"
+        },
+        "title": "Supreme Court leans toward Trump's move targeting Haitian and Syrian immigrants",
+        "basic_headline": "Supreme Court leans toward Trump's move targeting Haitian and Syrian immigrants",
+        "distributor": "Reuters",
+        "description": "The U.S. Supreme Court appeared sympathetic on Wednesday toward moves by President Donald Trump's administration to strip humanitarian protections from hundreds of thousands of Haitian and Syrian immigrants, part of his signature immigration crackdown.",
+        "primary_media_type": "image",
+        "primary_tag": {
+          "short_bio": "Constitutional Law",
+          "description": "Constitutional Law",
+          "slug": "nrlpa-oconl",
+          "text": "NRLPA:OCONL",
+          "is_topic": true,
+          "can_follow": true,
+          "is_legal": true,
+          "topic_url": "/legal/constitutional-law/"
+        },
+        "word_count": 1648,
+        "read_minutes": 9,
+        "kicker": {
+          "name": "United States",
+          "path": "/world/us/",
+          "names": [
+            "World",
+            "United States"
+          ]
+        },
+        "ad_topics": [
+          "DeathInjrConft",
+          "immgt",
+          "legal",
+          "pol"
+        ],
+        "thumbnail": {
+          "url": "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/RBFEHAUVUBIQHIJZX6MNXQ3GKM.jpg",
+          "caption": "A customer exits Rose Goute Creole Restaurant, a Haitian restaurant, after a federal judge issued a temporary stay blocking the Trump administration’s attempt to strip Temporary Protected Status (TPS) for Haitian immigrants, in Springfield, Ohio, U.S., February 4, 2026. REUTERS/Bing Guan",
+          "type": "image",
+          "resizer_url": "https://www.reuters.com/resizer/v2/RBFEHAUVUBIQHIJZX6MNXQ3GKM.jpg?auth=b9c4ea2e652d3df261cd67d11029e68cbd5835be2e5cac9ff3335de067ea5d58",
+          "location": "SPRINGFIELD, OH, UNITED STATES",
+          "id": "RBFEHAUVUBIQHIJZX6MNXQ3GKM",
+          "authors": "Bing Guan",
+          "alt_text": "U.S. judge halts the Trump administration's attempt to end protections for Haitians",
+          "width": 6000,
+          "height": 4000,
+          "subtitle": "U.S. judge halts the Trump administration's attempt to end protections for Haitians",
+          "slug": "USA-TRUMP-OHIO",
+          "updated_at": "2026-04-29T15:52:39Z",
+          "company": "Reuters",
+          "purchase_licensing_path": "https://www.reutersconnect.com/item/us-judge-halts-the-trump-administrations-attempt-to-end-protections-for-haitians/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX1JDMjNGSkE3WlYxNQ%3D%3D/?utm_medium=rcom-article-media&utm_campaign=rcom-rcp-lead"
+        },
+        "authors": [
+          {
+            "id": "andrew.chung1@thomsonreuters.com",
+            "name": "Andrew Chung",
+            "first_name": "Andrew",
+            "last_name": "Chung",
+            "company": "Reuters",
+            "thumbnail": {
+              "url": "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/H24NV3AFCZCWPC463OG3JRYY7U.jpg",
+              "type": "image",
+              "resizer_url": "https://www.reuters.com/resizer/v2/https%3A%2F%2Fcloudfront-us-east-2.images.arcpublishing.com%2Freuters%2FH24NV3AFCZCWPC463OG3JRYY7U.jpg?auth=4dd3566d980534ddab2fb815cfdf9f08e04ca3d4f4dd0c88f6e42931b1e77167"
+            },
+            "social_links": [
+              {
+                "site": "email",
+                "url": "mailto:andrew.chung1@thomsonreuters.com"
+              }
+            ],
+            "byline": "Andrew Chung",
+            "topic_url": "/authors/andrew-chung/"
+          }
+        ],
+        "display_time": "2026-04-29T10:11:51.085Z",
+        "updated_time": "2026-04-29T16:24:05.771Z"
+      },
+      {
+        "id": "XBY7FKCKTVNO3IVWW4TK6E4QOI",
+        "revision_id": "T3Z3HGK5A5APJF2MTYOA4UP2GA",
+        "canonical_url": "/world/middle-east/hormuz-shipping-traffic-remains-trickle-us-iran-deadlock-deepens-2026-04-29/",
+        "website": "reuters",
+        "web": "Hormuz shipping traffic remains at a trickle as US-Iran deadlock deepens",
+        "native": "Hormuz shipping traffic remains at a trickle as US-Iran deadlock deepens",
+        "published": true,
+        "published_time": "2026-04-29T15:43:17.964Z",
+        "article_type": "Standard",
+        "display_my_news": true,
+        "display_newsletter_signup": true,
+        "display_notifications": true,
+        "display_related_media": true,
+        "display_related_organizations": true,
+        "content_code": "metered",
+        "source": {
+          "name": "Reuters",
+          "original_name": "Reuters"
+        },
+        "title": "Hormuz shipping traffic remains at a trickle as US-Iran deadlock deepens",
+        "basic_headline": "Hormuz shipping traffic remains at a trickle as US-Iran deadlock deepens",
+        "distributor": "Reuters",
+        "description": "At least six ships - a fraction of the usual traffic - have crossed the Strait of Hormuz in the past 24 hours, shipping ​data showed on Wednesday, while the U.S. and Iran remain deadlocked ‌over coming to terms that would re-open the crucial waterway.",
+        "primary_media_type": "image",
+        "primary_tag": {
+          "short_bio": "Exploration & Production",
+          "description": "Exploration & Production",
+          "slug": "repi-exploration-production",
+          "text": "REPI:EXPLORATION-PRODUCTION",
+          "is_topic": true,
+          "can_follow": true,
+          "topic_url": "/business/energy/exploration-production/"
+        },
+        "word_count": 400,
+        "read_minutes": 2,
+        "kicker": {
+          "name": "Middle East",
+          "path": "/world/middle-east/",
+          "names": [
+            "World",
+            "Middle East"
+          ]
+        },
+        "ad_topics": [
+          "com",
+          "DeathInjrConft",
+          "engy",
+          "engy",
+          "insur",
+          "pol",
+          "trade",
+          "trans",
+          "DeathInjrConft"
+        ],
+        "thumbnail": {
+          "url": "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/H6I56UJQW5ND3CHGYPF65HDDJY.jpg",
+          "caption": "Ships and boats in the Strait of Hormuz, Musandam, Oman, April 29, 2026. REUTERS/Stringer",
+          "type": "image",
+          "resizer_url": "https://www.reuters.com/resizer/v2/H6I56UJQW5ND3CHGYPF65HDDJY.jpg?auth=e80c3cbcb5909d265019f416d20669b7a48e8cb3068f3bf15db1d3a46e377a15",
+          "location": "Musandam, OMAN",
+          "id": "H6I56UJQW5ND3CHGYPF65HDDJY",
+          "authors": "Stringer",
+          "alt_text": "Ships and boats in the Strait of Hormuz",
+          "width": 3832,
+          "height": 2155,
+          "subtitle": "Ships and boats in the Strait of Hormuz",
+          "slug": "IRAN-CRISIS-OMAN-HORMUZ",
+          "updated_at": "2026-04-29T15:46:30Z",
+          "company": "Reuters",
+          "purchase_licensing_path": "https://www.reutersconnect.com/item/ships-and-boats-in-the-strait-of-hormuz/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX1JDMldZS0FENlY4Ng%3D%3D/?utm_medium=rcom-article-media&utm_campaign=rcom-rcp-lead"
+        },
+        "authors": [
+          {
+            "name": "Reuters",
+            "company": "Reuters",
+            "thumbnail": {
+              "url": "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/H24NV3AFCZCWPC463OG3JRYY7U.jpg",
+              "type": "image",
+              "resizer_url": "https://www.reuters.com/resizer/v2/https%3A%2F%2Fcloudfront-us-east-2.images.arcpublishing.com%2Freuters%2FH24NV3AFCZCWPC463OG3JRYY7U.jpg?auth=4dd3566d980534ddab2fb815cfdf9f08e04ca3d4f4dd0c88f6e42931b1e77167"
+            },
+            "byline": "Reuters"
+          }
+        ],
+        "display_time": "2026-04-29T15:43:17.964Z",
+        "updated_time": "2026-04-29T15:46:36.594Z"
+      },
+      {
+        "id": "3NNH5W45GJJ7PFVAFP3WRGU2KU",
+        "revision_id": "LKMIUKO4DBCKFDKKZTE2Z2SKPY",
+        "canonical_url": "/world/africa/mugabes-son-given-fine-be-deported-south-africa-pointing-toy-gun-2026-04-29/",
+        "website": "reuters",
+        "web": "Mugabe's son given fine and to be deported from South Africa for pointing a toy gun",
+        "native": "Mugabe's son given fine and to be deported from South Africa for pointing a toy gun",
+        "published": true,
+        "published_time": "2026-04-29T11:06:50.17Z",
+        "article_type": "Standard",
+        "display_my_news": true,
+        "display_newsletter_signup": true,
+        "display_notifications": true,
+        "display_related_media": true,
+        "display_related_organizations": true,
+        "content_code": "metered",
+        "source": {
+          "name": "Reuters",
+          "original_name": "Reuters"
+        },
+        "title": "Mugabe's son given fine and to be deported from South Africa for pointing a toy gun",
+        "basic_headline": "Mugabe's son given fine and to be deported from South Africa for pointing a toy gun",
+        "distributor": "Reuters",
+        "description": "A South African court on Wednesday ordered the youngest son of Zimbabwe's former president Robert Mugabe to pay a ​large fine and said he would be deported for ‌pointing a toy gun at someone and breaking immigration laws.",
+        "primary_media_type": "video",
+        "primary_tag": {
+          "short_bio": "RULES:SOUTH-AFRICA",
+          "description": "RULES:SOUTH-AFRICA",
+          "slug": "rules-south-africa",
+          "text": "RULES:SOUTH-AFRICA",
+          "topic_url": "/tags/rules-south-africa/"
+        },
+        "word_count": 312,
+        "read_minutes": 2,
+        "kicker": {
+          "name": "Africa",
+          "path": "/world/africa/",
+          "names": [
+            "World",
+            "Africa"
+          ]
+        },
+        "ad_topics": [
+          "crime",
+          "immgt",
+          "legal",
+          "pol",
+          "crime"
+        ],
+        "thumbnail": {
+          "url": "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/MU6UUKXS35O5LBZST7YSR5YHTE.jpg",
+          "caption": "Bellarmine Chatunga Mugabe, the youngest son of Zimbabwe's former leader Robert Mugabe, and his co-accused Tobias Tampirepi Mugabe Matonhodze appear in court for sentencing on charges linked to the case of a shooting incident in Johannesburg earlier this year, at Alexandra Magistrates' Court in Johannesburg, South Africa, April 29, 2026. REUTERS/Oupa Nkosi",
+          "type": "image",
+          "resizer_url": "https://www.reuters.com/resizer/v2/MU6UUKXS35O5LBZST7YSR5YHTE.jpg?auth=aca182bcca5485d024efbf17ac1ce1193ab7a32769febcf31259a201674f92bf",
+          "location": "Johannebsurg, SOUTH AFRICA",
+          "id": "MU6UUKXS35O5LBZST7YSR5YHTE",
+          "authors": "Oupa Nkosi",
+          "alt_text": "Zimbabwe's former leader Robert Mugabe son's court trial, in Johannesburg",
+          "width": 5500,
+          "height": 3667,
+          "subtitle": "Zimbabwe's former leader Robert Mugabe son's court trial, in Johannesburg",
+          "slug": "SAFRICA-CRIME-MUGABE",
+          "updated_at": "2026-04-29T11:35:50Z",
+          "company": "Reuters",
+          "purchase_licensing_path": "https://www.reutersconnect.com/item/zimbabwes-former-leader-robert-mugabe-sons-court-trial-in-johannesburg/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX1JDMlpZS0FXRjhFUw%3D%3D/?utm_medium=rcom-article-media&utm_campaign=rcom-rcp-lead"
+        },
+        "authors": [
+          {
+            "name": "Reuters",
+            "company": "Reuters",
+            "thumbnail": {
+              "url": "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/H24NV3AFCZCWPC463OG3JRYY7U.jpg",
+              "type": "image",
+              "resizer_url": "https://www.reuters.com/resizer/v2/https%3A%2F%2Fcloudfront-us-east-2.images.arcpublishing.com%2Freuters%2FH24NV3AFCZCWPC463OG3JRYY7U.jpg?auth=4dd3566d980534ddab2fb815cfdf9f08e04ca3d4f4dd0c88f6e42931b1e77167"
+            },
+            "byline": "Reuters"
+          }
+        ],
+        "display_time": "2026-04-29T11:06:50.17Z",
+        "updated_time": "2026-04-29T16:17:06.541Z"
+      },
+      {
+        "id": "XXZFVZL4QZPQND4QLCDLIPDDDU",
+        "revision_id": "NDZRGRN7VRB4NKNIDQOKXDFVKA",
+        "canonical_url": "/world/us/king-charles-visit-new-york-commemorate-911-victims-2026-04-29/",
+        "website": "reuters",
+        "web": "King Charles to visit New York to commemorate 9/11 victims",
+        "native": "King Charles to visit New York to commemorate 9/11 victims",
+        "published": true,
+        "published_time": "2026-04-29T10:03:41.827Z",
+        "article_type": "Standard",
+        "display_my_news": true,
+        "display_newsletter_signup": true,
+        "display_notifications": true,
+        "display_related_media": true,
+        "display_related_organizations": true,
+        "content_code": "metered",
+        "source": {
+          "name": "Reuters",
+          "original_name": "Reuters"
+        },
+        "title": "King Charles to visit New York to commemorate 9/11 victims",
+        "basic_headline": "King Charles to visit New York to commemorate 9/11 victims",
+        "distributor": "Reuters",
+        "description": "Britain's King Charles and his wife Queen Camilla arrive in New York on Wednesday to commemorate victims of ‌the September 11, 2001, al Qaeda attack on the city, part of a four-day state visit to the U.S.",
+        "primary_media_type": "video",
+        "primary_tag": {
+          "short_bio": "TOPIC:WORLD-US-NEW-YORK",
+          "description": "TOPIC:WORLD-US-NEW-YORK",
+          "slug": "topic-world-us-new-york",
+          "text": "TOPIC:WORLD-US-NEW-YORK",
+          "topic_url": "/tags/topic-world-us-new-york/"
+        },
+        "word_count": 669,
+        "read_minutes": 4,
+        "kicker": {
+          "name": "United States",
+          "path": "/world/us/",
+          "names": [
+            "World",
+            "United States"
+          ]
+        },
+        "ad_topics": [
+          "DeathInjrConft",
+          "pol",
+          "trade"
+        ],
+        "thumbnail": {
+          "url": "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/7VH3WNBTOFOKXF3YGOHG6AQGPQ.jpg",
+          "caption": "REUTERS/Evelyn Hockstein",
+          "type": "image",
+          "resizer_url": "https://www.reuters.com/resizer/v2/7VH3WNBTOFOKXF3YGOHG6AQGPQ.jpg?auth=adbbb5050d975f14ed66af7aae89b0d6ba795fca73daaaef91a20a742547fce0",
+          "location": "WASHINGTON, DC, UNITED STATES",
+          "id": "7VH3WNBTOFOKXF3YGOHG6AQGPQ",
+          "authors": "Evelyn Hockstein",
+          "alt_text": "Britain's King Charles and Queen Camilla in the United States for state visit",
+          "width": 5500,
+          "height": 3668,
+          "subtitle": "Britain's King Charles and Queen Camilla in the United States for state visit",
+          "slug": "USA-BRITAIN-KING",
+          "updated_at": "2026-04-29T15:11:39Z",
+          "company": "Reuters",
+          "purchase_licensing_path": "https://www.reutersconnect.com/item/britains-king-charles-and-queen-camilla-in-the-united-states-for-state-visit/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX1JDMkxZS0EwRlJBUA%3D%3D/?utm_medium=rcom-article-media&utm_campaign=rcom-rcp-lead"
+        },
+        "display_time": "2026-04-29T10:03:41.827Z",
+        "updated_time": "2026-04-29T15:37:38.570Z",
+        "authors": [
+          {
+            "id": "jonathan.allen@thomsonreuters.com",
+            "name": "Jonathan Allen",
+            "first_name": "Jonathan",
+            "last_name": "Allen",
+            "company": "Reuters",
+            "thumbnail": {
+              "url": "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/H24NV3AFCZCWPC463OG3JRYY7U.jpg",
+              "type": "image",
+              "resizer_url": "https://www.reuters.com/resizer/v2/https%3A%2F%2Fcloudfront-us-east-2.images.arcpublishing.com%2Freuters%2FH24NV3AFCZCWPC463OG3JRYY7U.jpg?auth=4dd3566d980534ddab2fb815cfdf9f08e04ca3d4f4dd0c88f6e42931b1e77167"
+            },
+            "social_links": [
+              {
+                "site": "email",
+                "url": "mailto:jonathan.allen@thomsonreuters.com"
+              }
+            ],
+            "byline": "Jonathan Allen",
+            "topic_url": "/authors/jonathan-allen/"
+          },
+          {
+            "id": "maria.tsvetkova@thomsonreuters.com",
+            "name": "Maria Tsvetkova",
+            "first_name": "Maria",
+            "last_name": "Tsvetkova",
+            "company": "Reuters",
+            "thumbnail": {
+              "url": "https://author-service-images-prod-us-east-1.publishing.aws.arc.pub/reuters/be3c9abb-3dcf-454a-b159-e88d6ff5d1a1.png",
+              "type": "image",
+              "resizer_url": "https://www.reuters.com/resizer/v2/https%3A%2F%2Fauthor-service-images-prod-us-east-1.publishing.aws.arc.pub%2Freuters%2Fbe3c9abb-3dcf-454a-b159-e88d6ff5d1a1.png?auth=f7957efc48aaa1de130e232bdabd4dfdd844a2821ab8a9c518e5de20e6390e0c"
+            },
+            "social_links": [
+              {
+                "site": "email",
+                "url": "mailto:maria.tsvetkova@thomsonreuters.com"
+              },
+              {
+                "site": "twitter",
+                "url": "https://x.com/m_tsvetkova"
+              },
+              {
+                "site": "instagram",
+                "url": "https://www.instagram.com/mashatsvetkova/"
+              }
+            ],
+            "byline": "Maria Tsvetkova",
+            "description": "Maria Tsvetkova is an investigative journalist originally from Moscow who focuses on Russia’s invasion of Ukraine as part of an international team of reporters. She has reported from the conflict zones in Ukraine and Nagorno-Karabakh, as well as doing reporting stints in Armenia, Turkey and Iraq.",
+            "topic_url": "/authors/maria-tsvetkova/",
+            "role": "Russia Special Correspondent"
+          }
+        ]
+      },
+      {
+        "id": "34JD3A6AYJOLFDTT6LNSIPFHUE",
+        "revision_id": "5J6SUTPAERBV7M566AKS6TWGDA",
+        "canonical_url": "/world/africa/islamic-state-linked-insurgents-leave-mali-town-army-tries-reassert-control-2026-04-29/",
+        "website": "reuters",
+        "web": "Islamic State-linked insurgents leave Mali town as army tries to reassert control",
+        "native": "Islamic State-linked insurgents leave Mali town as army tries to reassert control",
+        "published": true,
+        "published_time": "2026-04-29T15:35:19.256Z",
+        "article_type": "Standard",
+        "display_my_news": true,
+        "display_newsletter_signup": true,
+        "display_notifications": true,
+        "display_related_media": true,
+        "display_related_organizations": true,
+        "content_code": "metered",
+        "source": {
+          "name": "Reuters",
+          "original_name": "Reuters"
+        },
+        "title": "Islamic State-linked insurgents leave Mali town as army tries to reassert control",
+        "basic_headline": "Islamic State-linked insurgents leave Mali town as army tries to reassert control",
+        "distributor": "Reuters",
+        "description": "Malian forces are back in control of ​a town on the Niger border that Islamic State-linked insurgents entered this week, ‌residents said on Wednesday, as they pushed to regain control of territory following coordinated attacks over the weekend.",
+        "primary_media_type": "image",
+        "primary_tag": {
+          "short_bio": "N2:CWP",
+          "description": "N2:CWP",
+          "slug": "n2-cwp",
+          "text": "CWP",
+          "topic_url": "/tags/n2-cwp/"
+        },
+        "word_count": 464,
+        "read_minutes": 3,
+        "kicker": {
+          "name": "Africa",
+          "path": "/world/africa/",
+          "names": [
+            "World",
+            "Africa"
+          ]
+        },
+        "ad_topics": [
+          "DeathInjrConft",
+          "pol",
+          "DeathInjrConft"
+        ],
+        "thumbnail": {
+          "url": "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/TFQEMRAAXJOI7ES24YM77SJ64I.jpg",
+          "caption": "Malian soldiers stand during a patrol following the attack on Mali's main military base Kati, outside the capital Bamako, in Kati, Mali, April 26, 2026. REUTERS/Stringer/File Photo",
+          "type": "image",
+          "resizer_url": "https://www.reuters.com/resizer/v2/TFQEMRAAXJOI7ES24YM77SJ64I.jpg?auth=30e0f2bf0402a3c900dd1c3d99603a7a65331d83b678252d9f2281d37a05896e",
+          "location": "KATI, Mali",
+          "id": "TFQEMRAAXJOI7ES24YM77SJ64I",
+          "authors": "Stringer",
+          "alt_text": "Malian soldiers stand during a patrol following the attack on Mali's main military base Kati outside the capital Bamako",
+          "width": 3024,
+          "height": 2525,
+          "subtitle": "Malian soldiers stand during a patrol following the attack on Mali's main military base Kati outside the capital Bamako",
+          "slug": "MALI-SECURITY",
+          "updated_at": "2026-04-29T15:35:24Z",
+          "company": "Reuters",
+          "purchase_licensing_path": "https://www.reutersconnect.com/item/malian-soldiers-stand-during-a-patrol-following-the-attack-on-malis-main-military-base-kati-outside-the-capital-bamako/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX1JDMlpXS0E2QlhGQw%3D%3D/?utm_medium=rcom-article-media&utm_campaign=rcom-rcp-lead"
+        },
+        "authors": [
+          {
+            "name": "Reuters",
+            "company": "Reuters",
+            "thumbnail": {
+              "url": "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/H24NV3AFCZCWPC463OG3JRYY7U.jpg",
+              "type": "image",
+              "resizer_url": "https://www.reuters.com/resizer/v2/https%3A%2F%2Fcloudfront-us-east-2.images.arcpublishing.com%2Freuters%2FH24NV3AFCZCWPC463OG3JRYY7U.jpg?auth=4dd3566d980534ddab2fb815cfdf9f08e04ca3d4f4dd0c88f6e42931b1e77167"
+            },
+            "byline": "Reuters"
+          }
+        ],
+        "display_time": "2026-04-29T15:35:19.256Z",
+        "updated_time": "2026-04-29T15:38:48.966Z"
+      },
+      {
+        "id": "5ESLD6DIBFLQ7DHEMC3HZ6YOFQ",
+        "revision_id": "TX3GYS5ILRCR5B3WHEUKRACLBQ",
+        "canonical_url": "/world/uk/three-men-trial-accused-arson-attacks-linked-uk-pm-starmer-2026-04-29/",
+        "website": "reuters",
+        "web": "Mysterious 'El Money' paid men to carry out arson attacks on property linked to Starmer, London court told",
+        "native": "Mysterious 'El Money' paid men to carry out arson attacks on property linked to Starmer, London court told",
+        "published": true,
+        "published_time": "2026-04-29T11:11:28.789Z",
+        "article_type": "Standard",
+        "display_my_news": true,
+        "display_newsletter_signup": true,
+        "display_notifications": true,
+        "display_related_media": true,
+        "display_related_organizations": true,
+        "content_code": "metered",
+        "source": {
+          "name": "Reuters",
+          "original_name": "Reuters"
+        },
+        "title": "Mysterious 'El Money' paid men to carry out arson attacks on property linked to Starmer, London court told",
+        "basic_headline": "Mysterious 'El Money' paid men to carry out arson attacks on property linked to Starmer, London court told",
+        "distributor": "Reuters",
+        "description": "Three men with links to Ukraine carried out a series of arson attacks on property connected to British Prime Minister Keir Starmer on behalf of a mystery ​figure known as \"El Money\", prosecutors told a London court on Wednesday.",
+        "primary_media_type": "image",
+        "primary_tag": {
+          "short_bio": "N2:CLJ",
+          "description": "N2:CLJ",
+          "slug": "n2-clj",
+          "text": "CLJ",
+          "topic_url": "/tags/n2-clj/"
+        },
+        "word_count": 483,
+        "read_minutes": 3,
+        "kicker": {
+          "name": "United Kingdom",
+          "path": "/world/uk/",
+          "names": [
+            "World",
+            "United Kingdom"
+          ]
+        },
+        "ad_topics": [
+          "dis",
+          "crime",
+          "pol"
+        ],
+        "thumbnail": {
+          "url": "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/GXB2FMAAGJIQ3GZW4NMVVT3PKM.jpg",
+          "caption": "British Prime Minister Keir Starmer leaves 10 Downing Street, on the day of Prime Minister's Questions, in London, Britain, April 29, 2026. REUTERS/Hannah McKay",
+          "type": "image",
+          "resizer_url": "https://www.reuters.com/resizer/v2/GXB2FMAAGJIQ3GZW4NMVVT3PKM.jpg?auth=c78d1064365c0450de57fa9f760ac358bccdd346563c00fafce584846c2dbe46",
+          "location": "LONDON, UNITED KINGDOM",
+          "id": "GXB2FMAAGJIQ3GZW4NMVVT3PKM",
+          "authors": "Hannah McKay",
+          "alt_text": "British Prime Minister Keir Starmer walks on Downing Street in London",
+          "width": 4896,
+          "height": 3264,
+          "subtitle": "British Prime Minister Keir Starmer walks on Downing Street in London",
+          "slug": "BRITAIN-POLITICS-PMQS",
+          "updated_at": "2026-04-29T11:12:39Z",
+          "company": "Reuters",
+          "purchase_licensing_path": "https://www.reutersconnect.com/item/british-prime-minister-keir-starmer-walks-on-downing-street-in-london/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX1JDMllZS0E2Vzk0Rg%3D%3D/?utm_medium=rcom-article-media&utm_campaign=rcom-rcp-lead"
+        },
+        "authors": [
+          {
+            "id": "michael.holden@thomsonreuters.com",
+            "name": "Michael Holden",
+            "first_name": "Michael",
+            "last_name": "Holden",
+            "company": "Reuters",
+            "thumbnail": {
+              "url": "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/H24NV3AFCZCWPC463OG3JRYY7U.jpg",
+              "type": "image",
+              "resizer_url": "https://www.reuters.com/resizer/v2/https%3A%2F%2Fcloudfront-us-east-2.images.arcpublishing.com%2Freuters%2FH24NV3AFCZCWPC463OG3JRYY7U.jpg?auth=4dd3566d980534ddab2fb815cfdf9f08e04ca3d4f4dd0c88f6e42931b1e77167"
+            },
+            "social_links": [
+              {
+                "site": "email",
+                "url": "mailto:michael.holden@thomsonreuters.com"
+              }
+            ],
+            "byline": "Michael Holden",
+            "topic_url": "/authors/michael-holden/"
+          }
+        ],
+        "display_time": "2026-04-29T11:11:28.789Z",
+        "updated_time": "2026-04-29T15:40:32.045Z"
+      },
+      {
+        "id": "X2KMLEASWVMDJMTNQ63EXY3SJQ",
+        "revision_id": "3SUV37SJ7FA5TKWFDT7DGPY5WQ",
+        "canonical_url": "/business/aerospace-defense/us-give-100-million-repair-damaged-chornobyl-nuclear-shelter-kyiv-says-2026-04-29/",
+        "website": "reuters",
+        "web": "US to give $100 million to repair damaged Chornobyl nuclear shelter, Kyiv says",
+        "native": "US to give $100 million to repair damaged Chornobyl nuclear shelter, Kyiv says",
+        "published": true,
+        "published_time": "2026-04-29T15:45:02.65Z",
+        "article_type": "Standard",
+        "display_my_news": true,
+        "display_newsletter_signup": true,
+        "display_notifications": true,
+        "display_related_media": true,
+        "display_related_organizations": true,
+        "content_code": "metered",
+        "source": {
+          "name": "Reuters",
+          "original_name": "Reuters"
+        },
+        "title": "US to give $100 million to repair damaged Chornobyl nuclear shelter, Kyiv says",
+        "basic_headline": "US to give $100 million to repair damaged Chornobyl nuclear shelter, Kyiv says",
+        "distributor": "Reuters",
+        "description": "The U.S. will give $100 million towards repairs ​of the vast radiation containment ‌dome at the Chornobyl plant in northern Ukraine, site of ​the world's worst atomic ​accident in 1986, after the ⁠dome was damaged by ​a Russian drone, Kyiv's energy ​minister, Denys Shmyhal, said on Wednesday.",
+        "primary_media_type": "image",
+        "primary_tag": {
+          "short_bio": "Governance",
+          "description": "Governance",
+          "slug": "repi-governance",
+          "text": "REPI:GOVERNANCE",
+          "is_topic": true,
+          "can_follow": true,
+          "topic_url": "/business/energy/governance/"
+        },
+        "word_count": 142,
+        "read_minutes": 1,
+        "kicker": {
+          "path": "/business/",
+          "names": [
+            "Business",
+            "Aerospace & Defense"
+          ]
+        },
+        "ad_topics": [
+          "aero",
+          "aero",
+          "com",
+          "DeathInjrConft",
+          "engy",
+          "DeathInjrConft"
+        ],
+        "thumbnail": {
+          "url": "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/VMW5EUZGDRPP5O37VD6M773RNI.jpg",
+          "caption": "Rescuers work at the New Safe Confinement (NSC) structure, that covers the old sarcophagus which confines the remains of the damaged fourth reactor and bears an impact of a Russian drone strike, amid Russia's attack on Ukraine, at the Chornobyl Nuclear Power Plant, in Kyiv region, Ukraine February 14, 2025. REUTERS/Gleb Garanich/File Photo",
+          "type": "image",
+          "resizer_url": "https://www.reuters.com/resizer/v2/VMW5EUZGDRPP5O37VD6M773RNI.jpg?auth=c047080ee8ceb523e51748167b1fee023bd87a80269be90109539b47133e5cb1",
+          "location": "CHORNOBYL, Ukraine",
+          "id": "VMW5EUZGDRPP5O37VD6M773RNI",
+          "authors": "Gleb Garanich",
+          "alt_text": "Aftermath of a Russian drone attack at Chornobyl Nuclear Power Plant",
+          "width": 2941,
+          "height": 1974,
+          "subtitle": "Aftermath of a Russian drone attack at Chornobyl Nuclear Power Plant",
+          "slug": "UKRAINE-CRISIS-CHORNOBYL-ANNIVERSARY-PLANT",
+          "updated_at": "2026-04-29T15:45:04Z",
+          "company": "Reuters",
+          "purchase_licensing_path": "https://www.reutersconnect.com/item/aftermath-of-a-russian-drone-attack-at-chornobyl-nuclear-power-plant/dGFnOnJldXRlcnMuY29tLDIwMjU6bmV3c21sX1JDMkVVQ0FKQThYSA%3D%3D/?utm_medium=rcom-article-media&utm_campaign=rcom-rcp-lead"
+        },
+        "authors": [
+          {
+            "name": "Reuters",
+            "company": "Reuters",
+            "thumbnail": {
+              "url": "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/H24NV3AFCZCWPC463OG3JRYY7U.jpg",
+              "type": "image",
+              "resizer_url": "https://www.reuters.com/resizer/v2/https%3A%2F%2Fcloudfront-us-east-2.images.arcpublishing.com%2Freuters%2FH24NV3AFCZCWPC463OG3JRYY7U.jpg?auth=4dd3566d980534ddab2fb815cfdf9f08e04ca3d4f4dd0c88f6e42931b1e77167"
+            },
+            "byline": "Reuters"
+          }
+        ],
+        "display_time": "2026-04-29T15:45:02.65Z",
+        "updated_time": "2026-04-29T15:45:07.969Z"
+      },
+      {
+        "id": "LRLJRANWZVJB7J6F54SK27V6KM",
+        "revision_id": "HAKLE6UP4ZBGTJCPEZQEN6ZXRY",
+        "canonical_url": "/business/media-telecom/trumps-court-setbacks-fail-blunt-his-campaign-against-media-2026-04-29/",
+        "website": "reuters",
+        "web": "Trump’s court setbacks fail to blunt his campaign against media",
+        "native": "Trump’s court setbacks fail to blunt his campaign against media",
+        "headline_feature": "ANALYSIS",
+        "published": true,
+        "published_time": "2026-04-29T10:24:59.338Z",
+        "article_type": "Standard",
+        "display_my_news": true,
+        "display_newsletter_signup": true,
+        "display_notifications": true,
+        "display_related_media": true,
+        "display_related_organizations": true,
+        "content_code": "metered",
+        "source": {
+          "name": "Reuters",
+          "original_name": "Reuters"
+        },
+        "company_rics": "DIS.N,NWSA.O,PSKY.O",
+        "title": "Trump’s court setbacks fail to blunt his campaign against media",
+        "basic_headline": "Trump’s court setbacks fail to blunt his campaign against media",
+        "distributor": "Reuters",
+        "description": "Trump's clash with ABC late-night host Jimmy Kimmel reflects a pressure campaign that extends beyond the courts. ",
+        "primary_media_type": "video",
+        "primary_tag": {
+          "short_bio": "Appellate",
+          "description": "Appellate",
+          "slug": "nrlpa-oapp",
+          "text": "NRLPA:OAPP",
+          "is_topic": true,
+          "can_follow": true,
+          "is_legal": true,
+          "topic_url": "/legal/appellate/"
+        },
+        "word_count": 1226,
+        "read_minutes": 7,
+        "kicker": {
+          "name": "ANALYSIS",
+          "names": [
+            "Business",
+            "Media & Telecom"
+          ]
+        },
+        "ad_topics": [
+          "media",
+          "pol"
+        ],
+        "thumbnail": {
+          "url": "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/SU56PBTUINJ7RBSB7PKS5DP2PE.jpg",
+          "caption": "Jimmy Kimmel speaks onstage during the Oscars show at the 98th Academy Awards in Hollywood, Los Angeles, California, U.S., March 15, 2026. REUTERS/Mike Blake/File Photo",
+          "type": "image",
+          "resizer_url": "https://www.reuters.com/resizer/v2/SU56PBTUINJ7RBSB7PKS5DP2PE.jpg?auth=0b59188af4743ff60b16f185d36070186843e7b36f03ef3544c9e5ad91210839",
+          "location": "LOS ANGELES, CALIFORNIA, United States",
+          "id": "SU56PBTUINJ7RBSB7PKS5DP2PE",
+          "authors": "Mike Blake",
+          "alt_text": "Jimmy Kimmel speaks at the Oscars show",
+          "width": 5000,
+          "height": 3333,
+          "subtitle": "Jimmy Kimmel speaks at the Oscars show",
+          "slug": "USA-TRUMP-MEDIA-LITIGATION",
+          "updated_at": "2026-04-29T11:59:52Z",
+          "company": "Reuters",
+          "purchase_licensing_path": "https://www.reutersconnect.com/item/jimmy-kimmel-speaks-at-the-oscars-show/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX1JDMkQ1S0FZUklVVA%3D%3D/?utm_medium=rcom-article-media&utm_campaign=rcom-rcp-lead"
+        },
+        "display_time": "2026-04-29T10:24:59.338Z",
+        "updated_time": "2026-04-29T14:37:21.745Z",
+        "authors": [
+          {
+            "id": "jack.queen@thomsonreuters.com",
+            "name": "Jack Queen",
+            "first_name": "Jack",
+            "last_name": "Queen",
+            "company": "Reuters",
+            "thumbnail": {
+              "url": "https://author-service-images-prod-us-east-1.publishing.aws.arc.pub/reuters/607ec47a-8b8b-4ccc-a542-2b79a483a499.png",
+              "type": "image",
+              "resizer_url": "https://www.reuters.com/resizer/v2/https%3A%2F%2Fauthor-service-images-prod-us-east-1.publishing.aws.arc.pub%2Freuters%2F607ec47a-8b8b-4ccc-a542-2b79a483a499.png?auth=b2a9ff8ed55577b67970a356c6de8ed578350c16cb7897e914d5e4b4c44ced4d"
+            },
+            "social_links": [
+              {
+                "site": "email",
+                "url": "mailto:Jack.Queen@thomsonreuters.com"
+              },
+              {
+                "site": "twitter",
+                "url": "https://x.com/jackqueen_"
+              },
+              {
+                "site": "linkedin",
+                "url": "https://www.linkedin.com/in/jack-queen-2b4b09a0/"
+              }
+            ],
+            "byline": "Jack Queen",
+            "description": "Jack Queen covers major lawsuits against the Trump administration involving urgent questions of executive power and how their resolution could affect the law and the legal profession in the years to come. Previously, he covered criminal and civil cases against Trump during the interim of his presidential terms, including gavel-to-gavel coverage of his historic hush money trial in New York and his civil fraud trial, which ended in a half-billion-dollar judgment. Jack has also covered high-profile defamation cases including the Dominion Voting Systems' lawsuit against Fox News, which settled for $787 million after intense pretrial litigation. Based in New York, he specializes in breaking news as well as analysis, explainers and other explanatory reporting.",
+            "topic_url": "/authors/jack-queen/",
+            "role": "Legal Correspondent"
+          }
+        ]
+      },
+      {
+        "id": "KAISQDUDN5O23H6R4YMDRTGS2U",
+        "revision_id": "VRHK55YUNVDT3FUYSGIKLHGZGA",
+        "canonical_url": "/world/us/us-produce-passports-bearing-trumps-image-2026-04-28/",
+        "website": "reuters",
+        "web": "US to issue passports bearing Trump's image",
+        "native": "US to issue passports bearing Trump's image",
+        "published": true,
+        "published_time": "2026-04-28T21:01:31.193Z",
+        "article_type": "Standard",
+        "display_my_news": true,
+        "display_newsletter_signup": true,
+        "display_notifications": true,
+        "display_related_media": true,
+        "display_related_organizations": true,
+        "content_code": "metered",
+        "source": {
+          "name": "Reuters",
+          "original_name": "Reuters"
+        },
+        "title": "US to issue passports bearing Trump's image",
+        "basic_headline": "US to issue passports bearing Trump's image",
+        "distributor": "Reuters",
+        "description": "The U.S. State Department said on Tuesday it would produce ​a limited number of commemorative passports bearing a portrait of Donald ‌Trump, the latest example of the administration attaching the president's likeness or name to official property.",
+        "primary_media_type": "video",
+        "primary_tag": {
+          "short_bio": "Donald Trump",
+          "description": "Donald Trump",
+          "slug": "rules-trump",
+          "text": "RULES:TRUMP",
+          "can_follow": true,
+          "topic_url": "/world/trump/"
+        },
+        "word_count": 392,
+        "read_minutes": 2,
+        "kicker": {
+          "name": "United States",
+          "path": "/world/us/",
+          "names": [
+            "World",
+            "United States"
+          ]
+        },
+        "ad_topics": [
+          "pol"
+        ],
+        "thumbnail": {
+          "url": "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/APAZRCNX2VI7HHKAY4LMCK2ULI.jpg",
+          "caption": "A U.S. passport featuring an image and signature of U.S. President Donald Trump is seen this rendering released by the State Department in Washington, D.C., U.S., April 28, 2026. U.S. State Department/Handout via REUTERS   THIS IMAGE HAS BEEN SUPPLIED BY A THIRD PARTY",
+          "type": "image",
+          "resizer_url": "https://www.reuters.com/resizer/v2/APAZRCNX2VI7HHKAY4LMCK2ULI.jpg?auth=f406f97253749b934a8d9cd7565486a9bd60454d54eca5cc2f919ce53d566ea0",
+          "location": "WASHINGTON, DC, UNITED STATES",
+          "id": "APAZRCNX2VI7HHKAY4LMCK2ULI",
+          "authors": "U.S. State Department",
+          "alt_text": "Artist rendering shows U.S. passport featuring an image and signature of U.S. President Donald Trump",
+          "width": 733,
+          "height": 478,
+          "subtitle": "Artist rendering shows U.S. passport featuring an image and signature of U.S. President Donald Trump",
+          "slug": "USA-TRUMP-PASSPORT",
+          "updated_at": "2026-04-29T15:29:47Z",
+          "company": "Reuters",
+          "purchase_licensing_path": "https://www.reutersconnect.com/item/artist-rendering-shows-us-passport-featuring-an-image-and-signature-of-us-president-donald-trump/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX1JDMkZZS0FVT0NINQ%3D%3D/?utm_medium=rcom-article-media&utm_campaign=rcom-rcp-lead"
+        },
+        "authors": [
+          {
+            "id": "simon.lewis@thomsonreuters.com",
+            "name": "Simon Lewis",
+            "first_name": "Simon",
+            "last_name": "Lewis",
+            "company": "Reuters",
+            "thumbnail": {
+              "url": "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/H24NV3AFCZCWPC463OG3JRYY7U.jpg",
+              "type": "image",
+              "resizer_url": "https://www.reuters.com/resizer/v2/https%3A%2F%2Fcloudfront-us-east-2.images.arcpublishing.com%2Freuters%2FH24NV3AFCZCWPC463OG3JRYY7U.jpg?auth=4dd3566d980534ddab2fb815cfdf9f08e04ca3d4f4dd0c88f6e42931b1e77167"
+            },
+            "social_links": [
+              {
+                "site": "email",
+                "url": "mailto:simon.lewis@thomsonreuters.com"
+              }
+            ],
+            "byline": "Simon Lewis",
+            "topic_url": "/authors/simon-lewis/"
+          }
+        ],
+        "display_time": "2026-04-28T21:01:31.193Z",
+        "updated_time": "2026-04-29T15:30:05.658Z"
+      },
+      {
+        "id": "FRKANJ7RGVJOFAP5H3WYQHRNEQ",
+        "revision_id": "Q4KDEMRN4BEKLB7GG2EJTJJERA",
+        "canonical_url": "/world/middle-east/russia-hopes-uae-exit-does-not-spell-end-opec-pledges-stay-put-2026-04-29/",
+        "website": "reuters",
+        "web": "Russia to remain in OPEC+, hopes UAE exit does not spell end of group",
+        "native": "Russia to remain in OPEC+, hopes UAE exit does not spell end of group",
+        "published": true,
+        "published_time": "2026-04-29T09:46:54.04Z",
+        "article_type": "Standard",
+        "display_my_news": true,
+        "display_newsletter_signup": true,
+        "display_notifications": true,
+        "display_related_media": true,
+        "display_related_organizations": true,
+        "content_code": "metered",
+        "source": {
+          "name": "Reuters",
+          "original_name": "Reuters"
+        },
+        "title": "Russia to remain in OPEC+, hopes UAE exit does not spell end of group",
+        "basic_headline": "Russia to remain in OPEC+, hopes UAE exit does not spell end of group",
+        "distributor": "Reuters",
+        "description": "Russia plans to stay ‌in OPEC+ despite a decision by the United Arab Emirates to leave, the Kremlin said on Wednesday, expressing hope that the alliance of oil producers would continue to operate amid turmoil in the global energy ​market.",
+        "primary_media_type": "video",
+        "primary_tag": {
+          "short_bio": "Exploration & Production",
+          "description": "Exploration & Production",
+          "slug": "repi-exploration-production",
+          "text": "REPI:EXPLORATION-PRODUCTION",
+          "is_topic": true,
+          "can_follow": true,
+          "topic_url": "/business/energy/exploration-production/"
+        },
+        "word_count": 422,
+        "read_minutes": 3,
+        "kicker": {
+          "name": "Middle East",
+          "path": "/world/middle-east/",
+          "names": [
+            "World",
+            "Middle East"
+          ]
+        },
+        "ad_topics": [
+          "com",
+          "engy",
+          "engy",
+          "pol",
+          "trade"
+        ],
+        "thumbnail": {
+          "url": "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/UK6AXJWNVRIXBBU3SU2U2YPIUY.jpg",
+          "caption": "People walk past an installation depicting barrel of oil with the logo of Organization of the Petroleum Exporting Countries (OPEC) during the COP29 United Nations climate change conference in Baku, Azerbaijan November 19, 2024. REUTERS/Maxim Shemetov/File Photo",
+          "type": "image",
+          "resizer_url": "https://www.reuters.com/resizer/v2/UK6AXJWNVRIXBBU3SU2U2YPIUY.jpg?auth=06a263c6e013e9e3a678ccfa6db86e4997059b267fc341fcd6fbde9c0b28cefe",
+          "location": "BAKU, AZERBAIJAN",
+          "id": "UK6AXJWNVRIXBBU3SU2U2YPIUY",
+          "authors": "Maxim Shemetov",
+          "alt_text": "COP29 climate summit in Baku",
+          "width": 3933,
+          "height": 2447,
+          "subtitle": "COP29 climate summit in Baku",
+          "slug": "EMIRATES-GULF-OPEC",
+          "updated_at": "2026-04-29T10:55:24Z",
+          "company": "Reuters",
+          "purchase_licensing_path": "https://www.reutersconnect.com/item/cop29-climate-summit-in-baku/dGFnOnJldXRlcnMuY29tLDIwMjQ6bmV3c21sX1JDMkE4QkEyUzIyTA%3D%3D/?utm_medium=rcom-article-media&utm_campaign=rcom-rcp-lead"
+        },
+        "authors": [
+          {
+            "id": "dimitri.antonov@thomsonreuters.com",
+            "name": "Dmitry Antonov",
+            "first_name": "Dmitry",
+            "last_name": "Antonov",
+            "company": "Reuters",
+            "thumbnail": {
+              "url": "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/H24NV3AFCZCWPC463OG3JRYY7U.jpg",
+              "type": "image",
+              "resizer_url": "https://www.reuters.com/resizer/v2/https%3A%2F%2Fcloudfront-us-east-2.images.arcpublishing.com%2Freuters%2FH24NV3AFCZCWPC463OG3JRYY7U.jpg?auth=4dd3566d980534ddab2fb815cfdf9f08e04ca3d4f4dd0c88f6e42931b1e77167"
+            },
+            "social_links": [
+              {
+                "site": "email",
+                "url": "mailto:dimitri.antonov@thomsonreuters.com"
+              }
+            ],
+            "byline": "Dmitry Antonov",
+            "topic_url": "/authors/dmitry-antonov/"
+          },
+          {
+            "id": "dasha.korsunskaya@thomsonreuters.com",
+            "name": "Darya Korsunskaya",
+            "first_name": "Darya",
+            "last_name": "Korsunskaya",
+            "company": "Reuters",
+            "thumbnail": {
+              "url": "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/H24NV3AFCZCWPC463OG3JRYY7U.jpg",
+              "type": "image",
+              "resizer_url": "https://www.reuters.com/resizer/v2/https%3A%2F%2Fcloudfront-us-east-2.images.arcpublishing.com%2Freuters%2FH24NV3AFCZCWPC463OG3JRYY7U.jpg?auth=4dd3566d980534ddab2fb815cfdf9f08e04ca3d4f4dd0c88f6e42931b1e77167"
+            },
+            "social_links": [
+              {
+                "site": "email",
+                "url": "mailto:dasha.korsunskaya@thomsonreuters.com"
+              }
+            ],
+            "byline": "Darya Korsunskaya",
+            "topic_url": "/authors/darya-korsunskaya/"
+          }
+        ],
+        "display_time": "2026-04-29T09:46:54.04Z",
+        "updated_time": "2026-04-29T14:44:47.505Z"
+      },
+      {
+        "id": "MTVSMMCS7FOXZLMQVA7FTB5EZQ",
+        "revision_id": "QQYE3XNXA5FZJLTDUZJZ6P5QR4",
+        "canonical_url": "/world/families-canadian-mass-shooting-victims-sue-openai-ceo-altman-us-court-2026-04-29/",
+        "website": "reuters",
+        "web": "Families of Canadian mass shooting victims sue OpenAI, CEO Altman in US court",
+        "native": "Families of Canadian mass shooting victims sue OpenAI, CEO Altman in US court",
+        "published": true,
+        "published_time": "2026-04-29T13:38:17.349Z",
+        "article_type": "Standard",
+        "display_my_news": true,
+        "display_newsletter_signup": true,
+        "display_notifications": true,
+        "display_related_media": true,
+        "display_related_organizations": true,
+        "content_code": "metered",
+        "source": {
+          "name": "Reuters",
+          "original_name": "Reuters"
+        },
+        "title": "Families of Canadian mass shooting victims sue OpenAI, CEO Altman in US court",
+        "basic_headline": "Families of Canadian mass shooting victims sue OpenAI, CEO Altman in US court",
+        "distributor": "Reuters",
+        "description": "Family members of victims of one of Canada's deadliest mass shootings sued OpenAI and its CEO Sam Altman in U.S. court on Wednesday, alleging the company identified the shooter as a ​credible threat eight months before the attack but did not warn police.",
+        "primary_media_type": "image",
+        "primary_tag": {
+          "short_bio": "Criminal",
+          "description": "Criminal",
+          "slug": "nrlpa-ocrim",
+          "text": "NRLPA:OCRIM",
+          "is_topic": true,
+          "can_follow": true,
+          "is_legal": true,
+          "topic_url": "/legal/criminal/"
+        },
+        "word_count": 966,
+        "read_minutes": 5,
+        "kicker": {
+          "name": "World",
+          "path": "/world/",
+          "names": [
+            "World"
+          ]
+        },
+        "ad_topics": [
+          "crime",
+          "pol",
+          "sci",
+          "ai",
+          "tech",
+          "crime"
+        ],
+        "thumbnail": {
+          "url": "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/CPBSSOLLMFOJTIHKZC6KPLWNAA.jpg",
+          "caption": "A person visits a growing makeshift memorial on the steps of the town hall, four days after one of the worst mass shootings in recent Canadian history, in the town of Tumbler Ridge, British Columbia, Canada February 14, 2026. REUTERS/Jennifer Gauthier",
+          "type": "image",
+          "resizer_url": "https://www.reuters.com/resizer/v2/CPBSSOLLMFOJTIHKZC6KPLWNAA.jpg?auth=722a1933c7952ff09dae6b72548d0a6b6edbbff1e4d2f538ea21fa97dab758d0",
+          "location": "TUMBLER RIDGE, BC, CANADA",
+          "id": "CPBSSOLLMFOJTIHKZC6KPLWNAA",
+          "authors": "Jennfier Gauthier",
+          "alt_text": "Aftermath of a mass shooting in the Canadian town of Tumbler Ridge",
+          "width": 5500,
+          "height": 3666,
+          "subtitle": "Aftermath of a mass shooting in the Canadian town of Tumbler Ridge",
+          "slug": "CANADA-SHOOTING",
+          "updated_at": "2026-04-29T15:51:05Z",
+          "company": "Reuters",
+          "purchase_licensing_path": "https://www.reutersconnect.com/item/aftermath-of-a-mass-shooting-in-the-canadian-town-of-tumbler-ridge/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX1JDMlZMSkE0UlpNWQ%3D%3D/?utm_medium=rcom-article-media&utm_campaign=rcom-rcp-lead"
+        },
+        "display_time": "2026-04-29T13:38:17.349Z",
+        "updated_time": "2026-04-29T15:51:11.708Z",
+        "authors": [
+          {
+            "id": "ryan.jones@thomsonreuters.com",
+            "name": "Ryan Patrick Jones",
+            "first_name": "Ryan",
+            "last_name": "Patrick Jones",
+            "company": "Reuters",
+            "thumbnail": {
+              "url": "https://author-service-images-prod-us-east-1.publishing.aws.arc.pub/reuters/9e8d6abb-3243-43ac-96a8-1f9e4f167c41.png",
+              "type": "image",
+              "resizer_url": "https://www.reuters.com/resizer/v2/https%3A%2F%2Fauthor-service-images-prod-us-east-1.publishing.aws.arc.pub%2Freuters%2F9e8d6abb-3243-43ac-96a8-1f9e4f167c41.png?auth=93527e72b75bb85551ba4c7a707c219df3ff4972afd135e71ea210d4144293e3"
+            },
+            "social_links": [
+              {
+                "site": "email",
+                "url": "mailto:Ryan.Jones@thomsonreuters.com"
+              },
+              {
+                "site": "twitter",
+                "url": "https://x.com/@helloryanjones"
+              }
+            ],
+            "byline": "Ryan Patrick Jones",
+            "description": "Ryan is a breaking news correspondent based in Toronto covering breaking news, national affairs and politics in the United States and Canada.",
+            "topic_url": "/authors/ryan-patrick-jones/",
+            "role": "Breaking news correspondent"
+          },
+          {
+            "id": "diana.jones2@thomsonreuters.com",
+            "name": "Diana Jones",
+            "first_name": "Diana",
+            "last_name": "Jones",
+            "company": "Reuters",
+            "thumbnail": {
+              "url": "https://author-service-images-prod-us-east-1.publishing.aws.arc.pub/reuters/8460616a-39ff-455f-8177-96ca401da7e1.png",
+              "type": "image",
+              "resizer_url": "https://www.reuters.com/resizer/v2/https%3A%2F%2Fauthor-service-images-prod-us-east-1.publishing.aws.arc.pub%2Freuters%2F8460616a-39ff-455f-8177-96ca401da7e1.png?auth=3026d05874a59ca4eb0942c2f41a5e93d0198144d08e3f0bb5cb332e258e57e4"
+            },
+            "social_links": [
+              {
+                "site": "email",
+                "url": "mailto:diana.jones2@thomsonreuters.com"
+              },
+              {
+                "site": "twitter",
+                "url": "https://x.com/dhnovak"
+              },
+              {
+                "site": "linkedin",
+                "url": "https://www.linkedin.com/in/diana-novak-jones-74b7a938/"
+              }
+            ],
+            "byline": "Diana Novak Jones",
+            "description": "Diana reports on product liability, litigation, mass torts and the plaintiffs' bar. She previously worked at Law360 and the Chicago Sun-Times.",
+            "topic_url": "/authors/diana-novak-jones/",
+            "role": "Legal business journalist"
+          }
+        ]
+      }
+    ],
+    "section": {
+      "id": "/world/",
+      "website": "reuters",
+      "name": "World",
+      "page_title": "World",
+      "can_follow": true,
+      "language": "en",
+      "template_type": "section",
+      "type": "section",
+      "advertising": {
+        "sponsored": "false"
+      },
+      "video_playlistId": "World_News_US",
+      "mobile_ad_unit_path": "/4735792/app.reuters/world/home",
+      "ad_unit_path": "/4735792/reuters.com/world/home",
+      "collection_alias": "world-home",
+      "section_about": "Follow the latest international and world news, breaking stories and global current events from your trusted online news source.",
+      "title": "World News | Latest Top Stories | Reuters",
+      "personalization": {
+        "id": "/world/",
+        "type": "SECTION",
+        "show_tags": true,
+        "can_follow": true
+      }
+    },
+    "ad_unit_path": "/4735792/reuters.com/world/home",
+    "response_time": 1777479994766
+  },
+  "_id": "8a4cee9a2d41a47f7c32e78502716162cb0643f2cbc1daea0bc12757bc61fd67"
+}
