@@ -643,6 +643,25 @@
     "color": "blue",
     "interval": 600000
   },
+  "reuters": {
+    "redirect": "reuters-world",
+    "name": "路透社",
+    "type": "realtime",
+    "column": "world",
+    "home": "https://www.reuters.com",
+    "color": "orange",
+    "interval": 3600000,
+    "title": "世界快讯"
+  },
+  "reuters-world": {
+    "name": "路透社",
+    "type": "realtime",
+    "column": "world",
+    "home": "https://www.reuters.com",
+    "color": "orange",
+    "interval": 3600000,
+    "title": "世界快讯"
+  },
   "bloomberg": {
     "redirect": "bloomberg-hot",
     "name": "彭博",
@@ -677,7 +696,7 @@
     "column": "world",
     "home": "https://www.bloomberg.com",
     "color": "gray",
-    "interval": 3600000,
+    "interval": 600000,
     "title": "欧美快讯"
   },
   "bloomberg-ja": {
@@ -686,7 +705,7 @@
     "column": "world",
     "home": "https://www.bloomberg.com",
     "color": "gray",
-    "interval": 3600000,
+    "interval": 600000,
     "title": "日本快讯"
   },
   "tencent": {

@@ -524,6 +524,19 @@ export const originSources = {
     type: "hottest",
     home: "https://store.steampowered.com",
   },
+  "reuters": {
+    name: "路透社",
+    column: "world",
+    color: "orange",
+    home: "https://www.reuters.com",
+    sub: {
+      world: {
+        title: "世界快讯",
+        type: "realtime",
+        interval: Time.Slow,
+      },
+    },
+  },
   "bloomberg": {
     name: "彭博",
     column: "world",

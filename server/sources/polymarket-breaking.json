@@ -1,0 +1,5199 @@
+{
+  "pageProps": {
+    "dehydratedState": {
+      "mutations": [],
+      "queries": [
+        {
+          "dehydratedAt": 1777540895265,
+          "state": {
+            "data": [
+              {
+                "id": "100215",
+                "label": "全部",
+                "slug": "all",
+                "forceShow": false,
+                "updatedAt": "2026-04-17T20:23:54.340488Z",
+                "activeEventsCount": 2
+              },
+              {
+                "id": "2",
+                "label": "政治",
+                "slug": "politics",
+                "forceShow": false,
+                "publishedAt": "2023-10-25 18:55:50.674+00",
+                "updatedBy": 13,
+                "createdAt": "2023-10-25T18:55:50.681Z",
+                "updatedAt": "2026-04-17T20:39:54.201881Z",
+                "forceHide": true,
+                "activeEventsCount": 1510
+              },
+              {
+                "id": "1",
+                "label": "体育",
+                "slug": "sports",
+                "forceShow": false,
+                "publishedAt": "2023-10-24 22:37:50.296+00",
+                "updatedBy": 15,
+                "createdAt": "2023-10-24T22:37:50.31Z",
+                "updatedAt": "2026-04-17T20:47:16.461062Z",
+                "forceHide": true,
+                "activeEventsCount": 4622
+              },
+              {
+                "id": "21",
+                "label": "加密",
+                "slug": "crypto",
+                "forceShow": false,
+                "publishedAt": "2023-11-02 21:03:54.55+00",
+                "updatedBy": 15,
+                "createdAt": "2023-11-02T21:03:54.564Z",
+                "updatedAt": "2026-03-09T22:28:03.349847Z",
+                "activeEventsCount": 3498
+              },
+              {
+                "id": "78",
+                "label": "伊朗",
+                "slug": "iran",
+                "forceShow": false,
+                "publishedAt": "2023-11-02 21:16:51.647+00",
+                "updatedBy": 15,
+                "createdAt": "2023-11-02T21:16:51.667Z",
+                "updatedAt": "2026-04-17T20:19:53.890971Z",
+                "activeEventsCount": 125
+              },
+              {
+                "id": "120",
+                "label": "财务",
+                "slug": "finance",
+                "forceShow": false,
+                "publishedAt": "2023-11-02 21:22:21.615+00",
+                "createdAt": "2023-11-02T21:22:21.62Z",
+                "updatedAt": "2026-04-17T20:17:43.066649Z",
+                "activeEventsCount": 379
+              },
+              {
+                "id": "100265",
+                "label": "地缘政治",
+                "slug": "geopolitics",
+                "forceShow": true,
+                "createdAt": "2024-06-12T20:13:03.615956Z",
+                "updatedAt": "2026-04-17T20:49:04.209055Z",
+                "activeEventsCount": 419
+              },
+              {
+                "id": "1401",
+                "label": "科技",
+                "slug": "tech",
+                "forceShow": false,
+                "publishedAt": "2024-02-21 23:06:12.305+00",
+                "createdAt": "2024-02-21T23:06:12.324Z",
+                "updatedAt": "2026-04-17T20:39:14.21105Z",
+                "activeEventsCount": 215
+              },
+              {
+                "id": "596",
+                "label": "文化",
+                "slug": "pop-culture",
+                "forceShow": false,
+                "publishedAt": "2023-11-29 18:40:13.013+00",
+                "createdAt": "2023-11-29T18:40:14.63Z",
+                "updatedAt": "2026-04-17T20:31:50.147585Z",
+                "activeEventsCount": 311
+              },
+              {
+                "id": "100328",
+                "label": "经济",
+                "slug": "economy",
+                "forceShow": false,
+                "createdAt": "2024-08-05T05:34:54.235643Z",
+                "updatedAt": "2026-04-17T20:29:06.948273Z",
+                "activeEventsCount": 177
+              },
+              {
+                "id": "84",
+                "label": "天气",
+                "slug": "weather",
+                "forceShow": false,
+                "publishedAt": "2023-11-02 21:17:34.81+00",
+                "createdAt": "2023-11-02T21:17:34.814Z",
+                "updatedAt": "2026-03-09T22:33:58.564774Z",
+                "activeEventsCount": 229
+              },
+              {
+                "id": "100343",
+                "label": "提及",
+                "slug": "mention-markets",
+                "forceShow": false,
+                "createdAt": "2024-08-16T02:29:11.548984Z",
+                "updatedAt": "2026-04-17T21:08:23.080776Z",
+                "activeEventsCount": 17
+              },
+              {
+                "id": "144",
+                "label": "选举",
+                "slug": "elections",
+                "forceShow": false,
+                "publishedAt": "2023-11-02 21:24:31.008+00",
+                "updatedBy": 13,
+                "createdAt": "2023-11-02T21:24:31.198Z",
+                "updatedAt": "2026-04-17T17:22:31.696566Z",
+                "forceHide": true,
+                "activeEventsCount": 897
+              }
+            ],
+            "dataUpdateCount": 1,
+            "dataUpdatedAt": 1777540888094,
+            "error": null,
+            "errorUpdateCount": 0,
+            "errorUpdatedAt": 0,
+            "fetchFailureCount": 0,
+            "fetchFailureReason": null,
+            "fetchMeta": null,
+            "isInvalidated": false,
+            "status": "success",
+            "fetchStatus": "idle"
+          },
+          "queryKey": [
+            "/api/tags",
+            "filteredTags",
+            "102982",
+            "active",
+            "en"
+          ],
+          "queryHash": "[\"/api/tags\",\"filteredTags\",\"102982\",\"active\",\"en\"]"
+        },
+        {
+          "dehydratedAt": 1777540895265,
+          "state": {
+            "data": [
+              {
+                "name": "notifications_v2",
+                "description": "Improved notification preferences and types.",
+                "enabled": true,
+                "userEnrolledBy": {
+                  "type": "allowlist_feature_flag_rule",
+                  "allowlistAddresses": []
+                },
+                "version": "d36219f005fa6abe4b245b3582e0c7f9162b9594"
+              },
+              {
+                "name": "authenticated_book_ws",
+                "description": "Use the funkit based deposit flow.",
+                "enabled": true,
+                "userEnrolledBy": {
+                  "type": "split_feature_flag_rule",
+                  "percent": 1
+                },
+                "version": "37528e449737734ab04409041e36708e9c0ea9c5"
+              },
+              {
+                "name": "rfq",
+                "description": "Request for Quote Maker & Taker UI",
+                "enabled": true,
+                "userEnrolledBy": {
+                  "type": "allowlist_feature_flag_rule",
+                  "allowlistAddresses": [
+                    "0x8c74b4eef9a894433B8126aA11d1345efb2B0488",
+                    "0x1B3CB941Da6aae2481147e8C177306950fF7Be0B",
+                    "0x5cF81c5c4500429f46025B5C0251C9702618d9E7",
+                    "0xa772dE12507bF3fa3B344e8E7826b3bb6d14f88C",
+                    "0x505da8075db50c4fe971aacf4b56cea1289c87b2",
+                    "0x4b27447b0370371b9e2b25be6845d7f144cec899",
+                    "0x6FAC4C06086fA4De0728e85a6C12d46B74C76D7e",
+                    "0x1D507F92d6577b4DED3e864Df93549266D12FB34"
+                  ]
+                },
+                "version": "2024703a0e61d658af66f2d2a4ea1476ce09e27b"
+              },
+              {
+                "name": "mobile_sports_overlay_v2",
+                "description": "Improved in-game view for sports markets.",
+                "enabled": true,
+                "userEnrolledBy": {
+                  "type": "allowlist_feature_flag_rule",
+                  "allowlistAddresses": []
+                },
+                "version": "029a9e71e0bc0e4864446298bea6009acaf7b26e"
+              },
+              {
+                "name": "async_order_submission",
+                "description": "Reduce market order latency.",
+                "enabled": true,
+                "userEnrolledBy": {
+                  "type": "allowlist_feature_flag_rule",
+                  "allowlistAddresses": []
+                },
+                "version": "80dcdbb0e1083774c87c7d31d113994c831e5a05"
+              },
+              {
+                "name": "sports_websocket",
+                "description": "Enable updates from the sports websocket.",
+                "enabled": true,
+                "userEnrolledBy": {
+                  "type": "allowlist_feature_flag_rule",
+                  "allowlistAddresses": []
+                },
+                "version": "69188cb32f3f8b050c961e6ba792a3679a7e4082"
+              },
+              {
+                "name": "language_selector",
+                "description": "Show/hide language selector in navigation",
+                "enabled": true,
+                "userEnrolledBy": {
+                  "type": "split_feature_flag_rule",
+                  "percent": 1
+                },
+                "version": "27ed1f8697d9a233c1331f5d0154e13426079218"
+              },
+              {
+                "name": "auto_locale_detection",
+                "description": "Auto-detect and redirect based on browser language",
+                "enabled": false,
+                "userEnrolledBy": {
+                  "type": "split_feature_flag_rule",
+                  "percent": 1
+                },
+                "version": "aff3dbc8cdeddc966271fa8e4bb8f65d3e9a3c8b"
+              },
+              {
+                "name": "homepage_btc_15m_slot",
+                "description": "Show BTC 15-minute up/down market in 3rd slot on homepage.",
+                "enabled": true,
+                "userEnrolledBy": {
+                  "type": "split_feature_flag_rule",
+                  "percent": 1
+                },
+                "version": "a57e579241ba4e3a67f2f18c8f865848623ad4ea"
+              },
+              {
+                "name": "signup_prompt",
+                "description": "Event page signup auto-pop",
+                "enabled": true,
+                "userEnrolledBy": {
+                  "type": "split_feature_flag_rule",
+                  "percent": 1
+                },
+                "version": "5e912949232700834435c17f09cbe483d60de0c1"
+              },
+              {
+                "name": "picked_for_you",
+                "description": "Show personalized Picked for You shelf on homepage",
+                "enabled": true,
+                "userEnrolledBy": {
+                  "type": "split_feature_flag_rule",
+                  "percent": 0.5,
+                  "allowlistAddresses": [
+                    "0xb2445087e45f114436ee0d4d5edf76347d79edcf",
+                    "0x0682990de7b862979a3cf330a1b088412ecefd43",
+                    "0xc0a04738c05ea55b0a9a42bbcf29c84f702bc10c",
+                    "0x49c2f016b9134f9232d2523bbb63634bf6a75a6d",
+                    "0x1fD727a4Bc3041B6e56D8fbc19fda852E262B633",
+                    "0x7c3db723f1d4d8cb9c550095203b686cb11e5c6b",
+                    "0xe51935ed72ae4cfb893f38bcbf8cc25faf234a99",
+                    "0xd7352670c710613db4d522cf20cd6940a55207e1",
+                    "0xf58b1c1340d6f8c0871e8ea8ee7b80ec6b8a5f34",
+                    "0x7418cc74e09e6c250969bef49c4aa34f9c213f31",
+                    "0xaa3281fccc565d5092a7d6e89866b9c9a4f9f6b4",
+                    "0x1e1f17412069c0736adfaadf8ee7f46e5612c855",
+                    "0x92A3C6fC2Aee7B2339414ADeC238491b299acf0a",
+                    "0x396665c13f6ae03bbcaaf710d2364071152bbe5f",
+                    "0x074f41295611EB11F3582A007A66Be3cf5B66abF",
+                    "0x4134CbC5fd5aa78026f1223236d1945c42FA11a4"
+                  ]
+                },
+                "version": "35aa74d44b5c48ef50c5b89f4bd7887bb0a9a8ce"
+              },
+              {
+                "name": "auto_redeem",
+                "description": "Auto-redeem prompt for closed market positions",
+                "enabled": true,
+                "userEnrolledBy": {
+                  "type": "split_feature_flag_rule",
+                  "percent": 1,
+                  "allowlistAddresses": [
+                    "0xb2445087e45f114436ee0d4d5edf76347d79edcf",
+                    "0x0682990de7b862979a3cf330a1b088412ecefd43",
+                    "0xc0a04738c05ea55b0a9a42bbcf29c84f702bc10c",
+                    "0x49c2f016b9134f9232d2523bbb63634bf6a75a6d",
+                    "0x1fD727a4Bc3041B6e56D8fbc19fda852E262B633",
+                    "0x7c3db723f1d4d8cb9c550095203b686cb11e5c6b",
+                    "0xe51935ed72ae4cfb893f38bcbf8cc25faf234a99",
+                    "0xd7352670c710613db4d522cf20cd6940a55207e1",
+                    "0xf58b1c1340d6f8c0871e8ea8ee7b80ec6b8a5f34",
+                    "0x7418cc74e09e6c250969bef49c4aa34f9c213f31",
+                    "0xaa3281fccc565d5092a7d6e89866b9c9a4f9f6b4",
+                    "0x1e1f17412069c0736adfaadf8ee7f46e5612c855",
+                    "0x92A3C6fC2Aee7B2339414ADeC238491b299acf0a",
+                    "0x396665c13f6ae03bbcaaf710d2364071152bbe5f",
+                    "0x074f41295611EB11F3582A007A66Be3cf5B66abF",
+                    "0x37c1874a60d348903594a96703e0507c518fc53a",
+                    "0x7c3db723f1d4d8cb9c550095203b686cb11e5c6b"
+                  ]
+                },
+                "version": "051496a9a87d7e91903207de8836417c0345ea44"
+              },
+              {
+                "name": "one_tap_5m_trading",
+                "description": "Enable one-tap trading widget for eligible 5-minute markets",
+                "enabled": true,
+                "userEnrolledBy": {
+                  "type": "split_feature_flag_rule",
+                  "percent": 1,
+                  "allowlistAddresses": [
+                    "0x0682990de7b862979a3cf330a1b088412ecefd43",
+                    "0x8C3352dD31C75D7f8DB8ed27A154dD5F69b91dD8",
+                    "0x8EF7E1f316BDeBB23D90C408c46c2A67dd127B01",
+                    "0xb2445087e45f114436ee0d4d5edf76347d79edcf",
+                    "0x7c3db723f1d4d8cb9c550095203b686cb11e5c6b"
+                  ]
+                },
+                "version": "c412e3e2a9dcbd492ecca8aae0fab9c308d94926"
+              },
+              {
+                "name": "disable_sponsor_markets",
+                "description": "Kill switch — when enabled, hides sponsor and cancel-sponsorship UI",
+                "enabled": true,
+                "userEnrolledBy": {
+                  "type": "split_feature_flag_rule",
+                  "percent": 1,
+                  "allowlistAddresses": []
+                },
+                "version": "e4d2c1ced1530a22b35b53b60be9556049198979"
+              },
+              {
+                "name": "enable_pmct_migration",
+                "description": "Enables the new contracts (PMCT) migration: post-migration modal, USDCe→pUSD wrap UI, new allowance reads/approvals, balance upgrade prompts, and the cancelled-orders portfolio tab.",
+                "enabled": true,
+                "userEnrolledBy": {
+                  "type": "allowlist_feature_flag_rule",
+                  "percent": 0,
+                  "allowlistAddresses": [
+                    "0x0682990de7b862979A3cf330a1B088412eCefD43"
+                  ]
+                },
+                "version": "39d7be8f07276e9cb36f880b93a8854a6972cb71"
+              }
+            ],
+            "dataUpdateCount": 1,
+            "dataUpdatedAt": 1777540887837,
+            "error": null,
+            "errorUpdateCount": 0,
+            "errorUpdatedAt": 0,
+            "fetchFailureCount": 0,
+            "fetchFailureReason": null,
+            "fetchMeta": null,
+            "isInvalidated": false,
+            "status": "success",
+            "fetchStatus": "idle"
+          },
+          "queryKey": [
+            "account",
+            "featureFlags",
+            ""
+          ],
+          "queryHash": "[\"account\",\"featureFlags\",\"\"]"
+        },
+        {
+          "dehydratedAt": 1777540895265,
+          "state": {
+            "data": {
+              "markets": [
+                {
+                  "id": "1820555",
+                  "slug": "will-alibaba-have-the-best-ai-model-at-the-end-of-april-2026-984",
+                  "question": "到2026年4月底，阿里巴巴会拥有最好的人工智能模型吗？",
+                  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-alibaba-have-the-top-ai-model-on-march-31-jSpk4aBgTVpy.png",
+                  "outcomePrices": [
+                    "0.0285",
+                    "0.9715"
+                  ],
+                  "oneDayPriceChange": -0.96,
+                  "events": [
+                    {
+                      "slug": "best-chinese-ai-company-end-of-april",
+                      "seriesSlug": "chinese-ai-1",
+                      "volume": 518259.347115,
+                      "commentCount": 0,
+                      "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/best-chinese-ai-company-end-of-april-a_9taJMfZn2f.jpg"
+                    }
+                  ],
+                  "clobTokenIds": [
+                    "19299302236478163464751158995430474580974135730053887545091319340047592739069",
+                    "53118166786822020734752550243622901511056309177650884071793981261331574024289"
+                  ],
+                  "history": [
+                    {
+                      "t": 1777454403,
+                      "p": 0.9885
+                    },
+                    {
+                      "t": 1777459204,
+                      "p": 0.9895
+                    },
+                    {
+                      "t": 1777464010,
+                      "p": 0.99
+                    },
+                    {
+                      "t": 1777468804,
+                      "p": 0.991
+                    },
+                    {
+                      "t": 1777473604,
+                      "p": 0.9905
+                    },
+                    {
+                      "t": 1777478405,
+                      "p": 0.9815
+                    },
+                    {
+                      "t": 1777483204,
+                      "p": 0.0285
+                    },
+                    {
+                      "t": 1777488007,
+                      "p": 0.03
+                    },
+                    {
+                      "t": 1777492807,
+                      "p": 0.0305
+                    },
+                    {
+                      "t": 1777497605,
+                      "p": 0.028
+                    },
+                    {
+                      "t": 1777502404,
+                      "p": 0.0375
+                    },
+                    {
+                      "t": 1777507213,
+                      "p": 0.0635
+                    },
+                    {
+                      "t": 1777512004,
+                      "p": 0.0995
+                    },
+                    {
+                      "t": 1777516804,
+                      "p": 0.094
+                    },
+                    {
+                      "t": 1777521605,
+                      "p": 0.056
+                    },
+                    {
+                      "t": 1777526405,
+                      "p": 0.047
+                    },
+                    {
+                      "t": 1777531204,
+                      "p": 0.018
+                    },
+                    {
+                      "t": 1777536005,
+                      "p": 0.0285
+                    },
+                    {
+                      "t": 1777540805,
+                      "p": 0.0285
+                    },
+                    {
+                      "t": 1777540864,
+                      "p": 0.0285
+                    }
+                  ],
+                  "currentPrice": 0.0285,
+                  "livePriceChange": -96,
+                  "closed": false
+                },
+                {
+                  "id": "2088990",
+                  "slug": "over-4m-committed-to-the-printr-public-sale",
+                  "question": "超过400万美元承诺用于 Prntr 公开售卖？",
+                  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/printr-public-sale-total-commitments-bEQ-dWPkB96q.jpg",
+                  "outcomePrices": [
+                    "0.073",
+                    "0.927"
+                  ],
+                  "oneDayPriceChange": -0.903,
+                  "events": [
+                    {
+                      "slug": "printr-public-sale-total-commitments",
+                      "volume": 4781738.575658,
+                      "commentCount": 146,
+                      "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/printr-public-sale-total-commitments-bEQ-dWPkB96q.jpg"
+                    }
+                  ],
+                  "clobTokenIds": [
+                    "6168819698862048181863757845481122198166445357362219819865984059115542346443",
+                    "76044319544359444268050131763372291197555048292179581324392157634668796436250"
+                  ],
+                  "history": [
+                    {
+                      "t": 1777454403,
+                      "p": 0.976
+                    },
+                    {
+                      "t": 1777459204,
+                      "p": 0.9575
+                    },
+                    {
+                      "t": 1777464004,
+                      "p": 0.978
+                    },
+                    {
+                      "t": 1777468804,
+                      "p": 0.9815
+                    },
+                    {
+                      "t": 1777473604,
+                      "p": 0.9785
+                    },
+                    {
+                      "t": 1777478404,
+                      "p": 0.9805
+                    },
+                    {
+                      "t": 1777483203,
+                      "p": 0.98
+                    },
+                    {
+                      "t": 1777488006,
+                      "p": 0.981
+                    },
+                    {
+                      "t": 1777492803,
+                      "p": 0.967
+                    },
+                    {
+                      "t": 1777497604,
+                      "p": 0.932
+                    },
+                    {
+                      "t": 1777502403,
+                      "p": 0.881
+                    },
+                    {
+                      "t": 1777507205,
+                      "p": 0.632
+                    },
+                    {
+                      "t": 1777512003,
+                      "p": 0.5025
+                    },
+                    {
+                      "t": 1777516804,
+                      "p": 0.704
+                    },
+                    {
+                      "t": 1777521603,
+                      "p": 0.731
+                    },
+                    {
+                      "t": 1777526404,
+                      "p": 0.639
+                    },
+                    {
+                      "t": 1777531203,
+                      "p": 0.5225
+                    },
+                    {
+                      "t": 1777536003,
+                      "p": 0.074
+                    },
+                    {
+                      "t": 1777540804,
+                      "p": 0.0735
+                    },
+                    {
+                      "t": 1777540864,
+                      "p": 0.067
+                    }
+                  ],
+                  "currentPrice": 0.067,
+                  "livePriceChange": -91,
+                  "closed": false
+                },
+                {
+                  "id": "1695983",
+                  "slug": "will-trump-talk-to-vladimir-putin-in-april",
+                  "question": "特朗普会在四月与弗拉基米尔·普京对话吗？",
+                  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-trump-meet-with-vladimir-putin-in-2025-2HcxujQoI25z.jpg",
+                  "outcomePrices": [
+                    "1",
+                    "0"
+                  ],
+                  "oneDayPriceChange": 0.8845,
+                  "events": [
+                    {
+                      "slug": "who-will-trump-talk-to-in-april",
+                      "seriesSlug": "trump-talk-monthly",
+                      "volume": 1231158.305572,
+                      "commentCount": 0,
+                      "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/who-will-trump-talk-to-in-august-5cRGa2yUPMwu.jpg"
+                    }
+                  ],
+                  "clobTokenIds": [
+                    "40097011730020239006483318177319265806722731927666930637110699549712501546676",
+                    "51336848705411866087337773400725104403000784851556915666892065366193680508034"
+                  ],
+                  "history": [
+                    {
+                      "t": 1777411203,
+                      "p": 0.115
+                    },
+                    {
+                      "t": 1777416004,
+                      "p": 0.12
+                    },
+                    {
+                      "t": 1777420803,
+                      "p": 0.11
+                    },
+                    {
+                      "t": 1777425603,
+                      "p": 0.275
+                    },
+                    {
+                      "t": 1777430403,
+                      "p": 0.2
+                    },
+                    {
+                      "t": 1777435203,
+                      "p": 0.155
+                    },
+                    {
+                      "t": 1777440003,
+                      "p": 0.135
+                    },
+                    {
+                      "t": 1777444803,
+                      "p": 0.125
+                    },
+                    {
+                      "t": 1777449603,
+                      "p": 0.12
+                    },
+                    {
+                      "t": 1777454403,
+                      "p": 0.095
+                    },
+                    {
+                      "t": 1777459204,
+                      "p": 0.105
+                    },
+                    {
+                      "t": 1777464004,
+                      "p": 0.095
+                    },
+                    {
+                      "t": 1777468804,
+                      "p": 0.09
+                    },
+                    {
+                      "t": 1777473604,
+                      "p": 0.18
+                    },
+                    {
+                      "t": 1777478404,
+                      "p": 0.335
+                    },
+                    {
+                      "t": 1777483203,
+                      "p": 0.135
+                    },
+                    {
+                      "t": 1777488006,
+                      "p": 0.9985
+                    },
+                    {
+                      "t": 1777492803,
+                      "p": 0.9995
+                    },
+                    {
+                      "t": 1777497604,
+                      "p": 0.9995
+                    }
+                  ],
+                  "currentPrice": 0.9995,
+                  "livePriceChange": 88,
+                  "closed": true
+                },
+                {
+                  "id": "1931059",
+                  "slug": "will-bryan-johnson-have-sex-again-this-month",
+                  "question": "布莱恩·约翰逊本月还会再发生性行为吗？",
+                  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-bryan-johnson-have-sex-again-this-month-tq1dPgWUpE4Z.jpg",
+                  "outcomePrices": [
+                    "1",
+                    "0"
+                  ],
+                  "oneDayPriceChange": 0.8795,
+                  "events": [
+                    {
+                      "slug": "will-bryan-johnson-have-sex-again-this-month",
+                      "volume": 138265.392263,
+                      "commentCount": 103,
+                      "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-bryan-johnson-have-sex-again-this-month-tq1dPgWUpE4Z.jpg"
+                    }
+                  ],
+                  "clobTokenIds": [
+                    "41007054421817273498741260096741107652882879151251478340427163412693088979519",
+                    "57238836530108544571908855327197284892871532461584804158760591044721916672120"
+                  ],
+                  "history": [
+                    {
+                      "t": 1777440004,
+                      "p": 0.12
+                    },
+                    {
+                      "t": 1777444804,
+                      "p": 0.155
+                    },
+                    {
+                      "t": 1777449605,
+                      "p": 0.1
+                    },
+                    {
+                      "t": 1777454404,
+                      "p": 0.085
+                    },
+                    {
+                      "t": 1777459205,
+                      "p": 0.085
+                    },
+                    {
+                      "t": 1777464012,
+                      "p": 0.085
+                    },
+                    {
+                      "t": 1777468805,
+                      "p": 0.06
+                    },
+                    {
+                      "t": 1777473605,
+                      "p": 0.05
+                    },
+                    {
+                      "t": 1777478406,
+                      "p": 0.045
+                    },
+                    {
+                      "t": 1777483205,
+                      "p": 0.045
+                    },
+                    {
+                      "t": 1777488007,
+                      "p": 0.05
+                    },
+                    {
+                      "t": 1777492809,
+                      "p": 0.05
+                    },
+                    {
+                      "t": 1777497606,
+                      "p": 0.065
+                    },
+                    {
+                      "t": 1777502404,
+                      "p": 0.07
+                    },
+                    {
+                      "t": 1777507217,
+                      "p": 0.075
+                    },
+                    {
+                      "t": 1777512004,
+                      "p": 0.055
+                    },
+                    {
+                      "t": 1777516805,
+                      "p": 0.055
+                    },
+                    {
+                      "t": 1777521607,
+                      "p": 0.9965
+                    }
+                  ],
+                  "currentPrice": 0.9965,
+                  "livePriceChange": 88,
+                  "closed": true
+                },
+                {
+                  "id": "1242270",
+                  "slug": "space-fdv-above-15m-one-day-after-launch-818",
+                  "question": "发射一天后，Space FDV 超过 1500 万美元？",
+                  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/space-public-sale-total-commitments-HEww4Z7f0iLw.png",
+                  "outcomePrices": [
+                    "0.091",
+                    "0.909"
+                  ],
+                  "oneDayPriceChange": -0.649,
+                  "events": [
+                    {
+                      "slug": "space-fdv-above-one-day-after-launch",
+                      "volume": 584266.874859,
+                      "commentCount": 37,
+                      "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/space-public-sale-total-commitments-HEww4Z7f0iLw.png"
+                    }
+                  ],
+                  "clobTokenIds": [
+                    "100043934323667825194130777434947686412039410569098345011976985320094345448236",
+                    "91840420815540361154949998870911523667623190214145172799757044827938204548306"
+                  ],
+                  "history": [
+                    {
+                      "t": 1777454403,
+                      "p": 0.735
+                    },
+                    {
+                      "t": 1777459204,
+                      "p": 0.895
+                    },
+                    {
+                      "t": 1777464008,
+                      "p": 0.895
+                    },
+                    {
+                      "t": 1777468804,
+                      "p": 0.885
+                    },
+                    {
+                      "t": 1777473604,
+                      "p": 0.81
+                    },
+                    {
+                      "t": 1777478405,
+                      "p": 0.77
+                    },
+                    {
+                      "t": 1777483204,
+                      "p": 0.235
+                    },
+                    {
+                      "t": 1777488007,
+                      "p": 0.31
+                    },
+                    {
+                      "t": 1777492806,
+                      "p": 0.23
+                    },
+                    {
+                      "t": 1777497605,
+                      "p": 0.095
+                    },
+                    {
+                      "t": 1777502404,
+                      "p": 0.0215
+                    },
+                    {
+                      "t": 1777507213,
+                      "p": 0.0515
+                    },
+                    {
+                      "t": 1777512004,
+                      "p": 0.052
+                    },
+                    {
+                      "t": 1777516804,
+                      "p": 0.063
+                    },
+                    {
+                      "t": 1777521604,
+                      "p": 0.0625
+                    },
+                    {
+                      "t": 1777526405,
+                      "p": 0.043
+                    },
+                    {
+                      "t": 1777531204,
+                      "p": 0.0425
+                    },
+                    {
+                      "t": 1777536004,
+                      "p": 0.1015
+                    },
+                    {
+                      "t": 1777540805,
+                      "p": 0.091
+                    },
+                    {
+                      "t": 1777540864,
+                      "p": 0.09
+                    }
+                  ],
+                  "currentPrice": 0.09,
+                  "livePriceChange": -65,
+                  "closed": false
+                },
+                {
+                  "id": "1973136",
+                  "slug": "nba-playoffs-rockets-vs-lakers-total-games-ou-5pt5",
+                  "question": "NBA季后赛：火箭 vs. 湖人 总场数 大/小于5.5",
+                  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nba-playoffs-rockets-vs-lakers-total-games-ou-8rRWxCOY3fGj.png",
+                  "outcomePrices": [
+                    "0.9955",
+                    "0.0045"
+                  ],
+                  "oneDayPriceChange": 0.6055,
+                  "events": [
+                    {
+                      "slug": "nba-playoffs-rockets-vs-lakers-total-games-ou-5pt5",
+                      "volume": 22253.52284,
+                      "commentCount": 2,
+                      "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nba-playoffs-rockets-vs-lakers-total-games-ou-8rRWxCOY3fGj.png"
+                    }
+                  ],
+                  "clobTokenIds": [
+                    "32827447760386343518492195398804272157361438819410183664129291456500185027503",
+                    "103850044332814069273801735258972879662789532531182183337228127155393912274816"
+                  ],
+                  "history": [
+                    {
+                      "t": 1777454403,
+                      "p": 0.39
+                    },
+                    {
+                      "t": 1777459204,
+                      "p": 0.385
+                    },
+                    {
+                      "t": 1777464008,
+                      "p": 0.385
+                    },
+                    {
+                      "t": 1777468804,
+                      "p": 0.385
+                    },
+                    {
+                      "t": 1777473604,
+                      "p": 0.385
+                    },
+                    {
+                      "t": 1777478405,
+                      "p": 0.385
+                    },
+                    {
+                      "t": 1777483204,
+                      "p": 0.34
+                    },
+                    {
+                      "t": 1777488007,
+                      "p": 0.345
+                    },
+                    {
+                      "t": 1777492806,
+                      "p": 0.345
+                    },
+                    {
+                      "t": 1777497605,
+                      "p": 0.345
+                    },
+                    {
+                      "t": 1777502404,
+                      "p": 0.35
+                    },
+                    {
+                      "t": 1777507213,
+                      "p": 0.33
+                    },
+                    {
+                      "t": 1777512004,
+                      "p": 0.33
+                    },
+                    {
+                      "t": 1777516804,
+                      "p": 0.42
+                    },
+                    {
+                      "t": 1777521604,
+                      "p": 0.58
+                    },
+                    {
+                      "t": 1777526405,
+                      "p": 0.996
+                    },
+                    {
+                      "t": 1777531204,
+                      "p": 0.996
+                    },
+                    {
+                      "t": 1777536004,
+                      "p": 0.996
+                    },
+                    {
+                      "t": 1777540805,
+                      "p": 0.9955
+                    },
+                    {
+                      "t": 1777540864,
+                      "p": 0.9955
+                    }
+                  ],
+                  "currentPrice": 0.9955,
+                  "livePriceChange": 61,
+                  "closed": false
+                },
+                {
+                  "id": "2090554",
+                  "slug": "printr-fdv-above-50m-one-day-after-launch",
+                  "question": "Printr FDV above $50M one day after launch?",
+                  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/printr-fdv-above-one-day-after-launch-YkPEWg8Y5PNr.jpg",
+                  "outcomePrices": [
+                    "0.225",
+                    "0.775"
+                  ],
+                  "oneDayPriceChange": -0.58,
+                  "events": [
+                    {
+                      "slug": "printr-fdv-above-one-day-after-launch",
+                      "volume": 56250.230359,
+                      "commentCount": 7,
+                      "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/printr-fdv-above-one-day-after-launch-YkPEWg8Y5PNr.jpg"
+                    }
+                  ],
+                  "clobTokenIds": [
+                    "10987659738103923751576451857393511188815777041806397936287080102144217252432",
+                    "6233751098421232003766159632167326717351761443134297387318347552843210481977"
+                  ],
+                  "history": [
+                    {
+                      "t": 1777454403,
+                      "p": 0.805
+                    },
+                    {
+                      "t": 1777459204,
+                      "p": 0.835
+                    },
+                    {
+                      "t": 1777464004,
+                      "p": 0.805
+                    },
+                    {
+                      "t": 1777468804,
+                      "p": 0.805
+                    },
+                    {
+                      "t": 1777473604,
+                      "p": 0.805
+                    },
+                    {
+                      "t": 1777478404,
+                      "p": 0.795
+                    },
+                    {
+                      "t": 1777483203,
+                      "p": 0.765
+                    },
+                    {
+                      "t": 1777488006,
+                      "p": 0.755
+                    },
+                    {
+                      "t": 1777492803,
+                      "p": 0.755
+                    },
+                    {
+                      "t": 1777497604,
+                      "p": 0.54
+                    },
+                    {
+                      "t": 1777502403,
+                      "p": 0.535
+                    },
+                    {
+                      "t": 1777507205,
+                      "p": 0.325
+                    },
+                    {
+                      "t": 1777512003,
+                      "p": 0.215
+                    },
+                    {
+                      "t": 1777516804,
+                      "p": 0.15
+                    },
+                    {
+                      "t": 1777521603,
+                      "p": 0.24
+                    },
+                    {
+                      "t": 1777526404,
+                      "p": 0.295
+                    },
+                    {
+                      "t": 1777531203,
+                      "p": 0.28
+                    },
+                    {
+                      "t": 1777536003,
+                      "p": 0.305
+                    },
+                    {
+                      "t": 1777540804,
+                      "p": 0.225
+                    },
+                    {
+                      "t": 1777540864,
+                      "p": 0.225
+                    }
+                  ],
+                  "currentPrice": 0.225,
+                  "livePriceChange": -58,
+                  "closed": false
+                },
+                {
+                  "id": "1706970",
+                  "slug": "will-hong-kong-have-between-160-170mm-of-precipitation-in-april-826",
+                  "question": "香港四月的降水量会在160-170毫米之间吗？",
+                  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/precipitation-in-hong-kong-in-march-ZJ5oq2Eiyz9P.jpg",
+                  "outcomePrices": [
+                    "0.978",
+                    "0.022"
+                  ],
+                  "oneDayPriceChange": 0.499,
+                  "events": [
+                    {
+                      "slug": "precipitation-in-hong-kong-in-april",
+                      "seriesSlug": "hong-kong-precipitation",
+                      "volume": 134057.284335,
+                      "commentCount": 0,
+                      "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/precipitation-in-hong-kong-in-march-ZJ5oq2Eiyz9P.jpg"
+                    }
+                  ],
+                  "clobTokenIds": [
+                    "2556232814217599030070702253678867727331230335745462815324829884113872749925",
+                    "74794637965815789002923980141515821859738301337820315174800323762152589335243"
+                  ],
+                  "history": [
+                    {
+                      "t": 1777454403,
+                      "p": 0.4835
+                    },
+                    {
+                      "t": 1777459205,
+                      "p": 0.324
+                    },
+                    {
+                      "t": 1777464011,
+                      "p": 0.0615
+                    },
+                    {
+                      "t": 1777468804,
+                      "p": 0.2595
+                    },
+                    {
+                      "t": 1777473604,
+                      "p": 0.516
+                    },
+                    {
+                      "t": 1777478406,
+                      "p": 0.632
+                    },
+                    {
+                      "t": 1777483204,
+                      "p": 0.939
+                    },
+                    {
+                      "t": 1777488007,
+                      "p": 0.943
+                    },
+                    {
+                      "t": 1777492808,
+                      "p": 0.9215
+                    },
+                    {
+                      "t": 1777497605,
+                      "p": 0.9165
+                    },
+                    {
+                      "t": 1777502404,
+                      "p": 0.725
+                    },
+                    {
+                      "t": 1777507215,
+                      "p": 0.9345
+                    },
+                    {
+                      "t": 1777512004,
+                      "p": 0.93
+                    },
+                    {
+                      "t": 1777516805,
+                      "p": 0.969
+                    },
+                    {
+                      "t": 1777521605,
+                      "p": 0.9555
+                    },
+                    {
+                      "t": 1777526405,
+                      "p": 0.9585
+                    },
+                    {
+                      "t": 1777531204,
+                      "p": 0.9495
+                    },
+                    {
+                      "t": 1777536005,
+                      "p": 0.9845
+                    },
+                    {
+                      "t": 1777540805,
+                      "p": 0.979
+                    },
+                    {
+                      "t": 1777540864,
+                      "p": 0.9875
+                    }
+                  ],
+                  "currentPrice": 0.9875,
+                  "livePriceChange": 51,
+                  "closed": false
+                },
+                {
+                  "id": "1283633",
+                  "slug": "will-the-democratic-party-win-the-la-06-house-seat",
+                  "question": "民主党会赢得洛杉矶第六区众议院席位吗？",
+                  "outcomePrices": [
+                    "0.435",
+                    "0.565"
+                  ],
+                  "oneDayPriceChange": -0.47,
+                  "events": [
+                    {
+                      "slug": "la-06-house-election-winner",
+                      "volume": 34030.327503,
+                      "commentCount": 0,
+                      "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/state_flags/LA.png"
+                    }
+                  ],
+                  "clobTokenIds": [
+                    "10527812993097872709394414368167833403731281477203524030944528898870068340952",
+                    "107123186012604052855208908135899113522955041303154283477481265941573313685260"
+                  ],
+                  "history": [
+                    {
+                      "t": 1777454403,
+                      "p": 0.905
+                    },
+                    {
+                      "t": 1777459204,
+                      "p": 0.905
+                    },
+                    {
+                      "t": 1777464004,
+                      "p": 0.905
+                    },
+                    {
+                      "t": 1777468804,
+                      "p": 0.905
+                    },
+                    {
+                      "t": 1777473604,
+                      "p": 0.38
+                    },
+                    {
+                      "t": 1777478404,
+                      "p": 0.525
+                    },
+                    {
+                      "t": 1777483203,
+                      "p": 0.59
+                    },
+                    {
+                      "t": 1777488006,
+                      "p": 0.7
+                    },
+                    {
+                      "t": 1777492803,
+                      "p": 0.715
+                    },
+                    {
+                      "t": 1777497604,
+                      "p": 0.71
+                    },
+                    {
+                      "t": 1777502403,
+                      "p": 0.68
+                    },
+                    {
+                      "t": 1777507205,
+                      "p": 0.67
+                    },
+                    {
+                      "t": 1777512003,
+                      "p": 0.65
+                    },
+                    {
+                      "t": 1777516804,
+                      "p": 0.67
+                    },
+                    {
+                      "t": 1777521603,
+                      "p": 0.625
+                    },
+                    {
+                      "t": 1777526404,
+                      "p": 0.42
+                    },
+                    {
+                      "t": 1777531203,
+                      "p": 0.45
+                    },
+                    {
+                      "t": 1777536003,
+                      "p": 0.43
+                    },
+                    {
+                      "t": 1777540804,
+                      "p": 0.44
+                    },
+                    {
+                      "t": 1777540864,
+                      "p": 0.44
+                    }
+                  ],
+                  "currentPrice": 0.44,
+                  "livePriceChange": -47,
+                  "closed": false
+                },
+                {
+                  "id": "2036170",
+                  "slug": "gaza-flotilla-enters-israeli-waters-by-31",
+                  "question": "加沙船队会在5月31日前进入以色列水域吗？",
+                  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/gaza-flotilla-enters-israeli-waters-by-31-MxC9agWuY3Jr.jpg",
+                  "outcomePrices": [
+                    "0.455",
+                    "0.545"
+                  ],
+                  "oneDayPriceChange": -0.315,
+                  "events": [
+                    {
+                      "slug": "gaza-flotilla-enters-israeli-waters-by-31",
+                      "volume": 66614.253834,
+                      "commentCount": 76,
+                      "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/gaza-flotilla-enters-israeli-waters-by-31-MxC9agWuY3Jr.jpg"
+                    }
+                  ],
+                  "clobTokenIds": [
+                    "68420615732869571322196691898010287912689328489139159285431162350194608464652",
+                    "40203232286098997828303623332446526965712119921880705531366744903399347717928"
+                  ],
+                  "history": [
+                    {
+                      "t": 1777454403,
+                      "p": 0.755
+                    },
+                    {
+                      "t": 1777459204,
+                      "p": 0.735
+                    },
+                    {
+                      "t": 1777464008,
+                      "p": 0.805
+                    },
+                    {
+                      "t": 1777468804,
+                      "p": 0.78
+                    },
+                    {
+                      "t": 1777473604,
+                      "p": 0.76
+                    },
+                    {
+                      "t": 1777478405,
+                      "p": 0.72
+                    },
+                    {
+                      "t": 1777483204,
+                      "p": 0.745
+                    },
+                    {
+                      "t": 1777488006,
+                      "p": 0.75
+                    },
+                    {
+                      "t": 1777492805,
+                      "p": 0.755
+                    },
+                    {
+                      "t": 1777497604,
+                      "p": 0.51
+                    },
+                    {
+                      "t": 1777502404,
+                      "p": 0.475
+                    },
+                    {
+                      "t": 1777507210,
+                      "p": 0.57
+                    },
+                    {
+                      "t": 1777512003,
+                      "p": 0.59
+                    },
+                    {
+                      "t": 1777516804,
+                      "p": 0.655
+                    },
+                    {
+                      "t": 1777521604,
+                      "p": 0.56
+                    },
+                    {
+                      "t": 1777526405,
+                      "p": 0.6
+                    },
+                    {
+                      "t": 1777531203,
+                      "p": 0.545
+                    },
+                    {
+                      "t": 1777536004,
+                      "p": 0.54
+                    },
+                    {
+                      "t": 1777540804,
+                      "p": 0.45
+                    },
+                    {
+                      "t": 1777540864,
+                      "p": 0.445
+                    }
+                  ],
+                  "currentPrice": 0.445,
+                  "livePriceChange": -31,
+                  "closed": false
+                },
+                {
+                  "id": "906596",
+                  "slug": "gensyn-fdv-above-600m-one-day-after-launch-397-966-144",
+                  "question": "Gensyn FDV在上线一天后超过6亿美元？",
+                  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/gensyn-fdv-above-one-day-after-launch-k4jAvOyGsAKv.jpg",
+                  "outcomePrices": [
+                    "0.135",
+                    "0.865"
+                  ],
+                  "oneDayPriceChange": -0.29,
+                  "events": [
+                    {
+                      "slug": "gensyn-fdv-above-one-day-after-launch",
+                      "volume": 1638844.569534,
+                      "commentCount": 49,
+                      "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/gensyn-fdv-above-one-day-after-launch-k4jAvOyGsAKv.jpg"
+                    }
+                  ],
+                  "clobTokenIds": [
+                    "101101625858935510994152869873088213062714890530116131353411379193297614599911",
+                    "103210765628553184348640546130290562927988637306637614245869307400286408816104"
+                  ],
+                  "history": [
+                    {
+                      "t": 1777454404,
+                      "p": 0.425
+                    },
+                    {
+                      "t": 1777459205,
+                      "p": 0.575
+                    },
+                    {
+                      "t": 1777464012,
+                      "p": 0.21
+                    },
+                    {
+                      "t": 1777468805,
+                      "p": 0.26
+                    },
+                    {
+                      "t": 1777473605,
+                      "p": 0.35
+                    },
+                    {
+                      "t": 1777478406,
+                      "p": 0.27
+                    },
+                    {
+                      "t": 1777483205,
+                      "p": 0.225
+                    },
+                    {
+                      "t": 1777488007,
+                      "p": 0.255
+                    },
+                    {
+                      "t": 1777492809,
+                      "p": 0.145
+                    },
+                    {
+                      "t": 1777497606,
+                      "p": 0.205
+                    },
+                    {
+                      "t": 1777502404,
+                      "p": 0.195
+                    },
+                    {
+                      "t": 1777507217,
+                      "p": 0.445
+                    },
+                    {
+                      "t": 1777512004,
+                      "p": 0.41
+                    },
+                    {
+                      "t": 1777516805,
+                      "p": 0.435
+                    },
+                    {
+                      "t": 1777521607,
+                      "p": 0.46
+                    },
+                    {
+                      "t": 1777526405,
+                      "p": 0.44
+                    },
+                    {
+                      "t": 1777531204,
+                      "p": 0.425
+                    },
+                    {
+                      "t": 1777536006,
+                      "p": 0.2
+                    },
+                    {
+                      "t": 1777540805,
+                      "p": 0.135
+                    },
+                    {
+                      "t": 1777540865,
+                      "p": 0.125
+                    }
+                  ],
+                  "currentPrice": 0.125,
+                  "livePriceChange": -30,
+                  "closed": false
+                },
+                {
+                  "id": "2109001",
+                  "slug": "james-comey-arrested-by-may-15-785-287",
+                  "question": "詹姆斯·科米会在5月15日前被逮捕吗？",
+                  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/james-comey-arrested-by-may-15-Oxx5ca4rh4W0.jpg",
+                  "outcomePrices": [
+                    "1",
+                    "0"
+                  ],
+                  "oneDayPriceChange": 0.2845,
+                  "events": [
+                    {
+                      "slug": "james-comey-arrested-by-may-15",
+                      "volume": 1372139.168668,
+                      "commentCount": 189,
+                      "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/james-comey-arrested-by-may-15-Oxx5ca4rh4W0.jpg"
+                    }
+                  ],
+                  "clobTokenIds": [
+                    "52654867087347567215122897511545252958473954706432767669870419553419278745269",
+                    "8364091734444172262367901782696018969139380916529661577118484693265634689584"
+                  ],
+                  "history": [
+                    {
+                      "t": 1777411203,
+                      "p": 0.74
+                    },
+                    {
+                      "t": 1777416004,
+                      "p": 0.875
+                    },
+                    {
+                      "t": 1777420807,
+                      "p": 0.865
+                    },
+                    {
+                      "t": 1777425603,
+                      "p": 0.84
+                    },
+                    {
+                      "t": 1777430403,
+                      "p": 0.87
+                    },
+                    {
+                      "t": 1777435204,
+                      "p": 0.875
+                    },
+                    {
+                      "t": 1777440003,
+                      "p": 0.895
+                    },
+                    {
+                      "t": 1777444804,
+                      "p": 0.875
+                    },
+                    {
+                      "t": 1777449604,
+                      "p": 0.77
+                    },
+                    {
+                      "t": 1777454403,
+                      "p": 0.805
+                    },
+                    {
+                      "t": 1777459204,
+                      "p": 0.765
+                    },
+                    {
+                      "t": 1777464008,
+                      "p": 0.715
+                    },
+                    {
+                      "t": 1777468804,
+                      "p": 0.925
+                    },
+                    {
+                      "t": 1777473604,
+                      "p": 0.915
+                    },
+                    {
+                      "t": 1777478405,
+                      "p": 0.925
+                    },
+                    {
+                      "t": 1777483204,
+                      "p": 0.99
+                    },
+                    {
+                      "t": 1777488007,
+                      "p": 0.995
+                    },
+                    {
+                      "t": 1777492807,
+                      "p": 0.9995
+                    },
+                    {
+                      "t": 1777497605,
+                      "p": 0.998
+                    }
+                  ],
+                  "currentPrice": 0.998,
+                  "livePriceChange": 26,
+                  "closed": true
+                },
+                {
+                  "id": "2007268",
+                  "slug": "nhl-playoffs-who-will-win-series-canadiens-vs-lightning",
+                  "question": "NHL Playoffs: Who Will Win Series? - Canadiens vs. Lightning ",
+                  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-playoffs-who-will-win-series-canadiens-vs-lightning-F24Ns5URkRMf.png",
+                  "outcomePrices": [
+                    "0.665",
+                    "0.335"
+                  ],
+                  "oneDayPriceChange": 0.27,
+                  "events": [
+                    {
+                      "slug": "nhl-playoffs-who-will-win-series-canadiens-vs-lightning",
+                      "volume": 93606.499254,
+                      "commentCount": 4,
+                      "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-playoffs-who-will-win-series-canadiens-vs-lightning-F24Ns5URkRMf.png"
+                    }
+                  ],
+                  "clobTokenIds": [
+                    "73353722662342990289981001091515897144819058003177208867036611740530556987426",
+                    "16867133451433068864617281085761272239210395619187146622985719936438723008805"
+                  ],
+                  "history": [
+                    {
+                      "t": 1777454403,
+                      "p": 0.395
+                    },
+                    {
+                      "t": 1777459204,
+                      "p": 0.395
+                    },
+                    {
+                      "t": 1777464004,
+                      "p": 0.395
+                    },
+                    {
+                      "t": 1777468804,
+                      "p": 0.395
+                    },
+                    {
+                      "t": 1777473604,
+                      "p": 0.395
+                    },
+                    {
+                      "t": 1777478404,
+                      "p": 0.38
+                    },
+                    {
+                      "t": 1777483203,
+                      "p": 0.38
+                    },
+                    {
+                      "t": 1777488006,
+                      "p": 0.38
+                    },
+                    {
+                      "t": 1777492803,
+                      "p": 0.385
+                    },
+                    {
+                      "t": 1777497604,
+                      "p": 0.385
+                    },
+                    {
+                      "t": 1777502403,
+                      "p": 0.385
+                    },
+                    {
+                      "t": 1777507205,
+                      "p": 0.425
+                    },
+                    {
+                      "t": 1777512003,
+                      "p": 0.475
+                    },
+                    {
+                      "t": 1777516804,
+                      "p": 0.67
+                    },
+                    {
+                      "t": 1777521603,
+                      "p": 0.67
+                    },
+                    {
+                      "t": 1777526404,
+                      "p": 0.66
+                    },
+                    {
+                      "t": 1777531203,
+                      "p": 0.66
+                    },
+                    {
+                      "t": 1777536003,
+                      "p": 0.66
+                    },
+                    {
+                      "t": 1777540804,
+                      "p": 0.665
+                    },
+                    {
+                      "t": 1777540864,
+                      "p": 0.665
+                    }
+                  ],
+                  "currentPrice": 0.665,
+                  "livePriceChange": 27,
+                  "closed": false
+                },
+                {
+                  "id": "1115677",
+                  "slug": "jerome-powell-out-from-fed-board-by-december-31",
+                  "question": "鲍威尔将在12月31日前离开美联储理事会吗？",
+                  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/jerome-powell-out-from-fed-board-by-Z9UI_OPBL8el.jpg",
+                  "outcomePrices": [
+                    "0.535",
+                    "0.465"
+                  ],
+                  "oneDayPriceChange": -0.23,
+                  "events": [
+                    {
+                      "slug": "jerome-powell-out-from-fed-board-by",
+                      "volume": 219510.924447001,
+                      "commentCount": 12,
+                      "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/jerome-powell-out-from-fed-board-by-Z9UI_OPBL8el.jpg"
+                    }
+                  ],
+                  "clobTokenIds": [
+                    "22801850234146882171623964647122386741389461559306988855789494206399090605744",
+                    "60429019529811633285660551458326478341862682357270076981022045678880535964564"
+                  ],
+                  "history": [
+                    {
+                      "t": 1777454404,
+                      "p": 0.765
+                    },
+                    {
+                      "t": 1777459205,
+                      "p": 0.765
+                    },
+                    {
+                      "t": 1777464011,
+                      "p": 0.825
+                    },
+                    {
+                      "t": 1777468804,
+                      "p": 0.825
+                    },
+                    {
+                      "t": 1777473605,
+                      "p": 0.82
+                    },
+                    {
+                      "t": 1777478406,
+                      "p": 0.82
+                    },
+                    {
+                      "t": 1777483205,
+                      "p": 0.805
+                    },
+                    {
+                      "t": 1777488007,
+                      "p": 0.67
+                    },
+                    {
+                      "t": 1777492808,
+                      "p": 0.675
+                    },
+                    {
+                      "t": 1777497606,
+                      "p": 0.675
+                    },
+                    {
+                      "t": 1777502404,
+                      "p": 0.675
+                    },
+                    {
+                      "t": 1777507215,
+                      "p": 0.645
+                    },
+                    {
+                      "t": 1777512004,
+                      "p": 0.655
+                    },
+                    {
+                      "t": 1777516805,
+                      "p": 0.625
+                    },
+                    {
+                      "t": 1777521606,
+                      "p": 0.625
+                    },
+                    {
+                      "t": 1777526405,
+                      "p": 0.625
+                    },
+                    {
+                      "t": 1777531204,
+                      "p": 0.545
+                    },
+                    {
+                      "t": 1777536006,
+                      "p": 0.535
+                    },
+                    {
+                      "t": 1777540805,
+                      "p": 0.535
+                    },
+                    {
+                      "t": 1777540865,
+                      "p": 0.535
+                    }
+                  ],
+                  "currentPrice": 0.535,
+                  "livePriceChange": -23,
+                  "closed": false
+                },
+                {
+                  "id": "1962712",
+                  "slug": "megaeth-fdv-above-1pt6b-one-day-after-launch",
+                  "question": "MegaETH FDV在上线一天后超过16亿美元？",
+                  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/megaeth-market-cap-fdv-one-day-after-launch-KzYK3qwuIK8t.jpg",
+                  "outcomePrices": [
+                    "0.705",
+                    "0.295"
+                  ],
+                  "oneDayPriceChange": 0.23,
+                  "events": [
+                    {
+                      "slug": "megaeth-fdv-above-one-day-after-launch",
+                      "volume": 164567.654065,
+                      "commentCount": 5,
+                      "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/megaeth-market-cap-fdv-one-day-after-launch-KzYK3qwuIK8t.jpg"
+                    }
+                  ],
+                  "clobTokenIds": [
+                    "80631219273080430809608720113838601477449120363216827412981200702778007466470",
+                    "107081595676524168656433455164315712788593348012064764815207864747782790575659"
+                  ],
+                  "history": [
+                    {
+                      "t": 1777454403,
+                      "p": 0.475
+                    },
+                    {
+                      "t": 1777459204,
+                      "p": 0.47
+                    },
+                    {
+                      "t": 1777464008,
+                      "p": 0.47
+                    },
+                    {
+                      "t": 1777468804,
+                      "p": 0.47
+                    },
+                    {
+                      "t": 1777473604,
+                      "p": 0.475
+                    },
+                    {
+                      "t": 1777478405,
+                      "p": 0.475
+                    },
+                    {
+                      "t": 1777483204,
+                      "p": 0.46
+                    },
+                    {
+                      "t": 1777488007,
+                      "p": 0.475
+                    },
+                    {
+                      "t": 1777492806,
+                      "p": 0.485
+                    },
+                    {
+                      "t": 1777497605,
+                      "p": 0.49
+                    },
+                    {
+                      "t": 1777502404,
+                      "p": 0.49
+                    },
+                    {
+                      "t": 1777507213,
+                      "p": 0.485
+                    },
+                    {
+                      "t": 1777512004,
+                      "p": 0.52
+                    },
+                    {
+                      "t": 1777516804,
+                      "p": 0.525
+                    },
+                    {
+                      "t": 1777521604,
+                      "p": 0.58
+                    },
+                    {
+                      "t": 1777526405,
+                      "p": 0.65
+                    },
+                    {
+                      "t": 1777531204,
+                      "p": 0.625
+                    },
+                    {
+                      "t": 1777536004,
+                      "p": 0.705
+                    },
+                    {
+                      "t": 1777540805,
+                      "p": 0.705
+                    },
+                    {
+                      "t": 1777540864,
+                      "p": 0.705
+                    }
+                  ],
+                  "currentPrice": 0.705,
+                  "livePriceChange": 23,
+                  "closed": false
+                },
+                {
+                  "id": "1004371",
+                  "slug": "will-the-communist-party-of-india-marxist-cpim-win-the-most-seats-in-the-2026-kerala-legislative-assembly-election",
+                  "question": "印度共产党（马克思主义）（CPI(M)）会在2026年喀拉拉邦立法议会选举中赢得最多席位吗？",
+                  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-the-communist-party-of-india-cpi-win-the-most-seats-in-the-2026-west-bengal-legislative-assembly-election-dQD_ZSLt_qX-.png",
+                  "outcomePrices": [
+                    "0.325",
+                    "0.675"
+                  ],
+                  "oneDayPriceChange": -0.175,
+                  "events": [
+                    {
+                      "slug": "kerala-legislative-assembly-election-winner",
+                      "volume": 371316.84972,
+                      "commentCount": 137,
+                      "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/kerala-legislative-assembly-election-winner-8bBW7mDk80a3.jpg"
+                    }
+                  ],
+                  "clobTokenIds": [
+                    "16487792108782147323001364417434257056129967800842217129495003874581275475296",
+                    "71950603570058887395769446580883926016705973995702222097799020678890476677556"
+                  ],
+                  "history": [
+                    {
+                      "t": 1777454403,
+                      "p": 0.5
+                    },
+                    {
+                      "t": 1777459204,
+                      "p": 0.495
+                    },
+                    {
+                      "t": 1777464010,
+                      "p": 0.39
+                    },
+                    {
+                      "t": 1777468804,
+                      "p": 0.4
+                    },
+                    {
+                      "t": 1777473604,
+                      "p": 0.28
+                    },
+                    {
+                      "t": 1777478405,
+                      "p": 0.34
+                    },
+                    {
+                      "t": 1777483204,
+                      "p": 0.335
+                    },
+                    {
+                      "t": 1777488007,
+                      "p": 0.38
+                    },
+                    {
+                      "t": 1777492807,
+                      "p": 0.37
+                    },
+                    {
+                      "t": 1777497605,
+                      "p": 0.345
+                    },
+                    {
+                      "t": 1777502404,
+                      "p": 0.35
+                    },
+                    {
+                      "t": 1777507213,
+                      "p": 0.35
+                    },
+                    {
+                      "t": 1777512004,
+                      "p": 0.35
+                    },
+                    {
+                      "t": 1777516804,
+                      "p": 0.35
+                    },
+                    {
+                      "t": 1777521605,
+                      "p": 0.35
+                    },
+                    {
+                      "t": 1777526405,
+                      "p": 0.35
+                    },
+                    {
+                      "t": 1777531204,
+                      "p": 0.335
+                    },
+                    {
+                      "t": 1777536005,
+                      "p": 0.325
+                    },
+                    {
+                      "t": 1777540805,
+                      "p": 0.325
+                    },
+                    {
+                      "t": 1777540864,
+                      "p": 0.325
+                    }
+                  ],
+                  "currentPrice": 0.325,
+                  "livePriceChange": -17,
+                  "closed": false
+                },
+                {
+                  "id": "1343892",
+                  "slug": "will-the-bank-of-mexico-announce-no-change-at-the-may-meeting",
+                  "question": "墨西哥央行会在五月会议上宣布维持不变吗？",
+                  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/bank-of-mexico-decision-in-december-e19G0aY7kK63.png",
+                  "outcomePrices": [
+                    "0.08",
+                    "0.92"
+                  ],
+                  "oneDayPriceChange": -0.165,
+                  "events": [
+                    {
+                      "slug": "bank-of-mexico-decision-in-may",
+                      "seriesSlug": "bank-of-mexico-decision",
+                      "volume": 184535.745096,
+                      "commentCount": 0,
+                      "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/bank-of-mexico-decision-in-december-e19G0aY7kK63.png"
+                    }
+                  ],
+                  "clobTokenIds": [
+                    "51879356623960339702517935610541417453102128871576127477151302298376463079921",
+                    "111818479229240828290208367364714178426200902608714241010568675631099799914850"
+                  ],
+                  "history": [
+                    {
+                      "t": 1777454403,
+                      "p": 0.245
+                    },
+                    {
+                      "t": 1777459204,
+                      "p": 0.215
+                    },
+                    {
+                      "t": 1777464004,
+                      "p": 0.205
+                    },
+                    {
+                      "t": 1777468804,
+                      "p": 0.19
+                    },
+                    {
+                      "t": 1777473604,
+                      "p": 0.125
+                    },
+                    {
+                      "t": 1777478404,
+                      "p": 0.115
+                    },
+                    {
+                      "t": 1777483203,
+                      "p": 0.175
+                    },
+                    {
+                      "t": 1777488006,
+                      "p": 0.1
+                    },
+                    {
+                      "t": 1777492803,
+                      "p": 0.085
+                    },
+                    {
+                      "t": 1777497604,
+                      "p": 0.085
+                    },
+                    {
+                      "t": 1777502403,
+                      "p": 0.065
+                    },
+                    {
+                      "t": 1777507205,
+                      "p": 0.075
+                    },
+                    {
+                      "t": 1777512003,
+                      "p": 0.08
+                    },
+                    {
+                      "t": 1777516804,
+                      "p": 0.08
+                    },
+                    {
+                      "t": 1777521603,
+                      "p": 0.08
+                    },
+                    {
+                      "t": 1777526404,
+                      "p": 0.08
+                    },
+                    {
+                      "t": 1777531203,
+                      "p": 0.08
+                    },
+                    {
+                      "t": 1777536003,
+                      "p": 0.08
+                    },
+                    {
+                      "t": 1777540804,
+                      "p": 0.08
+                    },
+                    {
+                      "t": 1777540864,
+                      "p": 0.08
+                    }
+                  ],
+                  "currentPrice": 0.08,
+                  "livePriceChange": -17,
+                  "closed": false
+                },
+                {
+                  "id": "1299187",
+                  "slug": "megaeth-market-cap-fdv-1pt5b-one-day-after-launch-371-844-879-681",
+                  "question": "MegaETH市值（FDV）在上线一天后超过15亿美元？",
+                  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/megaeth-market-cap-fdv-one-day-after-launch-KzYK3qwuIK8t.jpg",
+                  "outcomePrices": [
+                    "0.745",
+                    "0.255"
+                  ],
+                  "oneDayPriceChange": 0.16,
+                  "events": [
+                    {
+                      "slug": "megaeth-market-cap-fdv-one-day-after-launch",
+                      "volume": 22510407.4879791,
+                      "commentCount": 303,
+                      "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/megaeth-market-cap-fdv-one-day-after-launch-KzYK3qwuIK8t.jpg"
+                    }
+                  ],
+                  "clobTokenIds": [
+                    "59361386662140736273790755583050126642583489495616165418126619457111736694733",
+                    "45579185828186393592125679219182708166582222781958089303132510785428183891796"
+                  ],
+                  "history": [
+                    {
+                      "t": 1777454403,
+                      "p": 0.585
+                    },
+                    {
+                      "t": 1777459204,
+                      "p": 0.635
+                    },
+                    {
+                      "t": 1777464004,
+                      "p": 0.635
+                    },
+                    {
+                      "t": 1777468804,
+                      "p": 0.625
+                    },
+                    {
+                      "t": 1777473604,
+                      "p": 0.625
+                    },
+                    {
+                      "t": 1777478404,
+                      "p": 0.625
+                    },
+                    {
+                      "t": 1777483203,
+                      "p": 0.605
+                    },
+                    {
+                      "t": 1777488006,
+                      "p": 0.585
+                    },
+                    {
+                      "t": 1777492803,
+                      "p": 0.585
+                    },
+                    {
+                      "t": 1777497604,
+                      "p": 0.585
+                    },
+                    {
+                      "t": 1777502403,
+                      "p": 0.59
+                    },
+                    {
+                      "t": 1777507205,
+                      "p": 0.59
+                    },
+                    {
+                      "t": 1777512003,
+                      "p": 0.595
+                    },
+                    {
+                      "t": 1777516804,
+                      "p": 0.595
+                    },
+                    {
+                      "t": 1777521603,
+                      "p": 0.705
+                    },
+                    {
+                      "t": 1777526404,
+                      "p": 0.685
+                    },
+                    {
+                      "t": 1777531203,
+                      "p": 0.685
+                    },
+                    {
+                      "t": 1777536003,
+                      "p": 0.695
+                    },
+                    {
+                      "t": 1777540804,
+                      "p": 0.745
+                    },
+                    {
+                      "t": 1777540864,
+                      "p": 0.745
+                    }
+                  ],
+                  "currentPrice": 0.745,
+                  "livePriceChange": 16,
+                  "closed": false
+                },
+                {
+                  "id": "1940162",
+                  "slug": "will-metas-q1-headcount-be-above-77000",
+                  "question": "Meta第一季度的员工人数会超过77000吗？",
+                  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/meta-q1-headcount-above-P6LKNIs2xEQE.png",
+                  "outcomePrices": [
+                    "0.975",
+                    "0.025"
+                  ],
+                  "oneDayPriceChange": 0.155,
+                  "events": [
+                    {
+                      "slug": "meta-headcount-above-in-q1",
+                      "volume": 78596.410481,
+                      "commentCount": 0,
+                      "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/meta-q1-headcount-above-P6LKNIs2xEQE.png"
+                    }
+                  ],
+                  "clobTokenIds": [
+                    "75222515743151609307356875456173240921809136397953875598654528392887953196467",
+                    "105142008094916364383148328395017313391216176446146247052791314370334168545378"
+                  ],
+                  "history": [
+                    {
+                      "t": 1777454403,
+                      "p": 0.82
+                    },
+                    {
+                      "t": 1777459205,
+                      "p": 0.56
+                    },
+                    {
+                      "t": 1777464011,
+                      "p": 0.56
+                    },
+                    {
+                      "t": 1777468804,
+                      "p": 0.56
+                    },
+                    {
+                      "t": 1777473605,
+                      "p": 0.56
+                    },
+                    {
+                      "t": 1777478406,
+                      "p": 0.56
+                    },
+                    {
+                      "t": 1777483204,
+                      "p": 0.56
+                    },
+                    {
+                      "t": 1777488007,
+                      "p": 0.555
+                    },
+                    {
+                      "t": 1777492808,
+                      "p": 0.555
+                    },
+                    {
+                      "t": 1777497605,
+                      "p": 0.945
+                    },
+                    {
+                      "t": 1777502404,
+                      "p": 0.9945
+                    },
+                    {
+                      "t": 1777507215,
+                      "p": 0.995
+                    },
+                    {
+                      "t": 1777512004,
+                      "p": 0.995
+                    },
+                    {
+                      "t": 1777516805,
+                      "p": 0.995
+                    },
+                    {
+                      "t": 1777521605,
+                      "p": 0.995
+                    },
+                    {
+                      "t": 1777526405,
+                      "p": 0.985
+                    },
+                    {
+                      "t": 1777531204,
+                      "p": 0.985
+                    },
+                    {
+                      "t": 1777536005,
+                      "p": 0.975
+                    },
+                    {
+                      "t": 1777540805,
+                      "p": 0.975
+                    },
+                    {
+                      "t": 1777540864,
+                      "p": 0.975
+                    }
+                  ],
+                  "currentPrice": 0.975,
+                  "livePriceChange": 16,
+                  "closed": false
+                },
+                {
+                  "id": "1334671",
+                  "slug": "gemini-3pt5-released-by-june-30-224-585-669",
+                  "question": "6月30日前发布Gemini 3.5？",
+                  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/gemini-3pt0-released-by-Jgab86ADS9yM.png",
+                  "outcomePrices": [
+                    "0.47",
+                    "0.53"
+                  ],
+                  "oneDayPriceChange": 0.15,
+                  "events": [
+                    {
+                      "slug": "gemini-3pt5-released-by-june-30",
+                      "volume": 915561.771096998,
+                      "commentCount": 52,
+                      "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/gemini-3pt0-released-by-Jgab86ADS9yM.png"
+                    }
+                  ],
+                  "clobTokenIds": [
+                    "51822995006109447117727407905099088954173174697836793323514203793005646086701",
+                    "35777823205327671343362789810402218735540155227991612385528144626984929923164"
+                  ],
+                  "history": [
+                    {
+                      "t": 1777454403,
+                      "p": 0.32
+                    },
+                    {
+                      "t": 1777459204,
+                      "p": 0.325
+                    },
+                    {
+                      "t": 1777464008,
+                      "p": 0.325
+                    },
+                    {
+                      "t": 1777468804,
+                      "p": 0.325
+                    },
+                    {
+                      "t": 1777473604,
+                      "p": 0.41
+                    },
+                    {
+                      "t": 1777478405,
+                      "p": 0.36
+                    },
+                    {
+                      "t": 1777483204,
+                      "p": 0.355
+                    },
+                    {
+                      "t": 1777488007,
+                      "p": 0.38
+                    },
+                    {
+                      "t": 1777492806,
+                      "p": 0.39
+                    },
+                    {
+                      "t": 1777497605,
+                      "p": 0.385
+                    },
+                    {
+                      "t": 1777502404,
+                      "p": 0.385
+                    },
+                    {
+                      "t": 1777507213,
+                      "p": 0.385
+                    },
+                    {
+                      "t": 1777512004,
+                      "p": 0.395
+                    },
+                    {
+                      "t": 1777516804,
+                      "p": 0.395
+                    },
+                    {
+                      "t": 1777521604,
+                      "p": 0.38
+                    },
+                    {
+                      "t": 1777526405,
+                      "p": 0.38
+                    },
+                    {
+                      "t": 1777531204,
+                      "p": 0.465
+                    },
+                    {
+                      "t": 1777536004,
+                      "p": 0.465
+                    },
+                    {
+                      "t": 1777540805,
+                      "p": 0.47
+                    },
+                    {
+                      "t": 1777540864,
+                      "p": 0.47
+                    }
+                  ],
+                  "currentPrice": 0.47,
+                  "livePriceChange": 15,
+                  "closed": false
+                },
+                {
+                  "id": "1439550",
+                  "slug": "fed-rate-cut-by-october-2026-meeting-199-747",
+                  "question": "美联储将在2026年10月会议前降息吗？",
+                  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/fed-rate-cut-by-629-5NVm8vGZZ6U6.jpg",
+                  "outcomePrices": [
+                    "0.313",
+                    "0.687"
+                  ],
+                  "oneDayPriceChange": -0.1485,
+                  "events": [
+                    {
+                      "slug": "fed-rate-cut-by-629",
+                      "volume": 1543209.226235,
+                      "commentCount": 17,
+                      "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/fed-rate-cut-by-629-5NVm8vGZZ6U6.jpg"
+                    }
+                  ],
+                  "clobTokenIds": [
+                    "44988145651657165705599548149732848615827306030030294113026805446816695818477",
+                    "77520157601571841058805902692716742771926816526078241374918912770703681864753"
+                  ],
+                  "history": [
+                    {
+                      "t": 1777454403,
+                      "p": 0.4615
+                    },
+                    {
+                      "t": 1777459204,
+                      "p": 0.4615
+                    },
+                    {
+                      "t": 1777464008,
+                      "p": 0.4615
+                    },
+                    {
+                      "t": 1777468804,
+                      "p": 0.4645
+                    },
+                    {
+                      "t": 1777473604,
+                      "p": 0.47
+                    },
+                    {
+                      "t": 1777478405,
+                      "p": 0.47
+                    },
+                    {
+                      "t": 1777483204,
+                      "p": 0.4705
+                    },
+                    {
+                      "t": 1777488007,
+                      "p": 0.4705
+                    },
+                    {
+                      "t": 1777492807,
+                      "p": 0.3915
+                    },
+                    {
+                      "t": 1777497605,
+                      "p": 0.3945
+                    },
+                    {
+                      "t": 1777502404,
+                      "p": 0.2065
+                    },
+                    {
+                      "t": 1777507213,
+                      "p": 0.203
+                    },
+                    {
+                      "t": 1777512004,
+                      "p": 0.2445
+                    },
+                    {
+                      "t": 1777516804,
+                      "p": 0.2955
+                    },
+                    {
+                      "t": 1777521604,
+                      "p": 0.2955
+                    },
+                    {
+                      "t": 1777526405,
+                      "p": 0.3285
+                    },
+                    {
+                      "t": 1777531204,
+                      "p": 0.333
+                    },
+                    {
+                      "t": 1777536004,
+                      "p": 0.3115
+                    },
+                    {
+                      "t": 1777540805,
+                      "p": 0.313
+                    },
+                    {
+                      "t": 1777540864,
+                      "p": 0.312
+                    }
+                  ],
+                  "currentPrice": 0.312,
+                  "livePriceChange": -15,
+                  "closed": false
+                },
+                {
+                  "id": "2099616",
+                  "slug": "will-donald-trump-visit-china-on-may-13-2026",
+                  "question": "Will Donald Trump visit China on May 13, 2026?",
+                  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-trump-visit-china-by-october-31-ujqWMja0Uizt.png",
+                  "outcomePrices": [
+                    "0.405",
+                    "0.595"
+                  ],
+                  "oneDayPriceChange": -0.145,
+                  "events": [
+                    {
+                      "slug": "will-trump-visit-china-on",
+                      "volume": 106721.349779,
+                      "commentCount": 0,
+                      "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-trump-visit-china-by-october-31-ujqWMja0Uizt.png"
+                    }
+                  ],
+                  "clobTokenIds": [
+                    "38598469472487548371443916494986039124578083480669683171887238749470327285664",
+                    "16869348738296605804494608992730402685243565450809373252783459642536357794437"
+                  ],
+                  "history": [
+                    {
+                      "t": 1777454403,
+                      "p": 0.55
+                    },
+                    {
+                      "t": 1777459204,
+                      "p": 0.475
+                    },
+                    {
+                      "t": 1777464008,
+                      "p": 0.375
+                    },
+                    {
+                      "t": 1777468804,
+                      "p": 0.41
+                    },
+                    {
+                      "t": 1777473604,
+                      "p": 0.325
+                    },
+                    {
+                      "t": 1777478405,
+                      "p": 0.345
+                    },
+                    {
+                      "t": 1777483204,
+                      "p": 0.38
+                    },
+                    {
+                      "t": 1777488007,
+                      "p": 0.37
+                    },
+                    {
+                      "t": 1777492807,
+                      "p": 0.36
+                    },
+                    {
+                      "t": 1777497605,
+                      "p": 0.36
+                    },
+                    {
+                      "t": 1777502404,
+                      "p": 0.345
+                    },
+                    {
+                      "t": 1777507213,
+                      "p": 0.385
+                    },
+                    {
+                      "t": 1777512004,
+                      "p": 0.375
+                    },
+                    {
+                      "t": 1777516804,
+                      "p": 0.385
+                    },
+                    {
+                      "t": 1777521604,
+                      "p": 0.385
+                    },
+                    {
+                      "t": 1777526405,
+                      "p": 0.385
+                    },
+                    {
+                      "t": 1777531204,
+                      "p": 0.405
+                    },
+                    {
+                      "t": 1777536004,
+                      "p": 0.41
+                    },
+                    {
+                      "t": 1777540805,
+                      "p": 0.405
+                    },
+                    {
+                      "t": 1777540864,
+                      "p": 0.405
+                    }
+                  ],
+                  "currentPrice": 0.405,
+                  "livePriceChange": -14,
+                  "closed": false
+                },
+                {
+                  "id": "1910397",
+                  "slug": "will-iran-strike-bahrain-by-april-30-2026-553",
+                  "question": "在2026年4月30日之前，伊朗会打击巴林吗？",
+                  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/which-countries-will-iran-strike-in-march-00ZEvGOWjiXu.png",
+                  "outcomePrices": [
+                    "0.021",
+                    "0.979"
+                  ],
+                  "oneDayPriceChange": -0.124,
+                  "events": [
+                    {
+                      "slug": "iran-military-action-against-by-april-30",
+                      "seriesSlug": "iran-military-action-against",
+                      "volume": 5039356.180486,
+                      "commentCount": 1,
+                      "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/which-countries-will-iran-strike-in-march-00ZEvGOWjiXu.png"
+                    }
+                  ],
+                  "clobTokenIds": [
+                    "5225827609822868868145793265213508113788673663978980382143600892260812273680",
+                    "96521718224322877043588342873811544697584704332159333818377097077631341174371"
+                  ],
+                  "history": [
+                    {
+                      "t": 1777454404,
+                      "p": 0.145
+                    },
+                    {
+                      "t": 1777459205,
+                      "p": 0.15
+                    },
+                    {
+                      "t": 1777464012,
+                      "p": 0.13
+                    },
+                    {
+                      "t": 1777468805,
+                      "p": 0.13
+                    },
+                    {
+                      "t": 1777473605,
+                      "p": 0.115
+                    },
+                    {
+                      "t": 1777478406,
+                      "p": 0.11
+                    },
+                    {
+                      "t": 1777483205,
+                      "p": 0.11
+                    },
+                    {
+                      "t": 1777488007,
+                      "p": 0.11
+                    },
+                    {
+                      "t": 1777492809,
+                      "p": 0.11
+                    },
+                    {
+                      "t": 1777497606,
+                      "p": 0.09
+                    },
+                    {
+                      "t": 1777502404,
+                      "p": 0.065
+                    },
+                    {
+                      "t": 1777507217,
+                      "p": 0.065
+                    },
+                    {
+                      "t": 1777512004,
+                      "p": 0.0245
+                    },
+                    {
+                      "t": 1777516805,
+                      "p": 0.017
+                    },
+                    {
+                      "t": 1777521607,
+                      "p": 0.0115
+                    },
+                    {
+                      "t": 1777526405,
+                      "p": 0.0115
+                    },
+                    {
+                      "t": 1777531204,
+                      "p": 0.033
+                    },
+                    {
+                      "t": 1777536006,
+                      "p": 0.0315
+                    },
+                    {
+                      "t": 1777540805,
+                      "p": 0.0175
+                    },
+                    {
+                      "t": 1777540865,
+                      "p": 0.0175
+                    }
+                  ],
+                  "currentPrice": 0.0175,
+                  "livePriceChange": -12,
+                  "closed": false
+                },
+                {
+                  "id": "2109449",
+                  "slug": "us-x-iran-diplomatic-meeting-by-may-31-2026",
+                  "question": "美国与伊朗在2026年5月31日前举行外交会谈？",
+                  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-x-iran-meeting-by-9btZGbUg-ikA.jpg",
+                  "outcomePrices": [
+                    "0.455",
+                    "0.545"
+                  ],
+                  "oneDayPriceChange": -0.12,
+                  "events": [
+                    {
+                      "slug": "us-x-iran-diplomatic-meeting-by-329",
+                      "seriesSlug": "us-x-iran-diplomatic-meeting",
+                      "volume": 27832760.9722759,
+                      "commentCount": 5,
+                      "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-x-iran-meeting-by-9btZGbUg-ikA.jpg"
+                    }
+                  ],
+                  "clobTokenIds": [
+                    "66943183309609126145267595186770848206539060697362778426839241692667281922055",
+                    "35428732770316979266845984542877967790332023935693306294039545046023081753345"
+                  ],
+                  "history": [
+                    {
+                      "t": 1777454403,
+                      "p": 0.575
+                    },
+                    {
+                      "t": 1777459205,
+                      "p": 0.545
+                    },
+                    {
+                      "t": 1777464011,
+                      "p": 0.535
+                    },
+                    {
+                      "t": 1777468804,
+                      "p": 0.54
+                    },
+                    {
+                      "t": 1777473604,
+                      "p": 0.525
+                    },
+                    {
+                      "t": 1777478406,
+                      "p": 0.52
+                    },
+                    {
+                      "t": 1777483204,
+                      "p": 0.52
+                    },
+                    {
+                      "t": 1777488007,
+                      "p": 0.515
+                    },
+                    {
+                      "t": 1777492808,
+                      "p": 0.425
+                    },
+                    {
+                      "t": 1777497605,
+                      "p": 0.445
+                    },
+                    {
+                      "t": 1777502404,
+                      "p": 0.53
+                    },
+                    {
+                      "t": 1777507215,
+                      "p": 0.465
+                    },
+                    {
+                      "t": 1777512004,
+                      "p": 0.465
+                    },
+                    {
+                      "t": 1777516805,
+                      "p": 0.47
+                    },
+                    {
+                      "t": 1777521605,
+                      "p": 0.475
+                    },
+                    {
+                      "t": 1777526405,
+                      "p": 0.48
+                    },
+                    {
+                      "t": 1777531204,
+                      "p": 0.465
+                    },
+                    {
+                      "t": 1777536005,
+                      "p": 0.455
+                    },
+                    {
+                      "t": 1777540805,
+                      "p": 0.455
+                    },
+                    {
+                      "t": 1777540864,
+                      "p": 0.455
+                    }
+                  ],
+                  "currentPrice": 0.455,
+                  "livePriceChange": -11,
+                  "closed": false
+                },
+                {
+                  "id": "1809560",
+                  "slug": "strait-of-hormuz-traffic-returns-to-normal-by-end-of-may",
+                  "question": "霍尔木兹海峡的交通将在五月底恢复正常吗？",
+                  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-ships-transit-the-strait-of-hormuz-on-any-day-in-march-ERARnetK0FJm.jpg",
+                  "outcomePrices": [
+                    "0.235",
+                    "0.765"
+                  ],
+                  "oneDayPriceChange": -0.12,
+                  "events": [
+                    {
+                      "slug": "strait-of-hormuz-traffic-returns-to-normal-by-end-of-may",
+                      "seriesSlug": "hormuz-traffic-returns-to-normal",
+                      "volume": 3932225.13821797,
+                      "commentCount": 0,
+                      "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-ships-transit-the-strait-of-hormuz-on-any-day-in-march-ERARnetK0FJm.jpg"
+                    }
+                  ],
+                  "clobTokenIds": [
+                    "75845920741796858670183364159540464375486880005358999101126589340494255300090",
+                    "100297578629699403208665948730031291871216767534595550828919035864255991611215"
+                  ],
+                  "history": [
+                    {
+                      "t": 1777454404,
+                      "p": 0.355
+                    },
+                    {
+                      "t": 1777459205,
+                      "p": 0.355
+                    },
+                    {
+                      "t": 1777464012,
+                      "p": 0.355
+                    },
+                    {
+                      "t": 1777468804,
+                      "p": 0.355
+                    },
+                    {
+                      "t": 1777473605,
+                      "p": 0.335
+                    },
+                    {
+                      "t": 1777478406,
+                      "p": 0.305
+                    },
+                    {
+                      "t": 1777483205,
+                      "p": 0.295
+                    },
+                    {
+                      "t": 1777488007,
+                      "p": 0.275
+                    },
+                    {
+                      "t": 1777492808,
+                      "p": 0.275
+                    },
+                    {
+                      "t": 1777497606,
+                      "p": 0.285
+                    },
+                    {
+                      "t": 1777502404,
+                      "p": 0.28
+                    },
+                    {
+                      "t": 1777507215,
+                      "p": 0.275
+                    },
+                    {
+                      "t": 1777512004,
+                      "p": 0.285
+                    },
+                    {
+                      "t": 1777516805,
+                      "p": 0.275
+                    },
+                    {
+                      "t": 1777521606,
+                      "p": 0.265
+                    },
+                    {
+                      "t": 1777526405,
+                      "p": 0.265
+                    },
+                    {
+                      "t": 1777531204,
+                      "p": 0.265
+                    },
+                    {
+                      "t": 1777536006,
+                      "p": 0.265
+                    },
+                    {
+                      "t": 1777540805,
+                      "p": 0.235
+                    },
+                    {
+                      "t": 1777540865,
+                      "p": 0.235
+                    }
+                  ],
+                  "currentPrice": 0.235,
+                  "livePriceChange": -12,
+                  "closed": false
+                }
+              ]
+            },
+            "dataUpdateCount": 1,
+            "dataUpdatedAt": 1777540895265,
+            "error": null,
+            "errorUpdateCount": 0,
+            "errorUpdatedAt": 0,
+            "fetchFailureCount": 0,
+            "fetchFailureReason": null,
+            "fetchMeta": null,
+            "isInvalidated": false,
+            "status": "success",
+            "fetchStatus": "idle"
+          },
+          "queryKey": [
+            "biggest-movers",
+            "all"
+          ],
+          "queryHash": "[\"biggest-movers\",\"all\"]"
+        }
+      ]
+    },
+    "messages": {
+      "navbar": {
+        "home": "首页",
+        "search": "搜索",
+        "trending": "热门",
+        "breaking": "突发",
+        "new": "最新",
+        "more": "更多",
+        "activity": "动态",
+        "leaderboard": "排行榜",
+        "dashboards": "仪表板",
+        "rewards": "奖励",
+        "apis": "API 接口",
+        "darkMode": "深色模式",
+        "accuracy": "准确率",
+        "documentation": "文档",
+        "helpCenter": "帮助中心",
+        "termsOfUse": "使用条款",
+        "builders": "开发者",
+        "watchlist": "关注列表",
+        "logout": "退出登录",
+        "support": "支持",
+        "language": "语言",
+        "portfolio": "资产组合",
+        "cash": "现金",
+        "deposit": "充值",
+        "notifications": "通知",
+        "noNotifications": "暂无通知。",
+        "referAndEarn": "推荐好友赚钱",
+        "esports": "电竞",
+        "copyAddress": "复制地址",
+        "copied": "复制成功！",
+        "shareTooltip": "分享赚钱！",
+        "shareTooltipCta": "了解更多",
+        "chance": "概率"
+      },
+      "footer": {
+        "copyright": "Adventure One QSS Inc. © 2026 年",
+        "privacy": "隐私",
+        "termsOfUse": "使用条款",
+        "marketIntegrity": "市场诚信",
+        "esportsResolutionGuidelines": "电竞结算指引",
+        "disclaimer": {
+          "beforePolymarketUsLink": "Polymarket通过独立法律实体在全球运营。",
+          "polymarketUsLinkText": "Polymarket US",
+          "afterPolymarketUsLink": "由QCX LLC d/b/a Polymarket US运营，其为受CFTC监管的Designated Contract Market。本国际平台不受CFTC监管，并独立运营。交易存在重大亏损风险。请参阅我们的《",
+          "termsOfServiceLinkText": "服务条款",
+          "betweenLinks": "》和《",
+          "privacyPolicyLinkText": "隐私政策",
+          "afterPrivacyPolicyLink": "》。",
+          "translationNotice": "本翻译仅供参考。如英文文本与本翻译之间存在任何差异，以英文版本为准。"
+        },
+        "learn": "了解更多",
+        "careers": "招聘",
+        "press": "媒体",
+        "brand": "品牌",
+        "tagline": "全球最大预测市场™",
+        "marketsByCategory": "按分类和话题浏览盘口",
+        "supportAndSocial": "支持与社交",
+        "predictionsAndOdds": "预测与赔率",
+        "categories": {
+          "politics": "政治",
+          "sports": "体育",
+          "crypto": "加密货币",
+          "finance": "金融",
+          "geopolitics": "地缘政治",
+          "earnings": "财报",
+          "tech": "科技",
+          "culture": "文化",
+          "world": "全球",
+          "economy": "经济",
+          "climateScience": "气候与科学",
+          "elections": "选举",
+          "mentions": "提及"
+        },
+        "links": {
+          "contactUs": "联系我们",
+          "xTwitter": "𝕏 (Twitter)",
+          "instagram": "Instagram",
+          "discord": "Discord",
+          "tiktok": "TikTok",
+          "news": "新闻",
+          "accuracy": "准确率",
+          "activity": "动态",
+          "leaderboard": "排行榜",
+          "rewards": "奖励",
+          "apis": "API 接口"
+        },
+        "relatedTopicsTitle": "{category} 相关话题",
+        "popularMarketsTitle": "{category} 热门盘口",
+        "newMarketsTitle": "{category} 新盘口",
+        "relatedCategoriesTitle": "相关话题",
+        "viewMore": "查看更多",
+        "viewLess": "查看更少",
+        "showMoreComments": "展开更多",
+        "noTopics": "暂无相关话题",
+        "noMarkets": "暂无相关盘口",
+        "homepageCategories": {
+          "esports": {
+            "title": "电竞",
+            "subtitle": "赔率"
+          },
+          "weather": {
+            "title": "天气",
+            "subtitle": "赔率与预测"
+          },
+          "elections": {
+            "title": "选举",
+            "subtitle": "赔率与预测"
+          },
+          "bitcoin": {
+            "title": "比特币",
+            "subtitle": "预测与赔率"
+          },
+          "crypto": {
+            "title": "加密货币",
+            "subtitle": "价格预测"
+          },
+          "culture": {
+            "title": "文化",
+            "subtitle": "趋势与预测"
+          },
+          "earnings": {
+            "title": "财报",
+            "subtitle": "预测"
+          },
+          "economy": {
+            "title": "经济",
+            "subtitle": "预测与展望"
+          },
+          "finance": {
+            "title": "金融",
+            "subtitle": "展望与预测"
+          },
+          "geopolitics": {
+            "title": "地缘政治",
+            "subtitle": "预测"
+          },
+          "mentions": {
+            "title": "提及",
+            "subtitle": "盘口"
+          },
+          "politics": {
+            "title": "政治",
+            "subtitle": "赔率与预测"
+          },
+          "sports": {
+            "title": "体育",
+            "subtitle": "赔率与预测"
+          },
+          "tech": {
+            "title": "科技",
+            "subtitle": "趋势与预测"
+          },
+          "world": {
+            "title": "全球",
+            "subtitle": "趋势与预测"
+          }
+        },
+        "helpCenter": "帮助中心",
+        "docs": "文档"
+      },
+      "howItWorks": {
+        "text": "玩法介绍",
+        "slide1": {
+          "title": "1. 选一个预测盘口",
+          "titleEvents": "1.逛逛我们的预测盘口",
+          "description": "根据你的预测买“是”或“否”份额。赔率会随着其他交易者的交易实时变动。",
+          "alt": "预测盘口选择界面"
+        },
+        "slide2": {
+          "title": "2.投注",
+          "description": "用加密货币、借记卡或银行转账给账号充值，然后就可以开始交易。",
+          "alt": "在  Polymarket 上投注"
+        },
+        "slide3": {
+          "title": "3.兑付",
+          "description": "随时卖掉你的“是”或“否”份额，或者等盘口封盘后，凭赢利的份额兑换 1 美元/份。注册账号，几分钟就能完成第一笔交易。",
+          "alt": "Polymarket 赚钱界面"
+        },
+        "next": "下一页",
+        "getStarted": "立即开始"
+      },
+      "time": {
+        "now": "现在",
+        "justNow": "刚刚",
+        "ago": "前",
+        "in": "后",
+        "second": "秒",
+        "seconds": "秒",
+        "minute": "分钟",
+        "minutes": "分钟",
+        "hour": "小时",
+        "hours": "小时",
+        "day": "天",
+        "days": "天",
+        "month": "月",
+        "months": "月",
+        "year": "年",
+        "years": "年",
+        "untilCancelled": "取消前有效",
+        "dateInPast": "日期不能是过去的哦！",
+        "short": {
+          "s": "秒",
+          "m": "分",
+          "h": "时",
+          "d": "天",
+          "mo": "月",
+          "y": "年"
+        },
+        "past": "过去",
+        "timeLeft": "剩余时间",
+        "countdown": {
+          "days": "天",
+          "hrs": "时",
+          "min": "分",
+          "sec": "秒"
+        }
+      },
+      "pages": {
+        "politics": "政治",
+        "technology": "科技",
+        "popCulture": "流行文化",
+        "business": "商业",
+        "science": "科学",
+        "ai": "人工智能",
+        "worldEvents": "全球事件",
+        "middleEast": "中东",
+        "geopolitics": "地缘政治",
+        "economy": "经济",
+        "climateScience": "气候与科学",
+        "newPolymarkets": "新"
+      },
+      "filters": {
+        "all": "全部",
+        "filter": "筛选",
+        "sortBy": "排序方式",
+        "frequency": "频率：",
+        "status": "状态：",
+        "eventStatus": "事件状态",
+        "active": "进行中",
+        "resolved": "已结算",
+        "hideSports": "隐藏体育类",
+        "hideCrypto": "隐藏加密货币类",
+        "hideEarnings": "隐藏财报类",
+        "clearFilters": "清空筛选",
+        "showMoreMarkets": "显示更多盘口",
+        "dateRange": {
+          "today": "今天",
+          "yesterday": "昨天",
+          "lastWeek": "上周",
+          "lastMonth": "上月",
+          "last3Months": "近 3 个月",
+          "yearToDate": "今年至今",
+          "lastYear": "去年",
+          "all": "全部",
+          "clearDateRange": "清空日期范围",
+          "cancel": "取消",
+          "setDates": "设置日期"
+        },
+        "sortByOptions": {
+          "trending": "热门",
+          "volume24hr": "24 小时交易量",
+          "totalVolume": "总交易量",
+          "volume": "交易量",
+          "liquidity": "流动性",
+          "newest": "最新发布",
+          "endingSoon": "即将封盘",
+          "competitive": "竞争度",
+          "closedTime": "关闭时间"
+        },
+        "frequencyOptions": {
+          "fiveMinutes": "5分钟",
+          "fifteenMinutes": "15分钟",
+          "fourHour": "4小时",
+          "hourly": "每小时",
+          "daily": "每天",
+          "weekly": "每周",
+          "monthly": "每月",
+          "all": "全部"
+        }
+      },
+      "cards": {
+        "live": "实时",
+        "new": "最新",
+        "ended": "已结束",
+        "today": "今日",
+        "tomorrow": "明日"
+      },
+      "auth": {
+        "authentication": "身份验证",
+        "signUp": "注册",
+        "logIn": "登陆",
+        "welcomeToPolymarket": "欢迎来到 Polymarket",
+        "continueWithGoogle": "用 Google 账号继续",
+        "emailAddress": "电子邮箱地址",
+        "continue": "继续",
+        "terms": "条款",
+        "privacy": "隐私",
+        "or": "或者",
+        "chooseUsername": "选个用户名",
+        "updateLater": "之后也能改。",
+        "username": "用户名",
+        "usernameTaken": "用户名被占用了",
+        "usernameNotAccepted": "用户名不行哦",
+        "usernameError": "更新用户名失败，再试试吧",
+        "invalidReferralCode": "无效的推荐码",
+        "termsAgreement": "交易即表示你同意",
+        "termsOfUse": "使用条款",
+        "termsAttestation": "并声明你不是美国人、不在美国境内、也不是受限地区的居民/身处受限地区。",
+        "emailUpdates": "给我发重要的盘口和产品更新",
+        "referralCodeOptional": "推荐码（可选）",
+        "enterReferralCode": "输入推荐码",
+        "whatsYourEmail": "你的电子邮箱是？",
+        "emailNotifications": "留个电子邮箱，方便接收盘口和交易通知。",
+        "doThisLater": "稍后再弄",
+        "emailInUse": "这个电子邮箱好像已经用过了！换一个试试。",
+        "back": "返回",
+        "skipForNow": "先跳过",
+        "emailError": "提交电子邮箱时出问题了，再试试吧。",
+        "tryAgain": "再试一次",
+        "sendingVerification": "我们正在发验证链接给",
+        "didntGetEmail": "没收到电子邮件？",
+        "sendAgain": "重新发送",
+        "close": "关闭",
+        "enableTrading": "开启交易",
+        "setupWallet": "先设置钱包，才能在 Polymarket 交易哦。",
+        "switchToPolygon": "切换到 Polygon  网络",
+        "checkYourWallet": "看看你的钱包...",
+        "signatureRejected": "签名请求被拒绝了，再试试吧。",
+        "unknownError": "不知道出了什么错，再试试吧。",
+        "fundYourAccount": "给账号充值",
+        "depositFunds": "充值",
+        "installOn": "安装至",
+        "pleaseTryAgainLater": "请稍后再试"
+      },
+      "search": {
+        "placeholder": "搜索",
+        "eventsPlaceholder": "搜索事件...",
+        "clearSearch": "清除搜索",
+        "browse": "浏览",
+        "recent": "最近",
+        "topics": "话题",
+        "markets": "盘口",
+        "profiles": "个人资料",
+        "noResultsFound": "啥也没搜到",
+        "noResultsResetFilters": "No results found. Try resetting your filters.",
+        "seeAllResults": "查看全部结果",
+        "popular": "热门",
+        "liquid": "流动性足",
+        "endingSoon": "即将封盘",
+        "competitive": "竞争度",
+        "predictionsAndOdds": "预测与赔率",
+        "categories": {
+          "sports": "体育",
+          "ai": "人工智能",
+          "science": "科学",
+          "interestRates": "利率",
+          "tech": "科技",
+          "business": "商业",
+          "middleEast": "中东",
+          "politics": "政治",
+          "crypto": "加密货币",
+          "popCulture": "流行文化",
+          "liveCrypto": "实时加密货币"
+        }
+      },
+      "modals": {
+        "connectionError": {
+          "title": "连接问题",
+          "description": "你的会话需要重置才能进行交易。请退出登录然后重新登录。",
+          "dismiss": "关闭",
+          "logOut": "退出登录"
+        },
+        "viewOnlyMode": {
+          "title": "仅查看模式",
+          "descriptionBeforeLink": "以下地区无法进行交易。禁止使用任何手段规避或试图规避这些限制。",
+          "termsOfUse": "使用条款",
+          "blockedRegions": "受限地区：",
+          "gotIt": "知道了"
+        },
+        "nonUsIp": {
+          "title": "在 Polymarket 上交易",
+          "descriptionBefore": "进行交易即表示你同意",
+          "descriptionAfter": "，并声明你 (i) 不是美国人；(ii) 不在美国、法国或其他受限管辖区；(iii) 未使用 VPN 或其他方式规避限制。如果你不遵守这些条款，Polymarket 保留将你的钱包设为仅限关仓模式的权利。",
+          "accept": "接受"
+        },
+        "tradingRestricted": {
+          "title": "交易已暂停",
+          "descriptionBefore": "由于可能违反我们的服务条款，你的账户已被设为仅限关仓模式。你可以关闭现有持仓，但无法开新仓。如需了解更多信息，请联系",
+          "descriptionAfter": "，包括如果你认为收到此消息是错误的。",
+          "emailSupport": "发送邮件至 support@polymarket.com"
+        },
+        "proofOfResidence": {
+          "title": "需要居住证明",
+          "descriptionBeforeEmail": "如需继续使用本网站的交易功能，请发送邮件至",
+          "descriptionAfterEmail": "，并证明你不是美国居民，也不在美国境内：",
+          "formOfId": "身份证件：",
+          "formOfIdDetails": "护照、驾照或其他",
+          "proofOfResidence": "当前居住证明：",
+          "proofOfResidenceDetails": "非受限管辖区的近期水电费、银行或电话账单。美国、安大略省、英国和 OFAC 制裁地区为受限管辖区。",
+          "certificationNotice": "你还需要签署并提交一份非美国居民证明。请在 14 天内回复，否则你的账户将被设为仅限关仓模式。",
+          "sendEmail": "发送邮件"
+        },
+        "cancel": "取消"
+      },
+      "approvalModal": {
+        "title": "启用交易",
+        "deployProxyWallet": "部署代理钱包",
+        "deployProxyWalletSubtitle": "部署智能合约钱包以启用交易",
+        "deploy": "部署",
+        "unknownError": "发生未知错误",
+        "enableTrading": "启用交易",
+        "enableTradingSubtitle": "签署消息以生成您的 API 密钥",
+        "sign": "签名",
+        "failedToGetSigner": "获取签名者失败",
+        "approveTokens": "授权代币",
+        "approveTokensSubtitle": "授权代币交易支出",
+        "done": "完成"
+      },
+      "upgradeModal": {
+        "next": "下一步",
+        "learnMore": "了解更多",
+        "pills": {
+          "enhancedSecurity": "安全性增强",
+          "introducingPusd": "全新 pUSD",
+          "balanceConversion": "余额 1:1 转换",
+          "improvedInfrastructure": "基础设施升级"
+        },
+        "welcome": {
+          "title": "Polymarket 已升级",
+          "description": "我们对底层做了一些调整,让交易更加稳定可靠。"
+        },
+        "login": {
+          "title": "请登录以继续",
+          "description": "请登录你的账户,以便我们迁移余额并批准新合约。",
+          "button": "登录"
+        },
+        "balance": {
+          "title": "余额迁移",
+          "description": "你的 USDC.e 将按 1:1 比例转换为 pUSD。零手续费,涵盖所有仓位,可全额赎回。",
+          "currentBalance": "当前余额",
+          "afterMigration": "迁移后",
+          "migrationLabel": "USDC.e → pUSD 迁移",
+          "convert": "转换",
+          "converting": "转换中...",
+          "loadingWallet": "加载中",
+          "upgrade": "升级",
+          "upgrading": "升级中..."
+        },
+        "approval": {
+          "title": "完成迁移",
+          "description": "要开始使用升级后的系统进行交易,请在钱包中批准迁移。这是一次性操作。",
+          "proceed": "继续"
+        },
+        "cancelledOrders": {
+          "title": "限价订单已取消",
+          "description": "你未成交的限价订单已作为升级的一部分被取消。未收取任何费用,所有资金已退回到你的余额中。",
+          "button": "查看已取消订单",
+          "limitBuy": "限价买入",
+          "limitSell": "限价卖出",
+          "cancelled": "已取消"
+        },
+        "success": {
+          "title": "迁移完成",
+          "description": "你的余额和仓位已迁移完成。一切就绪。",
+          "startTrading": "开始交易",
+          "loading": "加载中..."
+        }
+      },
+      "backToTop": "返回顶部",
+      "seo": {
+        "siteName": "Polymarket",
+        "defaultTitle": "Polymarket | 全球最大预测市场",
+        "defaultDescription": "Polymarket 是全球最大预测市场，你可以在这里紧跟各类赛事动态，根据自己的预判投注，轻松实现知识变现。",
+        "defaultOgDescription": "根据预判投注",
+        "titleSuffix": " | Polymarket",
+        "collectionPage": {
+          "title": "{topicName} 预测和实时赔率 | Polymarket",
+          "description": "查看{topicName}预测和实时赔率，在全球最大预测市场™上交易。"
+        },
+        "categoryPage": {
+          "title": "{topicName}预测市场与实时赔率 | Polymarket"
+        },
+        "homepage": {
+          "title": "Polymarket | 全球最大预测市场",
+          "description": "Polymarket 是全球最大预测市场，你可以在这里紧跟各类赛事动态，根据自己的预判投注，轻松实现知识变现。",
+          "h1": "Polymarket | 全球最大预测市场"
+        },
+        "sports": {
+          "title": "体育赛事投注赔率与盘口 | Polymarket",
+          "description": "在 Polymarket 上实时投注体育赛事结果，看最新赔率",
+          "bettingOdds": "{league} {matchup} {date} 实时投注赔率",
+          "predictionMarkets": "{sport} 预测盘口 | Polymarket",
+          "categoryTitle": "体育实时预测市场和赔率 | Polymarket",
+          "categoryDescription": "在Polymarket实时交易体育赛事。交易NBA、NHL、UFC、MLB、足球等20多种体育项目的独赢、让分和大小分市场。实时赔率和比分。",
+          "categoryH1": "体育直播",
+          "subcategoryTitle": "{league}实时预测市场和赔率 | Polymarket",
+          "subcategoryDescription": "在Polymarket交易{league}比赛。获取{league}实时赔率，包括独赢、让分、大小分、特殊投注和期货。在预测市场上更聪明地交易。",
+          "propsDescription": "在Polymarket交易{league}特殊投注。获取{league}实时赔率，包括独赢、让分、大小分、特殊投注和期货。在预测市场上更聪明地交易。",
+          "futuresDescription": "在全球最大预测市场™上交易体育期货，获取实时赔率"
+        },
+        "esports": {
+          "categoryTitle": "电子竞技预测市场和实时赔率 | Polymarket",
+          "categoryDescription": "在Polymarket实时交易电竞比赛。交易CS2、Dota 2、LoL、Valorant等，包含独赢、让分和大小分市场。边看直播边交易。",
+          "categoryH1": "电竞直播",
+          "upcomingTitle": "即将开始的电竞预测市场和实时赔率 | Polymarket",
+          "upcomingDescription": "在Polymarket实时交易即将开始的电竞比赛。交易CS2、Dota 2、LoL、Valorant等，包含独赢、让分和大小分市场。边看直播边交易。",
+          "subcategoryTitle": "{game}预测市场和实时赔率 | Polymarket",
+          "subcategoryDescription": "在Polymarket实时交易{game}电竞比赛。交易独赢、让分和大小分市场。边看直播边交易。",
+          "upcomingCategoryTitle": "即将到来的电子竞技预测市场和实时赔率 | Polymarket",
+          "upcomingCategoryDescription": "在Polymarket实时交易即将到来的电竞比赛。交易CS2、Dota 2、LoL、Valorant等，包含独赢、让分和大小分市场。边看直播边交易。",
+          "propsDescription": "在Polymarket交易{game}比赛。获取{game}实时赔率，包括独赢、让分、大小分、特殊投注和期货。在预测市场上更聪明地交易。",
+          "tournamentTitle": "{game} — {tournament}预测市场和实时赔率 | Polymarket",
+          "tournamentDescription": "在Polymarket实时交易{game} — {tournament}电竞比赛。独赢、让分和大小分市场可用。边看直播边交易。"
+        },
+        "teams": {
+          "title": "{team} - {game} | Polymarket",
+          "description": "在 Polymarket 追踪 {team} 的实时赔率、预测及即将举行的 {game} 比赛。浏览并交易 {marketCount} 个活跃市场，成交额 {volume}。"
+        },
+        "crypto": {
+          "title": "加密货币预测盘口 | Polymarket",
+          "description": "Polymarket 加密货币交易价格预测"
+        },
+        "politics": {
+          "title": "政治事件预测盘口 | Polymarket",
+          "description": "在 Polymarket 上投注政治事件结果和选举走向"
+        },
+        "leaderboard": {
+          "title": "排行榜 | Polymarket",
+          "description": "看看 Polymarket 上的顶级交易者和最大赢家"
+        },
+        "portfolio": {
+          "title": "资产组合 | Polymarket",
+          "description": "查看你在 Polymarket 上的持仓和交易记录"
+        },
+        "rewards": {
+          "title": "奖励 | Polymarket",
+          "description": "在 Polymarket 上提供流动性就能赚奖励"
+        },
+        "activity": {
+          "title": "交易记录 | Polymarket",
+          "description": "查看 Polymarket 上的最新交易记录"
+        },
+        "search": {
+          "title": "搜索 | Polymarket",
+          "description": "在 Polymarket 上搜索预测盘口"
+        },
+        "tos": {
+          "title": "使用条款 | Polymarket",
+          "description": "使用 Polymarket，即表示你同意我们的使用条款。快来看看具体内容。"
+        },
+        "marketIntegrity": {
+          "title": "市场诚信 | Polymarket",
+          "description": "了解 Polymarket 的市场诚信政策和标准。"
+        },
+        "esportsResolutionGuidelines": {
+          "title": "电竞结算指引 | Polymarket",
+          "description": "Polymarket 如何结算电竞市场。"
+        },
+        "privacy": {
+          "title": "隐私政策 | Polymarket",
+          "description": "Polymarket 超重视你的隐私。快来看看隐私政策详情。"
+        },
+        "settings": {
+          "title": "设置 | Polymarket",
+          "description": "管理你的 Polymarket 账号设置、个人资料、交易偏好等。"
+        },
+        "accuracy": {
+          "title": "Polymarket 的预测有多准？ | Polymarket",
+          "description": "看看 Polymarket 在不同时间段、不同盘口交易量下的预测准确率和布莱尔分数。"
+        },
+        "fees": {
+          "title": "Polymarket Fees",
+          "description": "View trading fees on Polymarket, including fee types, rates, and rebates across all market categories."
+        },
+        "earnings": {
+          "title": "财报预测日历 | Polymarket",
+          "description": "查看 Polymarket 财报日历，了解最新动态。"
+        },
+        "create": {
+          "title": "创建盘口 | Polymarket",
+          "description": "在 Polymarket 上创建新预测盘口"
+        },
+        "refer": {
+          "title": "邀请好友加入 Polymarket",
+          "description": "邀请你的好友加入 Polymarket，赚取奖励。"
+        },
+        "fourOhFour": {
+          "title": "404 页面找不到啦 | Polymarket",
+          "description": "你要找的页面不存在哦。看看 Polymarket 上的预测盘口吧。",
+          "heading": "哎呀……这情况我们没预判到😅",
+          "subheading": "如果刷新没用，通过以下方式告诉我们",
+          "or": "或者",
+          "supportTeam": "支持团队",
+          "goToHome": "返回首页",
+          "archived": "此活动已归档"
+        },
+        "error": {
+          "title": "出错啦 {statusCode} | Polymarket",
+          "description": "加载页面时出了点问题"
+        },
+        "profile": {
+          "titleTemplate": "Polymarket {username}",
+          "description": "来看看这个 Polymarket 用户主页。"
+        },
+        "event": {
+          "predictionsAndOdds": "预测与赔率",
+          "bettingOddsAndPredictions": "投注赔率与预测",
+          "predictTheWinner": "预测赢家，在 Polymarket 追踪实时数据。",
+          "oddsAndPredictions": "赔率与预测"
+        },
+        "categories": {
+          "politics": {
+            "title": "政治赔率与预测",
+            "description": "涵盖全球选举、政策决定和政府结果的政治预测市场"
+          },
+          "tech": {
+            "title": "科技赔率与预测",
+            "description": "涵盖产品发布、AI 发展和科技行业动态的科技预测市场"
+          },
+          "culture": {
+            "title": "流行文化赔率与预测",
+            "description": "涵盖颁奖典礼、名人事件和文化趋势的流行文化预测市场"
+          },
+          "world": {
+            "title": "全球事件赔率与预测",
+            "description": "涵盖国际事务、世界新闻和重大全球发展的全球事件预测市场"
+          },
+          "economy": {
+            "title": "经济赔率与预测",
+            "description": "涵盖通胀、GDP 增长、失业率和宏观经济指标的经济预测市场"
+          },
+          "geopolitics": {
+            "title": "地缘政治赔率与预测",
+            "description": "涵盖国际关系、冲突和外交结果的地缘政治预测市场"
+          },
+          "business": {
+            "title": "商业赔率与预测",
+            "description": "涵盖企业事件、IPO、并购和行业动态的商业预测市场"
+          },
+          "finance": {
+            "title": "金融赔率与预测",
+            "description": "涵盖股票、加密货币、利率和经济指标的金融预测市场"
+          },
+          "crypto": {
+            "title": "加密货币赔率与预测",
+            "description": "涵盖 Bitcoin、Ethereum、Solana 等加密货币的预测市场"
+          },
+          "science": {
+            "title": "科学赔率与预测",
+            "description": "涵盖研究突破、太空探索和科学发现的科学预测市场"
+          },
+          "ai": {
+            "title": "AI 赔率与预测",
+            "description": "涵盖 AI 发展、AGI 时间线和机器学习突破的人工智能预测市场"
+          },
+          "middleEast": {
+            "title": "中东赔率与预测",
+            "description": "涵盖中东地区政治、冲突和发展的预测市场"
+          },
+          "sports": {
+            "title": "体育赔率与预测",
+            "description": "涵盖 NFL、NBA、英超及全球主要体育赛事的体育预测市场"
+          },
+          "newMarkets": {
+            "title": "最新 Polymarkets",
+            "description": "所有类别中新上线的预测市场，发现最新的交易事件"
+          },
+          "trending": {
+            "title": "热门 Polymarkets",
+            "description": "最受欢迎和交易最活跃的预测市场，看看大家都在交易什么"
+          },
+          "breaking": {
+            "title": "突发新闻",
+            "description": "查看过去 24 小时内变动最大的市场"
+          },
+          "fallbackTitle": "{category} 市场",
+          "fallbackDescription": "{category} 事件和结果的预测市场",
+          "asOf": "截至 {date}。"
+        },
+        "searchMeta": {
+          "searchResultsTitle": "\"{query}\" Polymarkets | Polymarket",
+          "tagTitle": "{tag} Polymarkets | Polymarket",
+          "exploreTitle": "探索热门 Polymarkets | Polymarket",
+          "volumeTitle": "探索交易量最高的 Polymarkets | Polymarket",
+          "competitiveTitle": "探索最具竞争力的 Polymarkets | Polymarket",
+          "endingSoonTitle": "探索即将结束的 Polymarkets | Polymarket",
+          "liquidityTitle": "探索流动性最强的 Polymarkets | Polymarket",
+          "newestTitle": "探索最新的 Polymarkets | Polymarket",
+          "searchResultsDescription": "在 Polymarket 预测市场中搜索 \"{query}\" 的结果",
+          "tagDescription": "浏览 Polymarket 上所有 {tag} 预测市场",
+          "defaultDescription": "在 Polymarket 上搜索和发现预测市场"
+        },
+        "predictionsHub": {
+          "title": "热门预测与实时赔率 | Polymarket",
+          "description": "探索数千个涵盖政治、体育、加密货币、全球事件等领域的实时预测与赔率。在全球最大预测市场™上追踪或交易结果"
+        },
+        "predictionsPage": {
+          "title": "{tag} 实时预测与赔率 | Polymarket",
+          "description": "在Polymarket上查看截至{date}的最新{tag}预测。追踪实时赔率，在全球最大预测市场上交易",
+          "liveDescription": "在Polymarket上查看截至{date}的{activeMarketCount}个实时{tag}预测市场。追踪实时赔率，在全球最大预测市场上交易",
+          "resolvedDescription": "在Polymarket上查看截至{date}的最新已结算{tag}预测市场，尽在全球最大预测市场"
+        },
+        "financeMeta": {
+          "description": "Polymarket 上的金融预测市场，涵盖股票、财报、指数、大宗商品和宏观事件。"
+        },
+        "cryptoMeta": {
+          "description": "实时加密货币预测市场。交易 Bitcoin、Ethereum 等加密货币价格走势。赔率每 15 分钟更新。"
+        },
+        "weatherMeta": {
+          "description": "探索截至{date}的{category}实时预测市场。追踪实时赔率，在全球最大的预测市场™上交易"
+        },
+        "structuredData": {
+          "orgDescription": "全球最大的预测市场平台",
+          "webAppDescription": "在全球最大的预测市场上交易现实世界事件",
+          "featureRealTimeMarkets": "实时预测市场",
+          "featureCryptoTrading": "加密货币交易",
+          "featureMarketCreation": "市场创建工具",
+          "featurePortfolioManagement": "投资组合管理",
+          "eventDescription": "查看\"{title}\"的实时赔率，在全球最大的预测市场™上交易",
+          "datasetName": "Polymarket Historical Prediction Accuracy",
+          "datasetDescription": "预测市场结果和准确性的历史数据",
+          "howToName": "如何在 Polymarket 上交易",
+          "howToDescription": "学习如何使用 Polymarket 交易预测市场",
+          "howToSupply": "网页浏览器和加密货币钱包",
+          "stepCreateAccountName": "创建账户",
+          "stepCreateAccountText": "使用邮箱或钱包注册 Polymarket 账户",
+          "stepFundAccountName": "为账户充值",
+          "stepFundAccountText": "向 Polymarket 账户充值 USDC",
+          "stepBrowseMarketsName": "浏览市场",
+          "stepBrowseMarketsText": "探索可用的预测市场",
+          "stepPlaceTradeName": "进行交易",
+          "stepPlaceTradeText": "购买你预测的结果份额",
+          "sportsEventName": "{away} vs {home}",
+          "sportsEventDescription": "预测 {away} vs {home} 的赢家。查看实时赔率并在 Polymarket 上交易。",
+          "predictionMarketTrading": "预测市场交易",
+          "discussionHeadline": "{title} — 讨论",
+          "discussionText": "关于{title}的讨论。交易者在 Polymarket 上分享见解和预测。"
+        },
+        "metaDescription": {
+          "resolved": "{title}（已结算）：在全球最大的预测市场™查看最终结果和历史赔率",
+          "viewRealTimeOdds": "截至 {date}，查看\"{title}\"的实时赔率，在全球最大的预测市场™上交易",
+          "viewRealTimeOddsWithVolume": "截至 {date}，\"{title}\"已交易 {volume}。查看实时赔率或在全球最大的预测市场™上交易"
+        },
+        "categoryFaq": {
+          "title": "常见问题解答",
+          "q1": {
+            "q": "什么是综合市场？",
+            "a": "Polymarket 是世界上最大的预测市场，用户可以在其中根据 {categoryLabel} 和许多其他主题的事件的现实结果进行交易。价格从 0 到 100 美分不等，反映了事件发生的隐含概率。由于交易者用真金白银支持他们的观点，Polymarket 赔率代表了实时的、切身利益的共识，通常被称为“群体的智慧”。"
+          },
+          "q2": {
+            "q": "什么是 {marketLabel} 预测市场？",
+            "aOutcome": "{marketLabel} 预测市场允许用户就与 {marketLabel} 相关事件（例如 {featuredMarket1}）相关的特定问题交易是或否股票。如果结果对自己有利，则每股支付 1 美元；如果不有利，则每股支付 0 美元。当前股价（例如 {topOutcome} 的 {topOutcomePct}）反映了市场在任何给定时刻出现该结果的隐含概率。",
+            "aChance": "{marketLabel} 预测市场允许用户就与 {marketLabel} 相关事件（例如 {featuredMarket1}）相关的特定问题交易是或否股票。如果结果对自己有利，则每股支付 1 美元；如果不有利，则每股支付 0 美元。当前股价（例如 {featuredMarket1} 中的 {topOutcomePct}）反映了市场在任何给定时刻的隐含概率。",
+            "aGeneric": "{marketLabel} 预测市场允许用户就与 {marketLabel} 相关事件相关的特定问题交易是或否股票。如果结果对自己有利，则每股支付 1 美元；如果不有利，则每股支付 0 美元。"
+          },
+          "q3": {
+            "q": "我可以在 {categoryLabel} 类别中交易哪些主题？",
+            "aWithSubcategories": "{categoryLabel} 类别拥有涵盖广泛主题的 {totalMarketCount} 市场。受欢迎的子类别包括 {topSubcategories}，每个子类别都有自己的专用页面，显示实时赔率、交易量和活跃市场。您可以从 {categoryLabel} 页面的左侧导航浏览 {categoryLabel} 子类别的完整列表。",
+            "aGeneric": "{categoryLabel} 类别拥有涵盖广泛主题的 {totalMarketCount} 市场。您可以从 {categoryLabel} 页面的左侧导航浏览可用的 {categoryLabel} 子类别，以查看实时赔率、交易量和活跃市场。"
+          },
+          "q4": {
+            "q": "Polymarket 的 {categoryLabel} 赔率如何运作？",
+            "aOutcome": "Polymarket 上的每个 {categoryLabel} 市场的结果价格在 0 美分到 100 美分之间。该价格是结果发生的隐含概率。例如，如果 {topOutcome} 在 {featuredMarket1} 中以 {topOutcomePct} 进行交易，交易者将大致按照该概率进行集体定价。随着新信息、数据发布和事件影响交易者情绪，价格不断更新。",
+            "aChance": "Polymarket 上的每个 {categoryLabel} 市场的结果价格在 0 美分到 100 美分之间。该价格是结果发生的隐含概率。例如，如果 {featuredMarket1} 的交易价格为 {topOutcomePct}，交易者将大致按照该概率进行集体定价。随着新信息、数据发布和事件影响交易者情绪，价格不断更新。",
+            "aGeneric": "Polymarket 上的每个 {categoryLabel} 市场的结果价格在 0 美分到 100 美分之间。该价格是结果发生的隐含概率，随着新信息、数据发布和事件影响交易者情绪，价格不断更新。"
+          },
+          "q5": {
+            "q": "目前哪些 {marketLabel} 市场最活跃？",
+            "aSpecificOne": "活动不断变化，但您可以按 24 小时交易量对页面进行排序，以查看交易集中的地方。目前，{top24hVolumeMarket} 是 {marketLabel} 页面上交易最活跃的市场之一，此外还有 {featuredMarket1} 等另一个高交易量市场。",
+            "aSpecificTwo": "活动不断变化，但您可以按 24 小时交易量对页面进行排序，以查看交易集中的地方。目前，{top24hVolumeMarket} 是 {marketLabel} 页面上交易最活跃的市场之一，与 {featuredMarket1} 和 {featuredMarket2} 等其他高交易量市场一样。",
+            "aGeneric": "活动不断变化，但您可以按 24 小时交易量对页面进行排序，以实时查看交易集中在哪里。"
+          },
+          "q6": {
+            "q": "{categoryLabel} 预测市场是如何解决的？",
+            "a": "每个 {categoryLabel} 市场都有明确定义的解决方案来源和标准，发布在市场页面上。当事件结束时，例如，当结果被正式报告、截止日期过去或权威消息来源确认结果时，市场就会解决，获胜的股票每股将获得 1 美元。选举、经济和地缘政治等类别的市场通常依赖官方政府、监管或主要来源报告来解决。"
+          },
+          "q7": {
+            "q": "为什么 {categoryLabel} 赔率变化如此频繁？",
+            "aSpecific": "{categoryLabel} 市场实时响应新闻、公告、数据发布和政策变化。单一的事态发展，例如新的民意调查、经济指标、法院裁决或地缘政治事件，都可以极大地改变结果的隐含概率。纵观 {featuredMarket1} 这样的市场，价格变动反映出交易者在新信息到来时不断更新他们的观点。",
+            "aGeneric": "{categoryLabel} 市场实时响应新闻、公告、数据发布和政策变化。单一的事态发展，例如新的民意调查、经济指标、法院裁决或地缘政治事件，都可以极大地改变结果的隐含概率。"
+          },
+          "q8": {
+            "q": "Polymarket 上有多少个 {categoryLabel} 市场？",
+            "aWithSubcategory": "Polymarket 目前在 {categoryLabel} 类别中列出了 {totalMarketCount} 个市场，其中 {subcategoryMarketCount} 个市场仅在 {subcategoryLabel} 类别中。左侧导航显示每个子类别的实时市场计数，包括 {topSubcategories}，因此您可以快速查看覆盖范围最深的地方。",
+            "aGeneric": "Polymarket 目前将 {totalMarketCount} 市场列为 {categoryLabel} 类别。左侧导航显示每个可用子类别的实时市场计数，因此您可以快速查看覆盖范围最深的地方。"
+          },
+          "q9": {
+            "q": "我可以在未来的 {categoryLabel} 事件发生之前进行交易吗？",
+            "aSpecificOne": "是的。大多数 {categoryLabel} 市场旨在让用户在潜在事件发生之前进行交易，从短期的每周市场到涵盖数月或数年之后结果的长期市场。当前列出的一个示例是 {featuredMarket1}，它允许交易者在市场生命周期中出现新信息时建仓。",
+            "aSpecificTwo": "是的。大多数 {categoryLabel} 市场旨在让用户在潜在事件发生之前进行交易，从短期的每周市场到涵盖数月或数年之后结果的长期市场。目前列出的示例包括 {featuredMarket1} 和 {featuredMarket2}，它们允许交易者在市场生命周期中出现新信息时建仓。",
+            "aGeneric": "是的。大多数 {categoryLabel} 市场旨在让用户在潜在事件发生之前进行交易，从短期的每周市场到涵盖数月或数年之后结果的长期市场。"
+          },
+          "q10": {
+            "q": "Polymarket 的 {categoryLabel} 赔率比民意调查或预测更准确吗？",
+            "a": "预测市场和传统预测（例如民意调查、模型或分析师估计）是互补的工具。由于 Polymarket 交易者冒着真实资本的风险，{categoryLabel} 赔率将许多参与者的信息和激励汇总成一个概率，这种机制历来密切跟踪选举、经济和地缘政治等领域的现实世界结果。也就是说，没有市场是万能的。赔率代表交易者在某个时间点的共识，而不是对将要发生的情况的预测。"
+          },
+          "q11": {
+            "q": "我如何开始在 Polymarket 上交易 {categoryLabel} 市场？",
+            "aWithSubcategories": "您可以浏览 {categoryLabel} 页面查看活跃市场，打开任何市场（例如 {featuredMarket1}）以查看其订单簿和完整规则，然后在您的账户注资后交易“是”或“否”股票。左侧导航可以轻松深入到 {topSubcat1} 或 {topSubcat2} 等子类别，以重点关注您最关注的主题。",
+            "aGeneric": "您可以浏览 {categoryLabel} 页面查看活跃市场，打开任何市场以查看其订单簿和完整规则，然后在您的账户注资后交易“是”或“否”股票。"
+          },
+          "q12": {
+            "q": "{marketLabel} 预测市场价格受什么因素影响？",
+            "aSpecific": "{marketLabel} 市场由推动现实世界故事的相同催化剂驱动：官方公告、预定活动和截止日期、数据和报告以及重大新闻。对于像 {featuredMarket1} 这样的市场，请关注即将到来的日期、相关的 {categoryLabel} 版本以及更广泛的 {topSubcat1} 和 {topSubcat2} 市场的变化，所有这些都可能改变交易者分配给每个结果的隐含概率。",
+            "aGeneric": "{marketLabel} 市场由推动现实世界故事的相同类型的催化剂驱动：官方公告、预定活动和截止日期、数据和报告以及重大新闻。"
+          },
+          "q13": {
+            "q": "我在哪里可以看到实时 {categoryLabel} 赔率和交易量？",
+            "aSpecificOne": "{pageLabelScope} 页面上的每张市场卡都会显示每个结果的当前隐含概率以及 24 小时或累计交易量。要了解更深入的详细信息，包括价格历史记录、订单簿和完整解析规则，请单击任何单个市场，例如 {featuredMarket1}。",
+            "aSpecificTwo": "{pageLabelScope} 页面上的每张市场卡都会显示每个结果的当前隐含概率以及 24 小时或累计交易量。如需了解更深入的详细信息，包括价格历史记录、订单簿和完整解析规则，请单击任意单个市场，例如 {featuredMarket1} 或 {top24hVolumeMarket}。",
+            "aGeneric": "这些页面上的每张市场卡都显示每个结果的当前隐含概率以及交易量。如需更深入的详细信息，包括价格历史记录、订单簿和完整解析规则，请单击任何单独的市场卡。"
+          }
+        }
+      },
+      "trading": {
+        "buy": "买入",
+        "sell": "卖出",
+        "yes": "是",
+        "no": "否",
+        "market": "盘口",
+        "limit": "限价",
+        "trade": "交易",
+        "merge": "合并",
+        "split": "拆分",
+        "buying": "买入中",
+        "selling": "卖出中",
+        "bought": "已买入",
+        "sold": "已卖出",
+        "merging": "合并中",
+        "merged": "已合并",
+        "splitting": "拆分中",
+        "splitPast": "已拆分",
+        "buyShares": "买入份额",
+        "sellShares": "卖出份额",
+        "placingBuyOrder": "正在提交买入订单",
+        "placingSellOrder": "正在提交卖出订单",
+        "placedBuyOrder": "已提交买入订单",
+        "placedSellOrder": "已提交卖出订单",
+        "more": "更多",
+        "rfq": "询价",
+        "requestQuote": "请求报价",
+        "requestExpired": "请求已过期",
+        "collectingQuotes": "正在收集报价...",
+        "bestOfferAppearHere": "最优报价将自动显示在此处",
+        "bestOffer": "最优报价",
+        "currentBestOffer": "当前最优报价",
+        "leftToAccept": "{time} 内可接受",
+        "remaining": "剩余 {time}",
+        "acceptOrWait": "你可以接受当前最优价格，或等待更好的报价。",
+        "cashOut": "提现",
+        "cashingOut": "正在兑现",
+        "cashedOut": "已兑现",
+        "cashing": "正在提现",
+        "cashed": "已提现",
+        "redeem": "兑换",
+        "redeeming": "正在兑换",
+        "redeemed": "已兑换",
+        "editOrder": "编辑订单",
+        "unavailable": "暂不可用",
+        "redeemNPositions": "兑换 {count} 个持仓",
+        "deposit": "充值",
+        "withdraw": "提现",
+        "polymarketBalance": "Polymarket 余额",
+        "acceptOfferAndBuy": "接受报价并买入",
+        "shares": "份额",
+        "share": "份额",
+        "amount": "金额",
+        "max": "最大",
+        "claimed": "已兑换",
+        "lost": "亏损",
+        "deposited": "已充值",
+        "withdrew": "已提现",
+        "reward": "奖励",
+        "referralReward": "推荐奖励",
+        "rewards": "奖励",
+        "makerRebate": "挂单返佣",
+        "depositedFunds": "充值资金",
+        "withdrewFunds": "提现资金",
+        "positionClosed": "仓位平仓",
+        "positionLost": "仓位亏损",
+        "makerRebateCredited": "挂单返佣已到账",
+        "view": "查看",
+        "rewardsForEpoch": "周期奖励已发放",
+        "yieldRewards": "4% 奖励",
+        "portfolioActivity": {
+          "buy": "买入",
+          "sell": "卖出",
+          "claim": "兑换",
+          "loss": "亏损",
+          "merge": "合并",
+          "split": "拆分",
+          "deposit": "充值",
+          "withdraw": "提现",
+          "reward": "奖励",
+          "referral": "推荐",
+          "yield": "收益",
+          "rebate": "返佣",
+          "depositLabel": "充值",
+          "withdrawalLabel": "提现",
+          "liquidityReward": "流动性奖励",
+          "referralReward": "推荐奖励",
+          "holdingsYield": "持仓收益（4% 年化）",
+          "tradingFeeRebate": "挂单返佣"
+        },
+        "positions": "持仓",
+        "allPositions": "所有持仓",
+        "decimals": "小数位",
+        "profit": "利润",
+        "change": "变化",
+        "multiplier": "倍数",
+        "avgPrice": "均价",
+        "outcome": "结果",
+        "qty": "数量",
+        "avg": "均价",
+        "value": "价值",
+        "return": "收益",
+        "current": "当前",
+        "cost": "成本",
+        "type": "类型",
+        "initialCost": "初始成本",
+        "payout": "赔付",
+        "updating": "正在更新...",
+        "termsOfService": {
+          "byTradingYouAgree": "交易即表示你同意",
+          "tooltipText": "交易即表示你同意本使用条款，包括你不是 (i) 美国人且 (ii) 不在美国、法国或其他受限地区。"
+        },
+        "geoRestrictions": {
+          "tradingUnavailableInRegion": "交易在你所在地区不可用。",
+          "depositingUnavailableInRegion": "充值在你所在地区不可用。",
+          "withdrawalsUnavailableInRegion": "提现在你所在地区不可用。",
+          "availableRegions": "可用地区",
+          "restrictedRegion": "受限地区"
+        },
+        "errors": {
+          "amountTooLow": "金额太低啦",
+          "invalidShareQuantity": "份额数量不对",
+          "invalidPrice": "价格不对",
+          "minimumShares": "限价单最少需要 {count} 份额",
+          "insufficientBalance": "余额不够",
+          "highPriceFluctuation": "供应减少导致价格波动大，试试限价单吧。",
+          "marketBuyMinimum": "盘口买入需高于 1 美元哦"
+        },
+        "slippage": {
+          "title": "重大价格滑点",
+          "description": "因订单量导致价格大幅变动。"
+        },
+        "orderBook": {
+          "title": "订单簿",
+          "tooltip": "订单簿显示该市场所有未完成的买卖订单。使用它以您偏好的价格下限价单。",
+          "tradeOutcome": "交易 {outcome}",
+          "price": "价格",
+          "shares": "份额",
+          "total": "总计",
+          "spread": "点差",
+          "last": "最新价",
+          "asks": "卖单",
+          "bids": "买单",
+          "noAsks": "暂无卖单",
+          "noBids": "暂无买单",
+          "loadingAsks": "正在加载卖单...",
+          "loadingBids": "正在加载买单...",
+          "clearDisclaimer": "订单簿将在 {time} 清空",
+          "clearDisclaimerTooltip": "该市场所有未成交的限价单将在比赛于 {dateTime} 开始时被取消。开赛后可以重新下单。"
+        },
+        "balance": "余额",
+        "balanceShort": "余额",
+        "limitPrice": "限价",
+        "setExpiration": "设置过期时间",
+        "setExpirationMobile": "设置过期时间",
+        "youllReceive": "你会收到",
+        "toWin": "赢取",
+        "minimumLiquidityReward": "最低流动性奖励",
+        "sharesFromOrderExecuted": "这笔订单的份额会直接成交",
+        "matching": "正在撮合",
+        "mergeShares": {
+          "title": "合并份额",
+          "description": "把 1 份“是”和 1 份“否”合并成 1 USDC。不想持仓时，这么做能省成本。",
+          "amount": "金额",
+          "availableShares": "可用份额",
+          "button": "合并份额",
+          "failed": "合并份额失败",
+          "errorOccurred": "提交交易时出问题了。",
+          "signatureRejected": "签名请求被拒绝了，"
+        },
+        "splitShares": {
+          "title": "拆分份额",
+          "description": "把 1 USDC 拆成 1 份“是”和 1  份“否”。这么做能省成本，方法是先都买了，再卖掉另一边就行",
+          "amount": "金额",
+          "available": "可用余额",
+          "mustHaveUsdc": "拆分份额得有 USDC 哦！",
+          "button": "拆分份额",
+          "failed": "拆分份额失败",
+          "errorOccurred": "提交交易时出问题了。",
+          "signatureRejected": "签名请求被拒绝了，"
+        },
+        "timeframes": {
+          "fiveMin": "5分钟",
+          "fifteenMin": "15分钟",
+          "oneHour": "1小时",
+          "oneDay": "1天"
+        }
+      },
+      "deposit": {
+        "fundsActivated": {
+          "title": "资金已激活",
+          "description": "你的资金已可用于交易！",
+          "startTrading": "开始交易"
+        }
+      },
+      "verifyEmail": {
+        "verifying": "正在验证你的邮箱...",
+        "codeNotFound": "未找到验证码",
+        "linkExpired": "验证链接已过期",
+        "alreadyVerified": "邮箱已经验证过了！",
+        "nothingMoreToDo": "这里没有其他需要做的了",
+        "verified": "你的邮箱已验证！",
+        "stayTuned": "请关注邮件获取最新动态",
+        "redirecting": "跳转中...",
+        "somethingWentWrong": "出了点问题！",
+        "requestAgain": "请在 Polymarket 设置中重新请求",
+        "contactUs": "联系我们",
+        "ifYouNeedHelp": "如果需要帮助。"
+      },
+      "portfolio": {
+        "today": "过去一天",
+        "availableToTrade": "可用于交易",
+        "profitLoss": "盈亏",
+        "pastDay": "过去 24 小时",
+        "pastWeek": "过去一周",
+        "pastMonth": "过去一个月",
+        "allTime": "历史累计",
+        "meta": {
+          "title": "你的资产组合 | Polymarket",
+          "description": "查看你的 Polymarket 资产组合，追踪交易记录和赢利情况。"
+        },
+        "claim": {
+          "youWon": "你赢啦",
+          "claim": "兑换",
+          "polymarketsWon": "赢利的预测盘口",
+          "totalReturn": "总收益",
+          "proceeds": "收益金额",
+          "bet": "交易金额",
+          "won": "赢利金额",
+          "value": "价值"
+        },
+        "status": {
+          "won": "已赢利",
+          "lost": "已亏损"
+        },
+        "tabs": {
+          "positions": "持仓",
+          "orders": "未成交订单",
+          "liquidity": "流动性",
+          "history": "历史记录",
+          "marketRewards": "市场奖励",
+          "manageYourPortfolio": "管理资产组合"
+        },
+        "filters": {
+          "search": "搜索",
+          "closeLosses": "平仓亏损",
+          "export": "导出",
+          "loading": "加载中",
+          "loadMore": "加载更多"
+        },
+        "table": {
+          "activity": "交易记录",
+          "market": "盘口",
+          "value": "价值",
+          "side": "方向",
+          "outcome": "结果",
+          "price": "价格",
+          "filled": "已成交",
+          "total": "总计",
+          "expiration": "到期时间",
+          "time": "时间",
+          "showMore": "显示更多",
+          "showMorePositions": "显示更多持仓",
+          "showMoreHistory": "显示更多历史",
+          "showMoreRewards": "显示更多奖励",
+          "cancelAll": "取消所有"
+        },
+        "sharesAt": "{shares} 份额，均价 {price}",
+        "messages": {
+          "noTradesYet": "你还没有任何预测盘口交易哦",
+          "noOpenOrdersFound": "暂无未成交订单。",
+          "loadingError": "加载交易记录出错了，试试刷新页面吧。",
+          "noActivityFound": "啥交易记录也没有。",
+          "noPositionsFound": "暂无持仓。",
+          "failedToRedeem": "兑换持仓失败"
+        },
+        "sponsorships": {
+          "search": "搜索赞助",
+          "viewSponsorships": "查看赞助",
+          "noSponsorshipsFound": "未找到赞助",
+          "errorLoading": "加载赞助时出错，请刷新页面重试。",
+          "headers": {
+            "status": "状态",
+            "market": "盘口",
+            "startDate": "开始日期",
+            "endDate": "结束日期",
+            "progress": "进度"
+          },
+          "sortBy": {
+            "currentValue": "当前价值",
+            "startDate": "开始日期",
+            "endDate": "结束日期",
+            "dailyRate": "日费率",
+            "alphabetically": "按字母排序"
+          },
+          "status": {
+            "active": "进行中",
+            "ended": "已结束",
+            "upcoming": "待确认"
+          },
+          "perDay": "/天",
+          "daysLeft": "剩余 {count} 天",
+          "refunded": "已退款",
+          "refundTooltip": "退款于每天 UTC 时间 0:00–1:00 之间处理。",
+          "confirming": "确认中...",
+          "cancelling": "取消中",
+          "cancellingTooltip": "你的退款覆盖 UTC 凌晨 12:00 起的时间段。在此之前奖励继续发放。流动性提供者未获得的部分也将在 UTC 凌晨 12:00 后退还。",
+          "linkCopied": "链接已复制！",
+          "linkCopiedDescription": "市场链接已复制到剪贴板"
+        },
+        "notAvailable": "暂无",
+        "errorState": {
+          "title": "出了点问题",
+          "message": "加载数据时出错了。",
+          "errorDetails": "错误详情"
+        },
+        "redeemAmount": {
+          "receive": "收到",
+          "sellingShares": "卖出 {shares} 份额 @ {avgPrice}"
+        },
+        "modals": {
+          "close": {
+            "title": "亏损的预测盘口",
+            "description": "你可以平掉这些已结算的持仓，确认最终亏损金额。",
+            "learnMore": "了解更多",
+            "closePositions": "平仓",
+            "closePositionsCount": "平掉 {count} 个持仓",
+            "processing": "处理中… {current}/{total}",
+            "done": "搞定",
+            "tryAgain": "再试试",
+            "successMessage": "已成功平仓所有份额。",
+            "positionsClosed": "持仓已平仓",
+            "closedCount": "已平仓 {count} 个持仓"
+          },
+          "redeem": {
+            "youWon": "你赢啦",
+            "greatJob": "太牛了！在 Polymarket 精准预判了未来走势。",
+            "addedToAccount": "已添加到您的账户",
+            "successDescription": "您的奖金已准备就绪，继续交易吧！",
+            "claimProceeds": "兑换收益",
+            "shareWinnings": "分享你赢得的 ${amount}",
+            "claimAmount": "兑换 ${amount}",
+            "processing": "处理中…{current}/{total}",
+            "done": "搞定",
+            "tryAgain": "再试试",
+            "creatingShareLink": "正在生成分享链接…",
+            "shareOn": "分享到",
+            "tweetText": "我刚在 @Polymarket 赢了 ${amount}！\n\n快来和我一起，把你的预判变成真金白银："
+          },
+          "merge": {
+            "title": "合并 ${amount} 持仓",
+            "description": "此操作会合并所有符合条件的盘口持仓。",
+            "mergePositions": "合并持仓",
+            "processing": "处理中…{current}/{total}",
+            "done": "搞定",
+            "tryAgain": "再试试",
+            "successMessage": "已成功合并所有符合条件的持仓。"
+          },
+          "error": {
+            "title": "兑换失败",
+            "helpArticleText": "请访问",
+            "helpArticleLink": "这篇文章",
+            "forMoreAssistance": "获取更多帮助。",
+            "tryAgain": "再试试"
+          }
+        },
+        "sort": {
+          "currentValue": "当前价值",
+          "bet": "交易金额",
+          "profitLossPercent": "盈亏百分比",
+          "profitLossDollar": "盈亏金额（美元）",
+          "shares": "份额",
+          "alphabetically": "按字母顺序",
+          "endingSoon": "即将封盘",
+          "payout": "赔付",
+          "latestPrice": "最新价格",
+          "averageCostPerShare": "每股平均成本",
+          "newest": "最新",
+          "oldest": "最早",
+          "filledQuantity": "已成交数量",
+          "totalQuantity": "总数量",
+          "orderDate": "订单日期",
+          "resolvingSoonest": "最早结算",
+          "poolShare": "资金池占比",
+          "fees": "手续费"
+        },
+        "filtersHistory": {
+          "all": "全部",
+          "trades": "交易",
+          "buy": "买入",
+          "merge": "合并",
+          "redeem": "兑换",
+          "liquidityRewards": "流动性奖励",
+          "referralRewards": "推荐奖励",
+          "holdingRewards": "持仓奖励",
+          "sell": "卖出",
+          "split": "拆分",
+          "convert": "转换",
+          "lost": "亏损",
+          "deposit": "充值",
+          "withdraw": "提现"
+        },
+        "orders": {
+          "viewOpenOrders": "查看未成交订单",
+          "sort": {
+            "market": "盘口",
+            "filledQty": "已成交数量",
+            "totalQty": "总数量",
+            "orderDate": "订单日期",
+            "resolution": "最早结算"
+          }
+        },
+        "positionsTable": {
+          "market": "盘口",
+          "avg": "均价",
+          "now": "当前价",
+          "avgToNowTooltip": "你的每股平均买入价与当前价格",
+          "howDoSharePricesWork": "份额价格是如何计算的？",
+          "bet": "交易金额",
+          "toWin": "可赢利金额",
+          "value": "价值"
+        },
+        "autoRedeem": {
+          "title": "立即收款",
+          "reenableTitle": "重新启用自动兑换",
+          "description": "赢了之后，奖金自动到账。不需要手动操作。",
+          "oneTimeApprovalLabel": "一次性授权",
+          "oneTimeApprovalDesc": "签一笔交易就搞定了",
+          "startsAfterNextTradeLabel": "下一笔交易后生效",
+          "startsAfterNextTradeDesc": "最后手动兑换一次奖金。",
+          "alwaysOnLabel": "始终开启",
+          "alwaysOnDesc": "一旦启用，永久生效。",
+          "approving": "授权中...",
+          "enableAutoRedeem": "开启自动兑换",
+          "enabledToastTitle": "自动兑换已开启",
+          "enabledToastDesc": "你的奖金将自动兑换。",
+          "failedToastTitle": "自动兑换失败",
+          "failedToastDesc": "出了点问题，请重试。",
+          "txFailedError": "交易未能确认，请重试！",
+          "signatureRejectedError": "签名被拒绝，请重试！",
+          "genericError": "出了点问题，请重试！",
+          "settingTitle": "自动兑换奖金",
+          "settingEnabled": "已开启",
+          "settingEnabling": "开启中...",
+          "settingEnable": "开启",
+          "settingActiveDesc": "市场关闭时奖金自动兑换。",
+          "settingInactiveDesc": "市场关闭时自动兑换你的奖金。一次授权，始终开启。",
+          "settingDisable": "关闭",
+          "settingDisabling": "关闭中...",
+          "disabledToastTitle": "自动兑换已关闭",
+          "disabledToastDesc": "你的奖金将不再自动兑换。"
+        },
+        "copyAddress": "复制地址",
+        "copied": "复制成功！",
+        "walletAddressTitle": "你的 Polymarket 钱包地址",
+        "walletAddressWarning": "请勿向此地址发送资金。此地址仅供 API 使用。",
+        "chartIntervalOneDay": "1天",
+        "chartIntervalOneWeek": "1周",
+        "chartIntervalOneMonth": "1个月",
+        "chartIntervalAll": "全部",
+        "pleaseTryAgain": "请重试",
+        "tooltipShare": "分享",
+        "tooltipCloseLostPosition": "平掉亏损持仓"
+      },
+      "orders": {
+        "filled": "已成交",
+        "remaining": "剩余 {count} 个",
+        "ordersCancelled": "订单已取消",
+        "cancelOrdersError": "取消订单时出错",
+        "cancelOrdersCount": "{count} 个订单已取消",
+        "areYouSure": "确定吗？",
+        "cancelMultipleOrders": "你将取消 {count} 个未成交订单。",
+        "cancelSingleOrder": "确定要取消这个未成交订单吗？",
+        "neverMind": "算了",
+        "confirm": "确认",
+        "cannotBeUndone": "此操作无法撤销。",
+        "cancelOneOpenOrder": "取消 1 个未成交订单",
+        "cancelNOpenOrders": "取消 {count} 个未成交订单",
+        "cancelOneOrder": "取消 1 个订单",
+        "cancelNOrders": "取消 {count} 个订单",
+        "orderCancelledSuccessfully": "订单已成功取消",
+        "ordersCancelledSuccessfully": "{count} 个订单已成功取消",
+        "earningRewards": "赚取奖励中",
+        "cancel": "取消",
+        "cancelAll": "全部取消",
+        "viewOpen": "查看挂单",
+        "nOrders": "{count} 个订单",
+        "nOrdersTitle": "{count} 个订单",
+        "nOrdersWereCancelled": "{count} 个订单已取消",
+        "errorCancellingNOrders": "取消 {count} 个订单时出错"
+      },
+      "shareCards": {
+        "shareProfile": "分享个人资料",
+        "sharePnlChart": "分享盈亏图表",
+        "shareTrade": "分享交易",
+        "profileTweetText": "来看看我在 @Polymarket 上的资料吧。",
+        "pnlTweetText": "来看看我在 @Polymarket 上的盈亏吧。",
+        "ownTradeTweetText": "我刚在 @Polymarket 上交易了。\n\n来跟我对赌：",
+        "thirdPartyTradeTweetText": "来看看 @Polymarket 上的这笔交易。",
+        "copied": "已复制！",
+        "copyLink": "复制链接",
+        "copyImage": "复制图片",
+        "sharing": "分享中...",
+        "share": "分享",
+        "shareWin": "分享胜利",
+        "cashoutTweetText": "我刚在 @Polymarket 赢了。"
+      },
+      "homepageV2": {
+        "featuredMarketsSectionHeading": "精选市场",
+        "featuredMarketsCarousel": "精选市场轮播",
+        "allMarkets": "所有盘口",
+        "exploreAll": "探索全部",
+        "breakingNews": "突发新闻",
+        "hotTopics": "热门话题",
+        "today": "今日",
+        "endedAt": "于{time}结束",
+        "endedOn": "于{date}结束",
+        "ends": "{date}截止",
+        "vol": "成交量",
+        "live": "直播",
+        "topTraders": "顶级交易者",
+        "trader": "交易者",
+        "side": "方向",
+        "pnl": "盈亏",
+        "spread": "点差",
+        "total": "总计",
+        "sports": "体育",
+        "priceToBeat": "目标价格",
+        "currentPrice": "当前价格",
+        "endsIn": "剩余时间",
+        "chance": "概率",
+        "yes": "是",
+        "no": "否",
+        "draw": "平局",
+        "up": "看涨",
+        "down": "看跌",
+        "upOrDown": "涨或跌",
+        "pickedForYou": "为你推荐",
+        "showMore": "查看更多"
+      },
+      "breaking": {
+        "title": "突发新闻",
+        "description": "查看过去 24 小时内波动最大的预测盘口",
+        "movers": {
+          "categories": {
+            "all": "全部",
+            "politics": "政治",
+            "world": "全球",
+            "sports": "体育",
+            "crypto": "加密货币",
+            "finance": "金融",
+            "tech": "科技",
+            "culture": "文化"
+          },
+          "emptyState": "这个分类下没有明显的盘口波动哦",
+          "emptyStateDescription": "换个分类试试，或者稍后再来看看",
+          "getUpdates": "获取更新",
+          "waitlist": {
+            "title": "获取每日更新",
+            "description": "我们每天都会给你发电子邮件，同步 Polymarket 上的波动动态",
+            "submittedTitle": "你已成功加入列表",
+            "submittedDescription": "你会收到每日盘口重大波动的最新通知",
+            "emailPlaceholder": "输入你的电子邮箱",
+            "emailError": "请输入有效的电子邮箱",
+            "joining": "加入中…",
+            "getUpdates": "获取更新"
+          },
+          "tweetList": {
+            "liveFrom": "来自 @polymarket 的实时动态",
+            "followOnX": "关注 𝕏",
+            "breakingNews": "突发新闻",
+            "newPolymarket": "新预测盘口",
+            "tweetMediaAlt": "推文配图",
+            "seeAll": "查看全部"
+          }
+        },
+        "meta": {
+          "defaultTitle": "突发新闻 | Polymarket",
+          "defaultDescription": "查看过去 24 小时内波动最大的盘口。",
+          "politics": {
+            "title": "突发政治新闻与预测 | Polymarket",
+            "description": "突发政治新闻、选举和政府政策的实时预测盘口及投注赔率。",
+            "h1": "突发政治新闻与预测"
+          },
+          "world": {
+            "title": "突发全球新闻与预测 | Polymarket",
+            "description": "突发全球新闻、冲突和国际关系的实时预测盘口。",
+            "h1": "突发全球新闻与预测"
+          },
+          "sports": {
+            "title": "突发体育新闻与预测 | Polymarket",
+            "description": "突发体育新闻、球员交易、伤病和赛事结果的实时预测盘口。",
+            "h1": "突发体育新闻与预测"
+          },
+          "crypto": {
+            "title": "突发加密货币新闻与预测 | Polymarket",
+            "description": "突发加密货币新闻、监管政策和价格波动的实时预测盘口。",
+            "h1": "突发加密货币新闻与预测"
+          },
+          "finance": {
+            "title": "突发金融新闻与预测 | Polymarket",
+            "description": "突发金融新闻、财报和经济数据发布的实时预测盘口。",
+            "h1": "突发金融新闻与预测"
+          },
+          "tech": {
+            "title": "突发科技新闻与预测 | Polymarket",
+            "description": "突发科技新闻、人工智能进展和产品发布的实时预测盘口。",
+            "h1": "突发科技新闻与预测"
+          },
+          "culture": {
+            "title": "突发文化新闻与预测 | Polymarket",
+            "description": "突发流行文化事件、名人新闻和刷屏热点的实时预测盘口。",
+            "h1": "突发文化新闻与预测 "
+          }
+        }
+      },
+      "rewards": {
+        "earn4Percent": "赚 4% 收益",
+        "earn4PercentHoldingRewards": "持仓赚 4% 奖励",
+        "earnRewardsByPlacingLimitOrders": "在中点价附近挂限价单就能赚奖励。",
+        "earnRewardsByPlacingOrdersWithinSpread": "在点差内挂单就能赚奖励。",
+        "learnMore": "了解更多",
+        "rewards": "奖励",
+        "maxSpread": "最大点差",
+        "minShares": "最少份额",
+        "dailyRewards": "每日奖励",
+        "earnings": "收益",
+        "enableRewards": "开启奖励",
+        "minimumRewardPayout": "最低奖励赔付额 1 美元，低于这个数不发哦。",
+        "rewardsDisplayedOnceThreshold": "最低支付：{polyThreshold}（Polymarket），{userThreshold}（用户赞助）。\n奖励正在累积，达到门槛后将自动发放。",
+        "market": "盘口",
+        "reward": "奖励",
+        "competitive": "竞争度",
+        "percent": "百分比",
+        "price": "价格",
+        "rules": "规则",
+        "noFavorites": "关注列表里还没有预测盘口哦",
+        "noResults": "暂无结果",
+        "maxSpreadTooltip": "挂单价格与盘口中点价的最大允许偏差（包含），达标才能计分",
+        "competitiveTooltip": "这个盘口提供流动性的竞争激烈程度",
+        "earningsTooltip": "今日已赚奖励",
+        "polyRewards": "Polymarket 奖励",
+        "userSponsoredRewards": "用户流动性奖励",
+        "percentTooltip": "你在这个盘口中提供的流动性占计分流动性的比例",
+        "changeLog": {
+          "increased": "增加",
+          "decreased": "减少",
+          "time": "时间",
+          "type": "类型",
+          "value": "值",
+          "reward": "奖励",
+          "minShares": "最小股数",
+          "maxSpread": "最大价差",
+          "minutesAgo": "分钟前",
+          "hoursAgo": "小时前",
+          "daysAgo": "天前"
+        },
+        "categories": {
+          "all": "全部",
+          "politics": "政治",
+          "sports": "体育",
+          "crypto": "加密货币",
+          "popCulture": "流行文化",
+          "middleEast": "中东",
+          "business": "商业",
+          "science": "科学"
+        },
+        "endOfDay": "当日结束",
+        "custom": "自定义",
+        "expiry": "过期时间",
+        "date": "日期",
+        "time": "时间",
+        "apply": "应用",
+        "expirationError": "过期时间得是未来时间哦，再试试",
+        "expirationModal": {
+          "relativeTime": "相对时间",
+          "relativeTimeHint": "例如 15m 或 2h 30m",
+          "relativeTimeError": "请输入类似 \"15m\" 或 \"2h 30m\" 的值",
+          "expiresIn": "{time}后到期",
+          "in30Seconds": "30秒后",
+          "saveThisOption": "保存此选项",
+          "savedOptions": "已保存选项",
+          "fiveMinutes": "5分钟",
+          "oneHour": "1小时",
+          "twelveHours": "12小时",
+          "twentyFourHours": "24小时"
+        },
+        "removeFromFavorites": "取消关注",
+        "addToFavorites": "加入关注",
+        "withPositions": "持仓",
+        "withOpenOrders": "未成交订单",
+        "mergeablePositions": "可合并",
+        "favoritePolymarkets": "收藏",
+        "addSponsor": "添加",
+        "liveSponsor": "已上线",
+        "addingSponsor": "添加中",
+        "trading": {
+          "place": "挂单",
+          "clear": "清空",
+          "cancelAll": "全部取消",
+          "orders": "订单",
+          "positions": "持仓",
+          "history": "历史",
+          "tradeHistory": "交易历史",
+          "trade": "交易",
+          "time": "时间",
+          "min": "最低",
+          "max": "最高",
+          "shares": "份额"
+        },
+        "changes": "",
+        "tabs": {
+          "rewards": "奖励",
+          "openOrders": "未成交订单"
+        },
+        "searchMarkets": "搜索市场",
+        "sort": {
+          "percent": "百分比",
+          "earnings": "收益",
+          "competition": "竞争",
+          "maxSpread": "最大价差",
+          "minSize": "最小数量",
+          "market": "市场",
+          "ratePerDay": "每日费率",
+          "price": "价格"
+        },
+        "filters": {
+          "decreasedRewards": "减少的奖励",
+          "removedRewards": "移除的奖励",
+          "cancelFiltered": "取消已筛选",
+          "rewardDecreased": "奖励减少",
+          "rewardRemoved": "奖励已移除",
+          "orderCancelledTitle": "订单已取消",
+          "ordersCancelledTitle": "订单已取消",
+          "nOrderWasCancelled": "个订单已取消",
+          "nOrdersWereCancelled": "个订单已取消",
+          "errorCancellingOrderTitle": "取消订单时出错",
+          "errorCancellingOrdersTitle": "取消订单时出错",
+          "errorCancellingNOrder": "个订单",
+          "errorCancellingNOrders": "个订单"
+        },
+        "mobile": {
+          "maxSpread": "最大价差",
+          "minSize": "最小金额",
+          "totalRewards": "总奖励",
+          "earnings": "收益",
+          "percent": "百分比",
+          "price": "价格",
+          "competition": "竞争"
+        },
+        "competitiveLevel": {
+          "none": "无竞争",
+          "low": "低竞争",
+          "mild": "轻度竞争",
+          "medium": "中等竞争",
+          "high": "高竞争",
+          "intense": "激烈竞争",
+          "spreadTooLarge": "价差过大"
+        },
+        "sponsor": {
+          "attractLiquidity": "通过赞助该市场的奖励来吸引更多流动性。",
+          "learnMore": "了解更多",
+          "loading": "加载中...",
+          "trackOrder": "跟踪订单",
+          "notAvailableInRegion": "您所在的地区不可用。",
+          "seeTerms": "查看条款。",
+          "perDay": "/天",
+          "utcSuffix": "UTC",
+          "noProxyAddress": "未找到代理地址。请连接您的钱包。",
+          "invalidParameters": "无效的赞助参数",
+          "txTimeout": "交易确认在 2 分钟后超时",
+          "txFailed": "交易确认失败",
+          "signatureRejected": "签名被拒绝",
+          "unknownError": "发生未知错误",
+          "invalidMarketId": "无效的市场 ID",
+          "unavailable": "不可用",
+          "marketSponsored": "市场已赞助"
+        },
+        "makerRebate": {
+          "description": "通过挂单成交获得每日 USDC 返佣。",
+          "learnMore": "了解更多",
+          "label": "挂单返佣"
+        },
+        "addRewards": "添加奖励",
+        "validation": {
+          "orderError": "订单错误",
+          "minimumShares": "限价单最少 {amount} 份",
+          "notEnoughShares": "份额不足",
+          "orderMustBeGreaterThanDollar": "订单金额必须大于 $1",
+          "limitBuyExceedsBalance": "限价买入超出余额"
+        },
+        "aria": {
+          "decreaseDuration": "减少持续时间",
+          "increaseDuration": "增加持续时间",
+          "copyMarketId": "复制市场 ID"
+        },
+        "sponsorshipModal": {
+          "sponsorRewards": "赞助市场奖励",
+          "sponsorDescriptionPre": "付费给流动性提供者，让他们在您希望看到更多活动的市场上交易。",
+          "sponsorDescriptionBold": "您自己不会获得奖励",
+          "sponsorDescriptionPost": "，您的资金将直接流向做市商。",
+          "rule1Pre": "资金将被",
+          "rule1Bold": "锁定",
+          "rule1Post": "，直到赞助期结束。",
+          "rule2Pre": "奖励将",
+          "rule2Bold": "每日",
+          "rule2Post": "分配给符合条件的流动性提供者。",
+          "rule3Pre": "未使用的资金将在市场提前结算时",
+          "rule3Bold": "退还",
+          "rule3Post": "。",
+          "acceptAndContinue": "接受并继续",
+          "logInToContinue": "登录以继续",
+          "deposit": "存入",
+          "continue": "继续",
+          "day": "天",
+          "days": "天",
+          "amount": "金额",
+          "balance": "余额：",
+          "minimumRequired": "{days} {daysLabel}至少需要 ${amount}",
+          "minimumSponsorship": "最低赞助金额为 ${amount}",
+          "duration": "持续时间",
+          "daysUnit": "天",
+          "dailyRewardRate": "每日奖励率",
+          "commitmentEnds": "承诺结束时间",
+          "unusedFundsReturn": "如果市场提前结算，未使用的资金将被退还",
+          "sponsorshipMinPerDay": "每天最低 ${amount} 要求",
+          "market": "市场",
+          "marketId": "市场 ID",
+          "totalAmount": "总金额",
+          "dailyRate": "每日费率",
+          "startDate": "开始日期",
+          "endDate": "结束日期",
+          "reviewTitle": "审核订单",
+          "reviewDescription": "请在确认前审核您的赞助详情。",
+          "reviewWarningPre": "您可以随时取消。",
+          "reviewWarningBold": "您的退款涵盖下一个 UTC 凌晨 12:00 之后的剩余余额。",
+          "reviewWarningPost": " 今天的分配将保留在流动性提供者的池中。流动性提供者未赚取的部分也将在 UTC 凌晨 12:00 退还。",
+          "learnMore": "了解更多",
+          "editOrder": "编辑订单",
+          "confirming": "确认中...",
+          "confirmOrder": "确认订单",
+          "trackSponsorshipProgress": "跟踪进度",
+          "view": "查看",
+          "sponsorshipActive": "赞助活跃中",
+          "reviewOrCancel": "在以下位置审核或取消您的赞助",
+          "portfolioSponsorships": "投资组合赞助",
+          "firstDistribution": "首次分配",
+          "sponsorship": "赞助",
+          "sponsorshipLive": "赞助已生效",
+          "contributionSuccess": "您的 ${amount} 贡献已成功添加到市场奖励中。",
+          "earlyResolveNote": "如果该市场在您的赞助结束前结算，未使用的资金将自动退还到您的余额中。",
+          "returnToMarket": "返回市场",
+          "trackProgress": "跟踪进度",
+          "configError": "配置错误",
+          "noConditionId": "未找到该市场的条件 ID",
+          "sponsorshipFailed": "赞助失败",
+          "unexpectedError": "发生意外错误"
+        },
+        "cancelModal": {
+          "cancelSponsorship": "取消赞助",
+          "sponsorshipCancelled": "赞助已取消",
+          "market": "市场",
+          "totalAmount": "总金额",
+          "dailyRate": "每日费率",
+          "availableForWithdrawal": "可提取金额",
+          "warningText": "您的退款将立即处理，但仅涵盖下一个 UTC 凌晨 12:00 之后的期间。今天的分配仍保留在奖励池中。流动性提供者未赚取的部分也将在 UTC 凌晨 12:00 退还。",
+          "close": "关闭",
+          "cancelling": "取消中...",
+          "cancel": "取消",
+          "cancellationFailed": "取消失败",
+          "unexpectedError": "发生意外错误",
+          "successHeading": "赞助已取消",
+          "successDescription": "您未使用的赞助余额将自动退还。",
+          "done": "完成",
+          "withdrawalTooltip": "此赞助将在下一个 UTC 凌晨 12:00 纪元之前结束。今天的全部分配已投入奖励池。"
+        }
+      },
+      "dashboards": {
+        "title": "仪表板",
+        "elections": "选举",
+        "primaries": "初选",
+        "macro": "宏观",
+        "sports": "体育",
+        "earnings": "财报",
+        "fedRates": "美联储利率",
+        "oscars": "奥斯卡",
+        "trump": "特朗普",
+        "midterms": "中期选举",
+        "viewAll": "查看全部",
+        "electionOdds": "选举赔率与预测",
+        "primariesOdds": "初选赔率与预测",
+        "macroDashboard": "宏观仪表板",
+        "economy": "经济",
+        "keyElections": "关键选举",
+        "geopolitics": "地缘政治",
+        "sportsPrediction": "体育赛事预测盘口 ",
+        "federalReserveRates": "美联储利率",
+        "fedSubtitle": "美联储下次会议会有啥动作？",
+        "fedDecisionProbabilities": "美联储决策概率",
+        "oddsOverTime": "赔率走势",
+        "expectedDecision": "预期决策",
+        "chance": "概率",
+        "meetingIn": "会议还有",
+        "nba": {
+          "nbaChampion": "NBA 冠军",
+          "nbaMvp": "NBA 常规赛 MVP",
+          "rookieOfYear": "年度新秀",
+          "nbaCupWinner": "NBA 杯冠军",
+          "easternConferenceChampion": "东部冠军",
+          "westernConferenceChampion": "西部冠军"
+        },
+        "epl": {
+          "premierLeagueWinner": "英超冠军",
+          "secondPlace": "亚军",
+          "thirdPlace": "季军",
+          "lastPlace": "倒数第一",
+          "whichClubsGetRelegated": "哪些俱乐部会降级？"
+        }
+      },
+      "events": {
+        "negRiskBadge": {
+          "title": "赢家通吃",
+          "onlyOneWinner": "只有 1 个赢家",
+          "supportsNegativeRisk": "支持负风险（把“否”份额转换成其他选项的“是”份额）",
+          "completeNegativeRisk": "完全负风险",
+          "completeNegativeRiskDescription": "如果后续新增结果选项，参与转换的用户也会获得对应的“是”份额"
+        },
+        "headerMeta": {
+          "volume": "交易量",
+          "estimatedEndDateTooltip": "这是预估结束日期，具体结算规则看下面哦。",
+          "holdingRewardsTooltip": "为了保证长期定价准确，我们会按你在这个盘口的总持仓发放 4% 的奖励。"
+        },
+        "resolution": {
+          "outcomeProposed": "已提议结果",
+          "outcomeProposal": "结果提议",
+          "disputeWindow": "争议期",
+          "noDispute": "无争议",
+          "final": "最终",
+          "finalReview": "最终审核",
+          "inReview": "审核中",
+          "finalOutcome": "最终结果",
+          "disputed": "有争议",
+          "finalDispute": "最终争议",
+          "proposeResolution": "提议结算结果",
+          "noOutcomeProposedYet": "还没人提议结算结果哦。",
+          "dispute": "争议",
+          "viewDetails": "查看详情"
+        },
+        "accordionHeader": {
+          "outcome": "结果",
+          "chance": "概率 %",
+          "refresh": "刷新",
+          "result": "结果",
+          "cancelAllOrders": "取消所有订单"
+        },
+        "grokEventSummary": {
+          "marketContext": "盘口背景",
+          "generate": "生成",
+          "gettingSources": "正在获取信息源...",
+          "resultsExperimental": "结果仅供参考哦。",
+          "contextDisclaimer": "基于Polymarket数据的AI实验性摘要。这不是交易建议，也不影响该市场的结算方式。",
+          "contextUpdated": "更新于"
+        },
+        "aboutSection": {
+          "about": "关于",
+          "rules": "规则",
+          "showLess": "收起",
+          "showMore": "展开",
+          "createdAt": "市场开放时间：",
+          "resolver": "结算方",
+          "sources": "信息来源",
+          "resolutionSource": "结算来源",
+          "liveDataDisclaimer": "实时数据可能延迟几秒，并可能受到其他交易所的价格活动和更广泛市场条件的影响。"
+        },
+        "statistics": {
+          "volume": "交易量",
+          "endDate": "结束日期",
+          "createdAt": "市场开放时间"
+        },
+        "backToTop": "返回顶部",
+        "lowerState": {
+          "comments": "评论",
+          "holders": "顶级持仓者",
+          "positions": "持仓",
+          "activity": "动态",
+          "related": "相关"
+        },
+        "tabs": {
+          "markets": "盘口",
+          "positions": "持仓",
+          "orders": "订单",
+          "history": "历史",
+          "orderBook": "订单簿",
+          "graph": "图表",
+          "openOrders": "未成交订单",
+          "resolution": "结算"
+        },
+        "orderHeaders": {
+          "type": "类型",
+          "side": "方向",
+          "outcome": "结果",
+          "price": "价格",
+          "filled": "已成交",
+          "total": "总计",
+          "expiration": "到期",
+          "expiry": "到期"
+        },
+        "resolutionCountdown": {
+          "eventHasEnded": "事件已结束",
+          "day": "天",
+          "days": "天",
+          "hr": "小时",
+          "hrs": "小时",
+          "min": "分钟",
+          "mins": "分钟",
+          "sec": "秒",
+          "secs": "秒",
+          "left": "剩余",
+          "resolutionTime": "结算时间"
+        },
+        "returnCell": {
+          "unrealized": "未实现",
+          "realized": "已实现",
+          "total": "总计"
+        },
+        "marketUpdates": {
+          "additionalContext": "补充信息",
+          "updated": "更新于 {date}"
+        },
+        "netPositions": {
+          "title": "净持仓",
+          "description": "基于你所有持仓的各个结果场景下的收益。",
+          "viewNetPositions": "查看净持仓",
+          "payout": "收益"
+        },
+        "dateDisplay": {
+          "resolvedAgo": "{days}前已结算",
+          "inDays": "{days}后",
+          "estimatedTimeRemaining": "预计剩余时间：{countdown}",
+          "seeRulesBelow": "具体结算详情请参阅下方规则。",
+          "estimatedEndDate": "这是预计的结束日期。具体结算详情请参阅下方规则。"
+        },
+        "videoEmbed": {
+          "watchStream": "观看直播",
+          "ended": "已结束",
+          "beginsIn": "开始倒计时"
+        },
+        "goToLiveMarket": "前往实时盘口",
+        "finalPrice": "最终价格",
+        "noPositionsYet": "暂无持仓",
+        "marketInsights": "市场洞察",
+        "relatedXPosts": "相关 X 帖子",
+        "seeXPosts": "查看 X 帖子",
+        "unableToLoadChart": "无法加载图表数据",
+        "scoreboard": "计分板",
+        "liveStream": "直播",
+        "notCurrentlyLive": "当前未直播",
+        "logInToViewStream": "请登录以观看此直播。",
+        "convertPositions": {
+          "title": "转换持仓",
+          "description": "将你的\"否\"持仓转换为互补的\"是\"持仓（以及可能的 USDC）。",
+          "learnMore": "了解更多",
+          "selectOneOrMore": "选择一个或多个",
+          "noPositions": "没有持仓",
+          "enterAmount": "输入数量",
+          "review": "审核",
+          "completed": "已完成",
+          "youHaveNewShares": "你有新的份额",
+          "okay": "好的",
+          "convert": "转换",
+          "shares": "份额"
+        }
+      },
+      "eventFaq": {
+        "title": "常见问题",
+        "whatIsMarket": {
+          "q": "什么是\"{title}\"预测市场？",
+          "binaryA": "\"{title}\"是 Polymarket 上的一个预测市场，交易者根据自己对事件是否会发生的判断买卖\"是\"或\"否\"的份额。当前社区预测的概率为 {leadingProbabilityDisplay}（\"{leadingOutcome}\"）。例如，如果\"是\"的价格为 {leadingProbabilityCents}，则市场集体认为该事件发生的概率为 {leadingProbabilityDisplay}。这些赔率会随着交易者对新动态和信息的反应而不断变化。正确结果的份额在市场结算时可兑换为每份 $1。",
+          "multiWithSecondA": "\"{title}\"是 Polymarket 上一个拥有 {outcomeCountDisplay} 个可能结果的预测市场，交易者根据自己的判断买卖份额。当前领先结果为\"{leadingOutcome}\"，概率为 {leadingProbabilityDisplay}，其次是\"{secondOutcome}\"，概率为 {secondProbabilityDisplay}。价格反映社区的实时概率。例如，价格为 {leadingProbabilityCents} 的份额意味着市场集体认为该结果的概率为 {leadingProbabilityDisplay}。这些赔率会随着交易者的反应而不断变化。正确结果的份额在市场结算时可兑换为每份 $1。",
+          "multiWithoutSecondA": "\"{title}\"是 Polymarket 上一个拥有 {outcomeCountDisplay} 个可能结果的预测市场，交易者根据自己的判断买卖份额。当前领先结果为\"{leadingOutcome}\"，概率为 {leadingProbabilityDisplay}。价格反映社区的实时概率。例如，价格为 {leadingProbabilityCents} 的份额意味着市场集体认为该结果的概率为 {leadingProbabilityDisplay}。这些赔率会随着交易者的反应而不断变化。正确结果的份额在市场结算时可兑换为每份 $1。"
+        },
+        "activity": {
+          "q": "\"{title}\"在 Polymarket 上产生了多少交易活动？",
+          "highVolumeA": "截至目前，\"{title}\"已产生 {totalVolumeRounded} 的总交易量{datePart}。这一活跃度反映了 Polymarket 社区的高度参与，并确保当前赔率由广泛的市场参与者共同形成。你可以直接在本页追踪实时价格变动并交易任何结果。",
+          "highVolumeDatePart": "（自{createdAt}市场上线以来）",
+          "newMarketA": "\"{title}\"是 Polymarket 上新创建的市场{datePart}。作为一个新市场，这是你率先设定赔率并建立初始价格信号的机会。你也可以将本页加入书签，以便跟踪交易量和活动。",
+          "newMarketDatePart": "，于{createdAt}上线"
+        },
+        "howToTrade": {
+          "q": "如何在\"{title}\"上交易？",
+          "binaryA": "要在\"{title}\"上交易，只需选择你认为答案是\"是\"还是\"否\"。每一方都有一个反映市场隐含概率的当前价格。输入你的金额并点击\"交易\"。如果你买入\"是\"的份额且结果为\"是\"，每份支付 $1。如果结果为\"否\"，你的\"是\"份额支付 $0。你也可以在结算前随时卖出份额以锁定利润或止损。",
+          "multiA": "要在\"{title}\"上交易，浏览本页上列出的 {outcomeCountDisplay} 个可用结果。每个结果显示一个代表市场隐含概率的当前价格。要建仓，选择你认为最可能的结果，选择\"是\"支持或\"否\"反对，输入金额并点击\"交易\"。如果你选择的结果在市场结算时正确，你的\"是\"份额每份支付 $1。如果不正确，支付 $0。你也可以在结算前随时卖出份额。"
+        },
+        "currentOdds": {
+          "q": "\"{title}\"的当前赔率是多少？",
+          "noTradesA": "该市场最近创建，尚未收到第一笔交易。成为第一个通过交易设定开盘赔率的人，或将本页加入书签以便稍后查看。",
+          "binaryA": "\"{title}\"的当前概率为 {leadingProbabilityDisplay}（\"{leadingOutcome}\"）。这意味着 Polymarket 社区目前认为该事件发生的概率为 {leadingProbabilityDisplay}。这些赔率基于实际交易实时更新，持续提供市场预期信号。",
+          "wideOpenWithSecondA": "这是一个非常开放的市场。\"{title}\"的当前领先者是\"{leadingOutcome}\"，仅有 {leadingProbabilityDisplay}，\"{secondOutcome}\"紧随其后为 {secondProbabilityDisplay}。由于没有任何结果占据明显优势，交易者认为这高度不确定，可能带来独特的交易机会。这些赔率实时更新，请将本页加入书签。",
+          "wideOpenWithoutSecondA": "这是一个非常开放的市场。\"{title}\"的当前领先者是\"{leadingOutcome}\"，仅有 {leadingProbabilityDisplay}。由于没有任何结果占据明显优势，交易者认为这高度不确定，可能带来独特的交易机会。这些赔率实时更新，请将本页加入书签。",
+          "standardWithSecondA": "\"{title}\"的当前领先者是\"{leadingOutcome}\"，概率为 {leadingProbabilityDisplay}，意味着市场对该结果的概率评估为 {leadingProbabilityDisplay}。紧随其后的结果是\"{secondOutcome}\"，概率为 {secondProbabilityDisplay}。这些赔率随着交易者买卖份额而实时更新。请经常回来查看或将本页加入书签。",
+          "standardWithoutSecondA": "\"{title}\"的当前领先者是\"{leadingOutcome}\"，概率为 {leadingProbabilityDisplay}，意味着市场对该结果的概率评估为 {leadingProbabilityDisplay}。这些赔率随着交易者买卖份额而实时更新。请经常回来查看或将本页加入书签。"
+        },
+        "resolution": {
+          "q": "\"{title}\"如何结算？",
+          "a": "\"{title}\"的结算规则明确定义了每个结果被宣布为获胜者所需满足的条件——包括用于确定结果的官方数据来源。你可以在本页评论上方的\"规则\"部分查看完整的结算标准。我们建议在交易前仔细阅读规则，因为它们规定了精确的条件、特殊情况和数据来源。"
+        },
+        "followWithout": {
+          "q": "我可以在不交易的情况下关注\"{title}\"吗？",
+          "a": "可以。你不需要交易也能保持了解。本页是\"{title}\"的实时跟踪器。结果概率会随着新交易的进入而实时更新。你可以将本页加入书签并查看评论区以了解其他交易者的看法。你还可以使用图表上的时间范围筛选器查看赔率随时间的变化情况。"
+        },
+        "reliability": {
+          "q": "为什么 Polymarket 对\"{title}\"的赔率被认为是可靠的？",
+          "highVolumeSchemaA": "Polymarket 的赔率由真实交易者用真金白银支持其判断来设定，这往往能产生准确的预测。\"{title}\"的交易量达到 {totalVolumeRounded}，这些价格汇聚了数千名参与者的集体知识和信念——通常优于民调、专家预测和传统调查。像 Polymarket 这样的预测市场有着出色的准确性记录，尤其是当事件接近结算日期时。例如，Polymarket 的一个月准确度评分为 {accuracyScore}。有关 Polymarket 预测准确度的最新统计数据，请访问 Polymarket 上的准确度页面。",
+          "highVolumeBeforeLink": "Polymarket 的赔率由真实交易者用真金白银支持其判断来设定，这往往能产生准确的预测。“{title}”的交易量达到 {totalVolumeRounded}，这些价格汇聚了数千名参与者的集体知识和信念——通常优于民调、专家预测和传统调查。像 Polymarket 这样的预测市场有着出色的准确性记录，尤其是当事件接近结算日期时。例如，Polymarket 的一个月准确度评分为 {accuracyScore}。有关 Polymarket 预测准确度的最新统计数据，请访问 ",
+          "highVolumeAfterLink": "。",
+          "lowVolumeSchemaA": "Polymarket 的赔率由真实交易者用真金白银支持其判断来设定，这往往能产生准确的预测。\"{title}\"仍在积累其交易基础，因此随着更多参与者进入市场，赔率将变得越来越可靠。像 Polymarket 这样的预测市场有着出色的准确性记录，尤其是当事件接近结算日期时。例如，Polymarket 的一个月准确度评分为 {accuracyScore}。有关 Polymarket 预测准确度的最新统计数据，请访问 Polymarket 上的准确度页面。",
+          "lowVolumeBeforeLink": "Polymarket 的赔率由真实交易者用真金白银支持其判断来设定，这往往能产生准确的预测。“{title}”仍在积累其交易基础，因此随着更多参与者进入市场，赔率将变得越来越可靠。像 Polymarket 这样的预测市场有着出色的准确性记录，尤其是当事件接近结算日期时。例如，Polymarket 的一个月准确度评分为 {accuracyScore}。有关 Polymarket 预测准确度的最新统计数据，请访问 ",
+          "lowVolumeAfterLink": "。",
+          "linkText": "准确度页面"
+        },
+        "getStarted": {
+          "q": "如何开始在\"{title}\"上交易？",
+          "a": "要在\"{title}\"上进行第一笔交易，请注册免费的 Polymarket 账户，并使用加密货币、信用卡或借记卡或银行转账充值。账户充值后，返回本页，选择你想交易的结果，输入金额并点击\"交易\"。如果你是预测市场的新手，请点击任何 Polymarket 页面顶部的\"运作方式\"链接，获取分步指南。"
+        },
+        "priceMeaning": {
+          "binaryQ": "\"{leadingOutcome}\"的价格 {leadingProbabilityCents} 意味着什么？",
+          "binaryA": "在 Polymarket 上，\"是\"或\"否\"的价格代表市场的隐含概率。\"{title}\"中\"是\"的价格为 {leadingProbabilityCents}，意味着交易者集体认为该事件发生的概率为 {leadingProbability}%。如果你以 {leadingProbabilityCents} 买入\"是\"且事件发生，你将获得每份 $1.00——利润为每份 {payoutMathDisplay}。如果事件未发生，这些份额价值 $0。",
+          "multiQ": "\"{leadingOutcome}\"的价格 {leadingProbabilityCents} 意味着什么？",
+          "multiA": "在 Polymarket 上，每个结果的价格代表市场的隐含概率。在\"{title}\"市场中，\"{leadingOutcome}\"的价格为 {leadingProbabilityCents}，意味着交易者集体认为\"{leadingOutcome}\"成为正确结果的概率约为 {leadingProbabilityDisplay}。如果你以 {leadingProbabilityCents} 买入\"是\"份额且结果正确，你将获得每份 $1.00——利润为每份 {payoutMathDisplay}。如果不正确，这些份额价值 $0。"
+        },
+        "marketClose": {
+          "q": "\"{title}\"市场何时关闭？",
+          "resolvedA": "\"{title}\"市场已结算。最终结果已确定，市场不再开放交易。你仍然可以在本页查看历史赔率、结果概率和评论。",
+          "endDatePassedA": "\"{title}\"市场的预定截止日期已过，但市场尚未正式结算。截止日期表示基础事件预计发生或可知的时间。市场在结果正式结算前仍保持开放交易。请查看本页上的结算状态和\"规则\"部分以获取最新信息。",
+          "noEndDateA": "该市场将在事件的官方结果确定后结算。请查看本页上的\"规则\"部分了解具体的结算标准和时间表。",
+          "longTermA": "\"{title}\"市场是一个长期预测，结算日期为 {endDate}——大约还有 {timeUntilResolution}。Polymarket 上的长期市场通常会随着事件的发展而出现显著的赔率变化。你可以随时交易或将本页加入书签。",
+          "standardA": "\"{title}\"市场预计在 {endDate} 前后结算。这意味着在此日期之前，交易将保持开放，赔率将继续变化。具体结算时间取决于官方结果何时可用，如\"规则\"部分所述。"
+        },
+        "tradersSaying": {
+          "q": "交易者对\"{title}\"有什么看法？",
+          "activeCommunity": "一个活跃的社区，有 {countDisplay} 条评论",
+          "growingDiscussion": "一个不断增长的讨论，有 {countDisplay} 条评论",
+          "activeA": "\"{title}\"市场有{communityPhrasing}，交易者在此分享分析、讨论结果和最新动态。向下滚动到评论区，阅读其他参与者的观点。你还可以按\"持仓大户\"筛选，或查看\"活动\"标签以获取实时交易动态。",
+          "newMarketA": "\"{title}\"市场是最近创建的。成为最早分享分析的人之一，在下方发表评论，或稍后回来查看。你还可以查看\"活动\"标签以获取最近交易的实时动态。"
+        },
+        "whatIsPolymarket": {
+          "q": "什么是 Polymarket？",
+          "a": "Polymarket 是全球最大的预测市场，你可以在此了解最新动态并利用自己对现实事件的知识获利。交易者买卖涵盖政治选举、加密货币、金融、体育、科技和文化等各种主题的结果份额，包括\"{title}\"等市场。价格反映由金融信念支持的实时概率，通常比民调、专家或传统调查提供更快、更准确的信号。"
+        },
+        "timeUntil": {
+          "aboutOneDay": "大约 1 天",
+          "aboutDays": "大约 {count} 天",
+          "aboutOneMonth": "大约 1 个月",
+          "aboutMonths": "大约 {count} 个月",
+          "overOneYear": "超过 1 年",
+          "overYears": "超过 {count} 年"
+        }
+      },
+      "comments": {
+        "addComment": "发表评论...",
+        "post": "发布",
+        "bewareExternalLinks": "警惕外部链接哦。",
+        "newest": "最新发布",
+        "mostLiked": "最受欢迎",
+        "holders": "持仓者",
+        "reply": "回复",
+        "replies": "{count} 条回复",
+        "share": "分享",
+        "report": "举报",
+        "delete": "删除",
+        "noComments": "暂无评论",
+        "readMore": "阅读更多",
+        "showLess": "收起",
+        "linkCopied": "链接已复制",
+        "linkCopiedDescription": "评论链接已复制到剪贴板",
+        "failedToCopyLink": "复制链接失败",
+        "pleaseTryAgain": "请重试",
+        "reported": {
+          "title": "评论已举报",
+          "description": "你举报了这条评论。",
+          "alreadyReported": "你已经举报过这条评论了。"
+        },
+        "deleteDialog": {
+          "title": "删除评论",
+          "description": "确定要删除你的评论吗？",
+          "cancel": "算了",
+          "confirm": "确认"
+        },
+        "emojiPicker": {
+          "search": "搜索表情",
+          "loading": "加载中...",
+          "noResults": "未找到表情。"
+        },
+        "giphyPicker": {
+          "search": "搜索 Giphy",
+          "title": "GIF",
+          "description": "搜索和选择 GIF",
+          "noResults": "未找到 GIF"
+        }
+      },
+      "topHolders": {
+        "holders": "持仓者",
+        "shares": "份额",
+        "noHolders": "暂无持仓者。",
+        "noNameHolders": "暂无 {name}",
+        "live": "实时",
+        "positionFilters": {
+          "all": "全部",
+          "open": "持仓中",
+          "closed": "已平仓",
+          "desc": "降序",
+          "asc": "升序"
+        },
+        "pnl": "盈亏",
+        "avg": "均价",
+        "bought": "买入"
+      },
+      "chart": {
+        "settings": {
+          "embed": "嵌入",
+          "exportData": "导出数据",
+          "autoscale": "自动缩放",
+          "xAxis": "X 轴",
+          "yAxis": "Y 轴",
+          "horizontalGrid": "横向网格",
+          "verticalGrid": "纵向网格",
+          "annotations": "标注",
+          "bothOutcomes": "两种结果",
+          "chartOptions": "图表选项",
+          "switchTo": "切换至 {outcome}",
+          "settings": "设置",
+          "closeSettings": "关闭设置",
+          "options": "选项",
+          "closeOptions": "关闭选项",
+          "closeAnnotations": "关闭标注"
+        },
+        "options": {
+          "showOnChart": "显示在图表上",
+          "selectMaximum": "最多选择 4 个"
+        },
+        "intervals": {
+          "oneHour": "1小时",
+          "sixHours": "6小时",
+          "oneDay": "1天",
+          "oneWeek": "1周",
+          "oneMonth": "1个月",
+          "all": "全部",
+          "max": "最大"
+        }
+      },
+      "tooltips": {
+        "watchLivestream": "观看直播",
+        "cancel": "取消",
+        "share": "分享",
+        "closeLostPosition": "平掉亏损持仓",
+        "scrollToGame": "滚动至赛事"
+      },
+      "embed": {
+        "title": "嵌入",
+        "preview": "预览",
+        "showVolume": "显示交易量",
+        "showChart": "显示图表",
+        "showTimeRangeSelector": "显示时间范围选择器",
+        "copy": "复制",
+        "light": "浅色",
+        "dark": "深色"
+      }
+    }
+  },
+  "__N_SSG": true
+}
