@@ -1,0 +1,29 @@
+services:
+  newsnow:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      tags:
+        - kayparavel/newsnow-kayparavel:latest
+    container_name: newsnow-kayparavel
+    image: kayparavel/newsnow-kayparavel:0.0.39.3
+    ports:
+      - '4444:4444'
+    volumes:
+      - newsnow_data:/usr/app/.data
+    environment:
+      - G_CLIENT_ID=
+      - G_CLIENT_SECRET=
+      - JWT_SECRET=
+      - INIT_TABLE=true
+      - ENABLE_CACHE=true
+      # 启用 Node.js 内置代理支持
+      - NODE_USE_ENV_PROXY=1
+      # 代理配置（取消注释并修改为您的代理地址）
+      - HTTP_PROXY=http://ip:port
+      - HTTPS_PROXY=http://ip:port
+      - PROXY=http://ip:port
+
+volumes:
+  newsnow_data:
+    name: newsnow_data
