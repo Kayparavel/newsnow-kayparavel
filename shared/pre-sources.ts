@@ -635,6 +635,12 @@ export const originSources = {
         interval: Time.Fast,
         home: "https://polymarket.com/zh/new",
       },
+      breaking: {
+        title: "突发",
+        type: "polymarket",
+        interval: Time.Fast,
+        home: "https://polymarket.com/zh/breaking",
+      },
     },
   },
 } as const satisfies Record<string, OriginSource>

@@ -1,60 +1,8 @@
-# Polymarket 卡片开发文档
+# Polymarket 卡片使用文档
 
 ## 概述
 
 本项目新增了 Polymarket 政治预测市场的卡片类型，用于实时显示 Polymarket 上的事件和市场预测数据。
-
-## 新增内容
-
-### 1. 类型定义 (`shared/types.ts`)
-
-- 新增 `"polymarket"` 作为 `NewsType` 和 `Source` 的有效值
-- 扩展 `NewsItemExtra` 接口，添加 `polymarket` 字段用于存储 Polymarket 特有数据
-
-```typescript
-export interface NewsItemExtra {
-  // ... 其他字段
-  /** Polymarket 源特有数据 */
-  polymarket?: {
-    eventSlug: string
-    imageUrl?: string
-    icon?: string
-    endDate?: string
-    active?: boolean
-    description?: string
-    markets: Array<{
-      slug: string
-      question: string
-      description?: string
-      outcomes?: any[]
-      outcomePrices: string[]
-      volume24h?: string
-      active?: boolean
-    }>
-  }
-}
-```
-
-### 2. 源解析器 (`server/sources/polymarket.ts`)
-
-- 从 Polymarket API 获取最新事件和市场数据
-- "最新" API：`https://polymarket.com/_next/data/build-TfctsWXpff2fKS/zh/new.json?category=new`
-- "轮播" API：`https://polymarket.com/api/homepage/carousel?locale=zh`
-- 事件数据路径（最新）：`data.pageProps.dehydratedState.queries[2].state.data.pages[0].events`
-- 事件数据路径（轮播）：`data[index].event`
-- 通用事件处理函数：`processEvent()`
-
-### 3. 源配置 (`shared/pre-sources.ts`)
-
-- 添加 Polymarket 源配置
-- 包含子源 "最新"（polymarket-new）和 "轮播"（polymarket-carousel）
-- 类型：polymarket
-- 颜色：purple
-- 刷新间隔：Fast（5分钟）
-
-### 4. 卡片组件 (`src/components/column/card.tsx`)
-
-新增 `NewsListPolymarket` 组件，用于渲染 Polymarket 事件卡片。
 
 ---
 
@@ -79,11 +27,12 @@ export interface NewsItemExtra {
       markets: Array<{         // Market 列表
         slug: string           // Market slug
         question: string       // Market 问题
-        description?: string   // Market 描述（用于hover）
-        outcomes?: any[]       // Market 选项（目前前端不显示）
+        description?: string   // Market 描述（用于hover，可选）
+        outcomes?: any[]       // Market 选项（目前前端不显示，可选）
         outcomePrices: string[] // Yes/No 价格数组，如 ["0.75", "0.25"]
         volume24h?: string     // Market 24h 交易量（可选）
         active?: boolean       // Market 是否有效（true=正常，false=变灰）
+        url?: string           // Market 跳转链接（点击market行跳转）
       }>
     }
   }
@@ -105,12 +54,13 @@ export interface NewsItemExtra {
 - **问题**：小字体显示 Market 问题
 - **比例条**：横向比例条，左边绿色代表 Yes，右边红色代表 No
 - **百分比**：Yes/No 百分比在比例条右侧显示
-- **hover**：鼠标悬停显示 description
+- **hover**：鼠标悬停显示 question
 - **失效状态**：`active=false` 时单个 Market 变灰
+- **跳转**：点击 Market 行跳转到对应的 market.url
 
 ### 底部区域
 
-- **交易量**：左侧显示 Event 总交易量
+- **交易量**：左侧显示 Event 总交易量（从第一个 market 取）
 - **截止日期**：右侧显示 `endDate`，格式为 `yyyy/mm/dd 截止`
 
 ---
@@ -119,47 +69,72 @@ export interface NewsItemExtra {
 
 ### 源解析器开发规范
 
-1. **Event 数据提取**
-   - 必须提取：id, slug, title, description, endDate, icon, active, markets
-   - 可选提取：image, volume24hr（注意 API 字段是 volume24hr）
+#### 1. Event 数据提取
 
-2. **Market 数据提取**
-   - 必须提取：question, slug, outcomePrices, active
-   - 可选提取：description, outcomes, volume24hr
+- **必须提取**：id, slug, title, active
+- **可选提取**：icon, endDate, description, image
 
-3. **交易量格式化**
-   - 使用 `formatVolume()` 函数格式化交易量
-   - 格式：$x.xK 或 $x.xM
+#### 2. Market 数据提取
 
-4. **URL 构造**
-   - Event URL：`https://polymarket.com/zh/event/${event.slug}`
+- **必须提取**：question, slug, outcomePrices
+- **可选提取**：description, outcomes, volume24hr, active, url
+
+#### 3. URL 构造规范
+
+```typescript
+// Event URL
+eventUrl: `https://polymarket.com/zh/event/${eventSlug}`
+
+// Market URL
+marketUrl: `https://polymarket.com/zh/event/${eventSlug}/${marketSlug}`
+```
+
+#### 4. 交易量格式化
+
+使用 `formatVolume()` 函数（在 `polymarket.ts` 里）：
+- 格式：$x.xK 或 $x.xM
+- 处理 null/undefined 情况
+
+#### 5. 三种源类型说明
+
+| 源类型 | API 说明 | 返回结构 |
+|--------|---------|---------|
+| **最新** | Next.js Data API | `events[]` 数组，每个 event 有自己的 `markets[]` |
+| **轮播** | Carousel API | 干净的 `event[]` 数组，每个 event 有完整 `markets[]` |
+| **突发** | Breaking API | `markets[]` 数组，每个 market 单独作为 NewsItem，event 信息从 market.events[0] 获取 |
 
 ### 前端组件使用规范
 
-1. **状态判断**
-   - Event 变灰：`item.extra?.polymarket?.active === false`
-   - Market 变灰：`market.active === false`
+#### 1. 状态判断
 
-2. **日期格式化**
-   - 使用 `formatEndDate()` 函数格式化
-   - 输出格式：`yyyy/mm/dd 截止`
+```typescript
+// Event 变灰
+const isEventActive = item.extra?.polymarket?.active ?? true
 
-3. **百分比计算**
-   - Yes 百分比：`Math.round(parseFloat(market.outcomePrices[0]) * 100)`
-   - No 百分比：`100 - yesPercent`
+// Market 变灰
+const isMarketActive = market.active ?? true
+```
+
+#### 2. 日期格式化
+
+使用 `formatEndDate()` 函数（在 `card.tsx` 里）：
+- 输入：ISO 日期字符串
+- 输出：`yyyy/mm/dd 截止`
+
+#### 3. 百分比计算
+
+```typescript
+const yesPrice = Number(market.outcomePrices?.[0] || 0)
+const noPrice = Number(market.outcomePrices?.[1] || 0)
+const yesPercent = yesPrice * 100
+const noPercent = noPrice * 100
+```
 
 ---
 
-## 更新记录
+## 源文件位置
 
-### 2026-05-01
-
-- ✅ 新增 Polymarket 源类型和卡片组件
-- ✅ 实现横向比例条显示 Yes/No 概率
-- ✅ 添加 Event 图标、endDate、active 状态
-- ✅ 添加 Market outcomes、active 状态
-- ✅ 实现 hover 显示 description
-- ✅ 实现失效状态变灰效果
-- ✅ 移除 Market 跳转链接，只保留 Event 跳转
-- ✅ 新增 "轮播" 子源，API 返回干净的事件数组
-- ✅ 重构源解析器，提取 `processEvent()` 通用函数处理事件
+- **源解析器**：`server/sources/polymarket.ts`
+- **类型定义**：`shared/types.ts`
+- **卡片组件**：`src/components/column/card.tsx`
+- **源配置**：`shared/pre-sources.ts`

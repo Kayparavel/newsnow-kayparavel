@@ -801,5 +801,14 @@
     "color": "purple",
     "interval": 300000,
     "title": "轮播"
+  },
+  "polymarket-breaking": {
+    "name": "Polymarket",
+    "type": "polymarket",
+    "column": "world",
+    "home": "https://polymarket.com/zh/breaking",
+    "color": "purple",
+    "interval": 300000,
+    "title": "突发"
   }
 }

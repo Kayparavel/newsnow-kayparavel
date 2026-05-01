@@ -121,6 +121,7 @@ export interface NewsItem {
         imageUrl?: string
         active?: boolean
         description?: string
+        url?: string
       }>
     }
   }

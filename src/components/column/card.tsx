@@ -385,9 +385,12 @@ function NewsListPolymarket({ items }: { items: NewsItem[] }) {
                 const isMarketActive = market.active ?? true
 
                 return (
-                  <div
+                  <a
                     key={market.slug}
-                    className="block hover:bg-neutral-700/50 rounded-lg p-1.5 -mx-1.5 transition-colors cursor-default"
+                    href={market.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block hover:bg-neutral-700/50 rounded-lg p-1.5 -mx-1.5 transition-colors"
                     title={market.question}
                   >
                     <div className="flex items-center justify-between mb-1">
@@ -399,19 +402,11 @@ function NewsListPolymarket({ items }: { items: NewsItem[] }) {
                         {market.question}
                       </span>
                       <div className="flex items-center gap-2 ml-2">
-                        <span className={$(
-                          "text-xs font-medium",
-                          isMarketActive ? "text-green-400" : "text-neutral-500",
-                        )}
-                        >
+                        <span className="text-xs font-medium text-green-400">
                           {yesPercent.toFixed(0)}
                           %
                         </span>
-                        <span className={$(
-                          "text-xs font-medium",
-                          isMarketActive ? "text-red-400" : "text-neutral-500",
-                        )}
-                        >
+                        <span className="text-xs font-medium text-red-400">
                           {noPercent.toFixed(0)}
                           %
                         </span>
@@ -421,21 +416,15 @@ function NewsListPolymarket({ items }: { items: NewsItem[] }) {
                     {/* 横向比例条 */}
                     <div className="w-full h-1.5 bg-neutral-700 rounded-full overflow-hidden flex">
                       <div
-                        className={$(
-                          "h-full transition-all",
-                          isMarketActive ? "bg-green-600" : "bg-neutral-500",
-                        )}
+                        className="h-full transition-all bg-green-600"
                         style={{ width: `${yesPercent}%` }}
                       />
                       <div
-                        className={$(
-                          "h-full transition-all",
-                          isMarketActive ? "bg-red-600" : "bg-neutral-600",
-                        )}
+                        className="h-full transition-all bg-red-600"
                         style={{ width: `${noPercent}%` }}
                       />
                     </div>
-                  </div>
+                  </a>
                 )
               })}
             </div>
