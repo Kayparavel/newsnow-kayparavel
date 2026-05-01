@@ -69,7 +69,7 @@ export interface Source {
   /**
    * Default normal timeline
    */
-  type?: "hottest" | "realtime"
+  type?: "hottest" | "realtime" | "polymarket"
   column?: HiddenColumnID
   home?: string
   /**
@@ -102,6 +102,26 @@ export interface NewsItem {
     icon?: false | string | {
       url: string
       scale: number
+    }
+  } & {
+    polymarket?: {
+      eventSlug: string
+      imageUrl?: string
+      icon?: string
+      endDate?: string
+      active?: boolean
+      description?: string
+      markets: Array<{
+        slug: string
+        question: string
+        tokenName?: string
+        outcomePrices: string[]
+        outcomes?: string[]
+        volume24h?: string
+        imageUrl?: string
+        active?: boolean
+        description?: string
+      }>
     }
   }
 }

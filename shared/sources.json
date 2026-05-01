@@ -773,5 +773,33 @@
     "color": "green",
     "interval": 1800000,
     "title": "热播榜"
+  },
+  "polymarket": {
+    "redirect": "polymarket-new",
+    "name": "Polymarket",
+    "type": "polymarket",
+    "column": "world",
+    "home": "https://polymarket.com/zh/new",
+    "color": "purple",
+    "interval": 300000,
+    "title": "最新"
+  },
+  "polymarket-new": {
+    "name": "Polymarket",
+    "type": "polymarket",
+    "column": "world",
+    "home": "https://polymarket.com/zh/new",
+    "color": "purple",
+    "interval": 300000,
+    "title": "最新"
+  },
+  "polymarket-carousel": {
+    "name": "Polymarket",
+    "type": "polymarket",
+    "column": "world",
+    "home": "https://polymarket.com/zh/new",
+    "color": "purple",
+    "interval": 300000,
+    "title": "轮播"
   }
 }

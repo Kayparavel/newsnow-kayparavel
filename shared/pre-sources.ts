@@ -617,6 +617,26 @@ export const originSources = {
       },
     },
   },
+  "polymarket": {
+    name: "Polymarket",
+    column: "world",
+    color: "purple",
+    home: "https://polymarket.com",
+    sub: {
+      new: {
+        title: "最新",
+        type: "polymarket",
+        interval: Time.Fast,
+        home: "https://polymarket.com/zh/new",
+      },
+      carousel: {
+        title: "轮播",
+        type: "polymarket",
+        interval: Time.Fast,
+        home: "https://polymarket.com/zh/new",
+      },
+    },
+  },
 } as const satisfies Record<string, OriginSource>
 
 export function genSources() {

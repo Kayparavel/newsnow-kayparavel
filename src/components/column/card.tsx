@@ -185,7 +185,7 @@ function NewsCard({ id, setHandleRef }: NewsCardProps) {
         defer
       >
         <div className={$("transition-opacity-500", isFetching && "op-20")}>
-          {!!data?.items?.length && (sources[id].type === "hottest" ? <NewsListHot items={data.items} /> : <NewsListTimeLine items={data.items} />)}
+          {!!data?.items?.length && (sources[id].type === "polymarket" ? <NewsListPolymarket items={data.items} /> : sources[id].type === "hottest" ? <NewsListHot items={data.items} /> : <NewsListTimeLine items={data.items} />)}
         </div>
       </OverlayScrollbar>
     </>
@@ -315,5 +315,150 @@ function NewsListTimeLine({ items }: { items: NewsItem[] }) {
         </li>
       ))}
     </ol>
+  )
+}
+
+function formatEndDate(dateStr: string): string {
+  try {
+    const date = new Date(dateStr)
+    const month = String(date.getMonth() + 1).padStart(2, "0")
+    const day = String(date.getDate()).padStart(2, "0")
+    const year = date.getFullYear()
+    return `${year}/${month}/${day} 截止`
+  } catch {
+    return dateStr
+  }
+}
+
+function NewsListPolymarket({ items }: { items: NewsItem[] }) {
+  const { width } = useWindowSize()
+  return (
+    <div className="flex flex-col gap-3">
+      {items?.map((item) => {
+        const markets = item.extra?.polymarket?.markets || []
+        const eventVolume = markets?.[0]?.volume24h
+        const isEventActive = item.extra?.polymarket?.active ?? true
+        const eventIcon = item.extra?.polymarket?.icon
+        const eventEndDate = item.extra?.polymarket?.endDate
+
+        return (
+          <div
+            key={item.id}
+            className={$(
+              "bg-neutral-800/80 dark:bg-neutral-900/80 rounded-xl p-4",
+              "cursor-pointer transition-all hover:bg-neutral-700/80 dark:hover:bg-neutral-800/80",
+            )}
+          >
+            <a
+              href={width < 768 ? item.mobileUrl || item.url : item.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block"
+              title={item.extra?.hover}
+            >
+              <div className="flex items-start gap-3">
+                {eventIcon && (
+                  <img
+                    src={eventIcon}
+                    className="w-10 h-10 rounded-lg object-cover flex-shrink-0"
+                    onError={e => e.currentTarget.style.display = "none"}
+                  />
+                )}
+                <div className="flex-1 min-w-0">
+                  <h3 className={$(
+                    "text-xl font-semibold leading-snug",
+                    isEventActive ? "text-white dark:text-white" : "text-neutral-500 dark:text-neutral-500",
+                  )}
+                  >
+                    {item.title}
+                  </h3>
+                </div>
+              </div>
+            </a>
+
+            <div className="mt-3 space-y-1">
+              {markets.map((market) => {
+                const yesPrice = Number(market.outcomePrices?.[0] || 0)
+                const noPrice = Number(market.outcomePrices?.[1] || 0)
+                const yesPercent = yesPrice * 100
+                const noPercent = noPrice * 100
+                const isMarketActive = market.active ?? true
+
+                return (
+                  <div
+                    key={market.slug}
+                    className="block hover:bg-neutral-700/50 rounded-lg p-1.5 -mx-1.5 transition-colors cursor-default"
+                    title={market.question}
+                  >
+                    <div className="flex items-center justify-between mb-1">
+                      <span className={$(
+                        "text-xs truncate flex-1",
+                        isMarketActive ? "text-neutral-200" : "text-neutral-500",
+                      )}
+                      >
+                        {market.question}
+                      </span>
+                      <div className="flex items-center gap-2 ml-2">
+                        <span className={$(
+                          "text-xs font-medium",
+                          isMarketActive ? "text-green-400" : "text-neutral-500",
+                        )}
+                        >
+                          {yesPercent.toFixed(0)}
+                          %
+                        </span>
+                        <span className={$(
+                          "text-xs font-medium",
+                          isMarketActive ? "text-red-400" : "text-neutral-500",
+                        )}
+                        >
+                          {noPercent.toFixed(0)}
+                          %
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* 横向比例条 */}
+                    <div className="w-full h-1.5 bg-neutral-700 rounded-full overflow-hidden flex">
+                      <div
+                        className={$(
+                          "h-full transition-all",
+                          isMarketActive ? "bg-green-600" : "bg-neutral-500",
+                        )}
+                        style={{ width: `${yesPercent}%` }}
+                      />
+                      <div
+                        className={$(
+                          "h-full transition-all",
+                          isMarketActive ? "bg-red-600" : "bg-neutral-600",
+                        )}
+                        style={{ width: `${noPercent}%` }}
+                      />
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+
+            {/* 在整个 event 底部显示一次热度和 endDate */}
+            {(eventVolume || eventEndDate) && (
+              <div className="text-xs text-neutral-400 mt-2 flex items-center justify-between">
+                <div className="flex items-center gap-1">
+                  {eventVolume && (
+                    <>
+                      <span>24h</span>
+                      <span>{eventVolume}</span>
+                    </>
+                  )}
+                </div>
+                {eventEndDate && (
+                  <span>{formatEndDate(eventEndDate)}</span>
+                )}
+              </div>
+            )}
+          </div>
+        )
+      })}
+    </div>
   )
 }
