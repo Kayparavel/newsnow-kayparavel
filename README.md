@@ -2,10 +2,11 @@
 
 English | [简体中文](README.zh-CN.md) | [日本語](README.ja-JP.md)
 
+**_Elegant reading of real-time and hottest news_**
+
 > [!NOTE]
 > This is a demo version currently supporting Chinese only. A full-featured version with better customization and English content support will be released later.
-
-**_Elegant reading of real-time and hottest news_**
+> This project is forked from [ourongxing/newsnow](https://github.com/ourongxing/newsnow)
 
 ## Features
 
@@ -26,13 +27,17 @@ English | [简体中文](README.zh-CN.md) | [日本語](README.ja-JP.md)
         "newsnow-mcp-server"
       ],
       "env": {
-        "BASE_URL": "https://newsnow.busiyi.world"
+        "BASE_URL": "https://newsnow.your.domain"
       }
     }
   }
 }
 ```
 You can change the `BASE_URL` to your own domain.
+
+### New Features
+- Support proxy configuration per individual source
+- More content source support
 
 ## Deployment
 
@@ -57,7 +62,7 @@ For deployments without login and caching:
 
 ### Environment Variables
 
-Refer to `example.env.server`. For local development, rename it to `.env.server` and configure:
+Refer to `example.env.server`. For local development, rename it to `.env.server` and configure, set environment variables for containers when deploying with Docker:
 
 ```env
 # Github Client ID
@@ -70,12 +75,22 @@ JWT_SECRET=
 INIT_TABLE=true
 # Whether to enable cache
 ENABLE_CACHE=true
+# ProductHunt API Token
+PRODUCTHUNT_API_TOKEN=
+# Whether to enable environment variable proxy configuration
+NODE_USE_ENV_PROXY=
+# HTTP proxy address
+HTTP_PROXY=
+# HTTPS proxy address
+HTTPS_PROXY=
+# Proxy address (fallback)
+PROXY=
 ```
 
 ### Database Support
 
 Supported database connectors: https://db0.unjs.io/connectors
-**Cloudflare D1 Database** is recommended.
+This project recommends Cloudflare Pages and Docker deployment, Vercel requires you to handle the database yourself.
 
 1. Create D1 database in Cloudflare Worker dashboard
 2. Configure database_id and database_name in wrangler.toml
@@ -84,13 +99,15 @@ Supported database connectors: https://db0.unjs.io/connectors
 
 ### Docker Deployment
 
-In project root directory:
+For Docker deployment, you can build the image yourself or reference the public release version on Docker Hub kayparavel/newsnow-kayparavel:latest. Only need the yml file in project root directory, run docker-compose in the same directory:
+- **Local Docker Deployment**: Refer to `example.docker-compose.local.yml`
+- **Cloud Docker Deployment**: Refer to `example.docker-compose.yml`
 
 ```sh
 docker compose up
 ```
 
-You can also set Environment Variables in `docker-compose.yml`.
+You can also set Environment Variables through yml configuration.
 
 ## Development
 
@@ -103,27 +120,26 @@ pnpm i
 pnpm dev
 ```
 
-### Adding Data Sources
-
 Refer to `shared/sources` and `server/sources` directories. The project provides complete type definitions and a clean architecture.
-
-For detailed instructions on how to add new sources, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Roadmap
 
-- Add **multi-language support** (English, Chinese, more to come).
-- Improve **personalization options** (category-based news, saved preferences).
-- Expand **data sources** to cover global news in multiple languages.
-
-**_release when ready_**
-![](https://testmnbbs.oss-cn-zhangjiakou.aliyuncs.com/pic/20250328172146_rec_.gif?x-oss-process=base_webp)
+- Expand **data sources** to cover global news in multiple languages
+- Add **auto-refresh** to automatically fetch and record news content
+- Add **NLP analysis** to provide instant and convenient hotspot notifications and clear and concise daily summary functions
 
 ## Contributing
 
 Contributions are welcome! Feel free to submit pull requests or create issues for feature requests and bug reports.
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines on how to contribute, especially for adding new data sources.
-
 ## License
 
-[MIT](./LICENSE) © ourongxing
+[MIT](./LICENSE) © ourongxing, kayparavel
+
+## Sponsor
+
+If this project helps you, you can buy the cat some snacks. If you need customization or other help, please contact us through the following methods with notes.
+
+[kayparavel](./screenshots/wechatpay-kayparavel.png)
+[kayparavel](./screenshots/alipaypay-kayparavel.jpg)
+![](./screenshots/reward.gif)

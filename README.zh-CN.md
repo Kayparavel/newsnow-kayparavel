@@ -6,7 +6,7 @@
 
 > [!NOTE]
 > 当前版本为 DEMO，仅支持中文。正式版将提供更好的定制化功能和英文内容支持。
->
+> 当前项目forked from [ourongxing/newsnow](https://github.com/ourongxing/newsnow)
 
 ## 功能特性
 - 优雅的阅读界面设计，实时获取最新热点新闻
@@ -25,7 +25,7 @@
         "newsnow-mcp-server"
       ],
       "env": {
-        "BASE_URL": "https://newsnow.busiyi.world"
+        "BASE_URL": "https://newsnow.your.domain"
       }
     }
   }
@@ -33,6 +33,10 @@
 ```
 
 你可以将 `BASE_URL` 修改为你的域名。
+
+### 新特性
+- 支持单个源单独配置代理
+- 更多的内容源支持
 
 ## 部署指南
 
@@ -52,7 +56,7 @@
 4. 获取 Client ID 和 Client Secret
 
 ### 环境变量配置
-参考 `example.env.server` 文件，本地运行时重命名为 `.env.server` 并填写以下配置：
+参考 `example.env.server` 文件，本地运行时重命名为 `.env.server` 并填写配置，docker部署时给容器设置环境变量：
 
 ```env
 # Github Clien ID
@@ -65,6 +69,16 @@ JWT_SECRET=
 INIT_TABLE=true
 # 是否启用缓存
 ENABLE_CACHE=true
+# ProductHunt API Token
+PRODUCTHUNT_API_TOKEN=
+# 是否启用环境变量代理配置
+NODE_USE_ENV_PROXY=
+# HTTP 代理地址
+HTTP_PROXY=
+# HTTPS 代理地址
+HTTPS_PROXY=
+# 代理地址（兜底）
+PROXY=
 ```
 
 ### 数据库支持
@@ -76,11 +90,14 @@ ENABLE_CACHE=true
 4. 重新部署生效
 
 ### Docker 部署
-对于 Docker 部署，只需要项目根目录 `docker-compose.yaml` 文件，同一目录下执行
+对于 Docker 部署，可自行build镜像或引用 Docker Hub 公开的 release 版本 kayparavel/newsnow-kayparavel:latest,只需要项目根目录yml文件，同一目录下执行docker-compose
+- **本地 Docker 部署**：参考 `example.docker-compose.local.yml`
+- **云 Docker 部署**：可参考 `example.docker-compose.yml`
+
 ```
 docker compose up
 ```
-同样可以通过 `docker-compose.yaml` 配置环境变量。
+同样可以通过yml配置环境变量。
 
 ## 开发
 > [!Note]
@@ -95,20 +112,19 @@ pnpm dev
 你可能想要添加数据源，请关注 `shared/sources` `server/sources`，项目类型完备，结构简单，请自行探索。
 
 ## 路线图
-- 添加 **多语言支持**（英语、中文，更多语言即将推出）
-- 改进 **个性化选项**（基于分类的新闻、保存的偏好设置）
 - 扩展 **数据源** 以涵盖多种语言的全球新闻
+- 添加 **自动刷新** 以自动拉取和记录新闻内容
+- 添加 **NLP 分析** 提供即时便捷的热点通知 与 清晰简洁的每日总结 功能
 
 ## 贡献指南
 欢迎贡献代码！您可以提交 pull request 或创建 issue 来提出功能请求和报告 bug
 
 ## License
 
-[MIT](./LICENSE) © ourongxing
+[MIT](./LICENSE) © ourongxing, kayparavel
 
 ## 赞赏
 如果本项目对你有所帮助，可以给小猫买点零食。如果需要定制或者其他帮助，请通过下列方式联系备注。
-
+[kayparavel](./screenshots/wechatpay-kayparavel.png)
+[kayparavel](./screenshots/alipaypay-kayparavel.jpg)
 ![](./screenshots/reward.gif)
-
-<a href="https://hellogithub.com/repository/c2978695e74a423189e9ca2543ab3b36" target="_blank"><img src="https://api.hellogithub.com/v1/widgets/recommend.svg?rid=c2978695e74a423189e9ca2543ab3b36&claim_uid=SMJiFwlsKCkWf89&theme=small" alt="Featured｜HelloGitHub" /></a>

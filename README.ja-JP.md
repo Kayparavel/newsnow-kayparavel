@@ -2,10 +2,11 @@
 
 [English](./README.md) | [简体中文](README.zh-CN.md) | 日本語
 
+***リアルタイムで最新のニュースをエレガントに読む***
+
 > [!NOTE]
 > 本バージョンはデモ版であり、現在中国語のみ対応しています。カスタマイズ機能や英語コンテンツをサポートした正式版は後日リリース予定です。
-
-***リアルタイムで最新のニュースをエレガントに読む***
+> このプロジェクトは [ourongxing/newsnow](https://github.com/ourongxing/newsnow) からフォークされました
 
 ## 機能
 - 最適な読書体験のためのクリーンでエレガントなUIデザイン
@@ -25,12 +26,17 @@
         "newsnow-mcp-server"
       ],
       "env": {
-        "BASE_URL": "https://newsnow.busiyi.world"
+        "BASE_URL": "https://newsnow.your.domain"
       }
     }
   }
 }
 ```
+`BASE_URL`を自分のドメインに変更できます。
+
+### 新機能
+- 個別のソースごとにプロキシ設定をサポート
+- より多くのコンテンツソースをサポート
 
 ## デプロイ
 
@@ -50,7 +56,7 @@
 4. Client IDとClient Secretを取得
 
 ### 環境変数
-`example.env.server`を参照。ローカル開発では、`.env.server`にリネームして以下を設定：
+`example.env.server`を参照。ローカル開発では、`.env.server`にリネームして設定し、Dockerでデプロイする場合はコンテナに環境変数を設定：
 
 ```env
 # GitHub Client ID
@@ -63,10 +69,21 @@ JWT_SECRET=
 INIT_TABLE=true
 # キャッシュを有効にするかどうか
 ENABLE_CACHE=true
+# ProductHunt API Token
+PRODUCTHUNT_API_TOKEN=
+# 環境変数プロキシ設定を有効にするかどうか
+NODE_USE_ENV_PROXY=
+# HTTPプロキシアドレス
+HTTP_PROXY=
+# HTTPSプロキシアドレス
+HTTPS_PROXY=
+# プロキシアドレス（フォールバック）
+PROXY=
 ```
 
 ### データベースサポート
-対応データベースコネクタ： https://db0.unjs.io/connectors Cloudflare D1 Database を推奨。
+対応データベースコネクタ： https://db0.unjs.io/connectors
+このプロジェクトではCloudflare PagesとDockerデプロイを推奨しています。Vercelでは自分でデータベースを処理する必要があります。
 
 1. Cloudflare WorkerダッシュボードでD1データベースを作成
 2. `wrangler.toml` に `database_id` と `database_name` を設定
@@ -74,13 +91,15 @@ ENABLE_CACHE=true
 4. 次回デプロイ時に変更が反映
 
 ### Dockerデプロイ
-プロジェクトルートディレクトリで：
+Dockerデプロイの場合、自分でイメージをビルドするか、Docker Hubの公開リリースバージョン kayparavel/newsnow-kayparavel:latest を参照できます。プロジェクトルートディレクトリにymlファイルがあればよく、同じディレクトリでdocker-composeを実行：
+- **ローカルDockerデプロイ**：`example.docker-compose.local.yml`を参照
+- **クラウドDockerデプロイ**：`example.docker-compose.yml`を参照
 
 ```sh
 docker compose up
- ```
+```
 
-環境変数は `docker-compose.yml` でも設定可能。
+yml設定を通じて環境変数を設定することもできます。
 
 ## 開発
 > [!TIP]
@@ -90,18 +109,24 @@ docker compose up
 corepack enable
 pnpm i
 pnpm dev
- ```
+```
 
-### データソースの追加
 `shared/sources` と `server/sources` ディレクトリを参照。プロジェクトは完全な型定義とクリーンなアーキテクチャを提供します。
 
 ## ロードマップ
-- **多言語サポート**の追加（英語、中国語、その他言語を順次対応）
-- **パーソナライズオプション**の改善（カテゴリ別ニュース、保存された設定）
-- **データソース**の拡充による多言語対応のグローバルニュースカバレッジ
+- **データソース**を拡張し、多言語のグローバルニュースをカバー
+- **自動更新**を追加し、ニュースコンテンツを自動的に取得・記録
+- **NLP分析**を追加し、即時かつ便利なホットスポット通知と明確で簡潔な日次要約機能を提供
 
 ## コントリビューション
 コントリビューションを歓迎します！機能リクエストやバグレポートのために、プルリクエストやイシューの作成をお気軽にどうぞ。
 
 ## ライセンス
-MIT © ourongxing
+[MIT](./LICENSE) © ourongxing, kayparavel
+
+## スポンサー
+このプロジェクトが役に立ったら、猫におやつを買ってあげてください。カスタマイズやその他のヘルプが必要な場合は、以下の方法で備考を添えてご連絡ください。
+
+[kayparavel](./screenshots/wechatpay-kayparavel.png)
+[kayparavel](./screenshots/alipaypay-kayparavel.jpg)
+![](./screenshots/reward.gif)
