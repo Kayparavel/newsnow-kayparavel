@@ -138,8 +138,8 @@ Contributions are welcome! Feel free to submit pull requests or create issues fo
 
 ## Sponsor
 
-If this project helps you, you can buy the cat some snacks. If you need customization or other help, please contact us through the following methods with notes.
+If this project helps you, you can buy me a cup of milk tea. If you need customization or other help, please contact us through the following methods with notes.
 
-[kayparavel](./screenshots/wechatpay-kayparavel.png)
-[kayparavel](./screenshots/alipaypay-kayparavel.jpg)
-![](./screenshots/reward.gif)
+![](./screenshots/wechat-kayparavel.png)
+![](./screenshots/wechatpay-kayparavel.png)
+![](./screenshots/alipaypay-kayparavel.jpg)

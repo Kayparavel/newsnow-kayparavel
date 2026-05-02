@@ -125,8 +125,8 @@ pnpm dev
 [MIT](./LICENSE) © ourongxing, kayparavel
 
 ## スポンサー
-このプロジェクトが役に立ったら、猫におやつを買ってあげてください。カスタマイズやその他のヘルプが必要な場合は、以下の方法で備考を添えてご連絡ください。
+このプロジェクトが役に立ったら、ミルクティーを一杯おごってください。カスタマイズやその他のヘルプが必要な場合は、以下の方法で備考を添えてご連絡ください。
 
-[kayparavel](./screenshots/wechatpay-kayparavel.png)
-[kayparavel](./screenshots/alipaypay-kayparavel.jpg)
-![](./screenshots/reward.gif)
+![](./screenshots/wechat-kayparavel.png)
+![](./screenshots/wechatpay-kayparavel.png)
+![](./screenshots/alipaypay-kayparavel.jpg)

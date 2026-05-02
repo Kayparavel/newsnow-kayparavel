@@ -125,6 +125,6 @@ pnpm dev
 
 ## 赞赏
 如果本项目对你有所帮助，可以给小猫买点零食。如果需要定制或者其他帮助，请通过下列方式联系备注。
-[kayparavel](./screenshots/wechatpay-kayparavel.png)
-[kayparavel](./screenshots/alipaypay-kayparavel.jpg)
-![](./screenshots/reward.gif)
+![](./screenshots/wechat-kayparavel.png)
+![](./screenshots/wechatpay-kayparavel.png)
+![](./screenshots/alipaypay-kayparavel.jpg)
