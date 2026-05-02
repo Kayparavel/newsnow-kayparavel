@@ -810,5 +810,23 @@
     "color": "purple",
     "interval": 300000,
     "title": "突发"
+  },
+  "polymarket-trending": {
+    "name": "Polymarket",
+    "type": "polymarket",
+    "column": "world",
+    "home": "https://polymarket.com/zh",
+    "color": "purple",
+    "interval": 300000,
+    "title": "热门"
+  },
+  "polymarket-zh": {
+    "name": "Polymarket",
+    "type": "polymarket",
+    "column": "world",
+    "home": "https://polymarket.com/zh",
+    "color": "purple",
+    "interval": 300000,
+    "title": "中文"
   }
 }

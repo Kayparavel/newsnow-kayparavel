@@ -15,7 +15,6 @@ imports.app.d.ts
 package-lock.json
 docker-compose.local.yml
 docker-compose.yml
-polycard.md
-analysis.md
+dev.md
 server/sources/*.json
 .specstory/

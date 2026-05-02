@@ -92,36 +92,37 @@ export interface NewsItem {
   id: string | number // unique
   title: string
   url: string
-  mobileUrl?: string
-  pubDate?: number | string
+  mobileUrl?: string // 移动端专用链接，移动端优先使用
+  pubDate?: number | string // 发布时间，时间戳或字符串，优先使用
   extra?: {
-    hover?: string
-    date?: number | string
-    info?: false | string
-    diff?: number
-    icon?: false | string | {
+    hover?: string // 鼠标悬停时显示的内容
+    date?: number | string // 备用发布时间，时间戳或字符串（旧字段）
+    info?: false | string // 显示在标题下方的额外信息，设为 false 时不显示
+    diff?: number // 位置变化，显示为 +1、-2 等
+    icon?: false | string | { // 自定义小图标，设为 false 时不显示
       url: string
       scale: number
     }
   } & {
-    polymarket?: {
-      eventSlug: string
-      imageUrl?: string
-      icon?: string
-      endDate?: string
-      active?: boolean
-      description?: string
-      markets: Array<{
-        slug: string
-        question: string
-        tokenName?: string
-        outcomePrices: string[]
-        outcomes?: string[]
-        volume24h?: string
-        imageUrl?: string
-        active?: boolean
-        description?: string
-        url?: string
+    polymarket?: { // 仅 Polymarket 源使用的特殊字段
+      eventSlug: string // 事件唯一标识符，用于拼接跳转 URL
+      imageUrl?: string // 事件图片 URL
+      icon?: string // 事件图标
+      endDate?: string // 事件结束日期
+      active?: boolean // 事件是否活跃
+      description?: string // 事件描述
+      volume24hr?: string // 24小时交易量
+      markets: Array<{ // 事件下的市场列表，每个市场是事件加上限定条件
+        slug: string // 市场唯一标识符
+        question: string // 市场问题
+        tokenName?: string // 暂无使用
+        outcomePrices: string[] // Yes/No 结果价格，0-1 数值，乘以 100 显示百分比
+        outcomes?: string[] // 结果选项，一般是 ["Yes", "No"]
+        volume24h?: string // 24 小时交易量
+        imageUrl?: string // 市场图片 URL
+        active?: boolean // 市场是否活跃
+        description?: string // 市场描述
+        url?: string // 市场链接
       }>
     }
   }

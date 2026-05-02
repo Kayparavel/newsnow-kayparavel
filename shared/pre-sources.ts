@@ -641,6 +641,18 @@ export const originSources = {
         interval: Time.Fast,
         home: "https://polymarket.com/zh/breaking",
       },
+      trending: {
+        title: "热门",
+        type: "polymarket",
+        interval: Time.Fast,
+        home: "https://polymarket.com/zh",
+      },
+      zh: {
+        title: "中文",
+        type: "polymarket",
+        interval: Time.Fast,
+        home: "https://polymarket.com/zh",
+      },
     },
   },
 } as const satisfies Record<string, OriginSource>

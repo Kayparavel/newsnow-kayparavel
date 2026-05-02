@@ -225,6 +225,7 @@ function DiffNumber({ diff }: { diff: number }) {
   )
 }
 function ExtraInfo({ item }: { item: NewsItem }) {
+  // 注意：icon 和 info 设为 false 时不显示
   const hasIcon = item?.extra?.icon
   const hasInfo = item?.extra?.info
 
@@ -336,7 +337,7 @@ function NewsListPolymarket({ items }: { items: NewsItem[] }) {
     <div className="flex flex-col gap-3">
       {items?.map((item) => {
         const markets = item.extra?.polymarket?.markets || []
-        const eventVolume = markets?.[0]?.volume24h
+        const eventVolume = item.extra?.polymarket?.volume24hr
         const isEventActive = item.extra?.polymarket?.active ?? true
         const eventIcon = item.extra?.polymarket?.icon
         const eventEndDate = item.extra?.polymarket?.endDate
