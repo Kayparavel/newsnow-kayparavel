@@ -45,6 +45,7 @@
     "db0": "^0.3.1",
     "defu": "^6.1.4",
     "fast-xml-parser": "^5.0.8",
+    "got-scraping": "^4.1.1",
     "framer-motion": "^12.4.7",
     "h3": "^1.15.1",
     "iconv-lite": "^0.6.3",
@@ -122,6 +123,7 @@
   "resolutions": {
     "cross-spawn": ">=7.0.6",
     "dayjs": "1.11.13",
+    "h3": "npm:h3-nightly@1.15.4-20250730-094032-325a62b",
     "nitropack": "npm:nitro-go@0.0.3",
     "picomatch": "^4.0.2",
     "react": "^19",

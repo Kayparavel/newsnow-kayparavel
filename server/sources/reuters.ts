@@ -1,10 +1,10 @@
 import process from "node:process"
-import { gotScraping } from "got-scraping"
 import { useProxyStorage } from "#/utils/fetch"
 
 const proxyEnvKeys = ["HTTP_PROXY", "HTTPS_PROXY", "http_proxy", "https_proxy", "PROXY", "proxy"] as const
 
 async function reutersFetch(url: string) {
+  const { gotScraping } = await import("got-scraping")
   const useProxy = useProxyStorage.getStore() ?? false
   logger.info(`[reuters] useProxy: ${useProxy}`)
 
