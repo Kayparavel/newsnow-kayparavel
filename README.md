@@ -77,8 +77,6 @@ INIT_TABLE=true
 ENABLE_CACHE=true
 # ProductHunt API Token
 PRODUCTHUNT_API_TOKEN=
-# Whether to enable environment variable proxy configuration
-NODE_USE_ENV_PROXY=
 # HTTP proxy address
 HTTP_PROXY=
 # HTTPS proxy address

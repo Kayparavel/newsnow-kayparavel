@@ -71,8 +71,6 @@ INIT_TABLE=true
 ENABLE_CACHE=true
 # ProductHunt API Token
 PRODUCTHUNT_API_TOKEN=
-# 環境変数プロキシ設定を有効にするかどうか
-NODE_USE_ENV_PROXY=
 # HTTPプロキシアドレス
 HTTP_PROXY=
 # HTTPSプロキシアドレス

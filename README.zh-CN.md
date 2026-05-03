@@ -71,8 +71,6 @@ INIT_TABLE=true
 ENABLE_CACHE=true
 # ProductHunt API Token
 PRODUCTHUNT_API_TOKEN=
-# 是否启用环境变量代理配置
-NODE_USE_ENV_PROXY=
 # HTTP 代理地址
 HTTP_PROXY=
 # HTTPS 代理地址
