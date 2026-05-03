@@ -73,7 +73,7 @@ export default defineSource({
           hover: alt ? `${item.headline} — ${alt}` : item.headline,
         },
       }
-    })
+    }).sort((a, b) => (b.pubDate || 0) - (a.pubDate || 0))
   },
 
   "bloomberg-us": fetchStories("us"),

@@ -50,7 +50,7 @@ export default defineSource({
           hover: item.description || "",
         },
       }
-    })
+    }).sort((a, b) => (b.pubDate || 0) - (a.pubDate || 0))
   },
   "reuters-world-googlerss": async () => {
     const data = await rss2json("https://news.google.com/rss/search?q=site:reuters.com+world&hl=en")
@@ -61,5 +61,6 @@ export default defineSource({
       id: item.link,
       pubDate: item.created ? new Date(item.created).getTime() : undefined,
     }))
+      .sort((a, b) => (b.pubDate || 0) - (a.pubDate || 0))
   },
 })
