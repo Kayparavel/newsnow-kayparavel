@@ -83,3 +83,36 @@ export const myFetch = new Proxy(myFetchDirect, {
     return Reflect.apply(fetchFn as any, thisArg, args)
   },
 }) as $Fetch
+
+const scrapingProxyEnvKeys = ["HTTPS_PROXY", "https_proxy", "HTTP_PROXY", "http_proxy", "PROXY", "proxy"] as const
+
+export async function myScrapingFetch(url: string, extraOptions?: Record<string, any>) {
+  const { gotScraping } = await import("got-scraping")
+  const useProxy = useProxyStorage.getStore() ?? false
+  logger.info(`[scraping] useProxy: ${useProxy}`)
+
+  const options: Record<string, any> = {
+    url,
+    http2: false,
+    ...extraOptions,
+  }
+
+  if (!useProxy) {
+    const saved = scrapingProxyEnvKeys.map(k => [k, process.env[k]] as const)
+    scrapingProxyEnvKeys.forEach(k => delete process.env[k])
+    try {
+      return await gotScraping(options)
+    } finally {
+      saved.forEach(([k, v]) => {
+        if (v) process.env[k] = v
+      })
+    }
+  }
+
+  const proxyUrl = scrapingProxyEnvKeys.map(k => process.env[k]).find(Boolean)
+  if (proxyUrl) {
+    options.proxyUrl = proxyUrl
+    logger.info(`[scraping] proxyUrl: ${proxyUrl}`)
+  }
+  return await gotScraping(options)
+}
