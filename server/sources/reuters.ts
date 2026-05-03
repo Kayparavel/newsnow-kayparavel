@@ -8,7 +8,7 @@ async function reutersFetch(url: string) {
   const useProxy = useProxyStorage.getStore() ?? false
   logger.info(`[reuters] useProxy: ${useProxy}`)
 
-  const options = {
+  const options: Record<string, any> = {
     url,
     responseType: "json" as const,
     timeout: { request: 15000 },
@@ -27,6 +27,13 @@ async function reutersFetch(url: string) {
     }
   }
 
+  const proxyUrl = process.env.HTTPS_PROXY || process.env.https_proxy
+    || process.env.HTTP_PROXY || process.env.http_proxy
+    || process.env.PROXY || process.env.proxy
+  if (proxyUrl) {
+    options.proxyUrl = proxyUrl
+    logger.info(`[reuters] proxyUrl: ${proxyUrl}`)
+  }
   return await gotScraping(options)
 }
 
