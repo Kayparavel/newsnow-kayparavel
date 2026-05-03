@@ -37,7 +37,8 @@ export default defineEventHandler(async (event): Promise<SourceResponse> => {
           return {
             status: "success",
             id,
-            updatedTime: now,
+            // updatedTime: now,  // 原代码：interval内直接返回now，导致前端显示"刚刚更新"，但实际并未重新抓取数据
+            updatedTime: cache.updated, // 修复：返回缓存的真实更新时间，避免虚假的"刚刚更新"
             items: cache.items,
           }
         }

@@ -530,8 +530,13 @@ export const originSources = {
     color: "orange",
     home: "https://www.reuters.com",
     sub: {
-      world: {
+      "world": {
         title: "世界快讯",
+        type: "realtime",
+        interval: Time.Slow,
+      },
+      "world-googlerss": {
+        title: "G-RSS世界",
         type: "realtime",
         interval: Time.Slow,
       },

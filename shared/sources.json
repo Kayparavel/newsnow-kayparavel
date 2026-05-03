@@ -662,6 +662,15 @@
     "interval": 3600000,
     "title": "世界快讯"
   },
+  "reuters-world-googlerss": {
+    "name": "路透社",
+    "type": "realtime",
+    "column": "world",
+    "home": "https://www.reuters.com",
+    "color": "orange",
+    "interval": 3600000,
+    "title": "G-RSS世界"
+  },
   "bloomberg": {
     "redirect": "bloomberg-hot",
     "name": "彭博",
