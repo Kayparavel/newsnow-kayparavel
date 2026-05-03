@@ -17,4 +17,5 @@ docker-compose.local.yml
 docker-compose.yml
 dev.md
 server/sources/*.json
+server/sources/*.xml
 .specstory/
