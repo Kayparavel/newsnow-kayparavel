@@ -16,8 +16,6 @@ services:
       - INIT_TABLE=true
       - ENABLE_CACHE=true
       - PRODUCTHUNT_API_TOKEN=
-      # 启用 Node.js 内置代理支持
-      - NODE_USE_ENV_PROXY=1
       # 代理配置（取消注释并修改为您的代理地址）
       - HTTP_PROXY=http://ip:port
       - HTTPS_PROXY=http://ip:port

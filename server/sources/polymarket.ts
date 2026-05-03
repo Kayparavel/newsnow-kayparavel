@@ -1,4 +1,5 @@
 import type { NewsItem } from "@shared/types"
+import { myFetch } from "#/utils/fetch"
 
 function formatVolume(volume: number): string {
   const roundedVolume = Math.floor(volume)
@@ -127,8 +128,7 @@ function processEventTrending(event: any): NewsItem {
 
 const fetchPolymarketNew = defineSource(async () => {
   const url = "https://polymarket.com/_next/data/build-TfctsWXpff2fKS/zh/new.json?category=new"
-  const response = await fetch(url)
-  const data = await response.json()
+  const data = await myFetch(url)
 
   const events = data.pageProps.dehydratedState.queries[2].state.data.pages[0].events || []
   return events.map(processEvent)
@@ -136,16 +136,14 @@ const fetchPolymarketNew = defineSource(async () => {
 
 const fetchPolymarketCarousel = defineSource(async () => {
   const url = "https://polymarket.com/api/homepage/carousel?locale=zh"
-  const response = await fetch(url)
-  const data = await response.json()
+  const data = await myFetch(url)
 
   return (data || []).map((item: any) => processEvent(item.event))
 })
 
 const fetchPolymarketBreaking = defineSource(async () => {
   const url = "https://polymarket.com/_next/data/build-TfctsWXpff2fKS/zh/breaking.json"
-  const response = await fetch(url)
-  const data = await response.json()
+  const data = await myFetch(url)
 
   const markets = data.pageProps.dehydratedState.queries[2].state.data.markets || []
   return markets.map((market: any) => {
@@ -186,8 +184,7 @@ const fetchPolymarketBreaking = defineSource(async () => {
 
 const fetchPolymarketTrending = defineSource(async () => {
   const url = "https://gamma-api.polymarket.com/events/keyset?limit=50&closed=false&order=volume24hr&ascending=false&locale=zh"
-  const response = await fetch(url)
-  const data = await response.json()
+  const data = await myFetch(url)
 
   const events = data.events || []
   return events.map(processEventTrending)
@@ -195,8 +192,7 @@ const fetchPolymarketTrending = defineSource(async () => {
 
 const fetchPolymarketZh = defineSource(async () => {
   const url = "https://polymarket.com/_next/data/build-TfctsWXpff2fKS/zh.json"
-  const response = await fetch(url)
-  const data = await response.json()
+  const data = await myFetch(url)
 
   const events = data.pageProps.dehydratedState.queries[0].state.data.pages[0].events || []
   return events.map(processEvent)

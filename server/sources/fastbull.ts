@@ -1,6 +1,22 @@
 import * as cheerio from "cheerio"
 import type { NewsItem } from "@shared/types"
 
+const CN_OFFSET = 8 * 60 * 60 * 1000
+
+function getBeijingDateComponents() {
+  const cn = new Date(Date.now() + CN_OFFSET)
+  return {
+    year: cn.getUTCFullYear(),
+    month: cn.getUTCMonth(),
+    date: cn.getUTCDate(),
+    day: cn.getUTCDay(),
+  }
+}
+
+function beijingMidnight(year: number, month: number, date: number): number {
+  return Date.UTC(year, month, date) - CN_OFFSET
+}
+
 // 格式化数值，将大数值转换为万/亿单位
 function formatNumber(value: string | null | undefined): string {
   if (value == null || value === "") {
@@ -97,6 +113,7 @@ interface FastBullResponse {
 async function getCalendarData(startTimestamp: number, endTimestamp: number): Promise<NewsItem[]> {
   const url = `https://api.fastbull.cn/fastbull-news-service/api/getMergeCalendarV1Page?pageSize=50&startTimestamp=${startTimestamp}&endTimestamp=${endTimestamp}&importance=3`
 
+  logger.info(`[fastbull-calendar] fetching: ${url}`)
   const res: FastBullResponse = await myFetch(url)
 
   if (res.code !== 0 || !res.bodyMessage) {
@@ -112,7 +129,7 @@ async function getCalendarData(startTimestamp: number, endTimestamp: number): Pr
 
     return bodyData.mergeList
       .filter(item => item.type === 1 || item.type === 2 || item.type === 3) // 保留经济数据、事件和假期
-      .sort((a, b) => b.releasedDate - a.releasedDate)
+      .sort((a, b) => a.releasedDate - b.releasedDate)
       .map((item) => {
         let title = ""
         let content = ""
@@ -194,41 +211,39 @@ async function getCalendarData(startTimestamp: number, endTimestamp: number): Pr
 
 // 今日日历
 const todayCalendar = defineSource(async () => {
-  const now = new Date()
-  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate())
-  const startTimestamp = today.getTime()
+  const { year, month, date } = getBeijingDateComponents()
+  const startTimestamp = beijingMidnight(year, month, date)
   const endTimestamp = startTimestamp + 24 * 60 * 60 * 1000 - 1
+  logger.info(`[fastbull-today] beijing: ${year}-${month + 1}-${date}, range: ${new Date(startTimestamp).toISOString()} ~ ${new Date(endTimestamp).toISOString()}`)
   return getCalendarData(startTimestamp, endTimestamp)
 })
 
 // 明日日历
 const tomorrowCalendar = defineSource(async () => {
-  const now = new Date()
-  const tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1)
-  const startTimestamp = tomorrow.getTime()
+  const { year, month, date } = getBeijingDateComponents()
+  const startTimestamp = beijingMidnight(year, month, date + 1)
   const endTimestamp = startTimestamp + 24 * 60 * 60 * 1000 - 1
+  logger.info(`[fastbull-tomorrow] beijing: ${year}-${month + 1}-${date + 1}, range: ${new Date(startTimestamp).toISOString()} ~ ${new Date(endTimestamp).toISOString()}`)
   return getCalendarData(startTimestamp, endTimestamp)
 })
 
 // 本周日历（周一到周日）
 const thisWeekCalendar = defineSource(async () => {
-  const now = new Date()
-  const day = now.getDay() // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
-  const mondayOffset = day === 0 ? -6 : 1 - day // 计算本周一的偏移
-  const monday = new Date(now.getFullYear(), now.getMonth(), now.getDate() + mondayOffset)
-  const startTimestamp = monday.getTime()
+  const { year, month, date, day } = getBeijingDateComponents()
+  const mondayOffset = day === 0 ? -6 : 1 - day
+  const startTimestamp = beijingMidnight(year, month, date + mondayOffset)
   const endTimestamp = startTimestamp + 7 * 24 * 60 * 60 * 1000 - 1
+  logger.info(`[fastbull-thisweek] beijing: ${year}-${month + 1}-${date}, day=${day}, mondayOffset=${mondayOffset}, range: ${new Date(startTimestamp).toISOString()} ~ ${new Date(endTimestamp).toISOString()}`)
   return getCalendarData(startTimestamp, endTimestamp)
 })
 
 // 下周日历（下周一到下周日）
 const nextWeekCalendar = defineSource(async () => {
-  const now = new Date()
-  const day = now.getDay() // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
-  const mondayOffset = day === 0 ? -6 : 1 - day // 计算本周一的偏移
-  const nextMonday = new Date(now.getFullYear(), now.getMonth(), now.getDate() + mondayOffset + 7)
-  const startTimestamp = nextMonday.getTime()
+  const { year, month, date, day } = getBeijingDateComponents()
+  const mondayOffset = day === 0 ? -6 : 1 - day
+  const startTimestamp = beijingMidnight(year, month, date + mondayOffset + 7)
   const endTimestamp = startTimestamp + 7 * 24 * 60 * 60 * 1000 - 1
+  logger.info(`[fastbull-nextweek] beijing: ${year}-${month + 1}-${date}, day=${day}, mondayOffset=${mondayOffset}, range: ${new Date(startTimestamp).toISOString()} ~ ${new Date(endTimestamp).toISOString()}`)
   return getCalendarData(startTimestamp, endTimestamp)
 })
 
