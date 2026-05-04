@@ -42,21 +42,7 @@ export default defineNitroPlugin(async (_nitro) => {
 
       logger.info(`[auto-refresh] ${dueIds.length} source(s) due for refresh`)
 
-      const staggerIds: SourceID[] = []
-      const normalIds: SourceID[] = []
       for (const id of dueIds) {
-        if (sources[id]?.staggerRefresh) {
-          staggerIds.push(id)
-        } else {
-          normalIds.push(id)
-        }
-      }
-
-      if (normalIds.length) {
-        await Promise.allSettled(normalIds.map(id => refreshOne(id, cacheTable)))
-      }
-
-      for (const id of staggerIds) {
         await refreshOne(id, cacheTable)
         await new Promise(r => setTimeout(r, 1000))
       }
@@ -77,7 +63,7 @@ export default defineNitroPlugin(async (_nitro) => {
       })
       const items = data.slice(0, 100)
       if (items.length) {
-        await cacheTable.set(id, items)
+        await cacheTable.updateAndSync(id, items)
         logger.success(`[auto-refresh] ${id} refreshed`)
       }
     } catch (e) {

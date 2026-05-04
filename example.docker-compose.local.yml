@@ -23,6 +23,13 @@ services:
       - PROXY=http://ip:port
       # 自动刷新（分钟），不设置或为0则不启用
       - CRON_INTERVAL=5
+      # MySQL配置（可选，用于增量新闻同步）
+      - MYSQL_HOST=
+      - MYSQL_PORT=
+      - MYSQL_USER=
+      - MYSQL_PASSWORD=
+      - MYSQL_NEWSOLD_DB=newsold
+      - MYSQL_NEWSNOW_DB=newsnow
 
 volumes:
   newsnow_data:

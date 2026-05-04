@@ -79,6 +79,13 @@ HTTPS_PROXY=
 PROXY=
 # 自動更新スキャン間隔（分）、未設定または0で無効
 CRON_INTERVAL=
+# MySQL設定（オプション、ニュース増分同期用）
+MYSQL_HOST=
+MYSQL_PORT=
+MYSQL_USER=""
+MYSQL_PASSWORD=""
+MYSQL_NEWSOLD_DB=newsold
+MYSQL_NEWSNOW_DB=newsnow
 ```
 
 ### データベースサポート

@@ -287,7 +287,7 @@
     "column": "finance",
     "home": "https://www.fastbull.cn",
     "color": "emerald",
-    "interval": 180000,
+    "interval": 1800000,
     "title": "今日日历"
   },
   "fastbull-today": {
@@ -296,7 +296,7 @@
     "column": "finance",
     "home": "https://www.fastbull.cn",
     "color": "emerald",
-    "interval": 180000,
+    "interval": 1800000,
     "title": "今日日历"
   },
   "fastbull-tomorrow": {
@@ -305,7 +305,7 @@
     "column": "finance",
     "home": "https://www.fastbull.cn",
     "color": "emerald",
-    "interval": 180000,
+    "interval": 1800000,
     "title": "明日日历"
   },
   "fastbull-this-week": {
@@ -314,7 +314,7 @@
     "column": "finance",
     "home": "https://www.fastbull.cn",
     "color": "emerald",
-    "interval": 180000,
+    "interval": 1800000,
     "title": "本周日历"
   },
   "fastbull-next-week": {
@@ -323,7 +323,7 @@
     "column": "finance",
     "home": "https://www.fastbull.cn",
     "color": "emerald",
-    "interval": 180000,
+    "interval": 1800000,
     "title": "下周日历"
   },
   "fastbull-news": {
@@ -370,7 +370,7 @@
     "column": "china",
     "home": "https://www.jiemian.com",
     "color": "blue",
-    "interval": 180000,
+    "interval": 1800000,
     "title": "今日热点",
     "staggerRefresh": true
   },
@@ -400,7 +400,7 @@
     "column": "china",
     "home": "https://www.jiemian.com",
     "color": "blue",
-    "interval": 180000,
+    "interval": 1800000,
     "title": "监管通报",
     "staggerRefresh": true
   },

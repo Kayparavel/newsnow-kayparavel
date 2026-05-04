@@ -85,6 +85,13 @@ HTTPS_PROXY=
 PROXY=
 # Auto-refresh scan interval (minutes), disabled if not set or set to 0
 CRON_INTERVAL=
+# MySQL configuration (optional, for incremental news sync)
+MYSQL_HOST=
+MYSQL_PORT=
+MYSQL_USER=""
+MYSQL_PASSWORD=""
+MYSQL_NEWSOLD_DB=newsold
+MYSQL_NEWSNOW_DB=newsnow
 ```
 
 ### Database Support

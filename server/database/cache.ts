@@ -2,6 +2,7 @@ import process from "node:process"
 import type { NewsItem } from "@shared/types"
 import type { Database } from "db0"
 import type { CacheInfo, CacheRow } from "../types"
+import { syncNewsItems } from "./mysql"
 
 export class Cache {
   private db
@@ -38,6 +39,13 @@ export class Cache {
       ).run(id, JSON.stringify(value), now)
     }
     logger.success(`set ${id} cache`)
+  }
+
+  async updateAndSync(id: string, value: NewsItem[]) {
+    const oldCache = await this.get(id)
+    const oldItems = oldCache?.items ?? []
+    await this.set(id, value)
+    await syncNewsItems(id, oldItems, value)
   }
 
   async get(id: string): Promise<CacheInfo | undefined> {
@@ -81,7 +89,7 @@ export class Cache {
   async getUseProxy(id: string): Promise<boolean> {
     const row = (await this.db.prepare(`SELECT useProxy FROM cache WHERE id = ?`).get(id)) as { useProxy: number } | undefined
     // 如果没有记录或者 useProxy 为 NULL，默认返回 false
-    return row && row.useProxy === 1 ? true : false
+    return !!(row && row.useProxy === 1)
   }
 
   async setUseProxy(id: string, useProxy: boolean) {
@@ -104,9 +112,9 @@ export class Cache {
 
   async getAllUseProxy(): Promise<Partial<Record<string, boolean>>> {
     const res = await this.db.prepare(`SELECT id, useProxy FROM cache WHERE useProxy IS NOT NULL`).all() as any
-    const rows = (res.results ?? res) as { id: string; useProxy: number }[]
+    const rows = (res.results ?? res) as { id: string, useProxy: number }[]
     const result: Partial<Record<string, boolean>> = {}
-    rows.forEach(row => {
+    rows.forEach((row) => {
       result[row.id] = row.useProxy === 1
     })
     return result

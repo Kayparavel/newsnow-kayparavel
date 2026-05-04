@@ -236,22 +236,22 @@ export const originSources = {
       "today": {
         title: "今日日历",
         type: "realtime",
-        interval: Time.Realtime,
+        interval: Time.Common,
       },
       "tomorrow": {
         title: "明日日历",
         type: "realtime",
-        interval: Time.Realtime,
+        interval: Time.Common,
       },
       "this-week": {
         title: "本周日历",
         type: "realtime",
-        interval: Time.Realtime,
+        interval: Time.Common,
       },
       "next-week": {
         title: "下周日历",
         type: "realtime",
-        interval: Time.Realtime,
+        interval: Time.Common,
       },
       "news": {
         title: "头条",
@@ -284,7 +284,7 @@ export const originSources = {
       todayhot: {
         title: "今日热点",
         type: "realtime",
-        interval: Time.Realtime,
+        interval: Time.Common,
         staggerRefresh: true,
       },
       company: {
@@ -302,7 +302,7 @@ export const originSources = {
       regulatory: {
         title: "监管通报",
         type: "realtime",
-        interval: Time.Realtime,
+        interval: Time.Common,
         staggerRefresh: true,
       },
       finance: {
