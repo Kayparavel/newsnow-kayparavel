@@ -22,8 +22,11 @@ export default defineEventHandler(async (event) => {
         return { all }
       }
     } else if (event.method === "POST") {
+      if (!event.context.disabledLogin && !event.context.user) {
+        throw createError({ statusCode: 401, message: "Login required" })
+      }
       const body = await readBody(event)
-      const { id, useProxy } = body as { id: SourceID; useProxy: boolean }
+      const { id, useProxy } = body as { id: SourceID, useProxy: boolean }
       if (!id || typeof useProxy !== "boolean") {
         throw createError({
           statusCode: 400,

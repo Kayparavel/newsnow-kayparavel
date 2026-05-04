@@ -18,9 +18,13 @@ export function useProxyConfig(id: SourceID) {
 
   const { mutate: _setProxy, isPending, isError } = useMutation({
     mutationFn: async (newValue: boolean) => {
+      const headers: Record<string, any> = {}
+      const jwt = safeParseString(localStorage.getItem("jwt"))
+      if (jwt) headers.Authorization = `Bearer ${jwt}`
       await myFetch("/source-proxy", {
         method: "POST",
         body: { id, useProxy: newValue },
+        headers,
         timeout: 1000,
       })
       return newValue

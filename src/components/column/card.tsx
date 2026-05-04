@@ -54,6 +54,7 @@ export const CardWrapper = forwardRef<HTMLElement, ItemsProps>(({ id, isDragging
 
 function NewsCard({ id, setHandleRef }: NewsCardProps) {
   const { refresh } = useRefetch()
+  const { enableLogin, loggedIn, login } = useLogin()
   const { useProxy, isLoading: isLoadingProxy, isPending, toggleProxy } = useProxyConfig(id)
   const { data, isFetching, isError } = useQuery({
     queryKey: ["source", id],
@@ -109,13 +110,22 @@ function NewsCard({ id, setHandleRef }: NewsCardProps) {
   const { isFocused, toggleFocus } = useFocusWith(id)
   const toast = useToast()
 
+  const proxyDisabled = enableLogin && !loggedIn
+
   const handleProxyToggle = useCallback(() => {
+    if (proxyDisabled) {
+      toast("登录后才能使用代理功能", {
+        type: "warning",
+        action: { label: "登录", onClick: login },
+      })
+      return
+    }
     toggleProxy({
       onError: () => {
         toast("代理flag设置失败,请稍后重试", { type: "error" })
       },
     })
-  }, [toggleProxy, toast])
+  }, [toggleProxy, toast, proxyDisabled, login])
 
   return (
     <>
@@ -147,10 +157,10 @@ function NewsCard({ id, setHandleRef }: NewsCardProps) {
           {!isLoadingProxy && useProxy !== undefined && (
             <button
               type="button"
-              disabled={isPending}
-              className={$("btn", isPending ? "i-ph:paper-plane-tilt-duotone animate-pulse" : useProxy ? "i-ph:paper-plane-tilt-fill" : "i-ph:paper-plane-tilt-duotone")}
+              disabled={isPending || proxyDisabled}
+              className={$("btn", isPending ? "i-ph:paper-plane-tilt-duotone animate-pulse" : useProxy ? "i-ph:paper-plane-tilt-fill" : "i-ph:paper-plane-tilt-duotone", proxyDisabled && "op-30! cursor-not-allowed!")}
               onClick={handleProxyToggle}
-              title={useProxy ? "当前使用代理访问" : "当前直连访问"}
+              title={proxyDisabled ? "登录后才能使用代理功能" : useProxy ? "当前使用代理访问" : "当前直连访问"}
             />
           )}
           <button
