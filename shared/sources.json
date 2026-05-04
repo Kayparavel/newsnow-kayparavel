@@ -31,7 +31,7 @@
     "column": "china",
     "home": "https://weibo.com",
     "color": "red",
-    "interval": 30000
+    "interval": 180000
   },
   "zaobao": {
     "name": "联合早报",
@@ -57,7 +57,7 @@
     "column": "finance",
     "home": "https://mktnews.net",
     "color": "indigo",
-    "interval": 30000,
+    "interval": 180000,
     "title": "快讯"
   },
   "mktnews-flash": {
@@ -65,7 +65,7 @@
     "column": "finance",
     "home": "https://mktnews.net",
     "color": "indigo",
-    "interval": 30000,
+    "interval": 180000,
     "title": "快讯"
   },
   "wallstreetcn": {
@@ -259,7 +259,7 @@
     "column": "finance",
     "home": "https://xueqiu.com",
     "color": "blue",
-    "interval": 30000,
+    "interval": 180000,
     "title": "热门股票"
   },
   "xueqiu-hotstock": {
@@ -268,7 +268,7 @@
     "column": "finance",
     "home": "https://xueqiu.com",
     "color": "blue",
-    "interval": 30000,
+    "interval": 180000,
     "title": "热门股票"
   },
   "gelonghui": {
@@ -278,7 +278,7 @@
     "column": "finance",
     "home": "https://www.gelonghui.com",
     "color": "blue",
-    "interval": 30000
+    "interval": 180000
   },
   "fastbull": {
     "redirect": "fastbull-today",
@@ -287,7 +287,7 @@
     "column": "finance",
     "home": "https://www.fastbull.cn",
     "color": "emerald",
-    "interval": 30000,
+    "interval": 180000,
     "title": "今日日历"
   },
   "fastbull-today": {
@@ -296,7 +296,7 @@
     "column": "finance",
     "home": "https://www.fastbull.cn",
     "color": "emerald",
-    "interval": 30000,
+    "interval": 180000,
     "title": "今日日历"
   },
   "fastbull-tomorrow": {
@@ -305,7 +305,7 @@
     "column": "finance",
     "home": "https://www.fastbull.cn",
     "color": "emerald",
-    "interval": 30000,
+    "interval": 180000,
     "title": "明日日历"
   },
   "fastbull-this-week": {
@@ -314,7 +314,7 @@
     "column": "finance",
     "home": "https://www.fastbull.cn",
     "color": "emerald",
-    "interval": 30000,
+    "interval": 180000,
     "title": "本周日历"
   },
   "fastbull-next-week": {
@@ -323,7 +323,7 @@
     "column": "finance",
     "home": "https://www.fastbull.cn",
     "color": "emerald",
-    "interval": 30000,
+    "interval": 180000,
     "title": "下周日历"
   },
   "fastbull-news": {
@@ -350,7 +350,7 @@
     "column": "china",
     "home": "https://www.jiemian.com",
     "color": "blue",
-    "interval": 30000,
+    "interval": 180000,
     "title": "即时资讯",
     "staggerRefresh": true
   },
@@ -360,7 +360,7 @@
     "column": "china",
     "home": "https://www.jiemian.com",
     "color": "blue",
-    "interval": 30000,
+    "interval": 180000,
     "title": "即时资讯",
     "staggerRefresh": true
   },
@@ -370,7 +370,7 @@
     "column": "china",
     "home": "https://www.jiemian.com",
     "color": "blue",
-    "interval": 30000,
+    "interval": 180000,
     "title": "今日热点",
     "staggerRefresh": true
   },
@@ -380,7 +380,7 @@
     "column": "china",
     "home": "https://www.jiemian.com",
     "color": "blue",
-    "interval": 30000,
+    "interval": 180000,
     "title": "公司头条",
     "staggerRefresh": true
   },
@@ -390,7 +390,7 @@
     "column": "china",
     "home": "https://www.jiemian.com",
     "color": "blue",
-    "interval": 30000,
+    "interval": 180000,
     "title": "股市前沿",
     "staggerRefresh": true
   },
@@ -400,7 +400,7 @@
     "column": "china",
     "home": "https://www.jiemian.com",
     "color": "blue",
-    "interval": 30000,
+    "interval": 180000,
     "title": "监管通报",
     "staggerRefresh": true
   },
@@ -410,7 +410,7 @@
     "column": "china",
     "home": "https://www.jiemian.com",
     "color": "blue",
-    "interval": 30000,
+    "interval": 180000,
     "title": "财经速览",
     "staggerRefresh": true
   },
@@ -420,7 +420,7 @@
     "column": "china",
     "home": "https://www.jiemian.com",
     "color": "blue",
-    "interval": 30000,
+    "interval": 180000,
     "title": "时事追踪",
     "staggerRefresh": true
   },
@@ -529,7 +529,7 @@
     "column": "finance",
     "home": "https://kuaixun.eastmoney.com",
     "color": "red",
-    "interval": 30000,
+    "interval": 180000,
     "title": "7x24"
   },
   "eastmoney-flash": {
@@ -538,7 +538,7 @@
     "column": "finance",
     "home": "https://kuaixun.eastmoney.com",
     "color": "red",
-    "interval": 30000,
+    "interval": 180000,
     "title": "7x24"
   },
   "eastmoney-focus": {
@@ -547,7 +547,7 @@
     "column": "finance",
     "home": "https://kuaixun.eastmoney.com",
     "color": "red",
-    "interval": 30000,
+    "interval": 180000,
     "title": "焦点"
   },
   "jin10": {
@@ -651,7 +651,8 @@
     "home": "https://www.reuters.com",
     "color": "orange",
     "interval": 3600000,
-    "title": "世界快讯"
+    "title": "世界快讯",
+    "staggerRefresh": true
   },
   "reuters-world": {
     "name": "路透社",
@@ -660,7 +661,8 @@
     "home": "https://www.reuters.com",
     "color": "orange",
     "interval": 3600000,
-    "title": "世界快讯"
+    "title": "世界快讯",
+    "staggerRefresh": true
   },
   "reuters-business": {
     "name": "路透社",
@@ -669,7 +671,8 @@
     "home": "https://www.reuters.com",
     "color": "orange",
     "interval": 3600000,
-    "title": "商业快讯"
+    "title": "商业快讯",
+    "staggerRefresh": true
   },
   "reuters-tech": {
     "name": "路透社",
@@ -678,7 +681,8 @@
     "home": "https://www.reuters.com",
     "color": "orange",
     "interval": 3600000,
-    "title": "科技快讯"
+    "title": "科技快讯",
+    "staggerRefresh": true
   },
   "reuters-world-googlerss": {
     "name": "路透社",
@@ -687,7 +691,8 @@
     "home": "https://www.reuters.com",
     "color": "orange",
     "interval": 3600000,
-    "title": "G-RSS世界"
+    "title": "G-RSS世界",
+    "staggerRefresh": true
   },
   "bloomberg": {
     "redirect": "bloomberg-hot",

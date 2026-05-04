@@ -83,6 +83,8 @@ HTTP_PROXY=
 HTTPS_PROXY=
 # Proxy address (fallback)
 PROXY=
+# Auto-refresh scan interval (minutes), disabled if not set or set to 0
+CRON_INTERVAL=
 ```
 
 ### Database Support

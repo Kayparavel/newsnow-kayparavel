@@ -77,6 +77,8 @@ HTTP_PROXY=
 HTTPS_PROXY=
 # プロキシアドレス（フォールバック）
 PROXY=
+# 自動更新スキャン間隔（分）、未設定または0で無効
+CRON_INTERVAL=
 ```
 
 ### データベースサポート

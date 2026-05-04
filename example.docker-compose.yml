@@ -20,6 +20,8 @@ services:
       - HTTP_PROXY=http://ip:port
       - HTTPS_PROXY=http://ip:port
       - PROXY=http://ip:port
+      # 自动刷新（分钟），不设置或为0则不启用
+      - CRON_INTERVAL=5
     restart: always
 
 volumes:

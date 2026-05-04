@@ -77,6 +77,8 @@ HTTP_PROXY=
 HTTPS_PROXY=
 # 代理地址（兜底）
 PROXY=
+# 自动刷新扫描间隔（分钟），不设置或为0则不启用
+CRON_INTERVAL=
 ```
 
 ### 数据库支持

@@ -5,7 +5,7 @@ import type { OriginSource, Source, SourceID } from "./types"
 
 const Time = {
   Test: 1,
-  Realtime: 0.5 * 60 * 1000,
+  Realtime: 3 * 60 * 1000,
   Fast: 5 * 60 * 1000,
   Default: Interval, // 10min
   Common: 30 * 60 * 1000,
@@ -534,21 +534,25 @@ export const originSources = {
         title: "世界快讯",
         type: "realtime",
         interval: Time.Slow,
+        staggerRefresh: true,
       },
       "business": {
         title: "商业快讯",
         type: "realtime",
         interval: Time.Slow,
+        staggerRefresh: true,
       },
       "tech": {
         title: "科技快讯",
         type: "realtime",
         interval: Time.Slow,
+        staggerRefresh: true,
       },
       "world-googlerss": {
         title: "G-RSS世界",
         type: "realtime",
         interval: Time.Slow,
+        staggerRefresh: true,
       },
     },
   },
