@@ -535,6 +535,16 @@ export const originSources = {
         type: "realtime",
         interval: Time.Slow,
       },
+      "business": {
+        title: "商业快讯",
+        type: "realtime",
+        interval: Time.Slow,
+      },
+      "tech": {
+        title: "科技快讯",
+        type: "realtime",
+        interval: Time.Slow,
+      },
       "world-googlerss": {
         title: "G-RSS世界",
         type: "realtime",

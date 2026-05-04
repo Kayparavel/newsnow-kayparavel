@@ -59,6 +59,8 @@
   "douban": "douban-remendianying",
   "steam": "Steam-zaixianrenshu",
   "reuters-world": "lutoushe-shijiekuaixun",
+  "reuters-business": "lutoushe-shangyekuaixun",
+  "reuters-tech": "lutoushe-kejikuaixun",
   "reuters-world-googlerss": "lutoushe-G-RSSshijie",
   "bloomberg-hot": "pengbo-redian",
   "bloomberg-market": "pengbo-shichangdongtai",

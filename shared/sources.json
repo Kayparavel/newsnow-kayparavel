@@ -662,6 +662,24 @@
     "interval": 3600000,
     "title": "世界快讯"
   },
+  "reuters-business": {
+    "name": "路透社",
+    "type": "realtime",
+    "column": "world",
+    "home": "https://www.reuters.com",
+    "color": "orange",
+    "interval": 3600000,
+    "title": "商业快讯"
+  },
+  "reuters-tech": {
+    "name": "路透社",
+    "type": "realtime",
+    "column": "world",
+    "home": "https://www.reuters.com",
+    "color": "orange",
+    "interval": 3600000,
+    "title": "科技快讯"
+  },
   "reuters-world-googlerss": {
     "name": "路透社",
     "type": "realtime",
