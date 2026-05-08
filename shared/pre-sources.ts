@@ -365,12 +365,12 @@ export const originSources = {
       "hot-video": {
         title: "热门视频",
         disable: "cf",
-        column: "china",
+        column: "entertainment",
         type: "hottest",
       },
       "ranking": {
         title: "排行榜",
-        column: "china",
+        column: "entertainment",
         disable: "cf",
         type: "hottest",
         interval: Time.Common,
@@ -510,7 +510,7 @@ export const originSources = {
   },
   "douban": {
     name: "豆瓣",
-    column: "china",
+    column: "entertainment",
     title: "热门电影",
     color: "green",
     type: "hottest",
@@ -609,7 +609,7 @@ export const originSources = {
 
   "qqvideo": {
     name: "腾讯视频",
-    column: "china",
+    column: "entertainment",
     color: "blue",
     home: "https://v.qq.com/",
     sub: {
@@ -624,7 +624,7 @@ export const originSources = {
   },
   "iqiyi": {
     name: "爱奇艺",
-    column: "china",
+    column: "entertainment",
     color: "green",
     home: "https://www.iqiyi.com",
     sub: {
@@ -673,6 +673,41 @@ export const originSources = {
         home: "https://polymarket.com/zh",
       },
     },
+  },
+  "maoyan": {
+    name: "猫眼票房",
+    type: "hottest",
+    column: "entertainment",
+    color: "red",
+    home: "https://piaofang.maoyan.com",
+    interval: Time.Test,
+    sub: {
+      boxoffice: {
+        title: "实时票房",
+      },
+      tvviewing: {
+        title: "节目收视",
+      },
+      webheat: {
+        title: "网络热播",
+      },
+    },
+  },
+  "guancha": {
+    name: "观察者网",
+    column: "china",
+    color: "red",
+    type: "realtime",
+    interval: Time.Common,
+    home: "https://www.guancha.cn",
+  },
+  "sohu": {
+    name: "搜狐新闻",
+    column: "china",
+    color: "red",
+    type: "realtime",
+    interval: Time.Common,
+    home: "https://news.sohu.com",
   },
 } as const satisfies Record<string, OriginSource>
 

@@ -489,7 +489,7 @@
     "name": "哔哩哔哩",
     "type": "hottest",
     "disable": "cf",
-    "column": "china",
+    "column": "entertainment",
     "home": "https://www.bilibili.com",
     "color": "blue",
     "interval": 600000,
@@ -499,7 +499,7 @@
     "name": "哔哩哔哩",
     "type": "hottest",
     "disable": "cf",
-    "column": "china",
+    "column": "entertainment",
     "home": "https://www.bilibili.com",
     "color": "blue",
     "interval": 1800000,
@@ -629,7 +629,7 @@
     "title": "热门电影",
     "name": "豆瓣",
     "type": "hottest",
-    "column": "china",
+    "column": "entertainment",
     "home": "https://www.douban.com",
     "color": "green",
     "interval": 600000
@@ -772,7 +772,7 @@
     "redirect": "qqvideo-tv-hotsearch",
     "name": "腾讯视频",
     "type": "hottest",
-    "column": "china",
+    "column": "entertainment",
     "home": "https://v.qq.com/channel/tv",
     "color": "blue",
     "interval": 1800000,
@@ -781,7 +781,7 @@
   "qqvideo-tv-hotsearch": {
     "name": "腾讯视频",
     "type": "hottest",
-    "column": "china",
+    "column": "entertainment",
     "home": "https://v.qq.com/channel/tv",
     "color": "blue",
     "interval": 1800000,
@@ -791,7 +791,7 @@
     "redirect": "iqiyi-hot-ranklist",
     "name": "爱奇艺",
     "type": "hottest",
-    "column": "china",
+    "column": "entertainment",
     "home": "https://www.iqiyi.com",
     "color": "green",
     "interval": 1800000,
@@ -800,7 +800,7 @@
   "iqiyi-hot-ranklist": {
     "name": "爱奇艺",
     "type": "hottest",
-    "column": "china",
+    "column": "entertainment",
     "home": "https://www.iqiyi.com",
     "color": "green",
     "interval": 1800000,
@@ -860,5 +860,58 @@
     "color": "purple",
     "interval": 300000,
     "title": "中文"
+  },
+  "maoyan": {
+    "redirect": "maoyan-boxoffice",
+    "name": "猫眼票房",
+    "type": "hottest",
+    "column": "entertainment",
+    "home": "https://piaofang.maoyan.com",
+    "color": "red",
+    "interval": 1,
+    "title": "实时票房"
+  },
+  "maoyan-boxoffice": {
+    "name": "猫眼票房",
+    "type": "hottest",
+    "column": "entertainment",
+    "home": "https://piaofang.maoyan.com",
+    "color": "red",
+    "interval": 1,
+    "title": "实时票房"
+  },
+  "maoyan-tvviewing": {
+    "name": "猫眼票房",
+    "type": "hottest",
+    "column": "entertainment",
+    "home": "https://piaofang.maoyan.com",
+    "color": "red",
+    "interval": 1,
+    "title": "节目收视"
+  },
+  "maoyan-webheat": {
+    "name": "猫眼票房",
+    "type": "hottest",
+    "column": "entertainment",
+    "home": "https://piaofang.maoyan.com",
+    "color": "red",
+    "interval": 1,
+    "title": "网络热播"
+  },
+  "guancha": {
+    "name": "观察者网",
+    "type": "realtime",
+    "column": "china",
+    "home": "https://www.guancha.cn",
+    "color": "red",
+    "interval": 1800000
+  },
+  "sohu": {
+    "name": "搜狐新闻",
+    "type": "realtime",
+    "column": "china",
+    "home": "https://news.sohu.com",
+    "color": "red",
+    "interval": 1800000
   }
 }
