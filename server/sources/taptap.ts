@@ -10,7 +10,7 @@ async function fetchTapTop(typeName: string): Promise<NewsItem[]> {
       const app = item.app
       const tags = app.tags?.map((t: any) => t.value).join("/") || ""
       const score = app.stat?.rating?.score || ""
-      const info = `\n${tags}${score ? ` · ${score}分` : ""}`
+      const info = `${tags}${score ? ` · ${score}分` : ""}`
       return {
         id: app.id,
         title: app.title,
@@ -26,6 +26,7 @@ const taptapHot = defineSource(() => fetchTapTop("hot"))
 const taptapSell = defineSource(() => fetchTapTop("sell"))
 
 export default defineSource({
+  "taptap": taptapHot,
   "taptap-hot": taptapHot,
   "taptap-sell": taptapSell,
 })

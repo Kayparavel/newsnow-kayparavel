@@ -946,20 +946,32 @@
     "color": "red",
     "interval": 1800000
   },
-  "taptap-hot": {
-    "name": "TapTap热门",
+  "taptap": {
+    "redirect": "taptap-hot",
+    "name": "TapTap",
     "type": "hottest",
     "column": "entertainment",
-    "home": "https://www.taptap.cn/top/played",
+    "home": "https://www.taptap.cn",
     "color": "blue",
-    "interval": 1800000
+    "interval": 1800000,
+    "title": "热门榜"
+  },
+  "taptap-hot": {
+    "name": "TapTap",
+    "type": "hottest",
+    "column": "entertainment",
+    "home": "https://www.taptap.cn",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "热门榜"
   },
   "taptap-sell": {
-    "name": "TapTap热卖",
+    "name": "TapTap",
     "type": "hottest",
     "column": "entertainment",
-    "home": "https://www.taptap.cn/top/sell",
+    "home": "https://www.taptap.cn",
     "color": "blue",
-    "interval": 1800000
+    "interval": 1800000,
+    "title": "热卖榜"
   }
 }
