@@ -945,5 +945,21 @@
     "home": "https://www.qidian.com",
     "color": "red",
     "interval": 1800000
+  },
+  "taptap-hot": {
+    "name": "TapTap热门",
+    "type": "hottest",
+    "column": "entertainment",
+    "home": "https://www.taptap.cn/top/played",
+    "color": "blue",
+    "interval": 1800000
+  },
+  "taptap-sell": {
+    "name": "TapTap热卖",
+    "type": "hottest",
+    "column": "entertainment",
+    "home": "https://www.taptap.cn/top/sell",
+    "color": "blue",
+    "interval": 1800000
   }
 }

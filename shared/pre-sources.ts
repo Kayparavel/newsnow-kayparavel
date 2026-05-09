@@ -741,6 +741,22 @@ export const originSources = {
     interval: Time.Common,
     home: "https://www.qidian.com",
   },
+  "taptap-hot": {
+    name: "TapTap热门",
+    column: "entertainment",
+    color: "blue",
+    type: "hottest",
+    interval: Time.Common,
+    home: "https://www.taptap.cn/top/played",
+  },
+  "taptap-sell": {
+    name: "TapTap热卖",
+    column: "entertainment",
+    color: "blue",
+    type: "hottest",
+    interval: Time.Common,
+    home: "https://www.taptap.cn/top/sell",
+  },
 } as const satisfies Record<string, OriginSource>
 
 export function genSources() {
