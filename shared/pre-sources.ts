@@ -680,7 +680,7 @@ export const originSources = {
     column: "entertainment",
     color: "red",
     home: "https://piaofang.maoyan.com",
-    interval: Time.Test,
+    interval: Time.Fast,
     sub: {
       boxoffice: {
         title: "实时票房",
@@ -708,6 +708,30 @@ export const originSources = {
     type: "realtime",
     interval: Time.Common,
     home: "https://news.sohu.com",
+  },
+  "apnews": {
+    name: "AP News",
+    column: "world",
+    color: "red",
+    type: "realtime",
+    interval: Time.Common,
+    home: "https://apnews.com",
+  },
+  "bbc": {
+    name: "BBC",
+    column: "world",
+    color: "red",
+    type: "realtime",
+    interval: Time.Common,
+    home: "https://www.bbc.com/news",
+  },
+  "music163": {
+    name: "网易云音乐",
+    column: "entertainment",
+    color: "red",
+    type: "hottest",
+    interval: Time.Common,
+    home: "https://music.163.com",
   },
 } as const satisfies Record<string, OriginSource>
 
