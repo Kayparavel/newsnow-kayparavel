@@ -39,6 +39,7 @@ declare module 'glob:./sources/{*.ts,**/index.ts}' {
   export const pcbeta: typeof import('./sources/pcbeta')
   export const polymarket: typeof import('./sources/polymarket')
   export const producthunt: typeof import('./sources/producthunt')
+  export const qidian: typeof import('./sources/qidian')
   export const qqvideo: typeof import('./sources/qqvideo')
   export const reuters: typeof import('./sources/reuters')
   export const smzdm: typeof import('./sources/smzdm')

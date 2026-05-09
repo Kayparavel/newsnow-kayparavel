@@ -937,5 +937,13 @@
     "home": "https://music.163.com",
     "color": "red",
     "interval": 1800000
+  },
+  "qidian": {
+    "name": "起点中文网",
+    "type": "hottest",
+    "column": "entertainment",
+    "home": "https://www.qidian.com",
+    "color": "red",
+    "interval": 1800000
   }
 }

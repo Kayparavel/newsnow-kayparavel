@@ -733,6 +733,14 @@ export const originSources = {
     interval: Time.Common,
     home: "https://music.163.com",
   },
+  "qidian": {
+    name: "起点中文网",
+    column: "entertainment",
+    color: "red",
+    type: "hottest",
+    interval: Time.Common,
+    home: "https://www.qidian.com",
+  },
 } as const satisfies Record<string, OriginSource>
 
 export function genSources() {
