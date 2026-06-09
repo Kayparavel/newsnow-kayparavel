@@ -740,6 +740,46 @@
     "interval": 600000,
     "title": "日本快讯"
   },
+  "bloomberg-hot-zh": {
+    "name": "彭博",
+    "type": "hottest",
+    "column": "world",
+    "home": "https://www.bloomberg.com",
+    "color": "gray",
+    "interval": 1,
+    "title": "热点(译文)",
+    "dependsOn": "bloomberg-hot"
+  },
+  "bloomberg-market-zh": {
+    "name": "彭博",
+    "type": "realtime",
+    "column": "world",
+    "home": "https://www.bloomberg.com",
+    "color": "gray",
+    "interval": 3600000,
+    "title": "市场动态(译文)",
+    "dependsOn": "bloomberg-market"
+  },
+  "bloomberg-us-zh": {
+    "name": "彭博",
+    "type": "realtime",
+    "column": "world",
+    "home": "https://www.bloomberg.com",
+    "color": "gray",
+    "interval": 600000,
+    "title": "欧美快讯(译文)",
+    "dependsOn": "bloomberg-us"
+  },
+  "bloomberg-ja-zh": {
+    "name": "彭博",
+    "type": "realtime",
+    "column": "world",
+    "home": "https://www.bloomberg.com",
+    "color": "gray",
+    "interval": 1,
+    "title": "日本快讯(译文)",
+    "dependsOn": "bloomberg-ja"
+  },
   "tencent": {
     "redirect": "tencent-hot",
     "name": "腾讯新闻",

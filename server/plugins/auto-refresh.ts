@@ -4,6 +4,14 @@ import { getters } from "#/getters"
 import { getCacheTable } from "#/database/cache"
 import { useProxyStorage } from "#/utils/fetch"
 
+// 译文源 ID 后缀
+const TRANSLATED_SUFFIX = "-zh"
+
+// 判断是否是译文源
+function isTranslatedSource(id: SourceID): boolean {
+  return id.endsWith(TRANSLATED_SUFFIX)
+}
+
 export default defineNitroPlugin(async (_nitro) => {
   const intervalMinutes = Number(process.env.CRON_INTERVAL) || 0
   if (intervalMinutes <= 0) return
@@ -24,25 +32,40 @@ export default defineNitroPlugin(async (_nitro) => {
 
       const now = Date.now()
       const allIds = Object.keys(sources) as SourceID[]
-      const dueIds: SourceID[] = []
+
+      // 分离普通源和译文源
+      const normalDueIds: SourceID[] = []
+      const translatedDueIds: SourceID[] = []
 
       for (const id of allIds) {
         const source = sources[id]
         if (!source || !getters[id]) continue
         const cache = await cacheTable.get(id)
         if (!cache || now - cache.updated >= source.interval) {
-          dueIds.push(id)
+          if (isTranslatedSource(id)) {
+            translatedDueIds.push(id)
+          } else {
+            normalDueIds.push(id)
+          }
         }
       }
 
-      if (!dueIds.length) {
+      const totalDue = normalDueIds.length + translatedDueIds.length
+      if (!totalDue) {
         logger.info("[auto-refresh] all caches are fresh, nothing to do")
         return
       }
 
-      logger.info(`[auto-refresh] ${dueIds.length} source(s) due for refresh`)
+      logger.info(`[auto-refresh] ${normalDueIds.length} normal source(s) and ${translatedDueIds.length} translated source(s) due for refresh`)
 
-      for (const id of dueIds) {
+      // 第一轮：刷新普通源
+      for (const id of normalDueIds) {
+        await refreshOne(id, cacheTable)
+        await new Promise(r => setTimeout(r, 1000))
+      }
+
+      // 第二轮：刷新译文源（此时原文源缓存已是最新）
+      for (const id of translatedDueIds) {
         await refreshOne(id, cacheTable)
         await new Promise(r => setTimeout(r, 1000))
       }

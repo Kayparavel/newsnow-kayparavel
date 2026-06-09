@@ -562,25 +562,50 @@ export const originSources = {
     color: "gray",
     home: "https://www.bloomberg.com",
     sub: {
-      hot: {
+      "hot": {
         title: "热点",
         type: "hottest",
         interval: Time.Slow,
       },
-      market: {
+      "market": {
         title: "市场动态",
         type: "realtime",
         interval: Time.Slow,
       },
-      us: {
+      "us": {
         title: "欧美快讯",
         type: "realtime",
         interval: Interval,
       },
-      ja: {
+      "ja": {
         title: "日本快讯",
         type: "realtime",
         interval: Interval,
+      },
+      // 译文源
+      "hot-zh": {
+        title: "热点(译文)",
+        type: "hottest",
+        interval: Time.Test,
+        dependsOn: "bloomberg-hot",
+      },
+      "market-zh": {
+        title: "市场动态(译文)",
+        type: "realtime",
+        interval: Time.Slow,
+        dependsOn: "bloomberg-market",
+      },
+      "us-zh": {
+        title: "欧美快讯(译文)",
+        type: "realtime",
+        interval: Interval,
+        dependsOn: "bloomberg-us",
+      },
+      "ja-zh": {
+        title: "日本快讯(译文)",
+        type: "realtime",
+        interval: Time.Test,
+        dependsOn: "bloomberg-ja",
       },
     },
   },

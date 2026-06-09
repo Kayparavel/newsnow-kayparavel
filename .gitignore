@@ -16,6 +16,7 @@ package-lock.json
 docker-compose.local.yml
 docker-compose.yml
 dev.md
+文本翻译.md
 server/sources/*.json
 server/sources/*.xml
 .specstory/
