@@ -163,6 +163,41 @@ export async function translateBatch(texts: string[], source: string = "en", tar
   return results
 }
 
+// 批量翻译文本（用换行符连接，一次性翻译）
+async function batchTranslateTexts(texts: string[]): Promise<string[]> {
+  if (!texts.length) return []
+  if (!isTranslateEnabled()) return texts
+
+  // 单次请求最大 6000 字符，保守用 5000
+  const MAX_CHARS = 5000
+  const results: string[] = []
+  let currentBatch: string[] = []
+  let currentLength = 0
+
+  for (const text of texts) {
+    // +1 是换行符的长度
+    if (currentLength + text.length + 1 > MAX_CHARS && currentBatch.length > 0) {
+      // 当前批次已满，翻译并清空
+      const translated = await callTranslateAPI(currentBatch.join("\n"), "auto", "zh")
+      results.push(...translated.split("\n"))
+      currentBatch = []
+      currentLength = 0
+      // 等待 400ms 避免限流
+      await new Promise(resolve => setTimeout(resolve, 400))
+    }
+    currentBatch.push(text)
+    currentLength += text.length + 1
+  }
+
+  // 翻译最后一批
+  if (currentBatch.length > 0) {
+    const translated = await callTranslateAPI(currentBatch.join("\n"), "auto", "zh")
+    results.push(...translated.split("\n"))
+  }
+
+  return results
+}
+
 // 翻译 NewsItem 数组
 export async function translateNewsItems(items: any[]): Promise<any[]> {
   if (!isTranslateEnabled()) {
@@ -172,39 +207,62 @@ export async function translateNewsItems(items: any[]): Promise<any[]> {
 
   logger.info(`[translate] Translating ${items.length} items`)
 
-  // 串行翻译，每个翻译请求间隔 400ms，避免超过频率限制（每秒 2-3 次）
-  const translatedItems: any[] = []
-
+  // 收集所有需要翻译的标题
+  const titles: string[] = []
+  const titleIndexes: number[] = [] // 记录哪些条目有标题
   for (let i = 0; i < items.length; i++) {
-    const item = items[i]
-    const translatedItem = { ...item }
-
-    // 翻译标题
-    if (item.title) {
-      const originalTitle = item.title
-      translatedItem.title = await translateText(item.title)
-      if (originalTitle !== translatedItem.title) {
-        logger.info(`[translate] Title: "${originalTitle}" -> "${translatedItem.title}"`)
-      }
-      // 每个翻译请求间隔 400ms
-      await new Promise(resolve => setTimeout(resolve, 400))
+    if (items[i].title) {
+      titles.push(items[i].title)
+      titleIndexes.push(i)
     }
+  }
 
-    // 翻译 hover 信息
-    if (item.extra?.hover) {
-      const originalHover = item.extra.hover
-      translatedItem.extra = {
-        ...item.extra,
-        hover: await translateText(item.extra.hover),
-      }
-      if (originalHover !== translatedItem.extra.hover) {
-        logger.info(`[translate] Hover: "${originalHover}" -> "${translatedItem.extra.hover}"`)
-      }
-      // 每个翻译请求间隔 400ms
-      await new Promise(resolve => setTimeout(resolve, 400))
+  // 批量翻译标题
+  let translatedTitles: string[] = []
+  if (titles.length > 0) {
+    logger.info(`[translate] Batch translating ${titles.length} titles`)
+    translatedTitles = await batchTranslateTexts(titles)
+  }
+
+  // 收集所有需要翻译的 hover 信息
+  const hovers: string[] = []
+  const hoverIndexes: number[] = [] // 记录哪些条目有 hover
+  for (let i = 0; i < items.length; i++) {
+    if (items[i].extra?.hover) {
+      hovers.push(items[i].extra.hover)
+      hoverIndexes.push(i)
     }
+  }
 
-    translatedItems.push(translatedItem)
+  // 批量翻译 hover 信息
+  let translatedHovers: string[] = []
+  if (hovers.length > 0) {
+    logger.info(`[translate] Batch translating ${hovers.length} hover texts`)
+    translatedHovers = await batchTranslateTexts(hovers)
+  }
+
+  // 组装翻译结果
+  const translatedItems = items.map(item => ({ ...item }))
+
+  // 更新标题
+  for (let i = 0; i < titleIndexes.length; i++) {
+    const itemIndex = titleIndexes[i]
+    if (translatedTitles[i] && translatedTitles[i] !== items[itemIndex].title) {
+      translatedItems[itemIndex].title = translatedTitles[i]
+      logger.info(`[translate] Title: "${items[itemIndex].title}" -> "${translatedTitles[i]}"`)
+    }
+  }
+
+  // 更新 hover 信息
+  for (let i = 0; i < hoverIndexes.length; i++) {
+    const itemIndex = hoverIndexes[i]
+    if (translatedHovers[i] && translatedHovers[i] !== items[itemIndex].extra.hover) {
+      translatedItems[itemIndex].extra = {
+        ...items[itemIndex].extra,
+        hover: translatedHovers[i],
+      }
+      logger.info(`[translate] Hover: "${items[itemIndex].extra.hover}" -> "${translatedHovers[i]}"`)
+    }
   }
 
   logger.info(`[translate] Translation completed`)
