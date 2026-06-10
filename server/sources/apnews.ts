@@ -38,5 +38,6 @@ const apnews = defineSource(async () => {
 })
 
 export default defineSource({
-  apnews,
+  "apnews": apnews,
+  "apnews-news": apnews,
 })

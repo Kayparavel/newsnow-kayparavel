@@ -14,7 +14,7 @@ function getOriginalSourceId(translatedId: SourceID): SourceID {
   return translatedId.slice(0, -TRANSLATED_SUFFIX.length) as SourceID
 }
 
-// 刷新原文源
+// 刷新原文源（只更新本地缓存，不同步 MySQL，同步由 cron 负责）
 async function refreshOriginalSource(originalId: SourceID, cacheTable: any): Promise<NewsItem[]> {
   // 延迟导入 getters 避免循环依赖
   const { getters } = await import("#/getters")
@@ -25,7 +25,7 @@ async function refreshOriginalSource(originalId: SourceID, cacheTable: any): Pro
   })
   const items = data.slice(0, 100)
   if (items.length) {
-    await cacheTable.updateAndSync(originalId, items)
+    await cacheTable.set(originalId, items)
     logger.success(`[translated] refreshed original source: ${originalId}`)
   }
   return items

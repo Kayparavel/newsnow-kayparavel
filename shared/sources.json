@@ -432,12 +432,33 @@
     "interval": 3600000
   },
   "hackernews": {
+    "redirect": "hackernews-hot",
     "name": "Hacker News",
     "type": "hottest",
     "column": "tech",
     "home": "https://news.ycombinator.com/",
     "color": "orange",
-    "interval": 600000
+    "interval": 600000,
+    "title": "热门"
+  },
+  "hackernews-hot": {
+    "name": "Hacker News",
+    "type": "hottest",
+    "column": "tech",
+    "home": "https://news.ycombinator.com/",
+    "color": "orange",
+    "interval": 600000,
+    "title": "热门"
+  },
+  "hackernews-hot-zh": {
+    "name": "Hacker News",
+    "type": "hottest",
+    "column": "tech",
+    "home": "https://news.ycombinator.com/",
+    "color": "orange",
+    "interval": 600000,
+    "title": "热门(译文)",
+    "dependsOn": "hackernews-hot"
   },
   "producthunt": {
     "name": "Product Hunt",
@@ -693,6 +714,50 @@
     "interval": 3600000,
     "title": "G-RSS世界",
     "staggerRefresh": true
+  },
+  "reuters-world-zh": {
+    "name": "路透社",
+    "type": "realtime",
+    "column": "world",
+    "home": "https://www.reuters.com",
+    "color": "orange",
+    "interval": 3600000,
+    "title": "世界快讯(译文)",
+    "staggerRefresh": true,
+    "dependsOn": "reuters-world"
+  },
+  "reuters-business-zh": {
+    "name": "路透社",
+    "type": "realtime",
+    "column": "world",
+    "home": "https://www.reuters.com",
+    "color": "orange",
+    "interval": 3600000,
+    "title": "商业快讯(译文)",
+    "staggerRefresh": true,
+    "dependsOn": "reuters-business"
+  },
+  "reuters-tech-zh": {
+    "name": "路透社",
+    "type": "realtime",
+    "column": "world",
+    "home": "https://www.reuters.com",
+    "color": "orange",
+    "interval": 3600000,
+    "title": "科技快讯(译文)",
+    "staggerRefresh": true,
+    "dependsOn": "reuters-tech"
+  },
+  "reuters-world-googlerss-zh": {
+    "name": "路透社",
+    "type": "realtime",
+    "column": "world",
+    "home": "https://www.reuters.com",
+    "color": "orange",
+    "interval": 3600000,
+    "title": "G-RSS世界(译文)",
+    "staggerRefresh": true,
+    "dependsOn": "reuters-world-googlerss"
   },
   "bloomberg": {
     "redirect": "bloomberg-hot",
@@ -955,20 +1020,62 @@
     "interval": 1800000
   },
   "apnews": {
+    "redirect": "apnews-news",
     "name": "AP News",
     "type": "realtime",
     "column": "world",
     "home": "https://apnews.com",
     "color": "red",
-    "interval": 1800000
+    "interval": 1800000,
+    "title": "最新"
+  },
+  "apnews-news": {
+    "name": "AP News",
+    "type": "realtime",
+    "column": "world",
+    "home": "https://apnews.com",
+    "color": "red",
+    "interval": 1800000,
+    "title": "最新"
+  },
+  "apnews-news-zh": {
+    "name": "AP News",
+    "type": "realtime",
+    "column": "world",
+    "home": "https://apnews.com",
+    "color": "red",
+    "interval": 1800000,
+    "title": "最新(译文)",
+    "dependsOn": "apnews-news"
   },
   "bbc": {
+    "redirect": "bbc-news",
     "name": "BBC",
     "type": "realtime",
     "column": "world",
     "home": "https://www.bbc.com/news",
     "color": "red",
-    "interval": 1800000
+    "interval": 1800000,
+    "title": "最新"
+  },
+  "bbc-news": {
+    "name": "BBC",
+    "type": "realtime",
+    "column": "world",
+    "home": "https://www.bbc.com/news",
+    "color": "red",
+    "interval": 1800000,
+    "title": "最新"
+  },
+  "bbc-news-zh": {
+    "name": "BBC",
+    "type": "realtime",
+    "column": "world",
+    "home": "https://www.bbc.com/news",
+    "color": "red",
+    "interval": 1800000,
+    "title": "最新(译文)",
+    "dependsOn": "bbc-news"
   },
   "music163": {
     "name": "网易云音乐",

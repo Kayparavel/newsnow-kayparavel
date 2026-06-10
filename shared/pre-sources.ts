@@ -330,8 +330,18 @@ export const originSources = {
     name: "Hacker News",
     color: "orange",
     column: "tech",
-    type: "hottest",
     home: "https://news.ycombinator.com/",
+    sub: {
+      "hot": {
+        title: "热门",
+        type: "hottest",
+      },
+      "hot-zh": {
+        title: "热门(译文)",
+        type: "hottest",
+        dependsOn: "hackernews-hot",
+      },
+    },
   },
   "producthunt": {
     name: "Product Hunt",
@@ -554,6 +564,35 @@ export const originSources = {
         interval: Time.Slow,
         staggerRefresh: true,
       },
+      // 译文源
+      "world-zh": {
+        title: "世界快讯(译文)",
+        type: "realtime",
+        interval: Time.Slow,
+        staggerRefresh: true,
+        dependsOn: "reuters-world",
+      },
+      "business-zh": {
+        title: "商业快讯(译文)",
+        type: "realtime",
+        interval: Time.Slow,
+        staggerRefresh: true,
+        dependsOn: "reuters-business",
+      },
+      "tech-zh": {
+        title: "科技快讯(译文)",
+        type: "realtime",
+        interval: Time.Slow,
+        staggerRefresh: true,
+        dependsOn: "reuters-tech",
+      },
+      "world-googlerss-zh": {
+        title: "G-RSS世界(译文)",
+        type: "realtime",
+        interval: Time.Slow,
+        staggerRefresh: true,
+        dependsOn: "reuters-world-googlerss",
+      },
     },
   },
   "bloomberg": {
@@ -738,17 +777,39 @@ export const originSources = {
     name: "AP News",
     column: "world",
     color: "red",
-    type: "realtime",
-    interval: Time.Common,
     home: "https://apnews.com",
+    sub: {
+      "news": {
+        title: "最新",
+        type: "realtime",
+        interval: Time.Common,
+      },
+      "news-zh": {
+        title: "最新(译文)",
+        type: "realtime",
+        interval: Time.Common,
+        dependsOn: "apnews-news",
+      },
+    },
   },
   "bbc": {
     name: "BBC",
     column: "world",
     color: "red",
-    type: "realtime",
-    interval: Time.Common,
     home: "https://www.bbc.com/news",
+    sub: {
+      "news": {
+        title: "最新",
+        type: "realtime",
+        interval: Time.Common,
+      },
+      "news-zh": {
+        title: "最新(译文)",
+        type: "realtime",
+        interval: Time.Common,
+        dependsOn: "bbc-news",
+      },
+    },
   },
   "music163": {
     name: "网易云音乐",

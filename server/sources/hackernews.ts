@@ -1,7 +1,7 @@
 import * as cheerio from "cheerio"
 import type { NewsItem } from "@shared/types"
 
-export default defineSource(async () => {
+const hackernewsHot = defineSource(async () => {
   const baseURL = "https://news.ycombinator.com"
   const html: any = await myFetch(baseURL)
   const $ = cheerio.load(html)
@@ -26,4 +26,9 @@ export default defineSource(async () => {
     }
   })
   return news
+})
+
+export default defineSource({
+  "hackernews": hackernewsHot,
+  "hackernews-hot": hackernewsHot,
 })

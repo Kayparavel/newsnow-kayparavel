@@ -66,5 +66,6 @@ const bbc = defineSource(async () => {
 })
 
 export default defineSource({
-  bbc,
+  "bbc": bbc,
+  "bbc-news": bbc,
 })
