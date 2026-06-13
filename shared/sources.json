@@ -811,7 +811,7 @@
     "column": "world",
     "home": "https://www.bloomberg.com",
     "color": "gray",
-    "interval": 1,
+    "interval": 3600000,
     "title": "热点(译文)",
     "dependsOn": "bloomberg-hot"
   },
@@ -841,7 +841,7 @@
     "column": "world",
     "home": "https://www.bloomberg.com",
     "color": "gray",
-    "interval": 1,
+    "interval": 600000,
     "title": "日本快讯(译文)",
     "dependsOn": "bloomberg-ja"
   },

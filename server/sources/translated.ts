@@ -14,6 +14,14 @@ function getOriginalSourceId(translatedId: SourceID): SourceID {
   return translatedId.slice(0, -TRANSLATED_SUFFIX.length) as SourceID
 }
 
+// 给译文条目添加后缀，保持 ID 唯一性
+function addTranslatedSuffix(item: NewsItem): NewsItem {
+  return {
+    ...item,
+    id: `${item.id}-translated`,
+  }
+}
+
 // 刷新原文源（只更新本地缓存，不同步 MySQL，同步由 cron 负责）
 async function refreshOriginalSource(originalId: SourceID, cacheTable: any): Promise<NewsItem[]> {
   // 延迟导入 getters 避免循环依赖
@@ -67,11 +75,62 @@ function createTranslatedGetter(translatedId: SourceID) {
       return []
     }
 
-    // 翻译
-    logger.info(`[translated] Translating ${originalItems.length} items for ${translatedId}`)
-    const translatedItems = await translateNewsItems(originalItems)
+    // 读取译文源缓存
+    const translatedCache = await cacheTable.get(translatedId)
+    const existingTranslatedItems: NewsItem[] = translatedCache?.items ?? []
 
-    logger.success(`[translated] ${translatedId} translation completed`)
+    // 建立译文 ID 到译文条目的映射（译文 ID = 原文 ID + "-translated"）
+    const translatedMap = new Map<string, NewsItem>()
+    for (const item of existingTranslatedItems) {
+      translatedMap.set(String(item.id), item)
+    }
+
+    // 找出需要翻译的条目（原文有但译文没有的）
+    const itemsToTranslate: NewsItem[] = []
+    const translatedItems: NewsItem[] = []
+
+    for (const originalItem of originalItems) {
+      const translatedId = `${originalItem.id}-translated`
+      const existingTranslation = translatedMap.get(translatedId)
+      if (existingTranslation) {
+        // 已有译文，直接使用
+        translatedItems.push(existingTranslation)
+      } else {
+        // 没有译文，需要翻译
+        itemsToTranslate.push(originalItem)
+        // 先用原文占位，后面会替换为译文
+        translatedItems.push(originalItem)
+      }
+    }
+
+    if (itemsToTranslate.length > 0) {
+      logger.info(`[translated] Translating ${itemsToTranslate.length} new items for ${translatedId} (skipping ${originalItems.length - itemsToTranslate.length} existing)`)
+
+      // 翻译新增的条目
+      const newTranslatedItems = await translateNewsItems(itemsToTranslate)
+
+      // 给译文条目添加后缀
+      const newTranslatedItemsWithSuffix = newTranslatedItems.map(addTranslatedSuffix)
+
+      // 建立原文 ID 到译文的映射
+      const newTranslatedMap = new Map<string, NewsItem>()
+      for (let i = 0; i < itemsToTranslate.length; i++) {
+        newTranslatedMap.set(String(itemsToTranslate[i].id), newTranslatedItemsWithSuffix[i])
+      }
+
+      // 替换占位的原文为译文
+      for (let i = 0; i < translatedItems.length; i++) {
+        const item = translatedItems[i]
+        const newTranslation = newTranslatedMap.get(String(item.id))
+        if (newTranslation) {
+          translatedItems[i] = newTranslation
+        }
+      }
+
+      logger.success(`[translated] ${translatedId} translation completed`)
+    } else {
+      logger.info(`[translated] No new items to translate for ${translatedId}`)
+    }
 
     return translatedItems
   }

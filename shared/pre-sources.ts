@@ -625,7 +625,7 @@ export const originSources = {
       "hot-zh": {
         title: "热点(译文)",
         type: "hottest",
-        interval: Time.Test,
+        interval: Time.Slow,
         dependsOn: "bloomberg-hot",
       },
       "market-zh": {
@@ -643,7 +643,7 @@ export const originSources = {
       "ja-zh": {
         title: "日本快讯(译文)",
         type: "realtime",
-        interval: Time.Test,
+        interval: Interval,
         dependsOn: "bloomberg-ja",
       },
     },

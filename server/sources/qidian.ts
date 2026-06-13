@@ -14,6 +14,7 @@ import { myScrapingFetch } from "#/utils/fetch"
  */
 
 const qidian = defineSource(async () => {
+  logger.info("[qidian] Fetching qidian rank...")
   const response = await myScrapingFetch("https://m.qidian.com/rank/yuepiao/", {
     headers: {
       referer: "https://m.qidian.com/",
@@ -22,10 +23,17 @@ const qidian = defineSource(async () => {
     timeout: { request: 15000 },
   })
 
+  logger.info("[qidian] Response status:", response.statusCode)
+  logger.info("[qidian] Response body length:", (response.body as string)?.length)
+  logger.info("[qidian] Response body preview:", (response.body as string)?.substring(0, 500))
+
   const $ = cheerio.load(response.body as string)
   const news: NewsItem[] = []
 
   const bookLinks = "a[href*='/book/']"
+  const bookLinksCount = $(bookLinks).length
+  logger.info("[qidian] Found book links:", bookLinksCount)
+
   $(bookLinks).each((i, el) => {
     const $a = $(el)
     const href = $a.attr("href") || ""
@@ -44,6 +52,8 @@ const qidian = defineSource(async () => {
 
     const title = nameMatch || titleText.replace(/^\d+/, "").replace(/\d+万月票.*/, "").trim()
 
+    logger.info(`[qidian] Book ${i + 1}: ${title} (${bookId})`)
+
     news.push({
       id: bookId,
       title,
@@ -54,6 +64,7 @@ const qidian = defineSource(async () => {
     })
   })
 
+  logger.info(`[qidian] Total books found: ${news.length}`)
   return news
 })
 
