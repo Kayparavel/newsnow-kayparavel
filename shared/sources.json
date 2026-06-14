@@ -1026,7 +1026,7 @@
     "column": "world",
     "home": "https://apnews.com",
     "color": "red",
-    "interval": 1800000,
+    "interval": 1,
     "title": "最新"
   },
   "apnews-news": {
@@ -1035,7 +1035,7 @@
     "column": "world",
     "home": "https://apnews.com",
     "color": "red",
-    "interval": 1800000,
+    "interval": 1,
     "title": "最新"
   },
   "apnews-news-zh": {
@@ -1044,7 +1044,7 @@
     "column": "world",
     "home": "https://apnews.com",
     "color": "red",
-    "interval": 1800000,
+    "interval": 1,
     "title": "最新(译文)",
     "dependsOn": "apnews-news"
   },

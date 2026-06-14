@@ -3,15 +3,13 @@ import { getCacheTable } from "#/database/cache"
 import { isTranslateEnabled, translateNewsItems } from "#/utils/translate"
 import { useProxyStorage } from "#/utils/fetch"
 
-// 译文源 ID 后缀
-const TRANSLATED_SUFFIX = "-zh"
-
-// 从译文源 ID 推导出原文源 ID
+// 从译文源配置获取原文源 ID
 function getOriginalSourceId(translatedId: SourceID): SourceID {
-  if (!translatedId.endsWith(TRANSLATED_SUFFIX)) {
-    throw new Error(`Invalid translated source ID: ${translatedId}`)
+  const source = sources[translatedId]
+  if (!source || !("dependsOn" in source) || !source.dependsOn) {
+    throw new Error(`Invalid translated source ID: ${translatedId}, missing dependsOn field`)
   }
-  return translatedId.slice(0, -TRANSLATED_SUFFIX.length) as SourceID
+  return source.dependsOn as SourceID
 }
 
 // 给译文条目添加后缀，保持 ID 唯一性
@@ -60,14 +58,19 @@ function createTranslatedGetter(translatedId: SourceID) {
     let originalItems: NewsItem[] = []
     const originalCache = await cacheTable.get(originalId)
 
-    if (originalCache) {
-      // 原文源有缓存，使用原文源的缓存数据
+    // 检查原文源缓存是否需要刷新
+    const originalSource = sources[originalId]
+    const now = Date.now()
+    const needRefresh = !originalCache || (originalSource && now - originalCache.updated >= originalSource.interval)
+
+    if (needRefresh) {
+      // 原文源无缓存或缓存已过期，刷新原文源
+      logger.info(`[translated] ${originalId} cache ${!originalCache ? "not found" : "expired"}, refreshing...`)
+      originalItems = await refreshOriginalSource(originalId, cacheTable)
+    } else {
+      // 原文源缓存有效，使用缓存数据
       logger.info(`[translated] Using original source cache for ${originalId}`)
       originalItems = originalCache.items
-    } else {
-      // 原文源也没有缓存，刷新原文源
-      logger.info(`[translated] No cache for ${originalId}, refreshing...`)
-      originalItems = await refreshOriginalSource(originalId, cacheTable)
     }
 
     if (!originalItems.length) {

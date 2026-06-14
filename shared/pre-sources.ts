@@ -782,12 +782,12 @@ export const originSources = {
       "news": {
         title: "最新",
         type: "realtime",
-        interval: Time.Common,
+        interval: Time.Test,
       },
       "news-zh": {
         title: "最新(译文)",
         type: "realtime",
-        interval: Time.Common,
+        interval: Time.Test,
         dependsOn: "apnews-news",
       },
     },

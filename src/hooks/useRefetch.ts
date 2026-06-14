@@ -36,6 +36,11 @@ export function useRefetch() {
       for (const id of sourceIds) {
         if (isTranslatedSource(id)) {
           translatedSources.push(id)
+          // 通过 dependsOn 字段获取原文源 ID
+          const originalId = sources[id]?.dependsOn
+          if (originalId && !originalSources.includes(originalId)) {
+            originalSources.push(originalId)
+          }
         } else {
           originalSources.push(id)
         }
