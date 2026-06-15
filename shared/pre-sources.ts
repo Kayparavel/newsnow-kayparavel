@@ -87,7 +87,7 @@ export const originSources = {
       hot: {
         title: "最热",
         type: "hottest",
-        interval: Time.Common,
+        interval: Time.Fast,
       },
     },
   },
@@ -284,13 +284,12 @@ export const originSources = {
       todayhot: {
         title: "今日热点",
         type: "realtime",
-        interval: Time.Common,
         staggerRefresh: true,
       },
       company: {
         title: "公司头条",
         type: "realtime",
-        interval: Time.Realtime,
+        interval: Time.Common,
         staggerRefresh: true,
       },
       stock: {
@@ -302,13 +301,13 @@ export const originSources = {
       regulatory: {
         title: "监管通报",
         type: "realtime",
-        interval: Time.Common,
+        interval: Time.Slow,
         staggerRefresh: true,
       },
       finance: {
         title: "财经速览",
         type: "realtime",
-        interval: Time.Realtime,
+        interval: Time.Slow,
         staggerRefresh: true,
       },
       affairs: {
@@ -418,7 +417,6 @@ export const originSources = {
       focus: {
         title: "焦点",
         type: "realtime",
-        interval: Time.Realtime,
       },
     },
   },
@@ -543,7 +541,6 @@ export const originSources = {
       "world": {
         title: "世界快讯",
         type: "realtime",
-        interval: Time.Slow,
         staggerRefresh: true,
       },
       "business": {
@@ -568,7 +565,6 @@ export const originSources = {
       "world-zh": {
         title: "世界快讯(译文)",
         type: "realtime",
-        interval: Time.Slow,
         staggerRefresh: true,
         dependsOn: "reuters-world",
       },
@@ -604,7 +600,6 @@ export const originSources = {
       "hot": {
         title: "热点",
         type: "hottest",
-        interval: Time.Slow,
       },
       "market": {
         title: "市场动态",
@@ -614,12 +609,10 @@ export const originSources = {
       "us": {
         title: "欧美快讯",
         type: "realtime",
-        interval: Interval,
       },
       "ja": {
         title: "日本快讯",
         type: "realtime",
-        interval: Interval,
       },
       // 译文源
       "hot-zh": {
@@ -637,13 +630,11 @@ export const originSources = {
       "us-zh": {
         title: "欧美快讯(译文)",
         type: "realtime",
-        interval: Interval,
         dependsOn: "bloomberg-us",
       },
       "ja-zh": {
         title: "日本快讯(译文)",
         type: "realtime",
-        interval: Interval,
         dependsOn: "bloomberg-ja",
       },
     },
@@ -657,7 +648,6 @@ export const originSources = {
       hot: {
         title: "综合早报",
         type: "hottest",
-        interval: Time.Common,
         home: "https://news.qq.com/tag/aEWqxLtdgmQ=",
       },
     },
@@ -744,7 +734,6 @@ export const originSources = {
     column: "entertainment",
     color: "red",
     home: "https://piaofang.maoyan.com",
-    interval: Time.Fast,
     sub: {
       boxoffice: {
         title: "实时票房",

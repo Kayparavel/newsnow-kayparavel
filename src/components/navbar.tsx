@@ -34,6 +34,15 @@ export function NavBar() {
           {metadata[columnId].name}
         </Link>
       ))}
+      <Link
+        to="/carousel"
+        className={$(
+          "px-2 hover:(bg-primary/10 rounded-md) cursor-pointer transition-all",
+          "op-70 dark:op-90",
+        )}
+      >
+        轮播
+      </Link>
     </span>
   )
 }

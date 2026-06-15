@@ -11,10 +11,17 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
+import { Route as CarouselImport } from './routes/carousel'
 import { Route as IndexImport } from './routes/index'
 import { Route as CColumnImport } from './routes/c.$column'
 
 // Create/Update Routes
+
+const CarouselRoute = CarouselImport.update({
+  id: '/carousel',
+  path: '/carousel',
+  getParentRoute: () => rootRoute,
+} as any)
 
 const IndexRoute = IndexImport.update({
   id: '/',
@@ -39,6 +46,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexImport
       parentRoute: typeof rootRoute
     }
+    '/carousel': {
+      id: '/carousel'
+      path: '/carousel'
+      fullPath: '/carousel'
+      preLoaderRoute: typeof CarouselImport
+      parentRoute: typeof rootRoute
+    }
     '/c/$column': {
       id: '/c/$column'
       path: '/c/$column'
@@ -53,36 +67,41 @@ declare module '@tanstack/react-router' {
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/carousel': typeof CarouselRoute
   '/c/$column': typeof CColumnRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/carousel': typeof CarouselRoute
   '/c/$column': typeof CColumnRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
+  '/carousel': typeof CarouselRoute
   '/c/$column': typeof CColumnRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/c/$column'
+  fullPaths: '/' | '/carousel' | '/c/$column'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/c/$column'
-  id: '__root__' | '/' | '/c/$column'
+  to: '/' | '/carousel' | '/c/$column'
+  id: '__root__' | '/' | '/carousel' | '/c/$column'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CarouselRoute: typeof CarouselRoute
   CColumnRoute: typeof CColumnRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CarouselRoute: CarouselRoute,
   CColumnRoute: CColumnRoute,
 }
 
@@ -97,11 +116,15 @@ export const routeTree = rootRoute
       "filePath": "__root.tsx",
       "children": [
         "/",
+        "/carousel",
         "/c/$column"
       ]
     },
     "/": {
       "filePath": "index.tsx"
+    },
+    "/carousel": {
+      "filePath": "carousel.tsx"
     },
     "/c/$column": {
       "filePath": "c.$column.tsx"
