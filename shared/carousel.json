@@ -1,0 +1,158 @@
+{
+  "channelName": "NewsNow 频道",
+  "summaries": [
+    {
+      "id": "domestic-summary",
+      "name": "半点热门",
+      "sources": [
+        "baidu",
+        "weibo",
+        "zhihu",
+        "jiemian-todayhot",
+        "douyin",
+        "bloomberg-hot-zh",
+        "36kr-renqi",
+        "tieba",
+        "bilibili-hot-search",
+        "eastmoney-focus"
+      ],
+      "prompt": "请根据以下国内新闻，生成一段简洁的热点汇总，突出重点事件，语言流畅自然，适合语音播报。",
+      "refreshInterval": 30,
+      "tts": true
+    }
+  ],
+  "collections": [
+    {
+      "id": "mqou5l5j4xl32",
+      "name": "猫眼",
+      "sources": [
+        "maoyan-boxoffice",
+        "maoyan-tvviewing",
+        "maoyan-webheat"
+      ]
+    },
+    {
+      "id": "mqou5tac63g14",
+      "name": "游戏",
+      "sources": [
+        "steam",
+        "taptap-hot",
+        "taptap-sell"
+      ]
+    }
+  ],
+  "programs": [
+    {
+      "type": "news",
+      "sourceId": "weibo",
+      "duration": 60,
+      "label": "微博热搜",
+      "tts": true,
+      "columns": 3
+    },
+    {
+      "type": "news",
+      "sourceId": "zhihu",
+      "duration": 60,
+      "label": "知乎热榜",
+      "tts": true,
+      "columns": 3
+    },
+    {
+      "type": "news",
+      "sourceId": "bloomberg-hot-zh",
+      "duration": 60,
+      "label": "彭博 - 热点(译文)",
+      "tts": true,
+      "columns": 3
+    },
+    {
+      "type": "news",
+      "sourceId": "zaobao",
+      "duration": 60,
+      "label": "联合早报",
+      "tts": false,
+      "columns": 3
+    },
+    {
+      "type": "news",
+      "sourceId": "reuters-world-zh",
+      "duration": 60,
+      "label": "路透社 - 世界快讯(译文)",
+      "tts": true,
+      "columns": 3
+    },
+    {
+      "type": "news",
+      "sourceId": "bloomberg-us-zh",
+      "duration": 60,
+      "label": "彭博 - 欧美快讯(译文)",
+      "tts": false,
+      "columns": 3
+    },
+    {
+      "type": "news",
+      "sourceId": "apnews-news-zh",
+      "duration": 60,
+      "label": "AP News - 最新(译文)",
+      "tts": true,
+      "columns": 3
+    },
+    {
+      "type": "news",
+      "sourceId": "bbc-news-zh",
+      "duration": 60,
+      "label": "BBC - 最新(译文)",
+      "tts": true,
+      "columns": 3
+    },
+    {
+      "type": "news",
+      "duration": 60,
+      "label": "法布财经 - 今日日历",
+      "tts": true,
+      "sourceId": "fastbull-today"
+    },
+    {
+      "type": "news",
+      "duration": 30,
+      "label": "东方财富 - 7x24",
+      "tts": true,
+      "sourceId": "eastmoney-flash",
+      "columns": 3
+    },
+    {
+      "type": "news",
+      "duration": 30,
+      "label": "华尔街见闻 - 快讯",
+      "tts": true,
+      "sourceId": "wallstreetcn-quick",
+      "columns": 3
+    },
+    {
+      "type": "news",
+      "duration": 30,
+      "label": "界面新闻 - 即时资讯",
+      "tts": true,
+      "sourceId": "jiemian-quick",
+      "columns": 3
+    },
+    {
+      "type": "collection",
+      "duration": 20,
+      "label": "猫眼",
+      "tts": false,
+      "collectionId": "mqou5l5j4xl32",
+      "columns": 1
+    },
+    {
+      "type": "collection",
+      "duration": 20,
+      "label": "猫眼",
+      "tts": false,
+      "collectionId": "mqou5l5j4xl32",
+      "columns": 1
+    }
+  ],
+  "enableTTS": true
+}

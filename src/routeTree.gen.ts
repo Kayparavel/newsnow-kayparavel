@@ -11,11 +11,18 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
+import { Route as CarouselEditorImport } from './routes/carousel-editor'
 import { Route as CarouselImport } from './routes/carousel'
 import { Route as IndexImport } from './routes/index'
 import { Route as CColumnImport } from './routes/c.$column'
 
 // Create/Update Routes
+
+const CarouselEditorRoute = CarouselEditorImport.update({
+  id: '/carousel-editor',
+  path: '/carousel-editor',
+  getParentRoute: () => rootRoute,
+} as any)
 
 const CarouselRoute = CarouselImport.update({
   id: '/carousel',
@@ -53,6 +60,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CarouselImport
       parentRoute: typeof rootRoute
     }
+    '/carousel-editor': {
+      id: '/carousel-editor'
+      path: '/carousel-editor'
+      fullPath: '/carousel-editor'
+      preLoaderRoute: typeof CarouselEditorImport
+      parentRoute: typeof rootRoute
+    }
     '/c/$column': {
       id: '/c/$column'
       path: '/c/$column'
@@ -68,12 +82,14 @@ declare module '@tanstack/react-router' {
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/carousel': typeof CarouselRoute
+  '/carousel-editor': typeof CarouselEditorRoute
   '/c/$column': typeof CColumnRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/carousel': typeof CarouselRoute
+  '/carousel-editor': typeof CarouselEditorRoute
   '/c/$column': typeof CColumnRoute
 }
 
@@ -81,27 +97,30 @@ export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
   '/carousel': typeof CarouselRoute
+  '/carousel-editor': typeof CarouselEditorRoute
   '/c/$column': typeof CColumnRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/carousel' | '/c/$column'
+  fullPaths: '/' | '/carousel' | '/carousel-editor' | '/c/$column'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/carousel' | '/c/$column'
-  id: '__root__' | '/' | '/carousel' | '/c/$column'
+  to: '/' | '/carousel' | '/carousel-editor' | '/c/$column'
+  id: '__root__' | '/' | '/carousel' | '/carousel-editor' | '/c/$column'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CarouselRoute: typeof CarouselRoute
+  CarouselEditorRoute: typeof CarouselEditorRoute
   CColumnRoute: typeof CColumnRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CarouselRoute: CarouselRoute,
+  CarouselEditorRoute: CarouselEditorRoute,
   CColumnRoute: CColumnRoute,
 }
 
@@ -117,6 +136,7 @@ export const routeTree = rootRoute
       "children": [
         "/",
         "/carousel",
+        "/carousel-editor",
         "/c/$column"
       ]
     },
@@ -125,6 +145,9 @@ export const routeTree = rootRoute
     },
     "/carousel": {
       "filePath": "carousel.tsx"
+    },
+    "/carousel-editor": {
+      "filePath": "carousel-editor.tsx"
     },
     "/c/$column": {
       "filePath": "c.$column.tsx"

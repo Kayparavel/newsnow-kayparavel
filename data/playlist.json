@@ -1,0 +1,8 @@
+{
+  "enabled": true,
+  "volume": 0.3,
+  "tracks": [
+    "/api/playlist/file/daylight-sparkle.mp3",
+    "/api/playlist/file/starlight-fall.mp3"
+  ]
+}
