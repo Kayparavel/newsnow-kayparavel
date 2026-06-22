@@ -35,7 +35,6 @@ interface CarouselConfig {
 const REFETCH_INTERVAL = 60_000 // 数据刷新间隔（毫秒）
 const DEFAULT_DURATION = 30 // 默认节目时长（秒）
 const ITEMS_PER_COLUMN = 10 // 每列显示新闻数量
-const MAX_COLLECTION_ITEMS = 30 // 集合新闻最大数量
 const PROGRESS_MAX = 100 // 进度条最大值
 
 // 列数对应的 CSS 类
@@ -92,7 +91,7 @@ function NewsListTimeline({ items, columns = 1 }: { items: NewsItem[], columns?:
     <div className={`grid gap-3 ${gridClass}`}>
       {Array.from({ length: columns }).map((_, colIndex) => (
         <div key={colIndex} className="space-y-1">
-          {items.slice(colIndex * itemsPerColumn, (colIndex + 1) * itemsPerColumn).map((item) => (
+          {items.slice(colIndex * itemsPerColumn, (colIndex + 1) * itemsPerColumn).map(item => (
             <div
               key={item.id}
               className="flex items-start gap-2 p-1.5 rounded-lg bg-base hover:bg-neutral/5 transition-colors"
@@ -146,7 +145,12 @@ function CollectionList({ sourcesData }: { sourcesData: SourceData[] }) {
               />
               <h3 className="font-bold text-base">
                 {source?.name || sourceId}
-                {source?.title && <span className="text-neutral-500 ml-1">- {source.title}</span>}
+                {source?.title && (
+                  <span className="text-neutral-500 ml-1">
+                    -
+                    {source.title}
+                  </span>
+                )}
               </h3>
             </div>
             {/* 新闻列表 */}
@@ -155,15 +159,17 @@ function CollectionList({ sourcesData }: { sourcesData: SourceData[] }) {
                 key={item.id}
                 className="flex items-start gap-2 p-1.5 rounded-lg bg-base hover:bg-neutral/5 transition-colors"
               >
-                {isHot ? (
-                  <span className="text-base font-bold text-neutral-400 w-7 text-right shrink-0 leading-tight">
-                    {index + 1}
-                  </span>
-                ) : (
-                  <span className="text-xs text-neutral-400 w-16 shrink-0 leading-tight">
-                    {item.pubDate ? relativeTime(item.pubDate) : item.extra?.date ? relativeTime(item.extra.date) : ""}
-                  </span>
-                )}
+                {isHot
+                  ? (
+                      <span className="text-base font-bold text-neutral-400 w-7 text-right shrink-0 leading-tight">
+                        {index + 1}
+                      </span>
+                    )
+                  : (
+                      <span className="text-xs text-neutral-400 w-16 shrink-0 leading-tight">
+                        {item.pubDate ? relativeTime(item.pubDate) : item.extra?.date ? relativeTime(item.extra.date) : ""}
+                      </span>
+                    )}
                 <div className="flex-1 min-w-0">
                   <a
                     href={item.url}
@@ -300,7 +306,7 @@ export function Carousel() {
     queryFn: async () => {
       if (!currentCollection?.sources?.length) return null
       const results = await Promise.all(
-        currentCollection.sources.map(id => myFetch<SourceResponse>(`/s?id=${id}&latest=true`))
+        currentCollection.sources.map(id => myFetch<SourceResponse>(`/s?id=${id}&latest=true`)),
       )
       return results
     },
@@ -338,7 +344,7 @@ export function Carousel() {
 
     // 切换到下一个节目
     timerRef.current = window.setTimeout(() => {
-      setCurrentIndex((prev) => (prev + 1) % config.programs.length)
+      setCurrentIndex(prev => (prev + 1) % config.programs.length)
       setProgress(0)
     }, duration * 1000)
 
@@ -354,13 +360,13 @@ export function Carousel() {
 
   const handlePrev = () => {
     if (!config) return
-    setCurrentIndex((prev) => (prev - 1 + config.programs.length) % config.programs.length)
+    setCurrentIndex(prev => (prev - 1 + config.programs.length) % config.programs.length)
     setProgress(0)
   }
 
   const handleNext = () => {
     if (!config) return
-    setCurrentIndex((prev) => (prev + 1) % config.programs.length)
+    setCurrentIndex(prev => (prev + 1) % config.programs.length)
     setProgress(0)
   }
 
@@ -396,7 +402,12 @@ export function Carousel() {
       <div className="text-center mb-6">
         <h1 className="text-2xl md:text-3xl font-bold">{config.channelName}</h1>
         <p className="text-neutral-500 text-sm mt-2">
-          {isPlaying ? "播放中" : "已暂停"} | 节目 {currentIndex + 1}/{config.programs.length}
+          {isPlaying ? "播放中" : "已暂停"}
+          {" "}
+          | 节目
+          {currentIndex + 1}
+          /
+          {config.programs.length}
         </p>
       </div>
 
@@ -422,7 +433,8 @@ export function Carousel() {
                   {currentProgram?.type === "summary" && "热点汇总"}
                   {currentProgram?.type === "break" && "休息"}
                   {" | "}
-                  {currentProgram?.duration}秒
+                  {currentProgram?.duration}
+                  秒
                   {currentProgram?.columns && currentProgram.columns > 1 && ` | ${currentProgram.columns} 列`}
                 </p>
               </div>
@@ -469,17 +481,19 @@ export function Carousel() {
         {/* 新闻内容 */}
         {currentProgram?.type === "news" && singleSourceData?.items && currentProgram.sourceId && (
           <div className="w-full max-w-6xl">
-            {sources[currentProgram.sourceId]?.type === "hottest" ? (
-              <NewsListHot
-                items={singleSourceData.items.slice(0, (currentProgram.columns || 1) * ITEMS_PER_COLUMN)}
-                columns={currentProgram.columns || 1}
-              />
-            ) : (
-              <NewsListTimeline
-                items={singleSourceData.items.slice(0, (currentProgram.columns || 1) * ITEMS_PER_COLUMN)}
-                columns={currentProgram.columns || 1}
-              />
-            )}
+            {sources[currentProgram.sourceId]?.type === "hottest"
+              ? (
+                  <NewsListHot
+                    items={singleSourceData.items.slice(0, (currentProgram.columns || 1) * ITEMS_PER_COLUMN)}
+                    columns={currentProgram.columns || 1}
+                  />
+                )
+              : (
+                  <NewsListTimeline
+                    items={singleSourceData.items.slice(0, (currentProgram.columns || 1) * ITEMS_PER_COLUMN)}
+                    columns={currentProgram.columns || 1}
+                  />
+                )}
           </div>
         )}
 

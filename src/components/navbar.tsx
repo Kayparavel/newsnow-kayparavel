@@ -1,10 +1,9 @@
 import { fixedColumnIds, metadata } from "@shared/metadata"
-import { Link, useLocation } from "@tanstack/react-router"
+import { Link } from "@tanstack/react-router"
 import { currentColumnIDAtom } from "~/atoms"
 
 export function NavBar() {
   const currentId = useAtomValue(currentColumnIDAtom)
-  const location = useLocation()
   const { toggle } = useSearchBar()
 
   return (

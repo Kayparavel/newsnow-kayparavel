@@ -1,11 +1,10 @@
-import { readFileSync, writeFileSync, existsSync, readdirSync } from "node:fs"
-import { join, dirname } from "node:path"
+import { existsSync, readFileSync, writeFileSync } from "node:fs"
+import { dirname, join } from "node:path"
 import { fileURLToPath } from "node:url"
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const projectRoot = join(__dirname, "../../..")
 const playlistPath = join(projectRoot, "data/playlist.json")
-const dataDir = join(projectRoot, "data")
 
 // 默认配置
 const defaultPlaylist = {

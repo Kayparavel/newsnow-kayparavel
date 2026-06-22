@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query"
 import type { SourceID } from "@shared/types"
 import { sources } from "@shared/sources"
@@ -170,7 +170,8 @@ export function CarouselEditor() {
 
   // 重置为默认配置
   const handleReset = () => {
-    if (confirm("确定要重置为默认配置吗？当前配置将丢失。")) {
+    // eslint-disable-next-line no-alert
+    if (window.confirm("确定要重置为默认配置吗？当前配置将丢失。")) {
       setConfig({
         channelName: "NewsNow 频道",
         summaries: [],
@@ -212,7 +213,8 @@ export function CarouselEditor() {
           programs: imported.programs || [],
           enableTTS: imported.enableTTS !== false,
         })
-      } catch (err) {
+      } catch {
+        // eslint-disable-next-line no-alert
         alert("导入失败：配置文件格式无效")
       }
     }
@@ -438,7 +440,9 @@ export function CarouselEditor() {
 
       {saveMutation.isError && (
         <div className="mb-4 p-3 rounded-lg bg-red-100 text-red-800">
-          保存失败: {saveMutation.error?.message}
+          保存失败:
+          {" "}
+          {saveMutation.error?.message}
         </div>
       )}
 
@@ -449,7 +453,7 @@ export function CarouselEditor() {
           type="text"
           className="w-full p-2 rounded border border-neutral/30 bg-base"
           value={config.channelName}
-          onChange={(e) => setConfig({ ...config, channelName: e.target.value })}
+          onChange={e => setConfig({ ...config, channelName: e.target.value })}
         />
       </div>
 
@@ -461,7 +465,7 @@ export function CarouselEditor() {
             <input
               type="checkbox"
               checked={config.enableTTS}
-              onChange={(e) => setConfig({ ...config, enableTTS: e.target.checked })}
+              onChange={e => setConfig({ ...config, enableTTS: e.target.checked })}
             />
             <span className="text-sm font-medium">启用 TTS 语音播报</span>
           </label>
@@ -543,8 +547,17 @@ export function CarouselEditor() {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <span className="font-medium">{summary.name}</span>
-                    <span className="text-sm text-neutral-500">{summary.sources.length} 个源</span>
-                    <span className="text-sm text-neutral-500">每 {summary.refreshInterval} 分钟刷新</span>
+                    <span className="text-sm text-neutral-500">
+                      {summary.sources.length}
+                      {" "}
+                      个源
+                    </span>
+                    <span className="text-sm text-neutral-500">
+                      每
+                      {summary.refreshInterval}
+                      {" "}
+                      分钟刷新
+                    </span>
                   </div>
                   <div className="flex gap-1">
                     <button
@@ -573,7 +586,7 @@ export function CarouselEditor() {
                         type="text"
                         className="w-full p-2 rounded border border-neutral/30 bg-base"
                         value={summary.name}
-                        onChange={(e) => handleUpdateSummary(index, { name: e.target.value })}
+                        onChange={e => handleUpdateSummary(index, { name: e.target.value })}
                       />
                     </div>
 
@@ -583,7 +596,7 @@ export function CarouselEditor() {
                         type="number"
                         className="w-full p-2 rounded border border-neutral/30 bg-base"
                         value={summary.refreshInterval}
-                        onChange={(e) => handleUpdateSummary(index, { refreshInterval: Number(e.target.value) })}
+                        onChange={e => handleUpdateSummary(index, { refreshInterval: Number(e.target.value) })}
                         min={1}
                       />
                       <p className="text-xs text-neutral-500 mt-1">
@@ -594,7 +607,7 @@ export function CarouselEditor() {
                     <div>
                       <label className="block text-sm font-medium mb-2">新闻源</label>
                       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 p-3 rounded border border-neutral/30 bg-base max-h-48 overflow-y-auto">
-                        {availableSources.map((s) => (
+                        {availableSources.map(s => (
                           <label key={s.id} className="flex items-center gap-2 text-sm">
                             <input
                               type="checkbox"
@@ -606,7 +619,10 @@ export function CarouselEditor() {
                                 handleUpdateSummary(index, { sources: newSources })
                               }}
                             />
-                            <span className="truncate">{s.name}{s.title ? ` - ${s.title}` : ""}</span>
+                            <span className="truncate">
+                              {s.name}
+                              {s.title ? ` - ${s.title}` : ""}
+                            </span>
                           </label>
                         ))}
                       </div>
@@ -617,7 +633,7 @@ export function CarouselEditor() {
                       <textarea
                         className="w-full p-2 rounded border border-neutral/30 bg-base min-h-[100px]"
                         value={summary.prompt}
-                        onChange={(e) => handleUpdateSummary(index, { prompt: e.target.value })}
+                        onChange={e => handleUpdateSummary(index, { prompt: e.target.value })}
                         placeholder="输入用于热点汇总的 LLM 提示词..."
                       />
                     </div>
@@ -627,7 +643,7 @@ export function CarouselEditor() {
                         <input
                           type="checkbox"
                           checked={summary.tts}
-                          onChange={(e) => handleUpdateSummary(index, { tts: e.target.checked })}
+                          onChange={e => handleUpdateSummary(index, { tts: e.target.checked })}
                         />
                         <span className="text-sm font-medium">TTS 播报</span>
                       </label>
@@ -673,7 +689,11 @@ export function CarouselEditor() {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <span className="font-medium">{collection.name}</span>
-                    <span className="text-sm text-neutral-500">{collection.sources.length} 个源</span>
+                    <span className="text-sm text-neutral-500">
+                      {collection.sources.length}
+                      {" "}
+                      个源
+                    </span>
                   </div>
                   <div className="flex gap-1">
                     <button
@@ -702,14 +722,14 @@ export function CarouselEditor() {
                         type="text"
                         className="w-full p-2 rounded border border-neutral/30 bg-base"
                         value={collection.name}
-                        onChange={(e) => handleUpdateCollection(index, { name: e.target.value })}
+                        onChange={e => handleUpdateCollection(index, { name: e.target.value })}
                       />
                     </div>
 
                     <div>
                       <label className="block text-sm font-medium mb-2">新闻源（1-3 个）</label>
                       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 p-3 rounded border border-neutral/30 bg-base max-h-48 overflow-y-auto">
-                        {availableSources.map((s) => (
+                        {availableSources.map(s => (
                           <label key={s.id} className="flex items-center gap-2 text-sm">
                             <input
                               type="checkbox"
@@ -722,12 +742,18 @@ export function CarouselEditor() {
                               }}
                               disabled={!collection.sources.includes(s.id) && collection.sources.length >= 3}
                             />
-                            <span className="truncate">{s.name}{s.title ? ` - ${s.title}` : ""}</span>
+                            <span className="truncate">
+                              {s.name}
+                              {s.title ? ` - ${s.title}` : ""}
+                            </span>
                           </label>
                         ))}
                       </div>
                       <p className="text-xs text-neutral-500 mt-1">
-                        已选择 {collection.sources.length}/3 个源
+                        已选择
+                        {" "}
+                        {collection.sources.length}
+                        /3 个源
                       </p>
                     </div>
                   </div>
@@ -797,28 +823,38 @@ export function CarouselEditor() {
                   <div className="flex items-center gap-3">
                     <span className="text-sm text-neutral-500 w-8">{index + 1}</span>
                     <span className={`px-2 py-0.5 rounded text-xs ${
-                      program.type === "news" ? "bg-blue-100 text-blue-800" :
-                      program.type === "collection" ? "bg-green-100 text-green-800" :
-                      program.type === "summary" ? "bg-purple-100 text-purple-800" :
-                      "bg-gray-100 text-gray-800"
-                    }`}>
+                      program.type === "news"
+                        ? "bg-blue-100 text-blue-800"
+                        : program.type === "collection"
+                          ? "bg-green-100 text-green-800"
+                          : program.type === "summary"
+                            ? "bg-purple-100 text-purple-800"
+                            : "bg-gray-100 text-gray-800"
+                    }`}
+                    >
                       {program.type === "news" ? "新闻" : program.type === "collection" ? "集合" : program.type === "summary" ? "汇总" : "休息"}
                     </span>
                     <span className="font-medium">
                       {program.type === "news"
                         ? (program.sourceId
-                          ? `${sources[program.sourceId]?.name || ""}${sources[program.sourceId]?.title ? ` - ${sources[program.sourceId].title}` : ""}` || program.sourceId
-                          : "未选择源")
+                            ? `${sources[program.sourceId]?.name || ""}${sources[program.sourceId]?.title ? ` - ${sources[program.sourceId].title}` : ""}` || program.sourceId
+                            : "未选择源")
                         : program.type === "collection"
                           ? getCollectionName(program.collectionId)
                           : program.type === "summary"
                             ? getSummaryName(program.summaryId)
-                            : program.label || "休息"
-                      }
+                            : program.label || "休息"}
                     </span>
-                    <span className="text-sm text-neutral-500">{program.duration}秒</span>
+                    <span className="text-sm text-neutral-500">
+                      {program.duration}
+                      秒
+                    </span>
                     {(program.type === "news" || program.type === "collection") && program.columns && program.columns > 1 && (
-                      <span className="text-xs text-neutral-400">{program.columns} 列</span>
+                      <span className="text-xs text-neutral-400">
+                        {program.columns}
+                        {" "}
+                        列
+                      </span>
                     )}
                   </div>
                   <div className="flex gap-1">
@@ -874,9 +910,10 @@ export function CarouselEditor() {
                             })
                           }}
                         >
-                          {availableSources.map((s) => (
+                          {availableSources.map(s => (
                             <option key={s.id} value={s.id}>
-                              {s.name}{s.title ? ` - ${s.title}` : ""}
+                              {s.name}
+                              {s.title ? ` - ${s.title}` : ""}
                             </option>
                           ))}
                         </select>
@@ -890,11 +927,16 @@ export function CarouselEditor() {
                         <select
                           className="w-full p-2 rounded border border-neutral/30 bg-base"
                           value={program.collectionId || ""}
-                          onChange={(e) => handleUpdateProgram(index, { collectionId: e.target.value })}
+                          onChange={e => handleUpdateProgram(index, { collectionId: e.target.value })}
                         >
-                          {config.collections.map((c) => (
+                          {config.collections.map(c => (
                             <option key={c.id} value={c.id}>
-                              {c.name} ({c.sources.length} 个源)
+                              {c.name}
+                              {" "}
+                              (
+                              {c.sources.length}
+                              {" "}
+                              个源)
                             </option>
                           ))}
                         </select>
@@ -908,9 +950,9 @@ export function CarouselEditor() {
                         <select
                           className="w-full p-2 rounded border border-neutral/30 bg-base"
                           value={program.summaryId || ""}
-                          onChange={(e) => handleUpdateProgram(index, { summaryId: e.target.value })}
+                          onChange={e => handleUpdateProgram(index, { summaryId: e.target.value })}
                         >
-                          {config.summaries.map((s) => (
+                          {config.summaries.map(s => (
                             <option key={s.id} value={s.id}>
                               {s.name}
                             </option>
@@ -925,7 +967,7 @@ export function CarouselEditor() {
                         type="number"
                         className="w-full p-2 rounded border border-neutral/30 bg-base"
                         value={program.duration}
-                        onChange={(e) => handleUpdateProgram(index, { duration: Number(e.target.value) })}
+                        onChange={e => handleUpdateProgram(index, { duration: Number(e.target.value) })}
                         min={1}
                       />
                     </div>
@@ -937,7 +979,7 @@ export function CarouselEditor() {
                         <select
                           className="w-full p-2 rounded border border-neutral/30 bg-base"
                           value={program.columns || 1}
-                          onChange={(e) => handleUpdateProgram(index, { columns: Number(e.target.value) })}
+                          onChange={e => handleUpdateProgram(index, { columns: Number(e.target.value) })}
                         >
                           <option value={1}>1 列</option>
                           <option value={2}>2 列</option>
@@ -972,24 +1014,32 @@ export function CarouselEditor() {
             <div
               key={index}
               className={`px-3 py-1.5 rounded text-sm ${
-                program.type === "news" ? "bg-blue-100 text-blue-800" :
-                program.type === "summary" ? "bg-purple-100 text-purple-800" :
-                "bg-gray-100 text-gray-800"
+                program.type === "news"
+                  ? "bg-blue-100 text-blue-800"
+                  : program.type === "summary"
+                    ? "bg-purple-100 text-purple-800"
+                    : "bg-gray-100 text-gray-800"
               }`}
             >
               {program.type === "news"
                 ? (program.sourceId ? sources[program.sourceId]?.name : "新闻")
                 : program.type === "summary"
                   ? getSummaryName(program.summaryId)
-                  : "休息"
-              }
-              <span className="ml-1 text-xs opacity-70">{program.duration}s</span>
+                  : "休息"}
+              <span className="ml-1 text-xs opacity-70">
+                {program.duration}
+                s
+              </span>
             </div>
           ))}
         </div>
         <div className="mt-4 text-sm text-neutral-500">
-          总时长: {Math.floor(config.programs.reduce((sum, p) => sum + p.duration, 0) / 60)}分
-          {config.programs.reduce((sum, p) => sum + p.duration, 0) % 60}秒
+          总时长:
+          {" "}
+          {Math.floor(config.programs.reduce((sum, p) => sum + p.duration, 0) / 60)}
+          分
+          {config.programs.reduce((sum, p) => sum + p.duration, 0) % 60}
+          秒
         </div>
       </div>
     </div>
@@ -1089,7 +1139,7 @@ function PlaylistEditor() {
             <input
               type="checkbox"
               checked={config.enabled}
-              onChange={(e) => setConfig({ ...config, enabled: e.target.checked })}
+              onChange={e => setConfig({ ...config, enabled: e.target.checked })}
             />
             <span className="text-sm font-medium">启用背景音乐</span>
           </label>
@@ -1098,7 +1148,10 @@ function PlaylistEditor() {
         {/* 音量控制 */}
         <div>
           <label className="block text-sm font-medium mb-2">
-            音量: {Math.round(config.volume * 100)}%
+            音量:
+            {" "}
+            {Math.round(config.volume * 100)}
+            %
           </label>
           <input
             type="range"
@@ -1106,7 +1159,7 @@ function PlaylistEditor() {
             max="1"
             step="0.05"
             value={config.volume}
-            onChange={(e) => setConfig({ ...config, volume: Number(e.target.value) })}
+            onChange={e => setConfig({ ...config, volume: Number(e.target.value) })}
             className="w-full"
           />
         </div>
@@ -1114,27 +1167,29 @@ function PlaylistEditor() {
         {/* 音轨列表 */}
         <div>
           <label className="block text-sm font-medium mb-2">选择音乐文件</label>
-          {availableTracks && availableTracks.length > 0 ? (
-            <div className="space-y-2">
-              {availableTracks.map((track) => (
-                <label
-                  key={track.filename}
-                  className="flex items-center gap-2 p-2 rounded-lg border border-neutral/20 hover:bg-neutral/5 cursor-pointer"
-                >
-                  <input
-                    type="checkbox"
-                    checked={config.tracks.includes(track.url)}
-                    onChange={() => handleToggleTrack(track.url)}
-                  />
-                  <span className="text-sm">{track.name}</span>
-                </label>
-              ))}
-            </div>
-          ) : (
-            <p className="text-sm text-neutral-500">
-              暂无音乐文件，请将 mp3 文件放入 data 目录
-            </p>
-          )}
+          {availableTracks && availableTracks.length > 0
+            ? (
+                <div className="space-y-2">
+                  {availableTracks.map(track => (
+                    <label
+                      key={track.filename}
+                      className="flex items-center gap-2 p-2 rounded-lg border border-neutral/20 hover:bg-neutral/5 cursor-pointer"
+                    >
+                      <input
+                        type="checkbox"
+                        checked={config.tracks.includes(track.url)}
+                        onChange={() => handleToggleTrack(track.url)}
+                      />
+                      <span className="text-sm">{track.name}</span>
+                    </label>
+                  ))}
+                </div>
+              )
+            : (
+                <p className="text-sm text-neutral-500">
+                  暂无音乐文件，请将 mp3 文件放入 data 目录
+                </p>
+              )}
         </div>
       </div>
     </div>

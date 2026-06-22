@@ -1,5 +1,5 @@
-import { readFileSync, writeFileSync, existsSync } from "node:fs"
-import { join, dirname } from "node:path"
+import { existsSync, readFileSync, writeFileSync } from "node:fs"
+import { dirname, join } from "node:path"
 import { fileURLToPath } from "node:url"
 
 // 获取项目根目录（server/api/carousel/index.ts -> server -> 项目根目录）

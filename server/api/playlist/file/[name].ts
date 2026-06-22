@@ -1,5 +1,5 @@
-import { readFileSync, existsSync } from "node:fs"
-import { join, dirname } from "node:path"
+import { existsSync, readFileSync } from "node:fs"
+import { dirname, join } from "node:path"
 import { fileURLToPath } from "node:url"
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
@@ -17,7 +17,7 @@ export default defineEventHandler((event) => {
   }
 
   // 安全检查：只允许访问 mp3 文件，防止路径遍历
-  const safeName = name.replace(/[^a-zA-Z0-9\-_.]/g, "")
+  const safeName = name.replace(/[^\w\-.]/g, "")
   if (!safeName.endsWith(".mp3")) {
     throw createError({ statusCode: 400, message: "Invalid file type" })
   }
