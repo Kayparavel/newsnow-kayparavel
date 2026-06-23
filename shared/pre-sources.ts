@@ -67,6 +67,10 @@ export const originSources = {
       flash: {
         title: "快讯",
       },
+      "flash-zh": {
+        title: "快讯(译文)",
+        dependsOn: "mktnews-flash",
+      },
     },
   },
   "wallstreetcn": {
@@ -618,7 +622,6 @@ export const originSources = {
       "hot-zh": {
         title: "热点(译文)",
         type: "hottest",
-        interval: Time.Slow,
         dependsOn: "bloomberg-hot",
       },
       "market-zh": {

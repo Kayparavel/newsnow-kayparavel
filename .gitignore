@@ -19,6 +19,7 @@ dev.md
 文本翻译.md
 CONTRIBUTING.md
 mimo.md
+mimo-tts.md
 server/sources/*.json
 server/sources/*.xml
 .specstory/

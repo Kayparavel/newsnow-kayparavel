@@ -1,5 +1,5 @@
 {
-  "channelName": "NewsNow 频道",
+  "channelName": "CastNow 频道",
   "summaries": [
     {
       "id": "domestic-summary",
@@ -16,8 +16,21 @@
         "bilibili-hot-search",
         "eastmoney-focus"
       ],
-      "prompt": "请根据以下国内新闻，生成一段简洁的热点汇总，突出重点事件，语言流畅自然，适合语音播报。",
+      "prompt": "这里有一些热门新闻排行的内容,每30分钟更新一次,请将当前时段内容汇总为简洁、有价值的摘要。在汇总时,关注出现频次高的内容,影响范围大的内容(比如世界时政/世界经济),影响深刻的内容(比如当前热门引起社会讨论的时事,在知乎里会有一些);可以适当包含一些奇闻轶事,但前提是有一定的意义和影响,严禁无意义的内容比如个人事务\\娱乐花边(尤其微博/抖音是重灾区),除非这些花边新闻引起了社会热议(比如艺人偷税漏水涉毒等等).",
       "refreshInterval": 30,
+      "tts": true
+    },
+    {
+      "id": "mqqaomdcmv44t",
+      "name": "一刻快报",
+      "sources": [
+        "eastmoney-flash",
+        "jiemian-quick",
+        "wallstreetcn-quick",
+        "mktnews-flash-zh"
+      ],
+      "prompt": "这里有一些即时新闻的内容,每15分钟更新一次,请将当前时段内容汇总为简洁、有价值的摘要。在汇总时,关注出现频次高的内容,影响范围大的内容(比如世界时政/世界经济),影响深刻的内容(比如当前热门引起社会讨论的时事);可以适当包含一些奇闻轶事,但前提是有一定的意义和影响,严禁无意义的内容比如个人事务\\娱乐花边,除非这些花边新闻引起了社会热议(比如艺人偷税漏水涉毒等等).",
+      "refreshInterval": 15,
       "tts": true
     }
   ],
@@ -39,6 +52,15 @@
         "taptap-hot",
         "taptap-sell"
       ]
+    },
+    {
+      "id": "mqp26iz9fxub0",
+      "name": "娱乐",
+      "sources": [
+        "qqvideo-tv-hotsearch",
+        "iqiyi-hot-ranklist",
+        "douban"
+      ]
     }
   ],
   "programs": [
@@ -55,7 +77,7 @@
       "sourceId": "zhihu",
       "duration": 60,
       "label": "知乎热榜",
-      "tts": true,
+      "tts": false,
       "columns": 3
     },
     {
@@ -63,7 +85,7 @@
       "sourceId": "bloomberg-hot-zh",
       "duration": 60,
       "label": "彭博 - 热点(译文)",
-      "tts": true,
+      "tts": false,
       "columns": 3
     },
     {
@@ -79,7 +101,7 @@
       "sourceId": "reuters-world-zh",
       "duration": 60,
       "label": "路透社 - 世界快讯(译文)",
-      "tts": true,
+      "tts": false,
       "columns": 3
     },
     {
@@ -95,7 +117,7 @@
       "sourceId": "apnews-news-zh",
       "duration": 60,
       "label": "AP News - 最新(译文)",
-      "tts": true,
+      "tts": false,
       "columns": 3
     },
     {
@@ -103,21 +125,21 @@
       "sourceId": "bbc-news-zh",
       "duration": 60,
       "label": "BBC - 最新(译文)",
-      "tts": true,
+      "tts": false,
       "columns": 3
     },
     {
       "type": "news",
       "duration": 60,
       "label": "法布财经 - 今日日历",
-      "tts": true,
+      "tts": false,
       "sourceId": "fastbull-today"
     },
     {
       "type": "news",
       "duration": 30,
       "label": "东方财富 - 7x24",
-      "tts": true,
+      "tts": false,
       "sourceId": "eastmoney-flash",
       "columns": 3
     },
@@ -125,7 +147,7 @@
       "type": "news",
       "duration": 30,
       "label": "华尔街见闻 - 快讯",
-      "tts": true,
+      "tts": false,
       "sourceId": "wallstreetcn-quick",
       "columns": 3
     },
@@ -133,8 +155,16 @@
       "type": "news",
       "duration": 30,
       "label": "界面新闻 - 即时资讯",
-      "tts": true,
+      "tts": false,
       "sourceId": "jiemian-quick",
+      "columns": 3
+    },
+    {
+      "type": "news",
+      "duration": 60,
+      "label": "MKTNews - 快讯(译文)",
+      "tts": false,
+      "sourceId": "mktnews-flash-zh",
       "columns": 3
     },
     {
@@ -150,8 +180,30 @@
       "duration": 20,
       "label": "猫眼",
       "tts": false,
-      "collectionId": "mqou5l5j4xl32",
+      "collectionId": "mqou5tac63g14",
       "columns": 1
+    },
+    {
+      "type": "collection",
+      "duration": 20,
+      "label": "猫眼",
+      "tts": false,
+      "collectionId": "mqp26iz9fxub0",
+      "columns": 1
+    },
+    {
+      "type": "summary",
+      "duration": 120,
+      "label": "半点热门",
+      "tts": true,
+      "summaryId": "domestic-summary"
+    },
+    {
+      "type": "summary",
+      "duration": 120,
+      "label": "一刻快报",
+      "tts": false,
+      "summaryId": "mqqaomdcmv44t"
     }
   ],
   "enableTTS": true

@@ -68,6 +68,15 @@
     "interval": 180000,
     "title": "快讯"
   },
+  "mktnews-flash-zh": {
+    "name": "MKTNews",
+    "column": "finance",
+    "home": "https://mktnews.net",
+    "color": "indigo",
+    "interval": 180000,
+    "title": "快讯(译文)",
+    "dependsOn": "mktnews-flash"
+  },
   "wallstreetcn": {
     "redirect": "wallstreetcn-quick",
     "name": "华尔街见闻",
@@ -811,7 +820,7 @@
     "column": "world",
     "home": "https://www.bloomberg.com",
     "color": "gray",
-    "interval": 3600000,
+    "interval": 840000,
     "title": "热点(译文)",
     "dependsOn": "bloomberg-hot"
   },

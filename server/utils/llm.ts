@@ -13,6 +13,7 @@ export interface LLMOptions {
   model?: string
   maxTokens?: number
   temperature?: number
+  timeout?: number
 }
 
 export async function chatCompletion(
@@ -37,10 +38,25 @@ export async function chatCompletion(
       max_completion_tokens: options.maxTokens || 2048,
       temperature: options.temperature || 0.7,
     },
+    timeout: options.timeout || 60000,
   })
 
-  const content = res?.choices?.[0]?.message?.content
-  if (!content) throw new Error("No content in LLM response")
+  logger.info(`[llm] response:`, JSON.stringify(res).slice(0, 500))
+
+  const message = res?.choices?.[0]?.message
+  const content = message?.content
+  const reasoningContent = message?.reasoning_content
+
+  if (!content && !reasoningContent) {
+    logger.error(`[llm] no content, full response:`, JSON.stringify(res))
+    throw new Error("No content in LLM response")
+  }
+
+  // 如果 content 为空但 reasoning_content 有内容，说明 token 都用在了推理上
+  if (!content && reasoningContent) {
+    logger.warn(`[llm] content is empty but reasoning_content exists, token limit may be too low`)
+    throw new Error("LLM token limit exceeded, please increase maxTokens")
+  }
 
   return content
 }

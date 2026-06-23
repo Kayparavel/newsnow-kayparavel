@@ -309,7 +309,7 @@ export function CarouselEditor() {
           : type === "collection"
             ? (config.collections[0]?.name || "集合")
             : "休息",
-      tts: type === "news",
+      tts: false,
       sourceId: type === "news" ? defaultSource?.id : undefined,
       summaryId: type === "summary" ? config.summaries[0]?.id : undefined,
       collectionId: type === "collection" ? config.collections[0]?.id : undefined,
@@ -927,7 +927,14 @@ export function CarouselEditor() {
                         <select
                           className="w-full p-2 rounded border border-neutral/30 bg-base"
                           value={program.collectionId || ""}
-                          onChange={e => handleUpdateProgram(index, { collectionId: e.target.value })}
+                          onChange={e => {
+                            const collectionId = e.target.value
+                            const collection = config.collections.find(c => c.id === collectionId)
+                            handleUpdateProgram(index, {
+                              collectionId,
+                              label: collection?.name || "集合",
+                            })
+                          }}
                         >
                           {config.collections.map(c => (
                             <option key={c.id} value={c.id}>
@@ -950,7 +957,14 @@ export function CarouselEditor() {
                         <select
                           className="w-full p-2 rounded border border-neutral/30 bg-base"
                           value={program.summaryId || ""}
-                          onChange={e => handleUpdateProgram(index, { summaryId: e.target.value })}
+                          onChange={e => {
+                            const summaryId = e.target.value
+                            const summary = config.summaries.find(s => s.id === summaryId)
+                            handleUpdateProgram(index, {
+                              summaryId,
+                              label: summary?.name || "汇总",
+                            })
+                          }}
                         >
                           {config.summaries.map(s => (
                             <option key={s.id} value={s.id}>
@@ -987,6 +1001,19 @@ export function CarouselEditor() {
                         </select>
                       </div>
                     )}
+
+                    {/* TTS 设置 */}
+                    <div>
+                      <label className="flex items-center gap-2 cursor-pointer">
+                        <input
+                          type="checkbox"
+                          checked={program.tts ?? false}
+                          onChange={e => handleUpdateProgram(index, { tts: e.target.checked })}
+                          className="rounded"
+                        />
+                        <span className="text-sm font-medium">启用 TTS 语音播报</span>
+                      </label>
+                    </div>
                   </div>
                 )}
               </div>
