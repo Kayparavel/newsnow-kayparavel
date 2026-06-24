@@ -1,18 +1,13 @@
 import { readFileSync, existsSync } from "node:fs"
 import { join } from "node:path"
-import type { SourceID } from "@shared/types"
+import type { NewsItem, SourceID } from "@shared/types"
+import type { CarouselConfig, SummaryTTSResult } from "@shared/carousel"
+import { sources } from "@shared/sources"
 import { chatCompletion } from "#/utils/llm"
 import { synthesizeSpeech } from "#/utils/tts"
 import { getters } from "#/getters"
 import { getCacheTable } from "#/database/cache"
 import { useProxyStorage } from "#/utils/fetch"
-
-// 汇总 + TTS 结果缓存
-interface SummaryTTSResult {
-  summary: any
-  ttsAudio: string | null // base64
-  expires: number
-}
 
 const summaryTTSCache = new Map<string, SummaryTTSResult>()
 const schedulerTimers = new Map<string, NodeJS.Timeout>()
@@ -23,41 +18,35 @@ function getProjectRoot(): string {
 }
 
 // 加载轮播配置
-function loadCarouselConfig(): any {
+function loadCarouselConfig(): CarouselConfig | null {
   try {
     const configPath = join(getProjectRoot(), "shared/carousel.json")
     if (!existsSync(configPath)) return null
     const content = readFileSync(configPath, "utf-8")
-    return JSON.parse(content)
+    return JSON.parse(content) as CarouselConfig
   } catch (e) {
     logger.error("[carousel-scheduler] failed to load config:", e)
     return null
   }
 }
 
-// 判断是否是译文源
-function isTranslatedSource(id: SourceID): boolean {
-  return !!sources[id]?.dependsOn
-}
-
 // 执行汇总
-async function executeSummaryLLM(summaryId: string, config: any): Promise<any> {
-  const summary = config.summaries.find((s: any) => s.id === summaryId)
+async function executeSummaryLLM(summaryId: string, config: CarouselConfig): Promise<SummaryTTSResult["summary"]> {
+  const summary = config.summaries.find(s => s.id === summaryId)
   if (!summary) return null
 
-  const sourceIds = summary.sources as SourceID[]
+  const sourceIds = summary.sources
   const prompt = summary.prompt
   const maxItemsPerSource = 30
 
   // 获取新闻源数据
-  const allNewsItems: any[] = []
+  const allNewsItems: { title: string, info?: string, hover?: string, url?: string }[] = []
   const sourceNames: string[] = []
   const cacheTable = await getCacheTable()
   const now = Date.now()
 
-  // 分离普通源和译文源
-  const normalSourceIds: SourceID[] = []
-  const translatedSourceIds: SourceID[] = []
+  // 需要刷新的源
+  const sourceIdsToRefresh: SourceID[] = []
 
   for (const sourceId of sourceIds) {
     if (!sources[sourceId] || !getters[sourceId]) continue
@@ -71,30 +60,12 @@ async function executeSummaryLLM(summaryId: string, config: any): Promise<any> {
     }
 
     if (needRefresh) {
-      if (isTranslatedSource(sourceId)) {
-        translatedSourceIds.push(sourceId)
-      } else {
-        normalSourceIds.push(sourceId)
-      }
+      sourceIdsToRefresh.push(sourceId)
     }
   }
 
-  // 刷新普通源
-  for (const id of normalSourceIds) {
-    try {
-      const useProxy = cacheTable ? await cacheTable.getUseProxy(id) : false
-      const data = await useProxyStorage.run(useProxy, async () => getters[id]())
-      if (data?.length && cacheTable) {
-        await cacheTable.updateAndSync(id, data.slice(0, 100))
-      }
-      await new Promise(r => setTimeout(r, 1000))
-    } catch (e) {
-      logger.error(`[carousel-scheduler] failed to refresh ${id}:`, e)
-    }
-  }
-
-  // 刷新译文源
-  for (const id of translatedSourceIds) {
+  // 刷新源数据
+  for (const id of sourceIdsToRefresh) {
     try {
       const useProxy = cacheTable ? await cacheTable.getUseProxy(id) : false
       const data = await useProxyStorage.run(useProxy, async () => getters[id]())
@@ -112,7 +83,7 @@ async function executeSummaryLLM(summaryId: string, config: any): Promise<any> {
     if (!sources[sourceId] || !getters[sourceId]) continue
 
     try {
-      let items: any[] | undefined
+      let items: NewsItem[] | undefined
       if (cacheTable) {
         const cache = await cacheTable.get(sourceId)
         if (cache) items = cache.items
@@ -167,7 +138,7 @@ async function executeSummaryLLM(summaryId: string, config: any): Promise<any> {
     },
   ]
 
-  const content = await chatCompletion(messages, { maxTokens: 8192 })
+  const content = await chatCompletion(messages, { maxTokens: 8192, timeout: 120000 })
 
   // 解析 JSON
   try {
@@ -188,8 +159,8 @@ async function executeSummaryLLM(summaryId: string, config: any): Promise<any> {
 }
 
 // 执行汇总 + TTS
-async function executeSummary(summaryId: string, config: any): Promise<void> {
-  const summary = config.summaries.find((s: any) => s.id === summaryId)
+async function executeSummary(summaryId: string, config: CarouselConfig): Promise<void> {
+  const summary = config.summaries.find(s => s.id === summaryId)
   if (!summary) return
 
   logger.info(`[carousel-scheduler] executing summary: ${summary.name}`)
@@ -202,9 +173,13 @@ async function executeSummary(summaryId: string, config: any): Promise<void> {
       return
     }
 
-    // 2. 根据 tts 字段决定是否生成 TTS
+    // 2. 决定是否生成 TTS
+    // 条件：全局 enableTTS 打开 且 节目单中有引用该汇总且 tts 为 true 的节目
     let audioBase64: string | null = null
-    if (summary.tts) {
+    const shouldGenerateTTS = config.enableTTS && config.programs.some(
+      p => p.type === "summary" && p.summaryId === summaryId && p.tts === true
+    )
+    if (shouldGenerateTTS) {
       const audioBuffer = await synthesizeSpeech(summaryResult.summary)
       audioBase64 = audioBuffer.toString("base64")
       logger.info(`[carousel-scheduler] TTS generated for ${summary.name}`)
@@ -217,14 +192,14 @@ async function executeSummary(summaryId: string, config: any): Promise<void> {
       expires: Date.now() + (summary.refreshInterval || 30) * 60 * 1000,
     })
 
-    logger.success(`[carousel-scheduler] summary completed for ${summary.name}${summary.tts ? " with TTS" : ""}`)
+    logger.success(`[carousel-scheduler] summary completed for ${summary.name}${shouldGenerateTTS ? " with TTS" : ""}`)
   } catch (e) {
     logger.error(`[carousel-scheduler] failed for ${summaryId}:`, e)
   }
 }
 
 // 启动定时任务
-function startScheduler(summaryId: string, intervalMinutes: number, config: any): void {
+function startScheduler(summaryId: string, intervalMinutes: number, config: CarouselConfig): void {
   // 清除已有的定时任务
   if (schedulerTimers.has(summaryId)) {
     clearInterval(schedulerTimers.get(summaryId)!)
@@ -256,25 +231,158 @@ export function getSummaryTTSCache(summaryId: string): SummaryTTSResult | undefi
   return summaryTTSCache.get(summaryId)
 }
 
-export default defineNitroPlugin(async (_nitro) => {
-  const config = loadCarouselConfig()
-  if (!config?.summaries?.length) {
-    logger.info("[carousel-scheduler] no summaries configured")
-    return
+// 刷新单个新闻源
+async function refreshNewsSource(sourceId: SourceID, isFirstRefresh: boolean = false): Promise<void> {
+  try {
+    const cacheTable = await getCacheTable()
+    if (!cacheTable) return
+
+    // 检查是否需要刷新（如果缓存存在且未过期，跳过）
+    const now = Date.now()
+    const cache = await cacheTable.get(sourceId)
+    const source = sources[sourceId]
+    if (!isFirstRefresh && cache && source?.interval && now - cache.updated < source.interval) {
+      return
+    }
+
+    const useProxy = await cacheTable.getUseProxy(sourceId)
+    const data = await useProxyStorage.run(useProxy, async () => getters[sourceId]())
+    if (data?.length) {
+      const items = data.slice(0, 100)
+
+      // 同步到 SQLite（updateAndSync 会计算 diff，首次刷新时跳过）
+      await cacheTable.updateAndSync(sourceId, items, isFirstRefresh)
+
+      // 根据 TTS 配置决定是否生成 TTS（首次刷新时跳过）
+      const config = loadCarouselConfig()
+      if (config?.enableTTS && !isFirstRefresh) {
+        // 检查所有引用该新闻源的节目，对 tts 字段取或逻辑
+        const shouldGenerateTTS = config.programs.some(p => {
+          if (p.type === "news" && p.sourceId === sourceId) return p.tts === true
+          if (p.type === "collection" && p.collectionId) {
+            const collection = config.collections.find(c => c.id === p.collectionId)
+            if (collection?.sources.includes(sourceId)) return p.tts === true
+          }
+          return false
+        })
+        if (shouldGenerateTTS) {
+          // 获取带 diff 的数据，找出新增项
+          const cached = await cacheTable?.get(sourceId)
+          if (cached?.items) {
+            const newItems = cached.items.filter(item => item.extra?._isNew)
+            if (newItems.length > 0) {
+              const sourceName = sources[sourceId]?.name || sourceId
+              try {
+                const ttsData = await synthesizeSpeech(
+                  `下面播报${sourceName}最新新闻。` +
+                  newItems.map(item => item.title).join("。") +
+                  `以上就是本时段${sourceName}最新新闻。`
+                )
+                await cacheTable?.setTtsData(sourceId, ttsData.toString("base64"))
+                logger.success(`[carousel-scheduler] TTS generated for ${sourceId}`)
+              } catch (e) {
+                logger.error(`[carousel-scheduler] TTS failed for ${sourceId}:`, e)
+              }
+            }
+          }
+        }
+      }
+
+      logger.success(`[carousel-scheduler] news source ${sourceId} refreshed`)
+    }
+  } catch (e) {
+    logger.error(`[carousel-scheduler] failed to refresh news source ${sourceId}:`, e)
   }
+}
 
-  logger.info(`[carousel-scheduler] starting ${config.summaries.length} summary scheduler(s)`)
+// 刷新所有新闻源（按照原生刷新逻辑：先原文后译文，处理 stagger）
+async function refreshAllNewsSources(config: CarouselConfig, isFirstRefresh: boolean = false): Promise<void> {
+  const allSourceIds = new Set<SourceID>()
 
-  // 为每个汇总项启动定时任务
-  for (const summary of config.summaries) {
-    if (summary.sources?.length && summary.prompt) {
-      startScheduler(summary.id, summary.refreshInterval || 30, config)
+  // 收集所有节目中的新闻源
+  for (const program of config.programs) {
+    if (program.type === "news" && program.sourceId) {
+      allSourceIds.add(program.sourceId)
+    } else if (program.type === "collection" && program.collectionId) {
+      const collection = config.collections.find(c => c.id === program.collectionId)
+      if (collection) {
+        collection.sources.forEach(id => allSourceIds.add(id))
+      }
     }
   }
 
-  // 监听配置变化（可选：定期重新加载配置）
-  // setInterval(() => {
-  //   const newConfig = loadCarouselConfig()
-  //   // 检查配置是否有变化...
-  // }, 60000)
+  // 分离译文源和原文源
+  const translatedSources: SourceID[] = []
+  const originalSources: SourceID[] = []
+  for (const id of allSourceIds) {
+    if (sources[id]?.dependsOn) {
+      translatedSources.push(id)
+    } else {
+      originalSources.push(id)
+    }
+  }
+
+  // 分离 stagger 源和普通源（原文源）
+  const staggerSources: SourceID[] = []
+  const normalSources: SourceID[] = []
+  for (const id of originalSources) {
+    if (sources[id]?.staggerRefresh) {
+      staggerSources.push(id)
+    } else {
+      normalSources.push(id)
+    }
+  }
+
+  logger.info(`[carousel-scheduler] refreshing ${originalSources.length} original source(s) and ${translatedSources.length} translated source(s)`)
+
+  // 第一轮：刷新原文源
+  // 普通源并发刷新
+  if (normalSources.length > 0) {
+    await Promise.all(normalSources.map(id => refreshNewsSource(id, isFirstRefresh)))
+  }
+
+  // stagger 源顺序刷新，每个间隔 1 秒
+  for (const id of staggerSources) {
+    await refreshNewsSource(id, isFirstRefresh)
+    await new Promise(r => setTimeout(r, 1000))
+  }
+
+  // 第二轮：刷新译文源（此时原文源缓存已是最新）
+  if (translatedSources.length > 0) {
+    // 等待一小段时间确保原文源缓存已更新
+    await new Promise(r => setTimeout(r, 500))
+    await Promise.all(translatedSources.map(id => refreshNewsSource(id, isFirstRefresh)))
+  }
+
+  logger.success(`[carousel-scheduler] all news sources refreshed`)
+}
+
+export default defineNitroPlugin(async (_nitro) => {
+  const config = loadCarouselConfig()
+  if (!config) {
+    logger.info("[carousel-scheduler] no config found")
+    return
+  }
+
+  // 启动汇总定时任务
+  if (config.summaries?.length) {
+    logger.info(`[carousel-scheduler] starting ${config.summaries.length} summary scheduler(s)`)
+    for (const summary of config.summaries) {
+      if (summary.sources?.length && summary.prompt) {
+        startScheduler(summary.id, summary.refreshInterval || 30, config)
+      }
+    }
+  }
+
+  // 启动新闻源定时任务
+  const newsInterval = config.newsRefreshInterval || 30
+  logger.info(`[carousel-scheduler] starting news source scheduler, interval: ${newsInterval} minutes`)
+
+  // 立即执行一次（首次刷新不计算 diff，不生成 TTS）
+  refreshAllNewsSources(config, true)
+
+  // 设置定时任务
+  setInterval(() => {
+    refreshAllNewsSources(config)
+  }, newsInterval * 60 * 1000)
 })

@@ -1,38 +1,15 @@
 import { useEffect, useRef, useState } from "react"
 import { useQuery, useQueryClient } from "@tanstack/react-query"
 import type { NewsItem, SourceID, SourceResponse } from "@shared/types"
+import type { CarouselConfig, Program } from "@shared/carousel"
 import { sources } from "@shared/sources"
 import { relativeTime } from "@shared/utils"
 import { currentColumnIDAtom } from "~/atoms"
-
-// 集合配置
-interface Collection {
-  id: string
-  name: string
-  sources: SourceID[]
-}
-
-// 轮播配置类型
-interface Program {
-  type: "news" | "summary" | "break" | "collection"
-  sourceId?: SourceID
-  summaryId?: string
-  collectionId?: string
-  duration: number
-  label?: string
-  tts?: boolean
-  columns?: number
-}
-
-interface CarouselConfig {
-  channelName: string
-  collections: Collection[]
-  programs: Program[]
-  enableTTS: boolean
-}
+import { NewsListHot } from "./NewsListHot"
+import { NewsListTimeline } from "./NewsListTimeline"
+import { CollectionList } from "./CollectionList"
 
 // 常量
-const REFETCH_INTERVAL = 60_000 // 数据刷新间隔（毫秒）
 const DEFAULT_DURATION = 30 // 默认节目时长（秒）
 const ITEMS_PER_COLUMN = 10 // 每列显示新闻数量
 const PROGRESS_MAX = 100 // 进度条最大值
@@ -46,207 +23,6 @@ function base64ToBlob(base64: string, mimeType: string): Blob {
   }
   const byteArray = new Uint8Array(byteNumbers)
   return new Blob([byteArray], { type: mimeType })
-}
-
-// 列数对应的 CSS 类
-const columnClassMap: Record<number, string> = {
-  1: "grid-cols-1",
-  2: "grid-cols-2",
-  3: "grid-cols-3",
-}
-
-// 最热类新闻列表（显示序号 + 排名变化）
-function NewsListHot({ items, columns = 1 }: { items: NewsItem[], columns?: number }) {
-  const itemsPerColumn = Math.ceil(items.length / columns)
-  const gridClass = columnClassMap[columns] || "grid-cols-1"
-
-  return (
-    <div className={`grid gap-3 ${gridClass}`}>
-      {Array.from({ length: columns }).map((_, colIndex) => (
-        <div key={colIndex} className="space-y-1">
-          {items.slice(colIndex * itemsPerColumn, (colIndex + 1) * itemsPerColumn).map((item, index) => {
-            const diff = item.extra?.diff
-            // diff === undefined 表示新上榜（在缓存中找不到）
-            const isNew = diff === undefined
-            const isUp = diff !== undefined && diff > 0
-            const isDown = diff !== undefined && diff < 0
-            // 新上榜或上升标红，下降标绿
-            const bgClass = isNew || isUp ? "bg-red/10" : isDown ? "bg-green/10" : ""
-
-            return (
-              <div
-                key={item.id}
-                className={`flex items-start gap-2 p-1.5 rounded-lg ${bgClass} hover:bg-neutral/5 transition-colors`}
-              >
-                <span className="text-base font-bold text-neutral-400 w-7 text-right shrink-0 leading-tight relative">
-                  {colIndex * itemsPerColumn + index + 1}
-                  {isNew && (
-                    <span className="absolute -top-1 -right-2 text-[10px] text-red font-bold">新</span>
-                  )}
-                  {isUp && (
-                    <span className="absolute -top-1 -right-2 text-[10px] text-red font-bold">+{diff}</span>
-                  )}
-                  {isDown && (
-                    <span className="absolute -top-1 -right-2 text-[10px] text-green font-bold">{diff}</span>
-                  )}
-                </span>
-                <div className="flex-1 min-w-0">
-                  <a
-                    href={item.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-base font-medium hover:text-primary line-clamp-2 leading-tight"
-                  >
-                    {item.title}
-                  </a>
-                  {item.extra?.info && item.extra.info !== false && (
-                    <p className="text-sm text-neutral-500 leading-tight line-clamp-1">{item.extra.info}</p>
-                  )}
-                </div>
-              </div>
-            )
-          })}
-        </div>
-      ))}
-    </div>
-  )
-}
-
-// 实时类新闻列表（显示时间 + 新增标红）
-function NewsListTimeline({ items, columns = 1 }: { items: NewsItem[], columns?: number }) {
-  const itemsPerColumn = Math.ceil(items.length / columns)
-  const gridClass = columnClassMap[columns] || "grid-cols-1"
-
-  return (
-    <div className={`grid gap-3 ${gridClass}`}>
-      {Array.from({ length: columns }).map((_, colIndex) => (
-        <div key={colIndex} className="space-y-1">
-          {items.slice(colIndex * itemsPerColumn, (colIndex + 1) * itemsPerColumn).map(item => {
-            const isNew = item.extra?._isNew
-            return (
-              <div
-                key={item.id}
-                className={`flex items-start gap-2 p-1.5 rounded-lg ${isNew ? "bg-red/10" : "bg-base"} hover:bg-neutral/5 transition-colors`}
-              >
-                <span className="text-xs text-neutral-400 w-16 shrink-0 leading-tight">
-                  {item.pubDate ? relativeTime(item.pubDate) : item.extra?.date ? relativeTime(item.extra.date) : ""}
-                </span>
-                <div className="flex-1 min-w-0">
-                  <a
-                    href={item.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-base font-medium hover:text-primary line-clamp-2 leading-tight"
-                  >
-                    {item.title}
-                  </a>
-                  {item.extra?.info && item.extra.info !== false && (
-                    <p className="text-sm text-neutral-500 leading-tight line-clamp-1">{item.extra.info}</p>
-                  )}
-                </div>
-              </div>
-            )
-          })}
-        </div>
-      ))}
-    </div>
-  )
-}
-
-// 集合列表组件（用于多源集合，每个源一列，显示源标题）
-interface SourceData {
-  sourceId: SourceID
-  items: NewsItem[]
-}
-
-function CollectionList({ sourcesData }: { sourcesData: SourceData[] }) {
-  const columns = sourcesData.length
-  const gridClass = columnClassMap[columns] || "grid-cols-1"
-
-  return (
-    <div className={`grid gap-3 ${gridClass}`}>
-      {sourcesData.map(({ sourceId, items }) => {
-        const source = sources[sourceId]
-        const isHot = source?.type === "hottest"
-        return (
-          <div key={sourceId} className="space-y-1">
-            {/* 源标题 */}
-            <div className="flex items-center gap-2 mb-1">
-              <div
-                className="w-6 h-6 rounded-full bg-cover"
-                style={{ backgroundImage: `url(/icons/${sourceId.split("-")[0]}.png)` }}
-              />
-              <h3 className="font-bold text-base">
-                {source?.name || sourceId}
-                {source?.title && (
-                  <span className="text-neutral-500 ml-1">
-                    -
-                    {source.title}
-                  </span>
-                )}
-              </h3>
-            </div>
-            {/* 新闻列表 */}
-            {items.slice(0, ITEMS_PER_COLUMN).map((item, index) => {
-              const diff = item.extra?.diff
-              // 热门类：diff === undefined 表示新上榜
-              const isNewHot = isHot && diff === undefined
-              const isUp = diff !== undefined && diff > 0
-              const isDown = diff !== undefined && diff < 0
-              // 实时类：_isNew 表示新增
-              const isNewTimeline = !isHot && item.extra?._isNew
-              const bgClass = isNewHot || isUp || isNewTimeline
-                ? "bg-red/10"
-                : isDown
-                  ? "bg-green/10"
-                  : "bg-base"
-
-              return (
-                <div
-                  key={item.id}
-                  className={`flex items-start gap-2 p-1.5 rounded-lg ${bgClass} hover:bg-neutral/5 transition-colors`}
-                >
-                  {isHot
-                    ? (
-                        <span className="text-base font-bold text-neutral-400 w-7 text-right shrink-0 leading-tight relative">
-                          {index + 1}
-                          {isNewHot && (
-                            <span className="absolute -top-1 -right-2 text-[10px] text-red font-bold">新</span>
-                          )}
-                          {isUp && (
-                            <span className="absolute -top-1 -right-2 text-[10px] text-red font-bold">+{diff}</span>
-                          )}
-                          {isDown && (
-                            <span className="absolute -top-1 -right-2 text-[10px] text-green font-bold">{diff}</span>
-                          )}
-                        </span>
-                      )
-                    : (
-                        <span className="text-xs text-neutral-400 w-16 shrink-0 leading-tight">
-                          {item.pubDate ? relativeTime(item.pubDate) : item.extra?.date ? relativeTime(item.extra.date) : ""}
-                        </span>
-                      )}
-                  <div className="flex-1 min-w-0">
-                    <a
-                      href={item.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-base font-medium hover:text-primary line-clamp-2 leading-tight"
-                    >
-                      {item.title}
-                    </a>
-                    {item.extra?.info && item.extra.info !== false && (
-                      <p className="text-sm text-neutral-500 leading-tight line-clamp-1">{item.extra.info}</p>
-                    )}
-                  </div>
-                </div>
-              )
-            })}
-          </div>
-        )
-      })}
-    </div>
-  )
 }
 
 // 播放列表配置
@@ -264,6 +40,12 @@ interface SummaryResult {
   sources: string[]
 }
 
+// 集合源数据
+interface SourceData {
+  sourceId: SourceID
+  items: NewsItem[]
+}
+
 export function Carousel() {
   const queryClient = useQueryClient()
   const [isPlaying, setIsPlaying] = useState(false)
@@ -279,6 +61,7 @@ export function Carousel() {
   const progressRef = useRef<number | null>(null)
   const setCurrentPage = useSetAtom(currentColumnIDAtom)
   const hasCompletedFirstCycleRef = useRef(false)
+  const isTTSPlayingRef = useRef(false)
   const ttsCacheRef = useRef<Map<string, {
     lastItemIds: string[]
     headerAudio: Blob | null
@@ -374,139 +157,17 @@ export function Carousel() {
 
   // 获取或创建请求（复用正在进行的请求）
   function getOrCreateRequest<T>(key: string, factory: () => Promise<T>): Promise<T> {
-    console.log(`[carousel] getOrCreateRequest called with key: ${key}, pending keys:`, Array.from(pendingRequestsRef.current.keys()))
     const pending = pendingRequestsRef.current.get(key)
     if (pending) {
-      console.log(`[carousel] reusing pending request: ${key}`)
       return pending
     }
 
-    console.log(`[carousel] creating new request: ${key}`)
     const request = factory().finally(() => {
       pendingRequestsRef.current.delete(key)
-      console.log(`[carousel] request completed: ${key}`)
     })
     pendingRequestsRef.current.set(key, request)
     return request
   }
-
-  // 预获取下一个节目
-  useEffect(() => {
-    if (!isPlaying || !config || !nextProgram) return
-
-    const prefetchNext = async () => {
-      try {
-        if (nextProgram.type === "news" && nextProgram.sourceId) {
-          const key = `source-${nextProgram.sourceId}`
-          const data = await getOrCreateRequest(key, async () => {
-            const response = await myFetch<SourceResponse>(`/s?id=${nextProgram.sourceId}&latest=true`)
-            if (response?.items) {
-              // 预获取时只标记新增，不更新缓存
-              response.items = markNewItems(nextProgram.sourceId!, response.items)
-            }
-            return response
-          })
-          queryClient.setQueryData(["source", nextProgram.sourceId], data)
-
-          // TTS：获取新增条目并生成音频
-          const nextProgramTtsEnabled = nextProgram.tts ?? false
-          if (ttsEnabled && nextProgramTtsEnabled && hasCompletedFirstCycleRef.current && data?.items) {
-            const newItems = data.items.filter(item => item.extra?._isNew)
-            if (newItems.length > 0) {
-              const ttsKey = `tts-${nextProgram.sourceId}`
-              const sourceName = sources[nextProgram.sourceId]?.name || nextProgram.sourceId
-              try {
-                const ttsData = await getOrCreateRequest(ttsKey, async () => {
-                  return await myFetch<any>("/carousel-tts", {
-                    method: "POST",
-                    body: {
-                      sourceId: nextProgram.sourceId,
-                      sourceName,
-                      items: newItems.map(item => ({ id: String(item.id), title: item.title })),
-                    },
-                    timeout: 120000,
-                  })
-                })
-                // 缓存 TTS 音频
-                const cache = ttsCacheRef.current.get(nextProgram.sourceId) || {
-                  lastItemIds: [],
-                  headerAudio: null,
-                  footerAudio: null,
-                  contentAudios: new Map(),
-                  summaryAudio: null,
-                }
-                if (ttsData.header) {
-                  cache.headerAudio = base64ToBlob(ttsData.header, "audio/wav")
-                }
-                if (ttsData.footer) {
-                  cache.footerAudio = base64ToBlob(ttsData.footer, "audio/wav")
-                }
-                for (const item of ttsData.contents) {
-                  cache.contentAudios.set(item.id, base64ToBlob(item.audio, "audio/wav"))
-                }
-                cache.lastItemIds = newItems.map(item => String(item.id))
-                ttsCacheRef.current.set(nextProgram.sourceId!, cache)
-              } catch (e) {
-                console.error("[carousel] TTS failed:", e)
-              }
-            }
-          }
-        } else if (nextProgram.type === "collection" && nextProgram.collectionId) {
-          const collection = config.collections.find(c => c.id === nextProgram.collectionId)
-          if (collection?.sources?.length) {
-            const key = `collection-${collection.id}`
-            const data = await getOrCreateRequest(key, async () => {
-              const results = await Promise.all(
-                collection.sources.map(async (id) => {
-                  const response = await myFetch<SourceResponse>(`/s?id=${id}&latest=true`)
-                  if (response?.items) {
-                    // 预获取时只标记新增，不更新缓存
-                    response.items = markNewItems(id, response.items)
-                  }
-                  return response
-                }),
-              )
-              return results
-            })
-            queryClient.setQueryData(["collection", collection.id], data)
-          }
-        } else if (nextProgram.type === "summary" && nextProgram.summaryId) {
-          const summary = config.summaries.find(s => s.id === nextProgram.summaryId)
-          if (summary?.sources?.length && summary?.prompt) {
-            // 从后端读取汇总 + TTS 缓存（后端定时任务会自动更新）
-            const cacheKey = `summary-tts-${summary.id}`
-            const cached = await getOrCreateRequest(cacheKey, async () => {
-              return await myFetch<any>(`/carousel-summary-tts?summaryId=${summary.id}`)
-            })
-
-            if (cached?.success && cached.summary) {
-              queryClient.setQueryData(["summary", summary.id], cached.summary)
-
-              // 缓存 TTS 音频
-              if (cached.ttsAudio) {
-                const ttsCache = ttsCacheRef.current.get(summary.id) || {
-                  lastItemIds: [],
-                  headerAudio: null,
-                  footerAudio: null,
-                  contentAudios: new Map(),
-                  summaryAudio: null,
-                }
-                ttsCache.summaryAudio = base64ToBlob(cached.ttsAudio, "audio/wav")
-                ttsCacheRef.current.set(summary.id, ttsCache)
-              }
-            }
-          }
-        }
-      } catch (e) {
-        console.error("[carousel] prefetch failed:", e)
-      }
-    }
-
-    prefetchNext()
-  }, [isPlaying, currentIndex, config, nextProgram, queryClient, ttsEnabled])
-
-  // 缓存旧数据用于计算 diff
-  const cachedSourcesRef = useRef<Map<SourceID, NewsItem[]>>(new Map())
 
   // 获取当前集合
   const currentCollection = currentProgram?.collectionId
@@ -518,122 +179,30 @@ export function Carousel() {
     ? config?.summaries.find(s => s.id === currentProgram.summaryId)
     : undefined
 
-  // 计算 diff 并标记新增项（同时更新缓存）
-  function computeDiff(sourceId: SourceID, newItems: NewsItem[]): NewsItem[] {
-    const cached = cachedSourcesRef.current.get(sourceId)
-    const sourceType = sources[sourceId]?.type
-
-    if (!cached || cached.length === 0) {
-      // 首次获取，不标记，直接缓存
-      cachedSourcesRef.current.set(sourceId, newItems)
-      return newItems
-    }
-
-    const cachedIds = new Set(cached.map(item => String(item.id)))
-
-    if (sourceType === "hottest") {
-      // 热门类：计算排名变化
-      const result = newItems.map((item, i) => {
-        const oldIndex = cached.findIndex(k => String(k.id) === String(item.id))
-        const diff = oldIndex === -1 ? undefined : oldIndex - i
-        return {
-          ...item,
-          extra: {
-            ...item.extra,
-            diff,
-          },
-        }
-      })
-      cachedSourcesRef.current.set(sourceId, newItems)
-      return result
-    } else {
-      // 实时类：标记新增项
-      const result = newItems.map(item => ({
-        ...item,
-        extra: {
-          ...item.extra,
-          _isNew: !cachedIds.has(String(item.id)),
-        },
-      }))
-      cachedSourcesRef.current.set(sourceId, newItems)
-      return result
-    }
-  }
-
-  // 标记新增项但不更新缓存（用于预获取和 TTS）
-  function markNewItems(sourceId: SourceID, newItems: NewsItem[]): NewsItem[] {
-    const cached = cachedSourcesRef.current.get(sourceId)
-    const sourceType = sources[sourceId]?.type
-
-    if (!cached || cached.length === 0) {
-      return newItems
-    }
-
-    const cachedIds = new Set(cached.map(item => String(item.id)))
-
-    if (sourceType === "hottest") {
-      return newItems.map((item, i) => {
-        const oldIndex = cached.findIndex(k => String(k.id) === String(item.id))
-        const diff = oldIndex === -1 ? undefined : oldIndex - i
-        return {
-          ...item,
-          extra: {
-            ...item.extra,
-            diff,
-          },
-        }
-      })
-    } else {
-      return newItems.map(item => ({
-        ...item,
-        extra: {
-          ...item.extra,
-          _isNew: !cachedIds.has(String(item.id)),
-        },
-      }))
-    }
-  }
-
-  // 获取单个新闻源数据（使用 latest=true 强制刷新）
-  const { data: singleSourceData } = useQuery<SourceResponse>({
-    queryKey: ["source", currentProgram?.sourceId],
+  // 获取单个新闻源数据（从后端缓存，带 diff）
+  const { data: singleSourceData } = useQuery<{ success: boolean, items: NewsItem[] }>({
+    queryKey: ["news-cache", currentProgram?.sourceId],
     queryFn: async () => {
       if (!currentProgram?.sourceId) return null
-      const key = `source-${currentProgram.sourceId}`
-      return getOrCreateRequest(key, async () => {
-        const response = await myFetch<SourceResponse>(`/s?id=${currentProgram.sourceId}&latest=true`)
-        if (response?.items) {
-          response.items = computeDiff(currentProgram.sourceId, response.items)
-        }
-        return response
-      })
+      return await myFetch(`/carousel-news-cache?sourceId=${currentProgram.sourceId}`)
     },
     enabled: !!currentProgram?.sourceId && isPlaying && currentProgram?.type === "news",
-    refetchInterval: REFETCH_INTERVAL,
     refetchOnWindowFocus: false,
   })
 
-  // 获取集合中多个新闻源数据（使用 latest=true 强制刷新）
-  const { data: collectionData } = useQuery<SourceResponse[]>({
-    queryKey: ["collection", currentCollection?.id],
+  // 获取集合中多个新闻源数据（从后端缓存，带 diff）
+  const { data: collectionData } = useQuery<{ success: boolean, items: NewsItem[] }[]>({
+    queryKey: ["news-cache-collection", currentCollection?.id],
     queryFn: async () => {
       if (!currentCollection?.sources?.length) return null
-      const key = `collection-${currentCollection.id}`
-      return getOrCreateRequest(key, async () => {
-        const results = await Promise.all(
-          currentCollection.sources.map(async (id) => {
-            const response = await myFetch<SourceResponse>(`/s?id=${id}&latest=true`)
-            if (response?.items) {
-              response.items = computeDiff(id, response.items)
-            }
-            return response
-          }),
-        )
-        return results
-      })
+      const results = await Promise.all(
+        currentCollection.sources.map(async (id) => {
+          return await myFetch<{ success: boolean, items: NewsItem[] }>(`/carousel-news-cache?sourceId=${id}`)
+        }),
+      )
+      return results
     },
     enabled: !!currentCollection?.sources?.length && isPlaying,
-    refetchInterval: REFETCH_INTERVAL,
     refetchOnWindowFocus: false,
   })
 
@@ -645,7 +214,38 @@ export function Carousel() {
       }))
     : []
 
-  // 汇总数据（从后端定时任务缓存获取）
+  // 定时获取汇总数据
+  useEffect(() => {
+    if (!isPlaying || !config || !currentSummary) return
+
+    const fetchSummary = async () => {
+      try {
+        const cached = await myFetch<any>(`/carousel-summary-tts?summaryId=${currentSummary.id}`)
+        if (cached?.success && cached.summary) {
+          queryClient.setQueryData(["summary", currentSummary.id], cached.summary)
+
+          // 缓存 TTS 音频
+          if (cached.ttsAudio) {
+            const ttsCache = ttsCacheRef.current.get(currentSummary.id) || {
+              lastItemIds: [],
+              headerAudio: null,
+              footerAudio: null,
+              contentAudios: new Map(),
+              summaryAudio: null,
+            }
+            ttsCache.summaryAudio = base64ToBlob(cached.ttsAudio, "audio/wav")
+            ttsCacheRef.current.set(currentSummary.id, ttsCache)
+          }
+        }
+      } catch (e) {
+        console.error("[carousel] fetch summary failed:", e)
+      }
+    }
+
+    fetchSummary()
+  }, [isPlaying, currentIndex, currentSummary, config, queryClient])
+
+  // 汇总数据（从 queryClient 获取）
   const summaryData = currentSummary?.id
     ? queryClient.getQueryData<SummaryResult>(["summary", currentSummary.id])
     : undefined
@@ -670,19 +270,24 @@ export function Carousel() {
       })
     }, 100)
 
-    // 切换到下一个节目
-    timerRef.current = window.setTimeout(() => {
+    // 切换到下一个节目（如果 TTS 正在播放则延长）
+    const switchToNext = () => {
+      if (isTTSPlayingRef.current) {
+        // TTS 正在播放，延长 1 秒再检查
+        timerRef.current = window.setTimeout(switchToNext, 1000)
+        return
+      }
       setCurrentIndex(prev => {
         const next = (prev + 1) % config.programs.length
         // 检测是否完成了一次循环
         if (next === 0 && !hasCompletedFirstCycleRef.current) {
           hasCompletedFirstCycleRef.current = true
-          console.log("[carousel] first cycle completed, TTS enabled")
         }
         return next
       })
       setProgress(0)
-    }, duration * 1000)
+    }
+    timerRef.current = window.setTimeout(switchToNext, duration * 1000)
 
     return () => {
       if (timerRef.current) clearTimeout(timerRef.current)
@@ -694,32 +299,47 @@ export function Carousel() {
     setIsPlaying(!isPlaying)
   }
 
+  // 停止当前 TTS 播放
+  const stopTTS = useCallback(() => {
+    if (ttsAudioRef.current) {
+      ttsAudioRef.current.pause()
+      ttsAudioRef.current.currentTime = 0
+      ttsAudioRef.current = null
+    }
+    isTTSPlayingRef.current = false
+    // 恢复 BGM 音量
+    if (audioRef.current && bgmEnabled) {
+      audioRef.current.volume = bgmVolume
+    }
+  }, [bgmEnabled, bgmVolume])
+
   const handlePrev = () => {
     if (!config) return
+    stopTTS()
     setCurrentIndex(prev => (prev - 1 + config.programs.length) % config.programs.length)
     setProgress(0)
   }
 
   const handleNext = () => {
     if (!config) return
+    stopTTS()
     setCurrentIndex(prev => (prev + 1) % config.programs.length)
     setProgress(0)
   }
 
   const handleJump = (index: number) => {
+    stopTTS()
     setCurrentIndex(index)
     setProgress(0)
   }
 
   // 播放 TTS 音频队列
   const playTTSAudio = useCallback(async (sourceId: string, isSummary: boolean = false) => {
-    console.log("[carousel] playTTSAudio called:", { sourceId, isSummary, ttsEnabled, hasCompletedFirstCycle: hasCompletedFirstCycleRef.current })
     if (!ttsEnabled) return
     // 汇总不受首轮循环影响，新闻源需要等待首轮循环完成
     if (!isSummary && !hasCompletedFirstCycleRef.current) return
 
     const cache = ttsCacheRef.current.get(sourceId)
-    console.log("[carousel] TTS cache:", cache)
     if (!cache) return
 
     // BGM 闪避：降低音量
@@ -727,6 +347,8 @@ export function Carousel() {
     if (audioRef.current && bgmEnabled) {
       audioRef.current.volume = originalVolume * 0.2
     }
+
+    isTTSPlayingRef.current = true
 
     try {
       if (isSummary && cache.summaryAudio) {
@@ -740,7 +362,7 @@ export function Carousel() {
         })
       } else {
         // 播放新闻音频：header -> contents -> footer
-        if (cache.headerAudio) {
+        if (cache.headerAudio && isTTSPlayingRef.current) {
           const audio = new Audio(URL.createObjectURL(cache.headerAudio))
           ttsAudioRef.current = audio
           await new Promise<void>((resolve) => {
@@ -751,6 +373,7 @@ export function Carousel() {
         }
 
         for (const itemId of cache.lastItemIds) {
+          if (!isTTSPlayingRef.current) break
           const contentAudio = cache.contentAudios.get(itemId)
           if (contentAudio) {
             const audio = new Audio(URL.createObjectURL(contentAudio))
@@ -763,7 +386,7 @@ export function Carousel() {
           }
         }
 
-        if (cache.footerAudio) {
+        if (cache.footerAudio && isTTSPlayingRef.current) {
           const audio = new Audio(URL.createObjectURL(cache.footerAudio))
           ttsAudioRef.current = audio
           await new Promise<void>((resolve) => {
@@ -779,12 +402,12 @@ export function Carousel() {
         audioRef.current.volume = originalVolume
       }
       ttsAudioRef.current = null
+      isTTSPlayingRef.current = false
     }
   }, [ttsEnabled, bgmVolume, bgmEnabled])
 
   // 当节目切换时播放 TTS
   useEffect(() => {
-    console.log("[carousel] TTS effect:", { isPlaying, ttsEnabled, currentProgram: currentProgram?.type, programTts: currentProgram?.tts })
     if (!isPlaying || !ttsEnabled || !currentProgram) return
 
     // 检查当前节目是否启用了 TTS
@@ -805,14 +428,10 @@ export function Carousel() {
       const checkAndPlay = () => {
         const cache = ttsCacheRef.current.get(sourceId)
         if (cache && (cache.summaryAudio || cache.headerAudio || cache.contentAudios.size > 0)) {
-          console.log("[carousel] TTS cache ready, playing...")
           playTTSAudio(sourceId, isSummary)
         } else if (retryCount < maxRetries) {
           retryCount++
-          console.log(`[carousel] waiting for TTS cache... (${retryCount}/${maxRetries})`)
           setTimeout(checkAndPlay, 1000)
-        } else {
-          console.log("[carousel] TTS cache timeout")
         }
       }
       // 延迟 2 秒开始检查，等待数据加载
@@ -907,7 +526,13 @@ export function Carousel() {
               <button
                 type="button"
                 className={$("btn p-2 rounded-lg", ttsEnabled ? "bg-primary text-white i-ph:speaker-high-fill" : "bg-neutral/20 hover:bg-neutral/30 op-80 i-ph:speaker-simple-slash")}
-                onClick={() => setTtsEnabled(!ttsEnabled)}
+                onClick={() => {
+                  const newValue = !ttsEnabled
+                  setTtsEnabled(newValue)
+                  if (!newValue) {
+                    stopTTS()
+                  }
+                }}
                 title={ttsEnabled ? "关闭语音播报" : "开启语音播报"}
               />
               <button
@@ -965,16 +590,7 @@ export function Carousel() {
 
         {currentProgram?.type === "summary" && (
           <div className="w-full max-w-6xl">
-            {summaryLoading ? (
-              <div className="text-center p-8 rounded-lg bg-primary/10">
-                <p className="text-lg text-neutral-500">正在生成汇总...</p>
-              </div>
-            ) : summaryError ? (
-              <div className="text-center p-8 rounded-lg bg-red/10">
-                <p className="text-lg text-red">汇总生成失败</p>
-                <p className="text-sm text-neutral-500 mt-2">{summaryError.message}</p>
-              </div>
-            ) : summaryData ? (
+            {summaryData ? (
               <div className="p-6 rounded-lg bg-base border border-neutral/10">
                 <h3 className="text-xl font-bold mb-4">{summaryData.title || "新闻汇总"}</h3>
                 <p className="text-base leading-relaxed mb-4 whitespace-pre-line">{summaryData.summary}</p>

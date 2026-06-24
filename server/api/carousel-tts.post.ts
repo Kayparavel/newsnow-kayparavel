@@ -12,6 +12,7 @@ interface TTSResponse {
   header: string | null
   contents: { id: string, audio: string }[]
   footer: string | null
+  summaryAudio?: string // base64，仅汇总时返回
 }
 
 // TTS 音频缓存
@@ -51,9 +52,8 @@ export default defineEventHandler(async (event): Promise<TTSResponse> => {
         header: null,
         contents: [],
         footer: null,
-        // 使用特殊字段返回汇总音频
         summaryAudio: audio.toString("base64"),
-      } as any
+      }
     }
 
     // 新闻源：分段 TTS

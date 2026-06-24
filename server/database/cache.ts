@@ -1,6 +1,7 @@
 import process from "node:process"
 import type { NewsItem } from "@shared/types"
 import type { Database } from "db0"
+import { sources } from "@shared/sources"
 import type { CacheInfo, CacheRow } from "../types"
 import { syncNewsItems } from "./mysql"
 
@@ -16,9 +17,14 @@ export class Cache {
         id TEXT PRIMARY KEY,
         updated INTEGER,
         data TEXT,
-        useProxy INTEGER DEFAULT 0
+        useProxy INTEGER DEFAULT 0,
+        ttsData TEXT
       );
     `).run()
+    // 添加 ttsData 列（如果不存在）
+    try {
+      await this.db.prepare(`ALTER TABLE cache ADD COLUMN ttsData TEXT`).run()
+    } catch {}
     logger.success(`init cache table`)
   }
 
@@ -41,10 +47,47 @@ export class Cache {
     logger.success(`set ${id} cache`)
   }
 
-  async updateAndSync(id: string, value: NewsItem[]) {
+  async updateAndSync(id: string, value: NewsItem[], skipDiff: boolean = false) {
     const oldCache = await this.get(id)
     const oldItems = oldCache?.items ?? []
-    await this.set(id, value)
+
+    // 计算 diff（首次刷新时跳过）
+    let diffItems: NewsItem[]
+    if (skipDiff || oldItems.length === 0) {
+      // 首次刷新：热门类设置 diff: 0，实时类设置 _isNew: false
+      const sourceType = (sources as any)[id]?.type
+      if (sourceType === "hottest") {
+        diffItems = value.map(item => ({
+          ...item,
+          extra: { ...item.extra, diff: 0 }
+        }))
+      } else {
+        diffItems = value.map(item => ({
+          ...item,
+          extra: { ...item.extra, _isNew: false }
+        }))
+      }
+    } else {
+      const sourceType = (sources as any)[id]?.type
+      if (sourceType === "hottest") {
+        // 热门类：计算排名变化
+        diffItems = value.map((item, i) => {
+          const oldIndex = oldItems.findIndex(k => String(k.id) === String(item.id))
+          const diff = oldIndex === -1 ? undefined : oldIndex - i
+          return { ...item, extra: { ...item.extra, diff } }
+        })
+      } else {
+        // 实时类：标记新增项
+        const oldIds = new Set(oldItems.map(item => String(item.id)))
+        diffItems = value.map(item => ({
+          ...item,
+          extra: { ...item.extra, _isNew: !oldIds.has(String(item.id)) }
+        }))
+      }
+    }
+
+    // 存入带 diff 的数据
+    await this.set(id, diffItems)
     await syncNewsItems(id, oldItems, value)
   }
 
@@ -122,6 +165,20 @@ export class Cache {
 
   async delete(id: string) {
     return await this.db.prepare(`DELETE FROM cache WHERE id = ?`).run(id)
+  }
+
+  async getTtsData(id: string): Promise<string | null> {
+    const row = (await this.db.prepare(`SELECT ttsData FROM cache WHERE id = ?`).get(id)) as { ttsData: string | null } | undefined
+    return row?.ttsData ?? null
+  }
+
+  async setTtsData(id: string, ttsData: string | null) {
+    const exists = await this.db.prepare(`SELECT id FROM cache WHERE id = ?`).get(id)
+    if (exists) {
+      await this.db.prepare(`UPDATE cache SET ttsData = ? WHERE id = ?`).run(ttsData, id)
+    } else {
+      await this.db.prepare(`INSERT INTO cache (id, ttsData) VALUES (?, ?)`).run(id, ttsData)
+    }
   }
 }
 

@@ -7,10 +7,6 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 const projectRoot = join(__dirname, "../../..")
 const configPath = join(projectRoot, "shared/carousel.json")
 
-console.log("[carousel] __dirname:", __dirname)
-console.log("[carousel] projectRoot:", projectRoot)
-console.log("[carousel] configPath:", configPath)
-
 // 默认配置
 const defaultConfig = {
   channelName: "NewsNow 频道",
@@ -58,16 +54,11 @@ export default defineEventHandler(async (event) => {
 
     try {
       const content = JSON.stringify(body, null, 2)
-      console.log("[carousel] saving to:", configPath)
-      console.log("[carousel] content length:", content.length)
       writeFileSync(configPath, content, "utf-8")
-      // 验证写入
-      const verify = readFileSync(configPath, "utf-8")
-      console.log("[carousel] verified length:", verify.length)
       logger.info("[carousel] config saved")
       return { success: true }
     } catch (e: any) {
-      console.error("[carousel] save error:", e)
+      logger.error("[carousel] save error:", e)
       throw createError({ statusCode: 500, message: `Failed to save: ${e.message}` })
     }
   }

@@ -1,48 +1,8 @@
 import { useEffect, useRef, useState } from "react"
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query"
 import type { SourceID } from "@shared/types"
+import type { CarouselConfig, Collection, Program, ProgramType, Summary } from "@shared/carousel"
 import { sources } from "@shared/sources"
-
-// 节目类型
-type ProgramType = "news" | "summary" | "break" | "collection"
-
-// 汇总配置
-interface Summary {
-  id: string
-  name: string
-  sources: SourceID[]
-  prompt: string
-  refreshInterval: number // 刷新间隔（分钟）
-  tts: boolean
-}
-
-// 集合配置
-interface Collection {
-  id: string
-  name: string
-  sources: SourceID[]
-}
-
-// 节目单项目
-interface Program {
-  type: ProgramType
-  sourceId?: SourceID
-  summaryId?: string
-  collectionId?: string
-  duration: number
-  label?: string
-  tts?: boolean
-  columns?: number // 1-3 列
-}
-
-// 轮播配置
-interface CarouselConfig {
-  channelName: string
-  summaries: Summary[]
-  collections: Collection[]
-  programs: Program[]
-  enableTTS: boolean
-}
 
 // 生成唯一 ID
 function generateId(): string {
@@ -88,6 +48,7 @@ export function CarouselEditor() {
     collections: [],
     programs: [],
     enableTTS: true,
+    newsRefreshInterval: 30,
   }
 
   // 加载配置
@@ -178,6 +139,7 @@ export function CarouselEditor() {
         collections: [],
         programs: [],
         enableTTS: true,
+        newsRefreshInterval: 30,
       })
     }
   }
@@ -212,6 +174,7 @@ export function CarouselEditor() {
           collections: imported.collections || [],
           programs: imported.programs || [],
           enableTTS: imported.enableTTS !== false,
+          newsRefreshInterval: imported.newsRefreshInterval || 30,
         })
       } catch {
         // eslint-disable-next-line no-alert
@@ -233,7 +196,6 @@ export function CarouselEditor() {
       sources: [],
       prompt: "请根据以下新闻生成一段简洁的热点汇总...",
       refreshInterval: 30,
-      tts: true,
     }
     setConfig({
       ...config,
@@ -460,15 +422,30 @@ export function CarouselEditor() {
       {/* 全局设置 */}
       <div className="mb-6 p-4 rounded-lg bg-base border border-neutral/20">
         <h2 className="text-lg font-bold mb-4">全局设置</h2>
-        <div>
-          <label className="flex items-center gap-2">
+        <div className="space-y-4">
+          <div>
+            <label className="flex items-center gap-2">
+              <input
+                type="checkbox"
+                checked={config.enableTTS}
+                onChange={e => setConfig({ ...config, enableTTS: e.target.checked })}
+              />
+              <span className="text-sm font-medium">启用 TTS 语音播报</span>
+            </label>
+          </div>
+          <div>
+            <label className="block text-sm font-medium mb-2">新闻源刷新间隔（分钟）</label>
             <input
-              type="checkbox"
-              checked={config.enableTTS}
-              onChange={e => setConfig({ ...config, enableTTS: e.target.checked })}
+              type="number"
+              className="w-full p-2 rounded border border-neutral/30 bg-base"
+              value={config.newsRefreshInterval || 30}
+              onChange={e => setConfig({ ...config, newsRefreshInterval: Number(e.target.value) })}
+              min={1}
             />
-            <span className="text-sm font-medium">启用 TTS 语音播报</span>
-          </label>
+            <p className="text-xs text-neutral-500 mt-1">
+              每隔多久刷新一次新闻源数据
+            </p>
+          </div>
         </div>
       </div>
 
@@ -636,17 +613,6 @@ export function CarouselEditor() {
                         onChange={e => handleUpdateSummary(index, { prompt: e.target.value })}
                         placeholder="输入用于热点汇总的 LLM 提示词..."
                       />
-                    </div>
-
-                    <div>
-                      <label className="flex items-center gap-2">
-                        <input
-                          type="checkbox"
-                          checked={summary.tts}
-                          onChange={e => handleUpdateSummary(index, { tts: e.target.checked })}
-                        />
-                        <span className="text-sm font-medium">TTS 播报</span>
-                      </label>
                     </div>
                   </div>
                 )}

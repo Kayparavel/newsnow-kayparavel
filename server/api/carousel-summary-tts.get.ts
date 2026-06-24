@@ -20,14 +20,6 @@ export default defineEventHandler(async (event) => {
     }
   }
 
-  // 检查是否过期
-  if (Date.now() > cached.expires) {
-    return {
-      success: false,
-      message: "Cache expired",
-    }
-  }
-
   return {
     success: true,
     summary: cached.summary,
