@@ -1,5 +1,6 @@
-import { readFileSync, existsSync } from "node:fs"
+import { existsSync, readFileSync } from "node:fs"
 import { join } from "node:path"
+import process from "node:process"
 import type { NewsItem, SourceID } from "@shared/types"
 import type { CarouselConfig, SummaryTTSResult } from "@shared/carousel"
 import { sources } from "@shared/sources"
@@ -142,14 +143,14 @@ async function executeSummaryLLM(summaryId: string, config: CarouselConfig): Pro
 
   // 解析 JSON
   try {
-    const jsonMatch = content.match(/```(?:json)?\s*([\s\S]*?)```/) || [null, content]
+    const jsonMatch = content.match(/```(?:json)?([\s\S]*?)```/) || [null, content]
     let jsonStr = jsonMatch[1].trim()
     jsonStr = jsonStr.replace(/,\s*([}\]])/g, "$1")
     const openBrackets = (jsonStr.match(/\[/g) || []).length
-    const closeBrackets = (jsonStr.match(/]/g) || []).length
+    const closeBrackets = (jsonStr.match(/\]/g) || []).length
     if (openBrackets > closeBrackets) jsonStr += "]".repeat(openBrackets - closeBrackets)
-    const openBraces = (jsonStr.match(/{/g) || []).length
-    const closeBraces = (jsonStr.match(/}/g) || []).length
+    const openBraces = (jsonStr.match(/\{/g) || []).length
+    const closeBraces = (jsonStr.match(/\}/g) || []).length
     if (openBraces > closeBraces) jsonStr += "}".repeat(openBraces - closeBraces)
     const result = JSON.parse(jsonStr)
     return { success: true, ...result, sources: sourceNames }
@@ -177,7 +178,7 @@ async function executeSummary(summaryId: string, config: CarouselConfig): Promis
     // 条件：全局 enableTTS 打开 且 节目单中有引用该汇总且 tts 为 true 的节目
     let audioBase64: string | null = null
     const shouldGenerateTTS = config.enableTTS && config.programs.some(
-      p => p.type === "summary" && p.summaryId === summaryId && p.tts === true
+      p => p.type === "summary" && p.summaryId === summaryId && p.tts === true,
     )
     if (shouldGenerateTTS) {
       const audioBuffer = await synthesizeSpeech(summaryResult.summary)
@@ -217,15 +218,6 @@ function startScheduler(summaryId: string, intervalMinutes: number, config: Caro
   logger.info(`[carousel-scheduler] started for ${summaryId}, interval: ${intervalMinutes} minutes`)
 }
 
-// 停止所有定时任务
-function stopAllSchedulers(): void {
-  for (const [id, timer] of schedulerTimers) {
-    clearInterval(timer)
-    logger.info(`[carousel-scheduler] stopped for ${id}`)
-  }
-  schedulerTimers.clear()
-}
-
 // 导出缓存查询函数
 export function getSummaryTTSCache(summaryId: string): SummaryTTSResult | undefined {
   return summaryTTSCache.get(summaryId)
@@ -257,7 +249,7 @@ async function refreshNewsSource(sourceId: SourceID, isFirstRefresh: boolean = f
       const config = loadCarouselConfig()
       if (config?.enableTTS && !isFirstRefresh) {
         // 检查所有引用该新闻源的节目，对 tts 字段取或逻辑
-        const shouldGenerateTTS = config.programs.some(p => {
+        const shouldGenerateTTS = config.programs.some((p) => {
           if (p.type === "news" && p.sourceId === sourceId) return p.tts === true
           if (p.type === "collection" && p.collectionId) {
             const collection = config.collections.find(c => c.id === p.collectionId)
@@ -274,9 +266,9 @@ async function refreshNewsSource(sourceId: SourceID, isFirstRefresh: boolean = f
               const sourceName = sources[sourceId]?.name || sourceId
               try {
                 const ttsData = await synthesizeSpeech(
-                  `下面播报${sourceName}最新新闻。` +
-                  newItems.map(item => item.title).join("。") +
-                  `以上就是本时段${sourceName}最新新闻。`
+                  `下面播报${sourceName}最新新闻。${
+                    newItems.map(item => item.title).join("。")
+                  }以上就是本时段${sourceName}最新新闻。`,
                 )
                 await cacheTable?.setTtsData(sourceId, ttsData.toString("base64"))
                 logger.success(`[carousel-scheduler] TTS generated for ${sourceId}`)

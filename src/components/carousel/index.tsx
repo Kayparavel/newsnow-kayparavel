@@ -1,13 +1,12 @@
 import { useEffect, useRef, useState } from "react"
 import { useQuery, useQueryClient } from "@tanstack/react-query"
-import type { NewsItem, SourceID, SourceResponse } from "@shared/types"
+import type { NewsItem, SourceID } from "@shared/types"
 import type { CarouselConfig, Program } from "@shared/carousel"
 import { sources } from "@shared/sources"
-import { relativeTime } from "@shared/utils"
-import { currentColumnIDAtom } from "~/atoms"
 import { NewsListHot } from "./NewsListHot"
 import { NewsListTimeline } from "./NewsListTimeline"
 import { CollectionList } from "./CollectionList"
+import { currentColumnIDAtom } from "~/atoms"
 
 // 常量
 const DEFAULT_DURATION = 30 // 默认节目时长（秒）
@@ -17,7 +16,7 @@ const PROGRESS_MAX = 100 // 进度条最大值
 // base64 转 Blob
 function base64ToBlob(base64: string, mimeType: string): Blob {
   const byteCharacters = atob(base64)
-  const byteNumbers = new Array(byteCharacters.length)
+  const byteNumbers = Array.from({ length: byteCharacters.length })
   for (let i = 0; i < byteCharacters.length; i++) {
     byteNumbers[i] = byteCharacters.charCodeAt(i)
   }
@@ -148,27 +147,6 @@ export function Carousel() {
 
   const currentProgram = config?.programs[currentIndex]
 
-  // 预获取下一个节目
-  const nextIndex = config ? (currentIndex + 1) % config.programs.length : 0
-  const nextProgram = config?.programs[nextIndex]
-
-  // 正在进行的请求跟踪
-  const pendingRequestsRef = useRef<Map<string, Promise<any>>>(new Map())
-
-  // 获取或创建请求（复用正在进行的请求）
-  function getOrCreateRequest<T>(key: string, factory: () => Promise<T>): Promise<T> {
-    const pending = pendingRequestsRef.current.get(key)
-    if (pending) {
-      return pending
-    }
-
-    const request = factory().finally(() => {
-      pendingRequestsRef.current.delete(key)
-    })
-    pendingRequestsRef.current.set(key, request)
-    return request
-  }
-
   // 获取当前集合
   const currentCollection = currentProgram?.collectionId
     ? config?.collections.find(c => c.id === currentProgram.collectionId)
@@ -277,7 +255,7 @@ export function Carousel() {
         timerRef.current = window.setTimeout(switchToNext, 1000)
         return
       }
-      setCurrentIndex(prev => {
+      setCurrentIndex((prev) => {
         const next = (prev + 1) % config.programs.length
         // 检测是否完成了一次循环
         if (next === 0 && !hasCompletedFirstCycleRef.current) {
@@ -590,31 +568,34 @@ export function Carousel() {
 
         {currentProgram?.type === "summary" && (
           <div className="w-full max-w-6xl">
-            {summaryData ? (
-              <div className="p-6 rounded-lg bg-base border border-neutral/10">
-                <h3 className="text-xl font-bold mb-4">{summaryData.title || "新闻汇总"}</h3>
-                <p className="text-base leading-relaxed mb-4 whitespace-pre-line">{summaryData.summary}</p>
-                {summaryData.highlights?.length > 0 && (
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-neutral-500 mb-2">要点：</h4>
-                    <ul className="list-disc list-inside space-y-1">
-                      {summaryData.highlights.map((item, i) => (
-                        <li key={i} className="text-sm">{item}</li>
-                      ))}
-                    </ul>
+            {summaryData
+              ? (
+                  <div className="p-6 rounded-lg bg-base border border-neutral/10">
+                    <h3 className="text-xl font-bold mb-4">{summaryData.title || "新闻汇总"}</h3>
+                    <p className="text-base leading-relaxed mb-4 whitespace-pre-line">{summaryData.summary}</p>
+                    {summaryData.highlights?.length > 0 && (
+                      <div className="mb-4">
+                        <h4 className="text-sm font-semibold text-neutral-500 mb-2">要点：</h4>
+                        <ul className="list-disc list-inside space-y-1">
+                          {summaryData.highlights.map((item, i) => (
+                            <li key={i} className="text-sm">{item}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                    {summaryData.sources?.length > 0 && (
+                      <div className="text-xs text-neutral-400">
+                        来源：
+                        {summaryData.sources.join("、")}
+                      </div>
+                    )}
+                  </div>
+                )
+              : (
+                  <div className="text-center p-8 rounded-lg bg-neutral/10">
+                    <p className="text-lg text-neutral-500">暂无汇总数据</p>
                   </div>
                 )}
-                {summaryData.sources?.length > 0 && (
-                  <div className="text-xs text-neutral-400">
-                    来源：{summaryData.sources.join("、")}
-                  </div>
-                )}
-              </div>
-            ) : (
-              <div className="text-center p-8 rounded-lg bg-neutral/10">
-                <p className="text-lg text-neutral-500">暂无汇总数据</p>
-              </div>
-            )}
           </div>
         )}
 

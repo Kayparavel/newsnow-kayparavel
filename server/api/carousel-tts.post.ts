@@ -1,3 +1,4 @@
+import type { Buffer } from "node:buffer"
 import { synthesizeSpeech } from "#/utils/tts"
 
 interface CarouselTTSRequest {

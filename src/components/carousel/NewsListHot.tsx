@@ -41,7 +41,10 @@ export function NewsListHot({ items, columns = 1 }: NewsListHotProps) {
                     <span className="absolute -top-1 -right-2 text-[10px] text-red font-bold">新</span>
                   )}
                   {isUp && (
-                    <span className="absolute -top-1 -right-2 text-[10px] text-red font-bold">+{diff}</span>
+                    <span className="absolute -top-1 -right-2 text-[10px] text-red font-bold">
+                      +
+                      {diff}
+                    </span>
                   )}
                   {isDown && (
                     <span className="absolute -top-1 -right-2 text-[10px] text-green font-bold">{diff}</span>

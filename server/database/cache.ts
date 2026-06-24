@@ -59,12 +59,12 @@ export class Cache {
       if (sourceType === "hottest") {
         diffItems = value.map(item => ({
           ...item,
-          extra: { ...item.extra, diff: 0 }
+          extra: { ...item.extra, diff: 0 },
         }))
       } else {
         diffItems = value.map(item => ({
           ...item,
-          extra: { ...item.extra, _isNew: false }
+          extra: { ...item.extra, _isNew: false },
         }))
       }
     } else {
@@ -81,7 +81,7 @@ export class Cache {
         const oldIds = new Set(oldItems.map(item => String(item.id)))
         diffItems = value.map(item => ({
           ...item,
-          extra: { ...item.extra, _isNew: !oldIds.has(String(item.id)) }
+          extra: { ...item.extra, _isNew: !oldIds.has(String(item.id)) },
         }))
       }
     }

@@ -32,6 +32,15 @@ interface Track {
   url: string
 }
 
+const defaultConfig: CarouselConfig = {
+  channelName: "NewsNow 频道",
+  summaries: [],
+  collections: [],
+  programs: [],
+  enableTTS: true,
+  newsRefreshInterval: 30,
+}
+
 export function CarouselEditor() {
   const queryClient = useQueryClient()
   const [config, setConfig] = useState<CarouselConfig | null>(null)
@@ -40,16 +49,6 @@ export function CarouselEditor() {
   const [activeTab, setActiveTab] = useState<"programs" | "summaries" | "bgm">("programs")
   const fileInputRef = useRef<HTMLInputElement>(null)
   const [loadStatus, setLoadStatus] = useState<"loading" | "success" | "default" | "error">("loading")
-
-  // 默认配置
-  const defaultConfig: CarouselConfig = {
-    channelName: "NewsNow 频道",
-    summaries: [],
-    collections: [],
-    programs: [],
-    enableTTS: true,
-    newsRefreshInterval: 30,
-  }
 
   // 加载配置
   const { data, isLoading, error } = useQuery<CarouselConfig>({
@@ -778,7 +777,7 @@ export function CarouselEditor() {
           <div className="space-y-2">
             {config.programs.map((program, index) => (
               <div
-                key={index}
+                key={`${program.type}-${program.sourceId || program.summaryId || program.collectionId || index}`}
                 className={`p-4 rounded-lg border transition-colors ${
                   editingProgramIndex === index
                     ? "border-primary bg-primary/5"
@@ -893,7 +892,7 @@ export function CarouselEditor() {
                         <select
                           className="w-full p-2 rounded border border-neutral/30 bg-base"
                           value={program.collectionId || ""}
-                          onChange={e => {
+                          onChange={(e) => {
                             const collectionId = e.target.value
                             const collection = config.collections.find(c => c.id === collectionId)
                             handleUpdateProgram(index, {
@@ -923,7 +922,7 @@ export function CarouselEditor() {
                         <select
                           className="w-full p-2 rounded border border-neutral/30 bg-base"
                           value={program.summaryId || ""}
-                          onChange={e => {
+                          onChange={(e) => {
                             const summaryId = e.target.value
                             const summary = config.summaries.find(s => s.id === summaryId)
                             handleUpdateProgram(index, {
@@ -1005,7 +1004,7 @@ export function CarouselEditor() {
         <div className="flex flex-wrap gap-2">
           {config.programs.map((program, index) => (
             <div
-              key={index}
+              key={`${program.type}-${program.sourceId || program.summaryId || program.collectionId || index}`}
               className={`px-3 py-1.5 rounded text-sm ${
                 program.type === "news"
                   ? "bg-blue-100 text-blue-800"

@@ -22,7 +22,7 @@ export function NewsListTimeline({ items, columns = 1 }: NewsListTimelineProps) 
     <div className={`grid gap-3 ${gridClass}`}>
       {Array.from({ length: columns }).map((_, colIndex) => (
         <div key={colIndex} className="space-y-1">
-          {items.slice(colIndex * itemsPerColumn, (colIndex + 1) * itemsPerColumn).map(item => {
+          {items.slice(colIndex * itemsPerColumn, (colIndex + 1) * itemsPerColumn).map((item) => {
             const isNew = item.extra?._isNew
             return (
               <div

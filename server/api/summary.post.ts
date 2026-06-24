@@ -1,4 +1,4 @@
-import type { SourceID, SourceResponse } from "@shared/types"
+import type { SourceID } from "@shared/types"
 import type { LLMMessage } from "#/utils/llm"
 import { chatCompletion } from "#/utils/llm"
 import { getters } from "#/getters"
@@ -19,7 +19,7 @@ interface SummaryRequest {
 }
 
 // 内存缓存
-const summaryCache = new Map<string, { data: any; expires: number }>()
+const summaryCache = new Map<string, { data: any, expires: number }>()
 
 interface NewsItemForLLM {
   title: string
@@ -171,7 +171,7 @@ export default defineEventHandler(async (event) => {
               info: item.extra?.info,
               hover: item.extra?.hover,
               url: item.url,
-            }))
+            })),
           )
         }
       } catch (e) {
@@ -215,15 +215,15 @@ export default defineEventHandler(async (event) => {
     let result
     try {
       // 尝试提取 JSON（可能被包裹在 markdown 代码块中）
-      const jsonMatch = content.match(/```(?:json)?\s*([\s\S]*?)```/) || [null, content]
+      const jsonMatch = content.match(/```(?:json)?([\s\S]*?)```/) || [null, content]
       let jsonStr = jsonMatch[1].trim()
       // 修复常见问题：trailing comma、缺失的括号
       jsonStr = jsonStr.replace(/,\s*([}\]])/g, "$1")
       // 尝试补全缺失的括号
-      const openBraces = (jsonStr.match(/{/g) || []).length
-      const closeBraces = (jsonStr.match(/}/g) || []).length
+      const openBraces = (jsonStr.match(/\{/g) || []).length
+      const closeBraces = (jsonStr.match(/\}/g) || []).length
       const openBrackets = (jsonStr.match(/\[/g) || []).length
-      const closeBrackets = (jsonStr.match(/]/g) || []).length
+      const closeBrackets = (jsonStr.match(/\]/g) || []).length
       if (openBrackets > closeBrackets) {
         jsonStr += "]".repeat(openBrackets - closeBrackets)
       }

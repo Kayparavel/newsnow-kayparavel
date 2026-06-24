@@ -64,7 +64,7 @@ export const originSources = {
     color: "indigo",
     interval: Time.Realtime,
     sub: {
-      flash: {
+      "flash": {
         title: "快讯",
       },
       "flash-zh": {
