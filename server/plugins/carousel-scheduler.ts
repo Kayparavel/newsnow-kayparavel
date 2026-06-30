@@ -13,6 +13,62 @@ import { useProxyStorage } from "#/utils/fetch"
 const summaryTTSCache = new Map<string, SummaryTTSResult>()
 const schedulerTimers = new Map<string, NodeJS.Timeout>()
 
+// 心跳机制：追踪前端活跃状态
+const HEARTBEAT_TIMEOUT = 2 * 60 * 1000 // 2分钟无心跳则暂停任务
+let lastHeartbeatTime = 0
+let wasActive = false // 上次心跳状态
+
+// 任务执行记录
+let lastNewsRefreshTime = 0
+const lastSummaryRefreshTime = new Map<string, number>()
+let carouselConfig: CarouselConfig | null = null
+
+export function updateHeartbeat() {
+  const now = Date.now()
+
+  // 检测是否从超时状态恢复
+  // 条件：曾经有过心跳 且 已超时
+  const isPreviouslyActive = lastHeartbeatTime > 0 && !isSchedulerActive()
+  if (isPreviouslyActive) {
+    wasActive = false
+  }
+
+  lastHeartbeatTime = now
+
+  // 检测状态变化：从 inactive 变为 active
+  if (!wasActive) {
+    logger.info("[carousel-scheduler] heartbeat restored, checking if immediate execution needed")
+    checkAndExecuteOnRestore(now)
+  }
+  wasActive = true
+}
+
+export function isSchedulerActive(): boolean {
+  return lastHeartbeatTime > 0 && (Date.now() - lastHeartbeatTime) < HEARTBEAT_TIMEOUT
+}
+
+// 心跳恢复时检查是否需要立即执行
+async function checkAndExecuteOnRestore(now: number) {
+  if (!carouselConfig) return
+
+  // 检查新闻源刷新
+  const newsInterval = (carouselConfig.newsRefreshInterval || 10) * 60 * 1000
+  if (lastNewsRefreshTime > 0 && (now - lastNewsRefreshTime) >= newsInterval) {
+    logger.info("[carousel-scheduler] news refresh overdue, executing immediately")
+    refreshAllNewsSources(carouselConfig)
+  }
+
+  // 检查汇总任务
+  for (const summary of carouselConfig.summaries || []) {
+    const interval = (summary.refreshInterval || 30) * 60 * 1000
+    const lastTime = lastSummaryRefreshTime.get(summary.id) || 0
+    if (lastTime > 0 && (now - lastTime) >= interval) {
+      logger.info(`[carousel-scheduler] summary ${summary.name} overdue, executing immediately`)
+      executeSummary(summary.id, carouselConfig)
+    }
+  }
+}
+
 // 获取项目根目录
 function getProjectRoot(): string {
   return process.cwd()
@@ -160,11 +216,20 @@ async function executeSummaryLLM(summaryId: string, config: CarouselConfig): Pro
 }
 
 // 执行汇总 + TTS
-async function executeSummary(summaryId: string, config: CarouselConfig): Promise<void> {
+async function executeSummary(summaryId: string, config: CarouselConfig, isFirstRefresh: boolean = false): Promise<void> {
+  // 首次执行无视心跳，后续执行需要心跳活跃
+  if (!isFirstRefresh && !isSchedulerActive()) {
+    logger.info("[carousel-scheduler] summary skipped: no active frontend")
+    return
+  }
+
   const summary = config.summaries.find(s => s.id === summaryId)
   if (!summary) return
 
   logger.info(`[carousel-scheduler] executing summary: ${summary.name}`)
+
+  // 记录执行时间
+  lastSummaryRefreshTime.set(summaryId, Date.now())
 
   try {
     // 1. 执行汇总
@@ -206,8 +271,8 @@ function startScheduler(summaryId: string, intervalMinutes: number, config: Caro
     clearInterval(schedulerTimers.get(summaryId)!)
   }
 
-  // 立即执行一次
-  executeSummary(summaryId, config)
+  // 立即执行一次（首次执行无视心跳）
+  executeSummary(summaryId, config, true)
 
   // 设置定时任务
   const timer = setInterval(() => {
@@ -225,6 +290,12 @@ export function getSummaryTTSCache(summaryId: string): SummaryTTSResult | undefi
 
 // 刷新单个新闻源
 async function refreshNewsSource(sourceId: SourceID, isFirstRefresh: boolean = false): Promise<void> {
+  // 首次执行无视心跳，后续执行需要心跳活跃
+  if (!isFirstRefresh && !isSchedulerActive()) {
+    logger.info(`[carousel-scheduler] refresh ${sourceId} skipped: no active frontend`)
+    return
+  }
+
   try {
     const cacheTable = await getCacheTable()
     if (!cacheTable) return
@@ -289,6 +360,15 @@ async function refreshNewsSource(sourceId: SourceID, isFirstRefresh: boolean = f
 
 // 刷新所有新闻源（按照原生刷新逻辑：先原文后译文，处理 stagger）
 async function refreshAllNewsSources(config: CarouselConfig, isFirstRefresh: boolean = false): Promise<void> {
+  // 首次执行无视心跳，后续执行需要心跳活跃
+  if (!isFirstRefresh && !isSchedulerActive()) {
+    logger.info("[carousel-scheduler] refresh all skipped: no active frontend")
+    return
+  }
+
+  // 记录执行时间
+  lastNewsRefreshTime = Date.now()
+
   const allSourceIds = new Set<SourceID>()
 
   // 收集所有节目中的新闻源
@@ -356,6 +436,9 @@ export default defineNitroPlugin(async (_nitro) => {
     return
   }
 
+  // 保存配置到全局变量，供心跳恢复时使用
+  carouselConfig = config
+
   // 启动汇总定时任务
   if (config.summaries?.length) {
     logger.info(`[carousel-scheduler] starting ${config.summaries.length} summary scheduler(s)`)
@@ -367,7 +450,7 @@ export default defineNitroPlugin(async (_nitro) => {
   }
 
   // 启动新闻源定时任务
-  const newsInterval = config.newsRefreshInterval || 30
+  const newsInterval = config.newsRefreshInterval || 10
   logger.info(`[carousel-scheduler] starting news source scheduler, interval: ${newsInterval} minutes`)
 
   // 立即执行一次（首次刷新不计算 diff，不生成 TTS）

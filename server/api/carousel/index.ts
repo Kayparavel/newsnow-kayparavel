@@ -14,6 +14,7 @@ const defaultConfig = {
   collections: [],
   programs: [],
   enableTTS: true,
+  newsRefreshInterval: 10,
 }
 
 export default defineEventHandler(async (event) => {
@@ -34,6 +35,7 @@ export default defineEventHandler(async (event) => {
         collections: Array.isArray(config.collections) ? config.collections : defaultConfig.collections,
         programs: Array.isArray(config.programs) ? config.programs : defaultConfig.programs,
         enableTTS: config.enableTTS !== false,
+        newsRefreshInterval: config.newsRefreshInterval || defaultConfig.newsRefreshInterval,
       }
     } catch {
       return defaultConfig

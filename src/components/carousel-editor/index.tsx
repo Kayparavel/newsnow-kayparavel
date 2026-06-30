@@ -38,7 +38,7 @@ const defaultConfig: CarouselConfig = {
   collections: [],
   programs: [],
   enableTTS: true,
-  newsRefreshInterval: 30,
+  newsRefreshInterval: 10,
 }
 
 export function CarouselEditor() {
@@ -76,6 +76,7 @@ export function CarouselEditor() {
         collections: Array.isArray(result.collections) ? result.collections : defaultConfig.collections,
         programs: Array.isArray(result.programs) ? result.programs : defaultConfig.programs,
         enableTTS: result.enableTTS !== false,
+        newsRefreshInterval: result.newsRefreshInterval || defaultConfig.newsRefreshInterval,
       })
       console.log("[carousel-editor] config reloaded:", result)
     } else {
@@ -102,6 +103,7 @@ export function CarouselEditor() {
         collections: Array.isArray(data.collections) ? data.collections : defaultConfig.collections,
         programs: Array.isArray(data.programs) ? data.programs : defaultConfig.programs,
         enableTTS: data.enableTTS !== false,
+        newsRefreshInterval: data.newsRefreshInterval || defaultConfig.newsRefreshInterval,
       })
     } else if (error) {
       console.log("[carousel-editor] config load error:", error)
@@ -138,7 +140,7 @@ export function CarouselEditor() {
         collections: [],
         programs: [],
         enableTTS: true,
-        newsRefreshInterval: 30,
+        newsRefreshInterval: 10,
       })
     }
   }
@@ -173,7 +175,7 @@ export function CarouselEditor() {
           collections: imported.collections || [],
           programs: imported.programs || [],
           enableTTS: imported.enableTTS !== false,
-          newsRefreshInterval: imported.newsRefreshInterval || 30,
+          newsRefreshInterval: imported.newsRefreshInterval || 10,
         })
       } catch {
         // eslint-disable-next-line no-alert
@@ -437,7 +439,7 @@ export function CarouselEditor() {
             <input
               type="number"
               className="w-full p-2 rounded border border-neutral/30 bg-base"
-              value={config.newsRefreshInterval || 30}
+              value={config.newsRefreshInterval || 10}
               onChange={e => setConfig({ ...config, newsRefreshInterval: Number(e.target.value) })}
               min={1}
             />

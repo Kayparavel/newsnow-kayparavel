@@ -68,11 +68,37 @@ export function Carousel() {
     contentAudios: Map<string, Blob>
     summaryAudio: Blob | null
   }>>(new Map())
+  const heartbeatTimerRef = useRef<number | null>(null)
 
   // 设置当前页面为轮播
   useEffect(() => {
     setCurrentPage("carousel")
   }, [setCurrentPage])
+
+  // 心跳机制：通知后端有前端活跃
+  useEffect(() => {
+    const HEARTBEAT_INTERVAL = 30 * 1000 // 30秒
+
+    const sendHeartbeat = async () => {
+      try {
+        await myFetch("/carousel-heartbeat", { method: "POST" })
+      } catch (e) {
+        console.error("[carousel] heartbeat failed:", e)
+      }
+    }
+
+    // 立即发送一次
+    sendHeartbeat()
+
+    // 定时发送
+    heartbeatTimerRef.current = window.setInterval(sendHeartbeat, HEARTBEAT_INTERVAL)
+
+    return () => {
+      if (heartbeatTimerRef.current) {
+        clearInterval(heartbeatTimerRef.current)
+      }
+    }
+  }, [])
 
   // 加载轮播配置
   useEffect(() => {
