@@ -1,35 +1,44 @@
-import { existsSync, readFileSync, writeFileSync } from "node:fs"
-import { dirname, join } from "node:path"
-import { fileURLToPath } from "node:url"
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs"
+import { join, resolve } from "node:path"
+import process from "node:process"
 
-const __dirname = dirname(fileURLToPath(import.meta.url))
-const projectRoot = join(__dirname, "../../..")
-const playlistPath = join(projectRoot, "data/playlist.json")
+const DATA_DIR = resolve(process.cwd(), ".data")
+const PLAYLIST_PATH = join(DATA_DIR, "playlist.json")
+const LEGACY_PLAYLIST_PATH = resolve(process.cwd(), "data/playlist.json")
 
-// 默认配置
 const defaultPlaylist = {
   enabled: false,
   volume: 0.3,
   tracks: [],
 }
 
+function readPlaylist() {
+  if (existsSync(PLAYLIST_PATH)) {
+    return JSON.parse(readFileSync(PLAYLIST_PATH, "utf-8"))
+  }
+  if (existsSync(LEGACY_PLAYLIST_PATH)) {
+    const content = JSON.parse(readFileSync(LEGACY_PLAYLIST_PATH, "utf-8"))
+    try {
+      mkdirSync(DATA_DIR, { recursive: true })
+      writeFileSync(PLAYLIST_PATH, JSON.stringify(content, null, 2), "utf-8")
+      logger.info(`[playlist] migrated from legacy path to ${PLAYLIST_PATH}`)
+    } catch {}
+    return content
+  }
+  return defaultPlaylist
+}
+
 export default defineEventHandler(async (event) => {
   const method = event.method
 
-  // GET - 读取播放列表
   if (method === "GET") {
     try {
-      if (!existsSync(playlistPath)) {
-        return defaultPlaylist
-      }
-      const content = readFileSync(playlistPath, "utf-8")
-      return JSON.parse(content)
+      return readPlaylist()
     } catch {
       return defaultPlaylist
     }
   }
 
-  // POST - 保存播放列表（需要登录）
   if (method === "POST") {
     if (!event.context.disabledLogin && !event.context.user) {
       throw createError({ statusCode: 401, message: "Login required" })
@@ -41,7 +50,8 @@ export default defineEventHandler(async (event) => {
     }
 
     try {
-      writeFileSync(playlistPath, JSON.stringify(body, null, 2), "utf-8")
+      mkdirSync(DATA_DIR, { recursive: true })
+      writeFileSync(PLAYLIST_PATH, JSON.stringify(body, null, 2), "utf-8")
       logger.info("[playlist] config saved")
       return { success: true }
     } catch (e: any) {

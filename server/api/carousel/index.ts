@@ -1,13 +1,13 @@
-import { existsSync, readFileSync, writeFileSync } from "node:fs"
-import { dirname, join } from "node:path"
-import { fileURLToPath } from "node:url"
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs"
+import { join, resolve } from "node:path"
+import process from "node:process"
 
-// 获取项目根目录（server/api/carousel/index.ts -> server -> 项目根目录）
-const __dirname = dirname(fileURLToPath(import.meta.url))
-const projectRoot = join(__dirname, "../../..")
-const configPath = join(projectRoot, "shared/carousel.json")
+const DATA_DIR = resolve(process.cwd(), ".data")
+const CONFIG_PATH = join(DATA_DIR, "carousel.json")
+const LEGACY_PATHS = [
+  resolve(process.cwd(), "shared/carousel.json"),
+]
 
-// 默认配置
 const defaultConfig = {
   channelName: "NewsNow 频道",
   summaries: [],
@@ -17,34 +17,47 @@ const defaultConfig = {
   newsRefreshInterval: 10,
 }
 
+function normalizeConfig(raw: any) {
+  return {
+    channelName: raw.channelName || defaultConfig.channelName,
+    summaries: Array.isArray(raw.summaries) ? raw.summaries : defaultConfig.summaries,
+    collections: Array.isArray(raw.collections) ? raw.collections : defaultConfig.collections,
+    programs: Array.isArray(raw.programs) ? raw.programs : defaultConfig.programs,
+    enableTTS: raw.enableTTS !== false,
+    newsRefreshInterval: raw.newsRefreshInterval || defaultConfig.newsRefreshInterval,
+  }
+}
+
+function readConfig() {
+  if (existsSync(CONFIG_PATH)) {
+    return JSON.parse(readFileSync(CONFIG_PATH, "utf-8"))
+  }
+  for (const p of LEGACY_PATHS) {
+    if (existsSync(p)) {
+      const content = JSON.parse(readFileSync(p, "utf-8"))
+      try {
+        mkdirSync(DATA_DIR, { recursive: true })
+        writeFileSync(CONFIG_PATH, JSON.stringify(content, null, 2), "utf-8")
+        logger.info(`[carousel] migrated config from legacy path to ${CONFIG_PATH}`)
+      } catch {}
+      return content
+    }
+  }
+  return defaultConfig
+}
+
 export default defineEventHandler(async (event) => {
   const method = event.method
 
-  // GET - 读取配置
   if (method === "GET") {
     try {
-      if (!existsSync(configPath)) {
-        return defaultConfig
-      }
-      const content = readFileSync(configPath, "utf-8")
-      const config = JSON.parse(content)
-      // 兼容旧配置格式
-      return {
-        channelName: config.channelName || defaultConfig.channelName,
-        summaries: Array.isArray(config.summaries) ? config.summaries : defaultConfig.summaries,
-        collections: Array.isArray(config.collections) ? config.collections : defaultConfig.collections,
-        programs: Array.isArray(config.programs) ? config.programs : defaultConfig.programs,
-        enableTTS: config.enableTTS !== false,
-        newsRefreshInterval: config.newsRefreshInterval || defaultConfig.newsRefreshInterval,
-      }
+      return normalizeConfig(readConfig())
     } catch {
       return defaultConfig
     }
   }
 
-  // POST - 保存配置（需要登录）
   if (method === "POST") {
-    // 检查是否需要登录
     if (!event.context.disabledLogin && !event.context.user) {
       throw createError({ statusCode: 401, message: "Login required" })
     }
@@ -55,8 +68,8 @@ export default defineEventHandler(async (event) => {
     }
 
     try {
-      const content = JSON.stringify(body, null, 2)
-      writeFileSync(configPath, content, "utf-8")
+      mkdirSync(DATA_DIR, { recursive: true })
+      writeFileSync(CONFIG_PATH, JSON.stringify(body, null, 2), "utf-8")
       logger.info("[carousel] config saved")
       return { success: true }
     } catch (e: any) {

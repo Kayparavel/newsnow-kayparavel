@@ -1,14 +1,17 @@
 import { existsSync, readFileSync } from "node:fs"
-import { dirname, join } from "node:path"
-import { fileURLToPath } from "node:url"
+import { join, resolve } from "node:path"
+import process from "node:process"
 
-const __dirname = dirname(fileURLToPath(import.meta.url))
-const projectRoot = join(__dirname, "../../..")
-const dataDir = join(projectRoot, "data")
+const DATA_DIR = resolve(process.cwd(), ".data")
+const LEGACY_DATA_DIR = resolve(process.cwd(), "data")
 
-console.log("[playlist/file] __dirname:", __dirname)
-console.log("[playlist/file] projectRoot:", projectRoot)
-console.log("[playlist/file] dataDir:", dataDir)
+function resolveFile(safeName: string): string | null {
+  const newPath = join(DATA_DIR, safeName)
+  if (existsSync(newPath)) return newPath
+  const oldPath = join(LEGACY_DATA_DIR, safeName)
+  if (existsSync(oldPath)) return oldPath
+  return null
+}
 
 export default defineEventHandler((event) => {
   const name = getRouterParam(event, "name")
@@ -16,15 +19,13 @@ export default defineEventHandler((event) => {
     throw createError({ statusCode: 400, message: "Missing file name" })
   }
 
-  // 安全检查：只允许访问 mp3 文件，防止路径遍历
   const safeName = name.replace(/[^\w\-.]/g, "")
   if (!safeName.endsWith(".mp3")) {
     throw createError({ statusCode: 400, message: "Invalid file type" })
   }
 
-  const filePath = join(dataDir, safeName)
-  console.log("[playlist/file] requested:", name, "-> safeName:", safeName, "-> filePath:", filePath, "-> exists:", existsSync(filePath))
-  if (!existsSync(filePath)) {
+  const filePath = resolveFile(safeName)
+  if (!filePath) {
     throw createError({ statusCode: 404, message: "File not found" })
   }
 

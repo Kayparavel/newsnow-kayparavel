@@ -1,6 +1,6 @@
 import process from "node:process"
-import { readFileSync } from "node:fs"
-import { join, resolve } from "node:path"
+import { existsSync, readFileSync } from "node:fs"
+import { basename, join, resolve } from "node:path"
 import { Buffer } from "node:buffer"
 import { ofetch } from "ofetch"
 
@@ -25,14 +25,32 @@ function evictTtsCache() {
 let voiceBase64: string | undefined
 let voiceMime = "audio/wav"
 
+function resolveSamplePath(samplePath: string): string {
+  const cwd = resolve(process.cwd())
+  const candidates: string[] = []
+
+  if (samplePath.startsWith(".")) {
+    candidates.push(join(cwd, samplePath))
+    const name = basename(samplePath)
+    candidates.push(join(cwd, ".data", name))
+    candidates.push(join(cwd, "data", name))
+  } else {
+    candidates.push(samplePath)
+  }
+
+  for (const p of candidates) {
+    if (existsSync(p)) return p
+  }
+  return candidates[0]
+}
+
 function loadVoiceSample(): string {
   if (voiceBase64) return voiceBase64
 
   const samplePath = process.env.TTS_VOICE_SAMPLE_PATH
   if (!samplePath) throw new Error("TTS_VOICE_SAMPLE_PATH not configured")
 
-  const projectRoot = resolve(process.cwd())
-  const resolved = samplePath.startsWith(".") ? join(projectRoot, samplePath) : samplePath
+  const resolved = resolveSamplePath(samplePath)
   const buf = readFileSync(resolved)
   const ext = resolved.split(".").pop()?.toLowerCase()
   if (ext === "mp3") {

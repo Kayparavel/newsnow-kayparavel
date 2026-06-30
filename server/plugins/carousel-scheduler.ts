@@ -1,5 +1,5 @@
-import { existsSync, readFileSync } from "node:fs"
-import { join } from "node:path"
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs"
+import { join, resolve } from "node:path"
 import process from "node:process"
 import type { NewsItem, SourceID } from "@shared/types"
 import type { CarouselConfig, SummaryTTSResult } from "@shared/carousel"
@@ -69,18 +69,27 @@ async function checkAndExecuteOnRestore(now: number) {
   }
 }
 
-// 获取项目根目录
-function getProjectRoot(): string {
-  return process.cwd()
-}
+const DATA_DIR = resolve(process.cwd(), ".data")
+const CONFIG_PATH = join(DATA_DIR, "carousel.json")
+const LEGACY_CONFIG_PATH = resolve(process.cwd(), "shared/carousel.json")
 
-// 加载轮播配置
 function loadCarouselConfig(): CarouselConfig | null {
   try {
-    const configPath = join(getProjectRoot(), "shared/carousel.json")
-    if (!existsSync(configPath)) return null
-    const content = readFileSync(configPath, "utf-8")
-    return JSON.parse(content) as CarouselConfig
+    if (existsSync(CONFIG_PATH)) {
+      const content = readFileSync(CONFIG_PATH, "utf-8")
+      return JSON.parse(content) as CarouselConfig
+    }
+    if (existsSync(LEGACY_CONFIG_PATH)) {
+      const content = readFileSync(LEGACY_CONFIG_PATH, "utf-8")
+      const parsed = JSON.parse(content) as CarouselConfig
+      try {
+        mkdirSync(DATA_DIR, { recursive: true })
+        writeFileSync(CONFIG_PATH, JSON.stringify(parsed, null, 2), "utf-8")
+        logger.info(`[carousel-scheduler] migrated config from legacy path to ${CONFIG_PATH}`)
+      } catch {}
+      return parsed
+    }
+    return null
   } catch (e) {
     logger.error("[carousel-scheduler] failed to load config:", e)
     return null
